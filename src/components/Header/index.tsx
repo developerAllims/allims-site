@@ -7,10 +7,7 @@ export const Header = ({ children, className, ...rest }: HeaderProps) => {
   return (
     <header
       {...rest}
-      className={
-        'flex justify-center w-full min-h-20 text-sm font-semibold text-gray-primary ' +
-        className
-      }
+      className={`flex justify-center w-full min-h-20 text-sm font-semibold text-gray-primary ${className}`}
     >
       <div className="flex w-full max-w-5xl justify-between items-center">
         {children}

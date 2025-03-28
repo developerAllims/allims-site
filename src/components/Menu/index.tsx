@@ -5,7 +5,7 @@ interface MenuProps extends ComponentProps<'nav'> {}
 
 export const Menu = ({ children, ...rest }: MenuProps) => {
   return (
-    <nav className="flex" {...rest}>
+    <nav {...rest} className="flex">
       <ul className="flex flex-row gap-6">{children}</ul>
     </nav>
   )
