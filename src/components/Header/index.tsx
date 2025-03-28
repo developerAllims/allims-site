@@ -6,7 +6,7 @@ interface HeaderProps extends ComponentProps<'header'> {}
 export const Header = ({ ...rest }: HeaderProps) => {
   return (
     <header className="flex w-full justify-center" {...rest}>
-      <span className="text-amber-500">Ola</span>
+      <h1 className="text-amber-500">Ola</h1>
     </header>
   )
 }
