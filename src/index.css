@@ -13,7 +13,12 @@
 :root {
   width: 100vw;
   height: 100vh;
-  font-size: 10px;
+  /* font-size: 10px; */
+  font-family: 'Open Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: 100;
 }
 
 /* 3. Enable keyword animations */
@@ -76,3 +81,8 @@ h6 {
 }
 
 @import 'tailwindcss';
+
+@theme {
+  --color-orange-primary: #f7941c;
+  --color-gray-primary: #3f4244;
+}
