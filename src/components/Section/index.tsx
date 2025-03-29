@@ -13,7 +13,7 @@ export const Section = ({
   return (
     <section
       {...rest}
-      className={`flex justify-center w-full min-h-60 ${className}`}
+      className={`flex justify-center w-full ${className}`}
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: 'cover'
