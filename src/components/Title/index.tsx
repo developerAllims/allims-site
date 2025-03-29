@@ -7,7 +7,7 @@ export const Title1 = ({ children, className, ...rest }: Title1Props) => {
   return (
     <h1
       {...rest}
-      className={`text-6xl font-bold text-orange-primary ${className}`}
+      className={`text-[55px] font-bold text-orange-primary ${className}`}
     >
       {children}
     </h1>

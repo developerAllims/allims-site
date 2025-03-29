@@ -11,9 +11,16 @@ export const Menu = ({ children, ...rest }: MenuProps) => {
   )
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-interface MenuItemProps extends ComponentProps<'li'> {}
+interface MenuItemProps extends ComponentProps<'li'> {
+  selected?: boolean
+}
 
-export const MenuItem = ({ children }: MenuItemProps) => {
-  return <li>{children}</li>
+export const MenuItem = ({ children, selected }: MenuItemProps) => {
+  return (
+    <li>
+      <a className={`${selected && 'text-orange-primary'}`} style={{}}>
+        {children}
+      </a>
+    </li>
+  )
 }

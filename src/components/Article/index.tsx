@@ -1,39 +1,34 @@
 import { ComponentProps } from 'react'
 
-interface ArticleProps extends ComponentProps<'article'> {
-  myBgColor?: string
-}
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+interface ArticleProps extends ComponentProps<'article'> {}
 
 export const Article = ({
   children,
-  myBgColor,
   className,
+  style,
   ...rest
 }: ArticleProps) => {
   return (
     <article
       {...rest}
-      className={`flex flex-col h-full w-1/2 max-w-1/2 p-20 bg-${myBgColor} ${className}`}
+      className={`flex flex-col h-full min-h-full w-1/2 ${className}`}
+      style={{ padding: '7%', ...style }}
     >
       {children || ' '}
     </article>
   )
 }
 
-interface ArticleContainerProps extends ComponentProps<'div'> {
-  myHeight?: number
-  myWidth?: number
-}
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+interface ArticleContainerProps extends ComponentProps<'div'> {}
 
 export const ArticleContainer = ({
   children,
-  myHeight,
-  myWidth
+  ...rest
 }: ArticleContainerProps) => {
   return (
-    <div
-      className={`flex flex-col h-[${myHeight}px] w-[${myWidth}px] justify-between gap-6`}
-    >
+    <div {...rest} className={`flex flex-col justify-between gap-6`}>
       {children}
     </div>
   )

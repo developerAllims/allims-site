@@ -1,32 +1,25 @@
 import { ComponentProps } from 'react'
 
 interface SectionProps extends ComponentProps<'section'> {
-  myHeight: number
-  myImage?: string
+  bgImage?: string
 }
 
 export const Section = ({
   children,
   className,
-  myHeight,
-  myImage,
+  bgImage,
   ...rest
 }: SectionProps) => {
   return (
     <section
       {...rest}
-      //className={`flex justify-center w-full items-center bg-orange-primary h-[${myHeight}px] min-h-[${myHeight}px] ${className}`}
-      className={`flex w-full h-[${myHeight}px] min-h-[${myHeight}px] min-h-60 ${className}`}
-      style={
-        myImage
-          ? {
-              backgroundImage: `url(${myImage})`,
-              backgroundSize: 'cover'
-            }
-          : {}
-      }
+      className={`flex justify-center w-full min-h-60 ${className}`}
+      style={{
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: 'cover'
+      }}
     >
-      <SectionContainer>{children}</SectionContainer>
+      {children}
     </section>
   )
 }
@@ -39,7 +32,7 @@ export const SectionContainer = ({
   ...rest
 }: SectionContainerProps) => {
   return (
-    <div {...rest} className="flex w-full max-w-5xl h-full">
+    <div {...rest} className={`flex w-full max-w-5xl h-full`}>
       {children}
     </div>
   )

@@ -72,6 +72,24 @@ h6 {
   text-wrap: balance;
 }
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a.button-hover {
+  position: relative;
+}
+a.button-hover:hover {
+  padding-left: 0.7em;
+  padding-right: 2em;
+  transition: all 0.2s;
+}
+a.button-hover:hover::before {
+  content: '>';
+  position: absolute;
+  right: 1em; /* equal to padding-left */
+}
+
 /*
   10. Create a root stacking context
 */

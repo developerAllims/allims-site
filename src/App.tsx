@@ -12,20 +12,21 @@ import {
   Paragraph1,
   Paragraph2,
   Section,
+  SectionContainer,
   Title1,
   Title2
 } from './components'
 
-import logoAllimsCinza from './assets/logo_allims_cinza.png'
-import testeiraAllims from './assets/testeira_allims.png'
+import logoCompanyMain from './assets/logo_company_main.png'
+import backgroundMain from './assets/background_main.png'
 
 function App() {
   return (
     <>
       <Header>
-        <Image className="w-32 max-h-14" src={logoAllimsCinza} />
+        <Image className="w-32 max-h-14" src={logoCompanyMain} />
         <Menu>
-          <MenuItem>Home</MenuItem>
+          <MenuItem selected>Home</MenuItem>
           <MenuItem>Sistema ALLÌMS</MenuItem>
           <MenuItem>Módulos</MenuItem>
           <MenuItem>Empresa</MenuItem>
@@ -33,21 +34,23 @@ function App() {
         </Menu>
       </Header>
       <Main>
-        <Section myHeight={502} myImage={testeiraAllims}>
-          <Article />
-          <Article>
-            <ArticleContainer myHeight={194} myWidth={330}>
-              <Title1>ALLÌMS</Title1>
-              <Paragraph1>
-                O sistema ideal para gerenciamento das informações do seu
-                laboratório
-              </Paragraph1>
-              <Button1>Saiba mais</Button1>
-            </ArticleContainer>
-          </Article>
+        <Section bgImage={backgroundMain}>
+          <SectionContainer style={{ padding: '120px 0' }}>
+            <Article />
+            <Article style={{ padding: '27px 60px' }}>
+              <ArticleContainer style={{ height: '194px', width: '377px' }}>
+                <Title1>ALLÌMS</Title1>
+                <Paragraph1>
+                  O sistema ideal para gerenciamento das informações do seu
+                  laboratório
+                </Paragraph1>
+                <Button1>Saiba mais</Button1>
+              </ArticleContainer>
+            </Article>
+          </SectionContainer>
         </Section>
-        <Section myHeight={548}>
-          <Article myBgColor="orange-primary">
+        <Section>
+          <Article className="bg-orange-primary">
             <ArticleContainer>
               <Title2>Conceito LIMS</Title2>
               <Paragraph2>
@@ -65,7 +68,7 @@ function App() {
               <Button2>Saiba mais</Button2>
             </ArticleContainer>
           </Article>
-          <Article myBgColor="orange-secondary">
+          <Article className="bg-orange-secondary">
             <ArticleContainer>
               <Title2>Empresa ALLÌMS</Title2>
               <Paragraph2>
@@ -78,8 +81,8 @@ function App() {
             </ArticleContainer>
           </Article>
         </Section>
-        <Section myHeight={548} className="bg-gray-primary">
-          {/* oi */}
+        <Section className="bg-gray-primary" style={{ height: '548px' }}>
+          <SectionContainer style={{ padding: '120px 0' }}></SectionContainer>
         </Section>
       </Main>
       <Footer className="pb-14">

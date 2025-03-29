@@ -5,7 +5,7 @@ interface Button1Props extends ComponentProps<'a'> {}
 
 export const Button1 = ({ children }: Button1Props) => {
   return (
-    <a className="bg-orange-primary text-white font-normal text-lg max-w-max px-4 py-1.5 rounded-[3px]">
+    <a className="bg-orange-primary text-white font-semibold text-lg max-w-max rounded-[3px] px-[1em] py-[0.4em] button-hover">
       {children}
     </a>
   )
@@ -16,7 +16,7 @@ interface Button2Props extends ComponentProps<'a'> {}
 
 export const Button2 = ({ children }: Button2Props) => {
   return (
-    <a className="border-2 text-white font-normal text-lg max-w-max px-4 py-1.5 rounded-[3px]">
+    <a className="border-2 text-white font-semibold text-lg max-w-max rounded-[3px] px-[1em] py-[0.4em] button-hover">
       {children}
     </a>
   )
