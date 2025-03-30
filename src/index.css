@@ -103,5 +103,7 @@ a.button-hover:hover::before {
 @theme {
   --color-orange-primary: #f7941c;
   --color-orange-secondary: #f9b343;
+  --color-orange-tertiary: #feedd9;
   --color-gray-primary: #3f4244;
+  --color-gray-secondary: #f0f0f0;
 }

@@ -6,18 +6,22 @@ interface SectionProps extends ComponentProps<'section'> {
 
 export const Section = ({
   children,
-  className,
+  className = '',
   bgImage,
   ...rest
 }: SectionProps) => {
   return (
     <section
       {...rest}
-      className={`flex justify-center w-full ${className}`}
-      style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundSize: 'cover'
-      }}
+      className={`flex justify-center w-full p-7 ${className}`}
+      style={
+        bgImage
+          ? {
+              backgroundImage: `url(${bgImage})`,
+              backgroundSize: 'cover'
+            }
+          : {}
+      }
     >
       {children}
     </section>

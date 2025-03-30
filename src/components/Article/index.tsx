@@ -5,8 +5,8 @@ interface ArticleProps extends ComponentProps<'article'> {}
 
 export const Article = ({
   children,
-  className,
-  style,
+  className = '',
+  style = {},
   ...rest
 }: ArticleProps) => {
   return (
@@ -25,10 +25,14 @@ interface ArticleContainerProps extends ComponentProps<'div'> {}
 
 export const ArticleContainer = ({
   children,
+  className = '',
   ...rest
 }: ArticleContainerProps) => {
   return (
-    <div {...rest} className={`flex flex-col justify-between gap-6`}>
+    <div
+      {...rest}
+      className={`flex flex-col justify-between gap-6 ${className}`}
+    >
       {children}
     </div>
   )
