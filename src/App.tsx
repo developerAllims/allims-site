@@ -86,7 +86,7 @@ function App() {
           </SectionContainer>
         </Section>
         <Section>
-          <Article className="bg-orange-primary">
+          <Article className="bg-orange-primary" style={{ height: '552px' }}>
             <ArticleContainer>
               <Title2>Conceito LIMS</Title2>
               <Paragraph2>
@@ -104,7 +104,7 @@ function App() {
               <Button2>Saiba mais</Button2>
             </ArticleContainer>
           </Article>
-          <Article className="bg-orange-secondary">
+          <Article className="bg-orange-secondary" style={{ height: '552px' }}>
             <ArticleContainer>
               <Title2>Empresa ALLÌMS</Title2>
               <Paragraph2>
