@@ -72,6 +72,10 @@ h6 {
   text-wrap: balance;
 }
 
+button {
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;

@@ -5,8 +5,8 @@ interface MenuProps extends ComponentProps<'nav'> {}
 
 export const Menu = ({ children, ...rest }: MenuProps) => {
   return (
-    <nav {...rest} className="flex">
-      <ul className="flex flex-row gap-6">{children}</ul>
+    <nav {...rest} className="flex h-full">
+      <ul className="flex flex-row gap-6 h-full">{children}</ul>
     </nav>
   )
 }
@@ -17,9 +17,9 @@ interface MenuItemProps extends ComponentProps<'li'> {
 
 export const MenuItem = ({ children, selected }: MenuItemProps) => {
   return (
-    <li>
+    <li className="flex h-full">
       <a className={`${selected && 'text-orange-primary'}`} style={{}}>
-        {children}
+        <div className="flex items-center h-full">{children}</div>
       </a>
     </li>
   )
