@@ -3,7 +3,7 @@ import {
   Article,
   ArticleContainer,
   SectionContainer,
-  Gallery,
+  Gallery4,
   Title3,
   Logo
 } from '../../components'
@@ -15,12 +15,12 @@ export const LayoutClients = () => {
         <Article className="w-full text-center">
           <ArticleContainer className="gap-20">
             <Title3 reverse>Clientes</Title3>
-            <Gallery>
+            <Gallery4>
               <Logo client="dsm" />
               <Logo client="cooxupe" />
               <Logo client="cls" />
               <Logo client="cetal" />
-            </Gallery>
+            </Gallery4>
           </ArticleContainer>
         </Article>
       </SectionContainer>

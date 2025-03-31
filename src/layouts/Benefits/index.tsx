@@ -12,7 +12,7 @@ import {
   Article,
   ArticleContainer,
   SectionContainer,
-  Gallery,
+  Gallery4,
   Title3,
   GalleryIconText
 } from '../../components'
@@ -24,7 +24,7 @@ export const LayoutBenefits = () => {
         <Article className="w-full text-center" style={{ padding: '7% 0' }}>
           <ArticleContainer className="gap-10">
             <Title3 reverse>Benefícios do Sistema ALLÍMS</Title3>
-            <Gallery>
+            <Gallery4>
               <GalleryIconText icon={iconAgility}>
                 Segurança e agilidade na consulta dos resultados
               </GalleryIconText>
@@ -49,7 +49,7 @@ export const LayoutBenefits = () => {
               <GalleryIconText icon={iconConnection}>
                 100% dos usuários conectados 100% do tempo
               </GalleryIconText>
-            </Gallery>
+            </Gallery4>
           </ArticleContainer>
         </Article>
       </SectionContainer>

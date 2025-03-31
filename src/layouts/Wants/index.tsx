@@ -3,7 +3,7 @@ import {
   Article,
   ArticleContainer,
   SectionContainer,
-  Gallery,
+  Gallery4,
   GalleryCheckText,
   Paragraph3,
   Title3
@@ -16,7 +16,7 @@ export const LayoutWants = () => {
         <Article className="w-full text-center" style={{ padding: '7% 0' }}>
           <ArticleContainer className="gap-10">
             <Title3>O Que Você Procura?</Title3>
-            <Gallery>
+            <Gallery4>
               <GalleryCheckText>
                 Implantar um sistema LIMS para substituir registros em papel,
                 planilhas, documentos eletrônicos ou outras soluções?
@@ -33,7 +33,7 @@ export const LayoutWants = () => {
                 Substituir seu sistema LIMS, referência no mercado, mas os
                 custos de manutenção são exagerados?
               </GalleryCheckText>
-            </Gallery>
+            </Gallery4>
             <Paragraph3>
               A ALLÌMS pode ajudar muito na busca da solução ideal:{' '}
               <strong>Custos Reduzidos X Benefícios Elevados.</strong>

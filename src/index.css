@@ -89,7 +89,7 @@ a.button-hover:hover {
   transition: all 0.2s;
 }
 a.button-hover:hover::before {
-  content: '>';
+  content: '❯';
   position: absolute;
   right: 1em; /* equal to padding-left */
 }

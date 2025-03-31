@@ -1,17 +1,35 @@
 import { ComponentProps } from 'react'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
-interface GalleryProps extends ComponentProps<'div'> {}
+interface Gallery4Props extends ComponentProps<'div'> {}
 
-export const Gallery = ({
+export const Gallery4 = ({
   children,
   className = '',
   ...rest
-}: GalleryProps) => {
+}: Gallery4Props) => {
   return (
     <div
       {...rest}
       className={`grid gap-20 grid-cols-4 place-items-center ${className}`}
+    >
+      {children}
+    </div>
+  )
+}
+
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+interface Gallery3Props extends ComponentProps<'div'> {}
+
+export const Gallery3 = ({
+  children,
+  className = '',
+  ...rest
+}: Gallery3Props) => {
+  return (
+    <div
+      {...rest}
+      className={`grid gap-20 grid-cols-3 place-items-center ${className}`}
     >
       {children}
     </div>
@@ -30,6 +48,40 @@ export const GalleryCheckText = ({
     <div {...rest} className={`flex gap-3 w-[225px] ${className}`}>
       <span className="text-4xl text-orange-primary">☑</span>
       <span className="text-base text-left font-semibold text-gray-primary">
+        {children}
+      </span>
+    </div>
+  )
+}
+
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+interface GalleryLampTextProps extends ComponentProps<'div'> {}
+
+export const GalleryLampText = ({
+  children,
+  className = '',
+  ...rest
+}: GalleryLampTextProps) => {
+  const size = 1
+  return (
+    <div
+      {...rest}
+      className={`flex gap-3 w-[23${size}px] h-[120px] ${className}`}
+    >
+      <span
+        className="text-4xl"
+        style={{
+          textShadow: [
+            `${size}px ${size}px ${size}px #fff`,
+            `${size}px -${size}px ${size}px #fff`,
+            `-${size}px ${size}px ${size}px #fff`,
+            `-${size}px -${size}px ${size}px #fff`
+          ].join(', ')
+        }}
+      >
+        💡
+      </span>
+      <span className="text-base text-left font-semibold text-white">
         {children}
       </span>
     </div>

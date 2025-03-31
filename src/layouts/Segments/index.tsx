@@ -13,7 +13,7 @@ import {
   Article,
   ArticleContainer,
   SectionContainer,
-  Gallery,
+  Gallery4,
   Title3,
   GalleryPhotoText
 } from '../../components'
@@ -25,7 +25,7 @@ export const LayoutSegments = () => {
         <Article className="w-full text-center" style={{ padding: '7% 0' }}>
           <ArticleContainer className="gap-10">
             <Title3 reverse>Áreas de Atuação</Title3>
-            <Gallery>
+            <Gallery4>
               <GalleryPhotoText icon={areaDrinks}>
                 Alimentos e Bebidas
               </GalleryPhotoText>
@@ -48,7 +48,7 @@ export const LayoutSegments = () => {
               <GalleryPhotoText icon={areaChemical}>
                 Química e Petroquímica
               </GalleryPhotoText>
-            </Gallery>
+            </Gallery4>
           </ArticleContainer>
         </Article>
       </SectionContainer>
