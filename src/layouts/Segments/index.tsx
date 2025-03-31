@@ -18,7 +18,7 @@ import {
   GalleryPhotoText
 } from '../../components'
 
-export const AreasLayout = () => {
+export const LayoutSegments = () => {
   return (
     <Section className="bg-orange-tertiary">
       <SectionContainer>

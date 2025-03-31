@@ -9,7 +9,7 @@ import {
   SectionContainer
 } from '../../components'
 
-export const TalksLayout = () => {
+export const LayoutTalks = () => {
   return (
     <Section bgImage={backgroundTalk}>
       <SectionContainer>

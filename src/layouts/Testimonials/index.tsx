@@ -7,7 +7,7 @@ import {
   Paragraph2
 } from '../../components'
 
-export const TestimonialsLayout = () => {
+export const LayoutTestimonials = () => {
   return (
     <Section className="bg-gray-primary p-10">
       <SectionContainer>

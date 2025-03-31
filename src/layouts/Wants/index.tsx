@@ -9,7 +9,7 @@ import {
   Title3
 } from '../../components'
 
-export const WantsLayout = () => {
+export const LayoutWants = () => {
   return (
     <Section className="bg-gray-secondary">
       <SectionContainer>

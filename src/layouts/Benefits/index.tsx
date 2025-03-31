@@ -17,7 +17,7 @@ import {
   GalleryIconText
 } from '../../components'
 
-export const BenefitsLayout = () => {
+export const LayoutBenefits = () => {
   return (
     <Section className="bg-white">
       <SectionContainer>

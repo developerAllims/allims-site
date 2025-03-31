@@ -13,7 +13,7 @@ import {
   Title4
 } from '../../components'
 
-export const MessagesLayout = () => {
+export const LayoutMessages = () => {
   return (
     <Section className="bg-gray-primary">
       <SectionContainer className="flex-col">

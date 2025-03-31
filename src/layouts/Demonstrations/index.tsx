@@ -9,7 +9,7 @@ import {
   Title2
 } from '../../components'
 
-export const DemonstrationsLayout = () => {
+export const LayoutDemonstrations = () => {
   return (
     <Section bgImage={backgroundDemonstration}>
       <SectionContainer>

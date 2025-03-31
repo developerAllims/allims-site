@@ -7,7 +7,7 @@ import {
   Title2
 } from '../../components'
 
-export const ConceptsLayout = () => {
+export const LayoutConcepts = () => {
   return (
     <Section>
       <Article className="bg-orange-primary" style={{ height: '552px' }}>

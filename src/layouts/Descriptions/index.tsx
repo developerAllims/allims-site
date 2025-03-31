@@ -10,7 +10,7 @@ import {
   SectionContainer
 } from '../../components'
 
-export const SystemLayout = () => {
+export const LayoutDescriptions = () => {
   return (
     <Section className="bg-gray-primary" style={{ height: '548px' }}>
       <SectionContainer>

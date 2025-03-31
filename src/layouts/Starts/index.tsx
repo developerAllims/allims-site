@@ -9,7 +9,7 @@ import {
   Button1
 } from '../../components'
 
-export const CompanyLayout = () => {
+export const LayoutStarts = () => {
   return (
     <Section bgImage={backgroundCompany}>
       <SectionContainer style={{ padding: '120px 0' }}>

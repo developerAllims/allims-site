@@ -1,38 +1,38 @@
 import { Main } from '../../components'
 import {
-  AreasLayout,
-  BenefitsLayout,
-  ClientsLayout,
-  CompanyLayout,
-  ConceptsLayout,
-  DemonstrationsLayout,
-  FooterLayout,
-  HeaderLayout,
-  MessagesLayout,
-  SystemLayout,
-  TalksLayout,
-  TestimonialsLayout,
-  WantsLayout
+  LayoutSegments,
+  LayoutBenefits,
+  LayoutClients,
+  LayoutStarts,
+  LayoutConcepts,
+  LayoutDemonstrations,
+  LayoutFooters,
+  LayoutHeaders,
+  LayoutMessages,
+  LayoutDescriptions,
+  LayoutTalks,
+  LayoutTestimonials,
+  LayoutWants
 } from '../../layouts'
 
 export const PageHome = () => {
   return (
     <>
-      <HeaderLayout />
+      <LayoutHeaders />
       <Main>
-        <CompanyLayout />
-        <ConceptsLayout />
-        <SystemLayout />
-        <TalksLayout />
-        <WantsLayout />
-        <BenefitsLayout />
-        <AreasLayout />
-        <DemonstrationsLayout />
-        <TestimonialsLayout />
-        <ClientsLayout />
-        <MessagesLayout />
+        <LayoutStarts />
+        <LayoutConcepts />
+        <LayoutDescriptions />
+        <LayoutTalks />
+        <LayoutWants />
+        <LayoutBenefits />
+        <LayoutSegments />
+        <LayoutDemonstrations />
+        <LayoutTestimonials />
+        <LayoutClients />
+        <LayoutMessages />
       </Main>
-      <FooterLayout />
+      <LayoutFooters />
     </>
   )
 }

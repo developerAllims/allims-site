@@ -8,7 +8,7 @@ import {
   Logo
 } from '../../components'
 
-export const ClientsLayout = () => {
+export const LayoutClients = () => {
   return (
     <Section className="bg-white p-10">
       <SectionContainer>

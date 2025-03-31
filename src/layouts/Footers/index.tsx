@@ -1,6 +1,6 @@
 import { Footer } from '../../components'
 
-export const FooterLayout = () => {
+export const LayoutFooters = () => {
   return (
     <Footer className="pb-14">
       <span className="font-semibold">

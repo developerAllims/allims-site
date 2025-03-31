@@ -11,14 +11,18 @@ export const Menu = ({ children, ...rest }: MenuProps) => {
   )
 }
 
-interface MenuItemProps extends ComponentProps<'li'> {
+interface MenuItemProps extends ComponentProps<'a'> {
   selected?: boolean
 }
 
-export const MenuItem = ({ children, selected }: MenuItemProps) => {
+export const MenuItem = ({ children, selected, ...rest }: MenuItemProps) => {
   return (
     <li className="flex h-full">
-      <a className={`${selected && 'text-orange-primary'}`} style={{}}>
+      <a
+        {...rest}
+        className={`${selected && 'text-orange-primary'}`}
+        style={{}}
+      >
         <div className="flex items-center h-full">{children}</div>
       </a>
     </li>

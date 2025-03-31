@@ -1,12 +1,15 @@
 import { Route, Routes } from 'react-router-dom'
-import { PageError, PageHome, PageTest } from './pages'
+import { appRoutes } from './routes'
+import { PageError } from './pages'
 
 function App() {
   return (
     <Routes>
-      <Route path="/" errorElement={<PageError />} Component={PageHome} />
-      <Route path="/test" errorElement={<PageError />} Component={PageTest} />
-      <Route path="*" Component={PageError} />
+      {appRoutes.map(({ path, page }) => {
+        return (
+          <Route path={path} errorElement={<PageError />} Component={page} />
+        )
+      })}
     </Routes>
   )
 }
