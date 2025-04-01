@@ -1,40 +1,37 @@
-import { illustrationCompany } from '../../assets'
 import {
   Section,
   Article,
   ArticleContainer,
-  Button2,
+  Button,
   Image,
-  Paragraph3,
-  Title6,
+  Paragraph,
+  Title,
   SectionContainer
 } from '../../components'
+import { dataPlaces } from '../../data'
 
 export const LayoutPlaces = () => {
+  const { icon, title, items, button } = dataPlaces
   return (
     <Section className="bg-white" style={{ height: '548px' }}>
       <SectionContainer>
         <Article style={{ padding: '10% 0' }}>
           <ArticleContainer style={{ padding: '27px 27px 0 0' }}>
-            <Image src={illustrationCompany} />
+            <Image src={icon} />
           </ArticleContainer>
         </Article>
         <Article style={{ padding: '10% 0' }}>
           <ArticleContainer style={{ padding: '27px 0 0 27px' }}>
-            <Title6 className="text-gray-primary">ALLÌMS</Title6>
-            <Paragraph3>
-              Atuamos no mercado de desenvolvimento de sistema para o segmento
-              laboratorial e também para o segmento agronômico.
-            </Paragraph3>
-            <Paragraph3>
-              Atendemos vários clientes no segmento de laboratórios, nas áreas:
-              ambiental, alimentos, solo, química, nutrição humana, nutrição
-              animal, farmacêutica, pesquisa e desenvolvimento, entre outros.
-            </Paragraph3>
-            <Paragraph3>
-              Estamos situados em Campinas – SP com sede própria.
-            </Paragraph3>
-            <Button2>Saiba mais</Button2>
+            <Title className="text-4xl text-gray-primary">{title}</Title>
+            {items.map((val, idx) => (
+              <Paragraph
+                key={`place-${idx}`}
+                className="text-base text-gray-primary"
+              >
+                {val}
+              </Paragraph>
+            ))}
+            <Button className="text-lg text-white border-2">{button}</Button>
           </ArticleContainer>
         </Article>
       </SectionContainer>

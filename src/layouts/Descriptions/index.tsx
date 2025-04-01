@@ -1,16 +1,17 @@
-import { illustrationSystem } from '../../assets'
 import {
   Section,
   Article,
   ArticleContainer,
-  Button2,
+  Button,
   Image,
-  Paragraph2,
-  Title2,
+  Paragraph,
+  Title,
   SectionContainer
 } from '../../components'
+import { dataDescriptions } from '../../data'
 
 export const LayoutDescriptions = () => {
+  const { icon, title, description, button } = dataDescriptions
   return (
     <Section className="bg-gray-primary" style={{ height: '598px' }}>
       <SectionContainer>
@@ -19,7 +20,7 @@ export const LayoutDescriptions = () => {
             className="justify-start h-full"
             style={{ padding: '27px 27px 0 0' }}
           >
-            <Image src={illustrationSystem} />
+            <Image src={icon} />
           </ArticleContainer>
         </Article>
         <Article style={{ padding: '10% 0' }}>
@@ -27,18 +28,11 @@ export const LayoutDescriptions = () => {
             className="gap-8 justify-center h-full"
             style={{ padding: '27px 0 0 27px' }}
           >
-            <Title2>Sistema ALLÌMS</Title2>
-            <Paragraph2>
-              O sistema ALLÌMS vai muito além dos padrões. Conta com recursos
-              exclusivos e de forma modular, atende a diversos tipos e tamanhos
-              de laboratórios: Prestadores de Serviços, Controle de Qualidade e
-              Pesquisa e Desenvolvimento. Saiba como conseguimos automatizar
-              centenas de rotinas em um único sistema. Com o melhor custo
-              benefício do mercado, o sistema ALLIMS tem a forma justa e
-              realista dos custos de licenciamento de uso. Reduza os custos
-              exagerados e conquiste mais recursos.
-            </Paragraph2>
-            <Button2>Saiba mais</Button2>
+            <Title className="text-4xl text-white">{title}</Title>
+            <Paragraph className="text-base text-white">
+              {description}
+            </Paragraph>
+            <Button className="text-lg text-white border-2">{button}</Button>
           </ArticleContainer>
         </Article>
       </SectionContainer>

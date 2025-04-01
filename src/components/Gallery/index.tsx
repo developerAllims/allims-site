@@ -1,54 +1,15 @@
 import { ComponentProps, useState } from 'react'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
-interface Gallery4Props extends ComponentProps<'div'> {}
+interface GalleryProps extends ComponentProps<'div'> {}
 
-export const Gallery4 = ({
+export const Gallery = ({
   children,
   className = '',
   ...rest
-}: Gallery4Props) => {
+}: GalleryProps) => {
   return (
-    <div
-      {...rest}
-      className={`grid gap-20 grid-cols-4 place-items-center ${className}`}
-    >
-      {children}
-    </div>
-  )
-}
-
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-interface Gallery3Props extends ComponentProps<'div'> {}
-
-export const Gallery3 = ({
-  children,
-  className = '',
-  ...rest
-}: Gallery3Props) => {
-  return (
-    <div
-      {...rest}
-      className={`grid gap-20 grid-cols-3 place-items-center ${className}`}
-    >
-      {children}
-    </div>
-  )
-}
-
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-interface Gallery2Props extends ComponentProps<'div'> {}
-
-export const Gallery2 = ({
-  children,
-  className = '',
-  ...rest
-}: Gallery2Props) => {
-  return (
-    <div
-      {...rest}
-      className={`grid gap-20 grid-cols-2 place-items-center ${className}`}
-    >
+    <div {...rest} className={`grid place-items-center ${className}`}>
       {children}
     </div>
   )

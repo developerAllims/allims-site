@@ -1,4 +1,3 @@
-import { logoSecondary } from '../../assets'
 import {
   Section,
   Article,
@@ -6,14 +5,25 @@ import {
   SectionContainer,
   Image,
   Form,
-  Button3,
+  Button,
   FormContainer,
   Input,
   TextArea,
-  Title4
+  Title
 } from '../../components'
+import { dataMessages } from '../../data'
 
 export const LayoutMessages = () => {
+  const {
+    icon,
+    title,
+    button,
+    fieldName,
+    fieldEmail,
+    fieldPhone,
+    fieldCompany,
+    fieldMessage
+  } = dataMessages
   return (
     <Section
       className="bg-gray-primary"
@@ -22,23 +32,27 @@ export const LayoutMessages = () => {
       <SectionContainer>
         <Article className="w-1/3" style={{ padding: '5%' }}>
           <ArticleContainer>
-            <Image src={logoSecondary} />
+            {/* TODO: refactor */}
+            <Image src={icon} />
           </ArticleContainer>
         </Article>
         <Article className="w-2/3 text-center" style={{ padding: '5% 0' }}>
           <ArticleContainer>
             <Form className="w-[650px] gap-5">
-              <Title4 className="text-left">
-                Fale conosco através do formulário abaixo:
-              </Title4>
-              <Input placeholder="Nome" />
+              <Title className="text-2xl text-white text-left">{title}</Title>
+              <Input placeholder={fieldName} />
               <FormContainer>
-                <Input placeholder="E-mail" />
-                <Input placeholder="Telefone" />
+                <Input placeholder={fieldEmail} />
+                <Input placeholder={fieldPhone} />
               </FormContainer>
-              <Input placeholder="Empresa" />
-              <TextArea placeholder="Mensagem" />
-              <Button3>Enviar</Button3>
+              <Input placeholder={fieldCompany} />
+              <TextArea placeholder={fieldMessage} />
+              <Button
+                className="text-lg bg-orange-primary text-white"
+                classContainer="justify-end"
+              >
+                {button}
+              </Button>
             </Form>
           </ArticleContainer>
         </Article>

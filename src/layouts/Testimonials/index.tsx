@@ -3,28 +3,35 @@ import {
   Article,
   ArticleContainer,
   SectionContainer,
-  Title3,
-  Paragraph2,
-  Paragraph4
+  Paragraph,
+  Title,
+  TitleContainer,
+  TitleDivider
 } from '../../components'
 import { dataTestimonials } from '../../data'
 
 export const LayoutTestimonials = () => {
   const { title, items } = dataTestimonials
+  // TODO: refactor
   const testimonial = items[0] || {}
   return (
     <Section className="bg-gray-primary p-10" style={{ height: '711px' }}>
       <SectionContainer>
         <Article className="w-full text-center justify-center h-full gap-30">
-          <Title3 className=" text-white">{title}</Title3>
+          <TitleContainer>
+            <Title className="text-4xl text-white">{title}</Title>
+            <TitleDivider className="text-orange-primary" />
+          </TitleContainer>
           <ArticleContainer className="gap-1">
-            <Paragraph2 className="text-lg">{testimonial?.text}</Paragraph2>
-            <Paragraph2 className="text-[23px]">
+            <Paragraph className="text-lg text-white">
+              {testimonial?.text}
+            </Paragraph>
+            <Paragraph className="text-[23px] text-white">
               <strong>{testimonial?.name}</strong>
-            </Paragraph2>
-            <Paragraph4 className="text-lg text-orange-primary">
+            </Paragraph>
+            <Paragraph className="text-lg text-orange-primary">
               {testimonial?.role}
-            </Paragraph4>
+            </Paragraph>
           </ArticleContainer>
         </Article>
       </SectionContainer>

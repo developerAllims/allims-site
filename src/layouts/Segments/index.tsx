@@ -1,54 +1,34 @@
 import {
-  segmentChemical,
-  segmentCosmetics,
-  segmentDrinks,
-  segmentEnvironment,
-  segmentFarm,
-  segmentMining,
-  segmentNutrition,
-  segmentSanitation
-} from '../../assets'
-import {
   Section,
   Article,
   ArticleContainer,
   SectionContainer,
-  Gallery4,
-  Title3,
-  GalleryPhotoText
+  Gallery,
+  GalleryPhotoText,
+  Title,
+  TitleContainer,
+  TitleDivider
 } from '../../components'
+import { dataSegments } from '../../data'
 
 export const LayoutSegments = () => {
+  const { title, items } = dataSegments
   return (
     <Section className="bg-orange-tertiary" style={{ height: '802px' }}>
       <SectionContainer>
         <Article className="w-full text-center" style={{ padding: '7% 0' }}>
           <ArticleContainer className="gap-14 justify-center h-full">
-            <Title3 reverse>Áreas de Atuação</Title3>
-            <Gallery4>
-              <GalleryPhotoText icon={segmentDrinks}>
-                Alimentos e Bebidas
-              </GalleryPhotoText>
-              <GalleryPhotoText icon={segmentSanitation}>
-                Saneamento
-              </GalleryPhotoText>
-              <GalleryPhotoText icon={segmentCosmetics}>
-                Cosméticos
-              </GalleryPhotoText>
-              <GalleryPhotoText icon={segmentFarm}>Agrícola</GalleryPhotoText>
-              <GalleryPhotoText icon={segmentEnvironment}>
-                Meio Ambiente
-              </GalleryPhotoText>
-              <GalleryPhotoText icon={segmentMining}>
-                Mineração e Metalúrgica
-              </GalleryPhotoText>
-              <GalleryPhotoText icon={segmentNutrition}>
-                Nutrição Animal
-              </GalleryPhotoText>
-              <GalleryPhotoText icon={segmentChemical}>
-                Química e Petroquímica
-              </GalleryPhotoText>
-            </Gallery4>
+            <TitleContainer>
+              <Title className="text-4xl text-orange-primary">{title}</Title>
+              <TitleDivider className="text-gray-primary" />
+            </TitleContainer>
+            <Gallery className="grid-cols-4 gap-20">
+              {items.map(({ icon, name }, idx) => (
+                <GalleryPhotoText key={`segment-${idx}`} icon={icon}>
+                  {name}
+                </GalleryPhotoText>
+              ))}
+            </Gallery>
           </ArticleContainer>
         </Article>
       </SectionContainer>

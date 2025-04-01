@@ -1,10 +1,11 @@
 import { useLocation } from 'react-router-dom'
-import { logoPrimary } from '../../assets'
 import { Header, Image, Menu, MenuItem, Link } from '../../components'
 import { appRoutes } from '../../routes'
 import { useScrollPosition } from '../../hooks'
+import { dataHeaders } from '../../data'
 
 export const LayoutHeaders = () => {
+  const { icon } = dataHeaders
   const location = useLocation()
   const scrollPosition = useScrollPosition()
   return (
@@ -18,7 +19,7 @@ export const LayoutHeaders = () => {
     >
       <Link href="/">
         <Image
-          src={logoPrimary}
+          src={icon}
           className={`w-32 ${scrollPosition > 200 ? 'h-10' : 'h-14'}`}
         />
       </Link>

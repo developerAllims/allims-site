@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom'
-import { Article, Section, SectionContainer, Title2 } from '../../components'
+import { Article, Section, SectionContainer, Title } from '../../components'
 import { appRoutes } from '../../routes'
 
 export const LayoutTitles = () => {
@@ -12,9 +12,9 @@ export const LayoutTitles = () => {
     >
       <SectionContainer>
         <Article style={{ padding: '4.2em 0' }}>
-          <Title2 className="text-[45px]">
+          <Title className="text-[45px] text-white">
             {config?.title || config?.name}
-          </Title2>
+          </Title>
         </Article>
       </SectionContainer>
     </Section>
