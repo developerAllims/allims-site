@@ -1,12 +1,12 @@
 import {
-  areaChemical,
-  areaCosmetics,
-  areaDrinks,
-  areaEnvironment,
-  areaFarm,
-  areaMining,
-  areaNutrition,
-  areaSanitation
+  segmentChemical,
+  segmentCosmetics,
+  segmentDrinks,
+  segmentEnvironment,
+  segmentFarm,
+  segmentMining,
+  segmentNutrition,
+  segmentSanitation
 } from '../../assets'
 import {
   Section,
@@ -26,26 +26,26 @@ export const LayoutSegments = () => {
           <ArticleContainer className="gap-14 justify-center h-full">
             <Title3 reverse>Áreas de Atuação</Title3>
             <Gallery4>
-              <GalleryPhotoText icon={areaDrinks}>
+              <GalleryPhotoText icon={segmentDrinks}>
                 Alimentos e Bebidas
               </GalleryPhotoText>
-              <GalleryPhotoText icon={areaSanitation}>
+              <GalleryPhotoText icon={segmentSanitation}>
                 Saneamento
               </GalleryPhotoText>
-              <GalleryPhotoText icon={areaCosmetics}>
+              <GalleryPhotoText icon={segmentCosmetics}>
                 Cosméticos
               </GalleryPhotoText>
-              <GalleryPhotoText icon={areaFarm}>Agrícola</GalleryPhotoText>
-              <GalleryPhotoText icon={areaEnvironment}>
+              <GalleryPhotoText icon={segmentFarm}>Agrícola</GalleryPhotoText>
+              <GalleryPhotoText icon={segmentEnvironment}>
                 Meio Ambiente
               </GalleryPhotoText>
-              <GalleryPhotoText icon={areaMining}>
+              <GalleryPhotoText icon={segmentMining}>
                 Mineração e Metalúrgica
               </GalleryPhotoText>
-              <GalleryPhotoText icon={areaNutrition}>
+              <GalleryPhotoText icon={segmentNutrition}>
                 Nutrição Animal
               </GalleryPhotoText>
-              <GalleryPhotoText icon={areaChemical}>
+              <GalleryPhotoText icon={segmentChemical}>
                 Química e Petroquímica
               </GalleryPhotoText>
             </Gallery4>

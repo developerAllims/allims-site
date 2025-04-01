@@ -1,40 +1,40 @@
-import areaChemical from './area_chemical.png'
-import areaCosmetics from './area_cosmetics.png'
-import areaDrinks from './area_drinks.png'
-import areaEnvironment from './area_environment.png'
-import areaFarm from './area_farm.png'
-import areaMining from './area_mining.png'
-import areaNutrition from './area_nutrition.png'
-import areaSanitation from './area_sanitation.png'
-import backgroundCompany from './background_company.png'
-import backgroundStart from './background_start.png'
-import backgroundDemonstration from './background_demonstration.png'
-import backgroundModules from './background_modules.png'
-import backgroundSystem from './background_system.png'
-import backgroundTalk from './background_talk.png'
-import iconAgility from './icon_agility.png'
-import iconCalculation from './icon_calculation.png'
-import iconConnection from './icon_connection.png'
-import iconEquipment from './icon_equipment.png'
-import iconExport from './icon_export.png'
-import iconIso from './icon_iso.png'
-import iconFollowUp from './icon_follow_up.png'
-import iconTraceability from './icon_traceability.png'
-import illustrationCompany from './illustration_company.png'
-import illustrationSystem from './illustration_system.png'
-import logoCompanyPrimary from './logo_company_primary.png'
-import logoCompanySecondary from './logo_company_secondary.png'
-import logoCompanyTertiary from './logo_company_tertiary.png'
+import segmentChemical from './segments/chemical.png'
+import segmentCosmetics from './segments/cosmetics.png'
+import segmentDrinks from './segments/drinks.png'
+import segmentEnvironment from './segments/environment.png'
+import segmentFarm from './segments/farm.png'
+import segmentMining from './segments/mining.png'
+import segmentNutrition from './segments/nutrition.png'
+import segmentSanitation from './segments/sanitation.png'
+import backgroundCompany from './backgrounds/company.png'
+import backgroundStart from './backgrounds/start.png'
+import backgroundDemonstration from './backgrounds/demonstration.png'
+import backgroundModules from './backgrounds/modules.png'
+import backgroundSystem from './backgrounds/system.png'
+import backgroundTalk from './backgrounds/talk.png'
+import iconAgility from './icons/agility.png'
+import iconCalculation from './icons/calculation.png'
+import iconConnection from './icons/connection.png'
+import iconEquipment from './icons/equipment.png'
+import iconExport from './icons/export.png'
+import iconIso from './icons/iso.png'
+import iconFollowUp from './icons/follow_up.png'
+import iconTraceability from './icons/traceability.png'
+import illustrationCompany from './illustrations/company.png'
+import illustrationSystem from './illustrations/system.png'
+import logoPrimary from './logos/primary.png'
+import logoSecondary from './logos/secondary.png'
+import logoTertiary from './logos/tertiary.png'
 
 export {
-  areaChemical,
-  areaCosmetics,
-  areaDrinks,
-  areaEnvironment,
-  areaFarm,
-  areaMining,
-  areaNutrition,
-  areaSanitation,
+  segmentChemical,
+  segmentCosmetics,
+  segmentDrinks,
+  segmentEnvironment,
+  segmentFarm,
+  segmentMining,
+  segmentNutrition,
+  segmentSanitation,
   backgroundStart,
   backgroundCompany,
   backgroundDemonstration,
@@ -51,7 +51,7 @@ export {
   iconTraceability,
   illustrationCompany,
   illustrationSystem,
-  logoCompanyPrimary,
-  logoCompanySecondary,
-  logoCompanyTertiary
+  logoPrimary,
+  logoSecondary,
+  logoTertiary
 }

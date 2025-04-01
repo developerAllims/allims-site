@@ -1,4 +1,4 @@
-import { ComponentProps } from 'react'
+import { ComponentProps, useState } from 'react'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface Gallery4Props extends ComponentProps<'div'> {}
@@ -136,9 +136,24 @@ export const GalleryPhotoText = ({
   icon,
   ...rest
 }: GalleryPhotoTextProps) => {
+  const [hover, setHover] = useState(false)
   return (
     <div {...rest} className={`flex flex-col gap-7 w-[225px] ${className}`}>
-      <img src={icon} className="max-h-[161px] object-contain" />
+      <img
+        src={icon}
+        className="max-h-[161px] object-contain"
+        style={
+          hover
+            ? {}
+            : { filter: 'grayscale(100%)', transform: 'translate(0, 10px)' }
+        }
+        onMouseEnter={() => {
+          setHover(true)
+        }}
+        onMouseLeave={() => {
+          setHover(false)
+        }}
+      />
       <span className="text-base font-semibold text-gray-primary">
         {children}
       </span>

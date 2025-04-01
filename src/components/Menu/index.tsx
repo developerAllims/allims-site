@@ -1,4 +1,4 @@
-import { ComponentProps } from 'react'
+import { ComponentProps, useState } from 'react'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface MenuProps extends ComponentProps<'nav'> {}
@@ -16,12 +16,19 @@ interface MenuItemProps extends ComponentProps<'a'> {
 }
 
 export const MenuItem = ({ children, selected, ...rest }: MenuItemProps) => {
+  const [hover, setHover] = useState(false)
   return (
     <li className="flex h-full">
       <a
         {...rest}
         className={`${selected && 'text-orange-primary'}`}
-        style={{}}
+        style={hover ? { opacity: '0.7' } : {}}
+        onMouseEnter={() => {
+          setHover(true)
+        }}
+        onMouseLeave={() => {
+          setHover(false)
+        }}
       >
         <div className="flex items-center h-full">{children}</div>
       </a>

@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom'
-import { logoCompanyPrimary } from '../../assets'
+import { logoPrimary } from '../../assets'
 import { Header, Image, Menu, MenuItem, Link } from '../../components'
 import { appRoutes } from '../../routes'
 import { useScrollPosition } from '../../hooks'
@@ -18,7 +18,7 @@ export const LayoutHeaders = () => {
     >
       <Link href="/">
         <Image
-          src={logoCompanyPrimary}
+          src={logoPrimary}
           className={`w-32 ${scrollPosition > 200 ? 'h-10' : 'h-14'}`}
         />
       </Link>

@@ -1,4 +1,4 @@
-import { logoCompanyTertiary } from '../../assets'
+import { logoTertiary } from '../../assets'
 import { Footer, Image } from '../../components'
 
 export const LayoutFooters = () => {
@@ -11,7 +11,7 @@ export const LayoutFooters = () => {
       </div>
       <div className="flex flex-col gap-1 items-start h-full">
         <span className="font-semibold">Desenvolvido por</span>
-        <Image src={logoCompanyTertiary} className="w-32 h-10" />
+        <Image src={logoTertiary} className="w-32 h-10" />
       </div>
     </Footer>
   )

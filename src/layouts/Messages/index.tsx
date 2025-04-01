@@ -1,4 +1,4 @@
-import { logoCompanySecondary } from '../../assets'
+import { logoSecondary } from '../../assets'
 import {
   Section,
   Article,
@@ -22,7 +22,7 @@ export const LayoutMessages = () => {
       <SectionContainer>
         <Article className="w-1/3" style={{ padding: '5%' }}>
           <ArticleContainer>
-            <Image src={logoCompanySecondary} />
+            <Image src={logoSecondary} />
           </ArticleContainer>
         </Article>
         <Article className="w-2/3 text-center" style={{ padding: '5% 0' }}>

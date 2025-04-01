@@ -7,26 +7,23 @@ import {
   Paragraph2,
   Paragraph4
 } from '../../components'
+import { dataTestimonials } from '../../data'
 
 export const LayoutTestimonials = () => {
+  const { title, items } = dataTestimonials
+  const testimonial = items[0] || {}
   return (
     <Section className="bg-gray-primary p-10" style={{ height: '711px' }}>
       <SectionContainer>
         <Article className="w-full text-center justify-center h-full gap-30">
-          <Title3 className=" text-white">Depoimentos</Title3>
+          <Title3 className=" text-white">{title}</Title3>
           <ArticleContainer className="gap-1">
-            <Paragraph2 className="text-lg">
-              Apresentamos um projeto ousado à ALLÌMS para gerenciamento de
-              análises na área de nutrição animal e, com muito profissionalismo
-              e empenho, os objetivos foram alçados. A atenção, a vontade de
-              fazer acontecer e a estrutura de suporte da ALLÌMS, tem sido
-              fatores fundamentais para o sucesso de nossos projetos.
-            </Paragraph2>
+            <Paragraph2 className="text-lg">{testimonial?.text}</Paragraph2>
             <Paragraph2 className="text-[23px]">
-              <strong>Aldair de Souza Santos</strong>
+              <strong>{testimonial?.name}</strong>
             </Paragraph2>
             <Paragraph4 className="text-lg text-orange-primary">
-              Gerente de serviços na DSM
+              {testimonial?.role}
             </Paragraph4>
           </ArticleContainer>
         </Article>
