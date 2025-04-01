@@ -33,10 +33,11 @@ interface SectionContainerProps extends ComponentProps<'div'> {}
 
 export const SectionContainer = ({
   children,
+  className = '',
   ...rest
 }: SectionContainerProps) => {
   return (
-    <div {...rest} className={`flex w-full max-w-5xl h-full`}>
+    <div {...rest} className={`flex w-full max-w-5xl h-full ${className}`}>
       {children}
     </div>
   )

@@ -16,7 +16,7 @@ import {
 export const LayoutMessages = () => {
   return (
     <Section className="bg-gray-primary">
-      <SectionContainer className="flex-col">
+      <SectionContainer>
         <Article className="w-1/3">
           <ArticleContainer className="">
             <Image src={logoCompanySecondary} />

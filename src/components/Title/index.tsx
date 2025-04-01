@@ -61,8 +61,22 @@ interface Title2Props extends ComponentProps<'h2'> {}
 
 export const Title4 = ({ children, className = '', ...rest }: Title2Props) => {
   return (
-    <h1 {...rest} className={`text-2xl font-bold text-white ${className}`}>
+    <h2 {...rest} className={`text-2xl font-bold text-white ${className}`}>
       {children}
-    </h1>
+    </h2>
+  )
+}
+
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+interface Title5Props extends ComponentProps<'h2'> {}
+
+export const Title5 = ({ children, className = '', ...rest }: Title5Props) => {
+  return (
+    <h3
+      {...rest}
+      className={`text-3xl font-bold text-gray-primary ${className}`}
+    >
+      {children}
+    </h3>
   )
 }

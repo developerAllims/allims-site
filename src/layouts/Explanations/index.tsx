@@ -11,9 +11,9 @@ export const LayoutExplanations = () => {
   return (
     <Section className="bg-white p-10">
       <SectionContainer>
-        <Article className="w-full text-center">
+        <Article className="w-full text-center" style={{ padding: '7% 0' }}>
           <ArticleContainer>
-            <Title3>Conceito do Sistema LIMS</Title3>
+            <Title3 reverse>Conceito do Sistema LIMS</Title3>
             <Paragraph3 className="text-justify">
               Um sistema LIMS pode ser definido como um conjunto de ferramentas
               de software que operam de forma integrada e que são suportados por

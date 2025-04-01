@@ -1,4 +1,4 @@
-import { backgroundCompany } from '../../assets'
+import { backgroundStart } from '../../assets'
 import {
   Section,
   SectionContainer,
@@ -11,7 +11,7 @@ import {
 
 export const LayoutStarts = () => {
   return (
-    <Section bgImage={backgroundCompany}>
+    <Section bgImage={backgroundStart}>
       <SectionContainer style={{ padding: '120px 0' }}>
         <Article />
         <Article style={{ padding: '27px 60px' }}>

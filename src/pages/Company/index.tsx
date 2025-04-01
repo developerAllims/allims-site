@@ -1,11 +1,13 @@
 import { Main } from '../../components'
-import { LayoutFooters, LayoutHeaders } from '../../layouts'
+import { LayoutFooters, LayoutHeaders, LayoutTitles } from '../../layouts'
 
 export const PageCompany = () => {
   return (
     <>
       <LayoutHeaders />
-      <Main>Empresa</Main>
+      <Main>
+        <LayoutTitles />
+      </Main>
       <LayoutFooters />
     </>
   )

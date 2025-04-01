@@ -37,6 +37,24 @@ export const Gallery3 = ({
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
+interface Gallery2Props extends ComponentProps<'div'> {}
+
+export const Gallery2 = ({
+  children,
+  className = '',
+  ...rest
+}: Gallery2Props) => {
+  return (
+    <div
+      {...rest}
+      className={`grid gap-20 grid-cols-2 place-items-center ${className}`}
+    >
+      {children}
+    </div>
+  )
+}
+
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface GalleryCheckTextProps extends ComponentProps<'div'> {}
 
 export const GalleryCheckText = ({

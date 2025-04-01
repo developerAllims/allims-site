@@ -7,6 +7,7 @@ import areaMining from './area_mining.png'
 import areaNutrition from './area_nutrition.png'
 import areaSanitation from './area_sanitation.png'
 import backgroundCompany from './background_company.png'
+import backgroundStart from './background_start.png'
 import backgroundDemonstration from './background_demonstration.png'
 import backgroundModules from './background_modules.png'
 import backgroundSystem from './background_system.png'
@@ -33,6 +34,7 @@ export {
   areaMining,
   areaNutrition,
   areaSanitation,
+  backgroundStart,
   backgroundCompany,
   backgroundDemonstration,
   backgroundModules,
