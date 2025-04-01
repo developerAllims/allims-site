@@ -13,9 +13,12 @@ import {
 
 export const LayoutWins = () => {
   return (
-    <Section className="bg-orange-primary">
+    <Section className="bg-orange-primary" style={{ height: '1007px' }}>
       <SectionContainer>
-        <Article className="w-full text-center" style={{ padding: '7% 0' }}>
+        <Article
+          className="w-full text-center justify-center h-full"
+          style={{ padding: '7% 0' }}
+        >
           <ArticleContainer className="gap-10">
             <Title3 reverse className="text-white">
               Ganhos com o uso do ALLÌMS

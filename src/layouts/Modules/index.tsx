@@ -73,9 +73,9 @@ export const LayoutModules = () => {
   }
   const pairModules = setPairModules()
   return (
-    <Section className="bg-gray-secondary py-20">
+    <Section className="bg-gray-secondary py-20" style={{ padding: '1%' }}>
       <SectionContainer className="flex-col">
-        {pairModules.map(({ left, right }) => (
+        {pairModules.map(({ left, right }, idx) => (
           <>
             <div className="flex gap-6 h-full">
               <Article
@@ -105,7 +105,7 @@ export const LayoutModules = () => {
                 </ArticleContainer>
               </Article>
             </div>
-            <Divider />
+            {idx + 1 < pairModules.length && <Divider />}
           </>
         ))}
       </SectionContainer>

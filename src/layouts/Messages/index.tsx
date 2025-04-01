@@ -15,16 +15,19 @@ import {
 
 export const LayoutMessages = () => {
   return (
-    <Section className="bg-gray-primary">
+    <Section
+      className="bg-gray-primary"
+      style={{ height: '682px', padding: '2% 0' }}
+    >
       <SectionContainer>
-        <Article className="w-1/3">
-          <ArticleContainer className="">
+        <Article className="w-1/3" style={{ padding: '5%' }}>
+          <ArticleContainer>
             <Image src={logoCompanySecondary} />
           </ArticleContainer>
         </Article>
-        <Article className="w-2/3 text-center">
+        <Article className="w-2/3 text-center" style={{ padding: '5% 0' }}>
           <ArticleContainer>
-            <Form className="w-[650px]">
+            <Form className="w-[650px] gap-5">
               <Title4 className="text-left">
                 Fale conosco através do formulário abaixo:
               </Title4>

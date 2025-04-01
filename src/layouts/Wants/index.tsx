@@ -13,10 +13,13 @@ export const LayoutWants = () => {
   return (
     <Section className="bg-gray-secondary">
       <SectionContainer>
-        <Article className="w-full text-center" style={{ padding: '7% 0' }}>
-          <ArticleContainer className="gap-10">
+        <Article
+          className="w-full text-center"
+          style={{ padding: '7% 0', height: '538px' }}
+        >
+          <ArticleContainer className="gap-14 justify-center h-full">
             <Title3>O Que Você Procura?</Title3>
-            <Gallery4>
+            <Gallery4 className="items-start">
               <GalleryCheckText>
                 Implantar um sistema LIMS para substituir registros em papel,
                 planilhas, documentos eletrônicos ou outras soluções?

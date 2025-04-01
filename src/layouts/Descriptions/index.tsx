@@ -12,15 +12,21 @@ import {
 
 export const LayoutDescriptions = () => {
   return (
-    <Section className="bg-gray-primary" style={{ height: '548px' }}>
+    <Section className="bg-gray-primary" style={{ height: '598px' }}>
       <SectionContainer>
         <Article style={{ padding: '10% 0' }}>
-          <ArticleContainer style={{ padding: '27px 27px 0 0' }}>
+          <ArticleContainer
+            className="justify-start h-full"
+            style={{ padding: '27px 27px 0 0' }}
+          >
             <Image src={illustrationSystem} />
           </ArticleContainer>
         </Article>
         <Article style={{ padding: '10% 0' }}>
-          <ArticleContainer style={{ padding: '27px 0 0 27px' }}>
+          <ArticleContainer
+            className="gap-8 justify-center h-full"
+            style={{ padding: '27px 0 0 27px' }}
+          >
             <Title2>Sistema ALLÌMS</Title2>
             <Paragraph2>
               O sistema ALLÌMS vai muito além dos padrões. Conta com recursos

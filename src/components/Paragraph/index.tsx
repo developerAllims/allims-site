@@ -50,3 +50,21 @@ export const Paragraph3 = ({
     </p>
   )
 }
+
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+interface Paragraph4Props extends ComponentProps<'p'> {}
+
+export const Paragraph4 = ({
+  children,
+  className = '',
+  ...rest
+}: Paragraph4Props) => {
+  return (
+    <p
+      {...rest}
+      className={`text-base text-orange-primary font-semibold ${className}`}
+    >
+      {children}
+    </p>
+  )
+}

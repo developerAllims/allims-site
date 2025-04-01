@@ -7,6 +7,7 @@ interface SectionProps extends ComponentProps<'section'> {
 export const Section = ({
   children,
   className = '',
+  style = {},
   bgImage,
   ...rest
 }: SectionProps) => {
@@ -18,9 +19,10 @@ export const Section = ({
         bgImage
           ? {
               backgroundImage: `url(${bgImage})`,
-              backgroundSize: 'cover'
+              backgroundSize: 'cover',
+              ...style
             }
-          : {}
+          : { ...style }
       }
     >
       {children}

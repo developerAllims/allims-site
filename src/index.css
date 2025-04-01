@@ -3,6 +3,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  transition: all 0.3s;
 }
 
 /* 2. Remove default margin */
@@ -19,6 +20,7 @@
   font-weight: 300;
   font-style: normal;
   font-variation-settings: 100;
+  overflow-x: hidden;
 }
 
 /* 3. Enable keyword animations */
@@ -86,7 +88,6 @@ a.button-hover {
 a.button-hover:hover {
   padding-left: 0.7em;
   padding-right: 2em;
-  transition: all 0.2s;
 }
 a.button-hover:hover::before {
   content: '❯';
@@ -110,4 +111,5 @@ a.button-hover:hover::before {
   --color-orange-tertiary: #feedd9;
   --color-gray-primary: #3f4244;
   --color-gray-secondary: #f0f0f0;
+  --color-gray-tertiary: #0006;
 }

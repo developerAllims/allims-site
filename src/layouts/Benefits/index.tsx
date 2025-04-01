@@ -21,10 +21,13 @@ export const LayoutBenefits = () => {
   return (
     <Section className="bg-white">
       <SectionContainer>
-        <Article className="w-full text-center" style={{ padding: '7% 0' }}>
-          <ArticleContainer className="gap-10">
+        <Article
+          className="w-full text-center"
+          style={{ padding: '7% 0', height: '895px' }}
+        >
+          <ArticleContainer className="gap-16 justify-center h-full">
             <Title3 reverse>Benefícios do Sistema ALLÍMS</Title3>
-            <Gallery4>
+            <Gallery4 className="gap-40">
               <GalleryIconText icon={iconAgility}>
                 Segurança e agilidade na consulta dos resultados
               </GalleryIconText>

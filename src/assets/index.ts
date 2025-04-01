@@ -24,6 +24,7 @@ import illustrationCompany from './illustration_company.png'
 import illustrationSystem from './illustration_system.png'
 import logoCompanyPrimary from './logo_company_primary.png'
 import logoCompanySecondary from './logo_company_secondary.png'
+import logoCompanyTertiary from './logo_company_tertiary.png'
 
 export {
   areaChemical,
@@ -51,5 +52,6 @@ export {
   illustrationCompany,
   illustrationSystem,
   logoCompanyPrimary,
-  logoCompanySecondary
+  logoCompanySecondary,
+  logoCompanyTertiary
 }

@@ -11,7 +11,7 @@ export const LayoutConcepts = () => {
   return (
     <Section>
       <Article className="bg-orange-primary" style={{ height: '552px' }}>
-        <ArticleContainer>
+        <ArticleContainer className="justify-start h-full">
           <Title2>Conceito LIMS</Title2>
           <Paragraph2>
             Sistema informatizado para gerenciamento das rotinas e informações
@@ -28,7 +28,10 @@ export const LayoutConcepts = () => {
           <Button2>Saiba mais</Button2>
         </ArticleContainer>
       </Article>
-      <Article className="bg-orange-secondary" style={{ height: '552px' }}>
+      <Article
+        className="bg-orange-secondary justify-start h-full"
+        style={{ height: '552px' }}
+      >
         <ArticleContainer>
           <Title2>Empresa ALLÌMS</Title2>
           <Paragraph2>

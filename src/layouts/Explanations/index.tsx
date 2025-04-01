@@ -9,10 +9,10 @@ import {
 
 export const LayoutExplanations = () => {
   return (
-    <Section className="bg-white p-10">
+    <Section className="bg-white p-10" style={{ height: '750px' }}>
       <SectionContainer>
         <Article className="w-full text-center" style={{ padding: '7% 0' }}>
-          <ArticleContainer>
+          <ArticleContainer className="justify-center h-full">
             <Title3 reverse>Conceito do Sistema LIMS</Title3>
             <Paragraph3 className="text-justify">
               Um sistema LIMS pode ser definido como um conjunto de ferramentas

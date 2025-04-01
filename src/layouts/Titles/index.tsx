@@ -6,7 +6,10 @@ export const LayoutTitles = () => {
   const location = useLocation()
   const config = appRoutes.find(({ path }) => path === location.pathname)
   return (
-    <Section bgImage={config?.bgImage}>
+    <Section
+      bgImage={config?.bgImage}
+      style={{ height: 'calc(184px + 80px)', padding: '80px 0' }}
+    >
       <SectionContainer>
         <Article style={{ padding: '4.2em 0' }}>
           <Title2 className="text-[45px]">

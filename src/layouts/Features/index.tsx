@@ -11,10 +11,10 @@ import {
 
 export const LayoutFeatures = () => {
   return (
-    <Section className="bg-gray-secondary">
+    <Section className="bg-gray-secondary" style={{ height: '737px' }}>
       <SectionContainer>
         <Article className="w-full text-center" style={{ padding: '7% 0' }}>
-          <ArticleContainer className="gap-10">
+          <ArticleContainer className="gap-10 justify-center h-full">
             <Title3>Funcionalidades do Sistema</Title3>
             <Gallery4>
               <GalleryCheckText>

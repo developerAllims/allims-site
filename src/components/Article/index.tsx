@@ -31,7 +31,9 @@ export const ArticleContainer = ({
   return (
     <div
       {...rest}
-      className={`flex flex-col justify-between gap-6 ${className}`}
+      className={`flex flex-col justify-between ${
+        className.includes('gap-') ? '' : 'gap-6'
+      } ${className}`}
     >
       {children}
     </div>

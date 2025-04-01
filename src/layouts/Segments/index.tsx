@@ -20,10 +20,10 @@ import {
 
 export const LayoutSegments = () => {
   return (
-    <Section className="bg-orange-tertiary">
+    <Section className="bg-orange-tertiary" style={{ height: '802px' }}>
       <SectionContainer>
         <Article className="w-full text-center" style={{ padding: '7% 0' }}>
-          <ArticleContainer className="gap-10">
+          <ArticleContainer className="gap-14 justify-center h-full">
             <Title3 reverse>Áreas de Atuação</Title3>
             <Gallery4>
               <GalleryPhotoText icon={areaDrinks}>
