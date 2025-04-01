@@ -1,5 +1,15 @@
 import { Main } from '../../components'
-import { LayoutFooters, LayoutHeaders, LayoutTitles } from '../../layouts'
+import {
+  LayoutClients,
+  LayoutDemonstrations,
+  LayoutDescriptions,
+  LayoutFooters,
+  LayoutHeaders,
+  LayoutMessages,
+  LayoutPlaces,
+  LayoutSegments,
+  LayoutTitles
+} from '../../layouts'
 
 export const PageCompany = () => {
   return (
@@ -7,6 +17,12 @@ export const PageCompany = () => {
       <LayoutHeaders />
       <Main>
         <LayoutTitles />
+        <LayoutPlaces />
+        <LayoutDescriptions />
+        <LayoutClients />
+        <LayoutSegments />
+        <LayoutDemonstrations />
+        <LayoutMessages />
       </Main>
       <LayoutFooters />
     </>

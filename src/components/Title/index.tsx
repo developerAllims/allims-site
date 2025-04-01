@@ -80,3 +80,17 @@ export const Title5 = ({ children, className = '', ...rest }: Title5Props) => {
     </h3>
   )
 }
+
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+interface Title6Props extends ComponentProps<'h2'> {}
+
+export const Title6 = ({ children, className = '', ...rest }: Title6Props) => {
+  return (
+    <h1
+      {...rest}
+      className={`text-4xl font-bold text-gray-primary ${className}`}
+    >
+      {children}
+    </h1>
+  )
+}
