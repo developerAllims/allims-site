@@ -41,6 +41,7 @@ export const LayoutModules = () => {
                   <Paragraph className="text-base text-gray-primary text-left">
                     {left?.description}
                   </Paragraph>
+                  {/* TODO: refactor */}
                   <Button className="text-lg bg-orange-primary text-white">
                     {left?.button}
                   </Button>
@@ -58,6 +59,7 @@ export const LayoutModules = () => {
                   <Paragraph className="text-base text-gray-primary text-left">
                     {right?.description}
                   </Paragraph>
+                  {/* TODO: refactor */}
                   <Button className="text-lg bg-orange-primary text-white">
                     {right?.button}
                   </Button>

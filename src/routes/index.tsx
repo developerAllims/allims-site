@@ -31,6 +31,13 @@ export const appRoutes: Array<TRoute> = [
     bgImage: backgroundSystem
   },
   {
+    path: '/sistema/#lims',
+    name: 'Sistema ALLÌMS',
+    page: PageSystem,
+    bgImage: backgroundSystem,
+    hide: true
+  },
+  {
     path: '/modulos',
     name: 'Módulos',
     page: PageModules,
@@ -46,3 +53,8 @@ export const appRoutes: Array<TRoute> = [
   { path: '/contato', name: 'Contato', page: PageContact },
   { path: '*', name: 'Default', page: PageNotFound, hide: true }
 ]
+
+export const getBasePath = (path = '') => {
+  const parts = path.split('/') || []
+  return `/${parts[1] || ''}`
+}

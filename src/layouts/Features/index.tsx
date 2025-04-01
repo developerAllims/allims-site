@@ -30,7 +30,10 @@ export const LayoutFeatures = () => {
                 </GalleryCheckText>
               ))}
             </Gallery>
-            <Button className="text-lg bg-orange-primary text-white">
+            <Button
+              href="/modulos"
+              className="text-lg bg-orange-primary text-white"
+            >
               {button}
             </Button>
           </ArticleContainer>

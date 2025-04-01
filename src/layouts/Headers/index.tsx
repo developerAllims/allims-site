@@ -1,12 +1,13 @@
 import { useLocation } from 'react-router-dom'
 import { Header, Image, Menu, MenuItem, Link } from '../../components'
-import { appRoutes } from '../../routes'
+import { appRoutes, getBasePath } from '../../routes'
 import { useScrollPosition } from '../../hooks'
 import { dataHeaders } from '../../data'
 
 export const LayoutHeaders = () => {
   const { icon } = dataHeaders
   const location = useLocation()
+  const basePath = getBasePath(location.pathname)
   const scrollPosition = useScrollPosition()
   return (
     <Header
@@ -30,7 +31,7 @@ export const LayoutHeaders = () => {
               <MenuItem
                 key={`menu-${path}`}
                 href={path}
-                selected={location.pathname === path}
+                selected={basePath === path}
               >
                 {name}
               </MenuItem>

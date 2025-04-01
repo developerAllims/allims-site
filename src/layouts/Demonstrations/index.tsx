@@ -39,7 +39,9 @@ export const LayoutDemonstrations = ({
             {isSimple ? (
               ''
             ) : (
-              <Button className="text-lg text-white border-2">{button}</Button>
+              <Button href="/contato" className="text-lg text-white border-2">
+                {button}
+              </Button>
             )}
           </ArticleContainer>
         </Article>

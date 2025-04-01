@@ -12,7 +12,7 @@ export const LayoutConcepts = () => {
   const { items } = dataConcepts
   return (
     <Section>
-      {items.map(({ title, descriptions, button }, idx) => (
+      {items.map(({ title, descriptions, button, route }, idx) => (
         <Article
           key={`concept-${idx}`}
           className={`justify-start h-full ${
@@ -32,6 +32,7 @@ export const LayoutConcepts = () => {
             ))}
 
             <Button
+              href={route}
               className="text-lg text-white border-2"
               classContainer="justify-start"
             >

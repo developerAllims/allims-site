@@ -61,15 +61,16 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
         </Article>
         <Article className="w-2/3 text-center" style={{ padding: '5% 0' }}>
           <ArticleContainer>
+            {/* TODO: refactor */}
             <Form className="w-[650px] gap-5">
               <Title className="text-2xl text-white text-left">{title}</Title>
-              <Input placeholder={fieldName} />
+              <Input placeholder={fieldName} required />
               <FormContainer>
-                <Input placeholder={fieldEmail} />
-                <Input placeholder={fieldPhone} />
+                <Input placeholder={fieldEmail} required />
+                <Input placeholder={fieldPhone} required />
               </FormContainer>
-              <Input placeholder={fieldCompany} />
-              <TextArea placeholder={fieldMessage} />
+              <Input placeholder={fieldCompany} required />
+              <TextArea placeholder={fieldMessage} required />
               <Button
                 className="text-lg bg-orange-primary text-white"
                 classContainer="justify-end"

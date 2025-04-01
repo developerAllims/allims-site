@@ -1,10 +1,13 @@
 import { useLocation } from 'react-router-dom'
 import { Article, Section, SectionContainer, Title } from '../../components'
-import { appRoutes } from '../../routes'
+import { appRoutes, getBasePath } from '../../routes'
 
 export const LayoutTitles = () => {
   const location = useLocation()
-  const config = appRoutes.find(({ path }) => path === location.pathname)
+  const basePath = getBasePath(location.pathname)
+  const config = appRoutes.find(
+    ({ path, hide = false }) => basePath === path && !hide
+  )
   return (
     <Section
       bgImage={config?.bgImage}
