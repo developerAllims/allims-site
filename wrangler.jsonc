@@ -1,7 +1,7 @@
 {
   "name": "allims-site",
   "compatibility_date": "2025-04-01",
-  "main": "dist/assets/index*.js",
+  "main": "dist/assets/index-C-QYPyXL.js",
   "assets": {
     "directory": "./dist"
   }
