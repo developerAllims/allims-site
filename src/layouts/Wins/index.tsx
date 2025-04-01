@@ -17,6 +17,10 @@ import { dataWins } from '../../data'
 export const LayoutWins = () => {
   const { title, items, groups } = dataWins
   return (
+    // <Section
+    //   className="bg-orange-primary dark:bg-red-500"
+    //   style={{ height: '1007px' }}
+    // />
     <Section className="bg-orange-primary" style={{ height: '1007px' }}>
       <SectionContainer>
         <Article
@@ -28,7 +32,7 @@ export const LayoutWins = () => {
               <Title className="text-4xl text-white">{title}</Title>
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
-            <Gallery className="gap-20 grid-cols-3">
+            <Gallery className="gap-16 grid-cols-3">
               {items.map((val, idx) => (
                 <GalleryLampText key={`win-${idx}`}>{val}</GalleryLampText>
               ))}

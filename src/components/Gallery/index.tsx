@@ -1,3 +1,5 @@
+import { GoLightBulb } from 'react-icons/go'
+
 import { ComponentProps, useState } from 'react'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
@@ -41,13 +43,9 @@ export const GalleryLampText = ({
   className = '',
   ...rest
 }: GalleryLampTextProps) => {
-  const size = 1
   return (
-    <div
-      {...rest}
-      className={`flex gap-3 w-[23${size}px] h-[120px] ${className}`}
-    >
-      <span
+    <div {...rest} className={`flex gap-3 w-full h-[120px] ${className}`}>
+      {/* <span
         className="text-4xl"
         style={{
           textShadow: [
@@ -59,8 +57,9 @@ export const GalleryLampText = ({
         }}
       >
         💡
-      </span>
-      <span className="text-base text-left font-semibold text-white">
+      </span> */}
+      <GoLightBulb size={30} className="min-w-[40px] text-white" />
+      <span className="text-base text-left font-normal text-white">
         {children}
       </span>
     </div>
