@@ -21,7 +21,7 @@ export const LayoutWins = () => {
     //   className="bg-orange-primary dark:bg-red-500"
     //   style={{ height: '1007px' }}
     // />
-    <Section className="bg-orange-primary" style={{ height: '1007px' }}>
+    <Section className="bg-orange-primary" style={{ minHeight: '1007px' }}>
       <SectionContainer>
         <Article
           className="w-full text-center justify-center h-full"

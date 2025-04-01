@@ -1,5 +1,3 @@
-import { GoLightBulb } from 'react-icons/go'
-
 import { ComponentProps, useState } from 'react'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
@@ -38,6 +36,8 @@ export const GalleryCheckText = ({
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface GalleryLampTextProps extends ComponentProps<'div'> {}
 
+import { TiLightbulb } from 'react-icons/ti'
+
 export const GalleryLampText = ({
   children,
   className = '',
@@ -58,7 +58,7 @@ export const GalleryLampText = ({
       >
         💡
       </span> */}
-      <GoLightBulb size={30} className="min-w-[40px] text-white" />
+      <TiLightbulb size={36} className="min-w-[40px] text-white opacity-60" />
       <span className="text-base text-left font-normal text-white">
         {children}
       </span>
@@ -82,6 +82,44 @@ export const GalleryIconText = ({
       <span className="text-base font-semibold text-gray-primary">
         {children}
       </span>
+    </div>
+  )
+}
+
+import { FaPhoneAlt } from 'react-icons/fa'
+import { FiMapPin } from 'react-icons/fi'
+import { MdEmail } from 'react-icons/md'
+
+interface GalleryIconLabelTextProps extends ComponentProps<'div'> {
+  iconType: string
+  label: string
+}
+
+export const GalleryIconLabelText = ({
+  children,
+  className = '',
+  iconType = 'email',
+  label,
+  ...rest
+}: GalleryIconLabelTextProps) => {
+  return (
+    <div {...rest} className={`flex gap-3 w-[225px] ${className}`}>
+      {iconType === 'phone' ? (
+        <FaPhoneAlt size={30} className="min-w-[50px] text-orange-primary" />
+      ) : iconType === 'address' ? (
+        <FiMapPin size={35} className="min-w-[50px] text-orange-primary" />
+      ) : (
+        <MdEmail size={42} className="min-w-[50px] text-orange-primary" />
+      )}
+      <div className="flex flex-col gap-1">
+        <label className="text-lg font-bold text-white">{label}</label>
+        <span
+          className="text-base font-semibold text-white"
+          style={{ width: '273px' }}
+        >
+          {children}
+        </span>
+      </div>
     </div>
   )
 }

@@ -9,11 +9,17 @@ import {
   FormContainer,
   Input,
   TextArea,
-  Title
+  Title,
+  Gallery,
+  GalleryIconLabelText
 } from '../../components'
 import { dataMessages } from '../../data'
 
-export const LayoutMessages = () => {
+interface LayoutMessagesProps {
+  isSimple?: boolean
+}
+
+export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
   const {
     icon,
     title,
@@ -22,7 +28,8 @@ export const LayoutMessages = () => {
     fieldEmail,
     fieldPhone,
     fieldCompany,
-    fieldMessage
+    fieldMessage,
+    items
   } = dataMessages
   return (
     <Section
@@ -30,10 +37,26 @@ export const LayoutMessages = () => {
       style={{ height: '682px', padding: '2% 0' }}
     >
       <SectionContainer>
-        <Article className="w-1/3" style={{ padding: '5%' }}>
+        <Article
+          className="w-1/3"
+          style={{ padding: `${isSimple ? '5%' : '5% 5% 0 0'}` }}
+        >
           <ArticleContainer>
-            {/* TODO: refactor */}
-            <Image src={icon} />
+            {isSimple ? (
+              <Image src={icon} />
+            ) : (
+              <Gallery className="gap-10 justify-start">
+                {items.map(({ name, type, text }, idx) => (
+                  <GalleryIconLabelText
+                    key={`msg-info-${idx}`}
+                    iconType={type}
+                    label={name}
+                  >
+                    {text}
+                  </GalleryIconLabelText>
+                ))}
+              </Gallery>
+            )}
           </ArticleContainer>
         </Article>
         <Article className="w-2/3 text-center" style={{ padding: '5% 0' }}>

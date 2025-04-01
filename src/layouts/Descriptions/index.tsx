@@ -10,8 +10,12 @@ import {
 } from '../../components'
 import { dataDescriptions } from '../../data'
 
-export const LayoutDescriptions = () => {
-  const { icon, title, description, button } = dataDescriptions
+interface LayoutDescriptions {
+  isSimple: boolean
+}
+
+export const LayoutDescriptions = ({ isSimple = false }) => {
+  const { icon, title, items, button } = dataDescriptions
   return (
     <Section className="bg-gray-primary" style={{ height: '598px' }}>
       <SectionContainer>
@@ -25,14 +29,30 @@ export const LayoutDescriptions = () => {
         </Article>
         <Article style={{ padding: '10% 0' }}>
           <ArticleContainer
-            className="gap-8 justify-center h-full"
+            className="gap-3 justify-center"
             style={{ padding: '27px 0 0 27px' }}
           >
             <Title className="text-4xl text-white">{title}</Title>
-            <Paragraph className="text-base text-white">
-              {description}
-            </Paragraph>
-            <Button className="text-lg text-white border-2">{button}</Button>
+
+            {isSimple ? (
+              items.map((val, idx) => (
+                <Paragraph key={`desc-${idx}`} className="text-base text-white">
+                  {val}
+                </Paragraph>
+              ))
+            ) : (
+              <>
+                <Paragraph className="text-base text-white">
+                  {items.join(' ')}
+                </Paragraph>
+                <Button
+                  className="text-lg text-white border-2"
+                  classContainer="justify-start py-[12px]"
+                >
+                  {button}
+                </Button>
+              </>
+            )}
           </ArticleContainer>
         </Article>
       </SectionContainer>

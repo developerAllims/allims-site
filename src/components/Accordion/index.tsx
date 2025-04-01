@@ -50,11 +50,15 @@ export const AccordionItem = ({
           </span>
         </div>
       </div>
-      {opened && (
-        <div className="text-left" style={{ padding: '0 20px 20px 20px' }}>
-          {children}
-        </div>
-      )}
+      <div
+        className="text-left"
+        style={{
+          padding: `${opened ? '0 20px 20px 20px' : '0'}`,
+          height: `${opened ? 'auto' : '0'}`
+        }}
+      >
+        {opened && children}
+      </div>
     </div>
   )
 }

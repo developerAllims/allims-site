@@ -11,8 +11,9 @@ export const PageContact = () => {
     <>
       <LayoutHeaders />
       <Main>
-        <LayoutDemonstrations />
-        <LayoutMessages />
+        <LayoutDemonstrations isSimple={true} />
+        <LayoutMessages isSimple={false} />
+        <div style={{ minHeight: '440px' }} />
       </Main>
       <LayoutFooters />
     </>

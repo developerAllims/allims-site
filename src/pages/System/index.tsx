@@ -16,7 +16,7 @@ export const PageSystem = () => {
       <LayoutHeaders />
       <Main>
         <LayoutTitles />
-        <LayoutDescriptions />
+        <LayoutDescriptions isSimple={true} />
         <LayoutFeatures />
         <LayoutWins />
         <LayoutExplanations />

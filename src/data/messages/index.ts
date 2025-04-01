@@ -8,5 +8,22 @@ export const dataMessages = {
   fieldPhone: 'Telefone',
   fieldCompany: 'Empresa',
   fieldMessage: 'Mensagem',
+  items: [
+    {
+      name: 'Telefone',
+      type: 'phone',
+      text: '19 98160-6342'
+    },
+    {
+      name: 'Email',
+      type: 'email',
+      text: 'comercial@allims.com.br'
+    },
+    {
+      name: 'Endereço',
+      type: 'address',
+      text: 'Rua Atibaia, 26, Nova Campinas, Campinas/SP'
+    }
+  ],
   button: 'Enviar'
 }

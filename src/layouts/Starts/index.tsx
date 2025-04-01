@@ -27,7 +27,10 @@ export const LayoutStarts = () => {
             <Paragraph className="text-xl text-gray-primary">
               {slogan}
             </Paragraph>
-            <Button className="text-lg bg-orange-primary text-white">
+            <Button
+              className="text-lg bg-orange-primary text-white"
+              classContainer="justify-start"
+            >
               {button}
             </Button>
           </ArticleContainer>

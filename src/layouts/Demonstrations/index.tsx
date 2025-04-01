@@ -9,10 +9,19 @@ import {
 } from '../../components'
 import { dataDemonstrations } from '../../data'
 
-export const LayoutDemonstrations = () => {
+interface LayoutDemonstrationsProps {
+  isSimple?: boolean
+}
+
+export const LayoutDemonstrations = ({
+  isSimple = false
+}: LayoutDemonstrationsProps) => {
   const { icon, title, items, button } = dataDemonstrations
   return (
-    <Section bgImage={icon} style={{ height: '482px' }}>
+    <Section
+      bgImage={icon}
+      style={{ height: '482px', padding: `${isSimple ? '80px 0 0 0' : ''}` }}
+    >
       <SectionContainer>
         <Article className="w-full justify-center text-center">
           <ArticleContainer
@@ -27,7 +36,11 @@ export const LayoutDemonstrations = () => {
                 {val}
               </Paragraph>
             ))}
-            <Button className="text-lg text-white border-2">{button}</Button>
+            {isSimple ? (
+              ''
+            ) : (
+              <Button className="text-lg text-white border-2">{button}</Button>
+            )}
           </ArticleContainer>
         </Article>
       </SectionContainer>

@@ -21,7 +21,10 @@ export const LayoutPlaces = () => {
           </ArticleContainer>
         </Article>
         <Article style={{ padding: '10% 0' }}>
-          <ArticleContainer style={{ padding: '27px 0 0 27px' }}>
+          <ArticleContainer
+            className="gap-2"
+            style={{ padding: '27px 0 0 27px' }}
+          >
             <Title className="text-4xl text-gray-primary">{title}</Title>
             {items.map((val, idx) => (
               <Paragraph

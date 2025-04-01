@@ -31,7 +31,12 @@ export const LayoutConcepts = () => {
               </Paragraph>
             ))}
 
-            <Button className="text-lg text-white border-2">{button}</Button>
+            <Button
+              className="text-lg text-white border-2"
+              classContainer="justify-start"
+            >
+              {button}
+            </Button>
           </ArticleContainer>
         </Article>
       ))}
