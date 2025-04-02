@@ -46,7 +46,7 @@ export const LayoutDescriptions = ({ isSimple = false }) => {
                   {items.join(' ')}
                 </Paragraph>
                 <Button
-                  href="/sistema"
+                  to="/sistema"
                   className="text-lg text-white border-2"
                   classContainer="justify-start py-[12px]"
                 >

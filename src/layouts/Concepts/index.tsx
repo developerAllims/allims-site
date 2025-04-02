@@ -32,7 +32,7 @@ export const LayoutConcepts = () => {
             ))}
 
             <Button
-              href={route}
+              to={route}
               className="text-lg text-white border-2"
               classContainer="justify-start"
             >

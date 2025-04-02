@@ -31,7 +31,7 @@ export const LayoutFeatures = () => {
               ))}
             </Gallery>
             <Button
-              href="/modulos"
+              to="/modulos"
               className="text-lg bg-orange-primary text-white"
             >
               {button}

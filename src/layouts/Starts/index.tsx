@@ -28,7 +28,7 @@ export const LayoutStarts = () => {
               {slogan}
             </Paragraph>
             <Button
-              href="/sistema"
+              to="/sistema"
               className="text-lg bg-orange-primary text-white"
               classContainer="justify-start"
             >

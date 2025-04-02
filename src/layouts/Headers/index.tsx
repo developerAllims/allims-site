@@ -1,5 +1,5 @@
-import { useLocation } from 'react-router-dom'
-import { Header, Image, Menu, MenuItem, Link } from '../../components'
+import { Link, useLocation } from 'react-router-dom'
+import { Header, Image, Menu, MenuItem } from '../../components'
 import { appRoutes, getBasePath } from '../../routes'
 import { useScrollPosition } from '../../hooks'
 import { dataHeaders } from '../../data'
@@ -19,7 +19,7 @@ export const LayoutHeaders = () => {
         zIndex: 99
       }}
     >
-      <Link href="/">
+      <Link to="/">
         <Image
           src={icon}
           className={`w-32 ${scrollPosition > 200 ? 'h-10' : 'h-14'}`}
@@ -31,7 +31,7 @@ export const LayoutHeaders = () => {
             !hide && (
               <MenuItem
                 key={`menu-${path}`}
-                href={path}
+                to={path}
                 selected={basePath === path}
               >
                 {name}

@@ -1,4 +1,5 @@
 import { ComponentProps, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface MenuProps extends ComponentProps<'nav'> {}
@@ -13,14 +14,21 @@ export const Menu = ({ children, ...rest }: MenuProps) => {
 
 interface MenuItemProps extends ComponentProps<'a'> {
   selected?: boolean
+  to: string
 }
 
-export const MenuItem = ({ children, selected, ...rest }: MenuItemProps) => {
+export const MenuItem = ({
+  children,
+  selected,
+  to,
+  ...rest
+}: MenuItemProps) => {
   const [hover, setHover] = useState(false)
   return (
     <li className="flex h-full">
-      <a
+      <Link
         {...rest}
+        to={to}
         className={`${selected && 'text-orange-primary'}`}
         style={hover ? { opacity: '0.7' } : {}}
         onMouseEnter={() => {
@@ -31,7 +39,7 @@ export const MenuItem = ({ children, selected, ...rest }: MenuItemProps) => {
         }}
       >
         <div className="flex items-center h-full">{children}</div>
-      </a>
+      </Link>
     </li>
   )
 }

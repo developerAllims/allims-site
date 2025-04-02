@@ -27,8 +27,8 @@ export const LayoutModules = () => {
     <Section className="bg-gray-secondary py-20" style={{ padding: '1%' }}>
       <SectionContainer className="flex-col">
         {pairModules.map(({ left, right }, idx) => (
-          <>
-            <div key={`module-c-${idx}`} className="flex gap-6 h-full">
+          <div key={`module-${idx}`}>
+            <div className="flex gap-6 h-full">
               <Article
                 className="w-full text-center h-full"
                 style={{ padding: '7% 0' }}
@@ -41,7 +41,10 @@ export const LayoutModules = () => {
                     {left?.description}
                   </Paragraph>
                   {/* TODO: refactor */}
-                  <Button className="text-lg bg-orange-primary text-white">
+                  <Button
+                    to={''}
+                    className="text-lg bg-orange-primary text-white"
+                  >
                     {left?.button}
                   </Button>
                 </ArticleContainer>
@@ -58,16 +61,17 @@ export const LayoutModules = () => {
                     {right?.description}
                   </Paragraph>
                   {/* TODO: refactor */}
-                  <Button className="text-lg bg-orange-primary text-white">
+                  <Button
+                    to={'/'}
+                    className="text-lg bg-orange-primary text-white"
+                  >
                     {right?.button}
                   </Button>
                 </ArticleContainer>
               </Article>
             </div>
-            {idx + 1 < pairModules.length && (
-              <Divider key={`module-d-${idx}`} />
-            )}
-          </>
+            {idx + 1 < pairModules.length && <Divider />}
+          </div>
         ))}
       </SectionContainer>
     </Section>
