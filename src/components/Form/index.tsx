@@ -56,13 +56,15 @@ export const FormContainer = ({
 interface FormBaseProps {
   children: ReactNode
   resolver?: ZodType<any, FieldValues>
+  cb?: any
 }
 
-export const FormBase = ({ children, resolver }: FormBaseProps) => {
+export const FormBase = ({ children, resolver, cb }: FormBaseProps) => {
   const methods = useForm({ resolver: resolver && zodResolver(resolver) })
   const onValid = (data: FieldValues, event?: BaseSyntheticEvent) => {
     event?.preventDefault()
-    console.log('data', data)
+    //console.log('data', data)
+    if (cb) cb(data)
   }
   const onInvalid = (
     errors: FieldErrors<FieldValues>,

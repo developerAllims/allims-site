@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import axios from 'axios'
 import {
   Section,
   Article,
@@ -53,7 +55,27 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
           <ArticleContainer>
             {/* TODO: refactor */}
             <FormContainer>
-              <FormBase resolver={schema}>
+              <FormBase
+                resolver={schema}
+                cb={async (data: any) => {
+                  const { name, email, phone, company, message } = data
+                  const text = `name=${name}\nemail=${email}\nphone=${phone}\ncompany=${company}\nmessage=${message}`
+                  const html = `<p>name=${name}</p><p>email=${email}</p><p>phone=${phone}</p><p>company=${company}</p><p>message=${message}</p>`
+                  const payload = {
+                    from: 'desenvolvimento@allims.com.br',
+                    to: 'ricardo.miranda@allims.com.br',
+                    subject: 'SiteALLIMS',
+                    text,
+                    html
+                  }
+                  console.log('payload', payload)
+                  const resp = await axios.post(
+                    'https://allims-simple-mailer.onrender.com/',
+                    payload
+                  )
+                  console.log('resp.data', resp.data)
+                }}
+              >
                 <Title className="text-2xl text-white text-left">{title}</Title>
                 <FormField config={fields.name} />
                 <FormRow>
