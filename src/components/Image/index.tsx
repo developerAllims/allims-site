@@ -12,44 +12,7 @@ export const Image = ({ children, className = '', ...rest }: ImageProps) => {
 }
 
 interface LogoProps extends ComponentProps<'img'> {
-  client:
-    | 'adambiental'
-    | 'adm'
-    | 'agrolab'
-    | 'agronomico'
-    | 'allims'
-    | 'alsukkar'
-    | 'ascana'
-    | 'atralabs'
-    | 'bachema'
-    | 'biolab'
-    | 'camda'
-    | 'centralanalitica'
-    | 'cetal'
-    | 'cispar'
-    | 'cls'
-    | 'colombo'
-    | 'coopercitrus'
-    | 'cooxupe'
-    | 'cqlab'
-    | 'custom'
-    | 'dark'
-    | 'default'
-    | 'dsm'
-    | 'econsulting'
-    | 'esalq'
-    | 'fundacaoabc'
-    | 'iac'
-    | 'ibra'
-    | 'laborfort'
-    | 'light'
-    | 'mattos'
-    | 'salus'
-    | 'solum'
-    | 'ufes'
-    | 'unicamp'
-    | 'upf'
-    | 'vapor'
+  client: string
 }
 
 export const Logo = ({

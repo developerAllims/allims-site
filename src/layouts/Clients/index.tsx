@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import {
   Section,
   Article,
@@ -12,7 +13,18 @@ import {
 import { dataClients } from '../../data'
 
 export const LayoutClients = () => {
-  const { title } = dataClients
+  const { title, items } = dataClients
+  const [position, setPosition] = useState(0)
+  const max = 4
+  const arr = new Array(max).fill(null).map((_, idx) => idx)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPosition(position + max >= items?.length ? 0 : position + max)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [items?.length, position])
+
   return (
     <Section className="bg-white p-10" style={{ height: '574px' }}>
       <SectionContainer>
@@ -23,11 +35,14 @@ export const LayoutClients = () => {
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
             {/* TODO: refactor */}
-            <Gallery className="grid-cols-4 gap-20">
-              <Logo client="dsm" />
-              <Logo client="cooxupe" />
-              <Logo client="cls" />
-              <Logo client="cetal" />
+            <Gallery className={`grid-cols-${max} gap-20`}>
+              {arr.map(val => (
+                <Logo
+                  key={`client-${position + val}`}
+                  client={items[position + val]}
+                  style={{ maxHeight: '80px' }}
+                />
+              ))}
             </Gallery>
           </ArticleContainer>
         </Article>
