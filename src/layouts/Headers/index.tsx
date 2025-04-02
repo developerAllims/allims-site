@@ -15,7 +15,8 @@ export const LayoutHeaders = () => {
       style={{
         position: 'fixed',
         top: 0,
-        boxShadow: '0 0 7px var(--color-gray-tertiary)'
+        boxShadow: '0 0 7px var(--color-gray-tertiary)',
+        zIndex: 99
       }}
     >
       <Link href="/">

@@ -1,10 +1,46 @@
+import { useEffect, useState } from 'react'
 import { Footer, Image } from '../../components'
 import { dataFooters } from '../../data'
 
 export const LayoutFooters = () => {
   const { logo, copyright, devBy } = dataFooters
+
+  const [pageHeight, setPageHeight] = useState(0)
+  const [viewHeight, setViewHeight] = useState(0)
+  const [hasScroll, setHasScroll] = useState(false)
+
+  useEffect(() => {
+    const onPageLoad = () => {
+      setPageHeight(document.body.scrollHeight)
+      setViewHeight(document.documentElement.clientHeight)
+    }
+
+    if (document.readyState === 'complete') {
+      onPageLoad()
+    } else {
+      window.addEventListener('load', onPageLoad, false)
+      return () => window.removeEventListener('load', onPageLoad)
+    }
+  }, [setPageHeight])
+
+  useEffect(() => {
+    setHasScroll(pageHeight > viewHeight)
+  }, [pageHeight, viewHeight])
+
   return (
-    <Footer style={{ padding: '1.7% 0' }}>
+    <Footer
+      style={
+        hasScroll
+          ? {
+              padding: '1.7% 0'
+            }
+          : {
+              padding: '1.7% 0',
+              position: 'absolute',
+              bottom: '0'
+            }
+      }
+    >
       <div className="flex flex-col items-start h-full">
         <span className="font-semibold">{copyright}</span>
       </div>

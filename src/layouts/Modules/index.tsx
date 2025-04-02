@@ -28,9 +28,8 @@ export const LayoutModules = () => {
       <SectionContainer className="flex-col">
         {pairModules.map(({ left, right }, idx) => (
           <>
-            <div className="flex gap-6 h-full">
+            <div key={`module-c-${idx}`} className="flex gap-6 h-full">
               <Article
-                key={`module-${left?.title}`}
                 className="w-full text-center h-full"
                 style={{ padding: '7% 0' }}
               >
@@ -48,7 +47,6 @@ export const LayoutModules = () => {
                 </ArticleContainer>
               </Article>
               <Article
-                key={`module-${right?.title}`}
                 className="w-full text-center"
                 style={{ padding: '7% 0' }}
               >
@@ -66,7 +64,9 @@ export const LayoutModules = () => {
                 </ArticleContainer>
               </Article>
             </div>
-            {idx + 1 < pairModules.length && <Divider />}
+            {idx + 1 < pairModules.length && (
+              <Divider key={`module-d-${idx}`} />
+            )}
           </>
         ))}
       </SectionContainer>
