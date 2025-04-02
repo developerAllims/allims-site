@@ -72,6 +72,7 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
               <Input placeholder={fieldCompany} required />
               <TextArea placeholder={fieldMessage} required />
               <Button
+                to={'/'}
                 className="text-lg bg-orange-primary text-white"
                 classContainer="justify-end"
               >
