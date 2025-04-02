@@ -4,14 +4,14 @@ import {
   ArticleContainer,
   SectionContainer,
   Image,
-  Form,
-  Button,
-  FormContainer,
-  Input,
-  TextArea,
+  FormRow,
   Title,
   Gallery,
-  GalleryIconLabelText
+  GalleryIconLabelText,
+  FormBase,
+  ButtonSubmit,
+  FormContainer,
+  FormField
 } from '../../components'
 import { dataMessages } from '../../data'
 
@@ -20,17 +20,7 @@ interface LayoutMessagesProps {
 }
 
 export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
-  const {
-    icon,
-    title,
-    button,
-    fieldName,
-    fieldEmail,
-    fieldPhone,
-    fieldCompany,
-    fieldMessage,
-    items
-  } = dataMessages
+  const { icon, title, button, fields, schema, items } = dataMessages
   return (
     <Section
       className="bg-gray-primary"
@@ -62,23 +52,24 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
         <Article className="w-2/3 text-center" style={{ padding: '5% 0' }}>
           <ArticleContainer>
             {/* TODO: refactor */}
-            <Form className="w-[650px] gap-5">
-              <Title className="text-2xl text-white text-left">{title}</Title>
-              <Input placeholder={fieldName} required />
-              <FormContainer>
-                <Input placeholder={fieldEmail} required />
-                <Input placeholder={fieldPhone} required />
-              </FormContainer>
-              <Input placeholder={fieldCompany} required />
-              <TextArea placeholder={fieldMessage} required />
-              <Button
-                to={'/'}
-                className="text-lg bg-orange-primary text-white"
-                classContainer="justify-end"
-              >
-                {button}
-              </Button>
-            </Form>
+            <FormContainer>
+              <FormBase resolver={schema}>
+                <Title className="text-2xl text-white text-left">{title}</Title>
+                <FormField config={fields.name} />
+                <FormRow>
+                  <FormField config={fields.email} />
+                  <FormField config={fields.phone} />
+                </FormRow>
+                <FormField config={fields.company} />
+                <FormField config={fields.message} />
+                <ButtonSubmit
+                  className="text-lg bg-orange-primary text-white"
+                  classContainer="justify-end"
+                >
+                  {button}
+                </ButtonSubmit>
+              </FormBase>
+            </FormContainer>
           </ArticleContainer>
         </Article>
       </SectionContainer>

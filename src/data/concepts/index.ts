@@ -7,7 +7,7 @@ export const dataConcepts = {
         `A partir deste conceito, simples processos como garantir a rastreabilidade de uma amostra dentro do laboratório, até processos mais complexos como: aquisição de dados dos equipamentos, execução de cálculos nos ensaios, comparativos de resultados, emissão e envio automático do Relatório de Ensaio para os clientes, são funções de um sistema LIMS completo.`
       ],
       button: 'Saiba mais',
-      route: '/sistema/#lims' // TODO: refactor
+      route: '/sistema#lims' // TODO: refactor
     },
     {
       title: 'Empresa ALLÌMS',

@@ -37,3 +37,38 @@ export const Button = ({
     </div>
   )
 }
+
+interface ButtonSubmitProps extends ComponentProps<'button'> {
+  classContainer?: string
+}
+
+export const ButtonSubmit = ({
+  children,
+  className = '',
+  classContainer = '',
+  ...rest
+}: ButtonSubmitProps) => {
+  const [hover, setHover] = useState(false)
+  return (
+    <div
+      className={`flex ${
+        classContainer.includes('justify-') ? classContainer : 'justify-center'
+      }`}
+    >
+      <button
+        type="submit"
+        {...rest}
+        className={`font-semibold max-w-max px-[1em] py-[0.4em] rounded-[3px] ${className}`}
+        style={hover ? { padding: '0.4em 1.2em 0.4em 0.7em' } : {}}
+        onMouseEnter={() => {
+          setHover(true)
+        }}
+        onMouseLeave={() => {
+          setHover(false)
+        }}
+      >
+        {`${children}${hover ? '  ❯' : ''}`}
+      </button>
+    </div>
+  )
+}

@@ -21,7 +21,7 @@ export const LayoutFooters = () => {
       window.addEventListener('load', onPageLoad, false)
       return () => window.removeEventListener('load', onPageLoad)
     }
-  }, [setPageHeight])
+  }, [])
 
   useEffect(() => {
     setHasScroll(pageHeight > viewHeight)

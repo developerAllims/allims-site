@@ -31,13 +31,6 @@ export const appRoutes: Array<TRoute> = [
     bgImage: backgroundSystem
   },
   {
-    path: '/sistema/#lims',
-    name: 'Sistema ALLÌMS',
-    page: PageSystem,
-    bgImage: backgroundSystem,
-    hide: true
-  },
-  {
     path: '/modulos',
     name: 'Módulos',
     page: PageModules,
