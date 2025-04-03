@@ -9,7 +9,7 @@ export const replaceTemplate = ({ template = '', config }: ReplaceTemplate) => {
   let text = template
   for (const prop of props) {
     const value = config[prop] || ''
-    text = text.replace(prop, value)
+    text = text.replace(`{${prop}}`, value)
   }
   return text
 }
