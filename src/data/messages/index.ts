@@ -53,7 +53,7 @@ export const dataMessages = {
     {
       name: 'Telefone',
       type: 'phone',
-      text: '(19) 99173-8161 | (19) 98160-6342'
+      list: ['(19) 9.9173-8161', '(19) 9.8160-6342']
     },
     {
       name: 'Email',
