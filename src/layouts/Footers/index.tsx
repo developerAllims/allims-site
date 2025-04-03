@@ -44,7 +44,7 @@ export const LayoutFooters = () => {
     >
       <div className="flex flex-col items-start h-full">
         <span className="font-semibold">{copyright}</span>
-        <span className="font-semibold">{version}</span>
+        <span className="font-semibold">{`v.${version}`}</span>
       </div>
       <div className="flex flex-col gap-1 items-start h-full">
         <span className="font-semibold">{devBy}</span>
