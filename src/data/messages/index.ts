@@ -53,7 +53,7 @@ export const dataMessages = {
     {
       name: 'Telefone',
       type: 'phone',
-      text: '19 98160-6342'
+      text: '(19) 99173-8161 | (19) 98160-6342'
     },
     {
       name: 'Email',
@@ -63,7 +63,7 @@ export const dataMessages = {
     {
       name: 'Endereço',
       type: 'address',
-      text: 'Rua Atibaia, 26, Nova Campinas, Campinas/SP'
+      text: 'Rua Comendador Torlogo Dauntre n. 74, Sala 1207 - Cambuí - Campinas - SP - CEP 13.025-270'
     }
   ],
   button: 'Enviar'
