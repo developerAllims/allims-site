@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Footer, Image } from '../../components'
 import { dataFooters } from '../../data'
+import { version } from '../../../package.json'
 
 export const LayoutFooters = () => {
   const { logo, copyright, devBy } = dataFooters
@@ -43,6 +44,7 @@ export const LayoutFooters = () => {
     >
       <div className="flex flex-col items-start h-full">
         <span className="font-semibold">{copyright}</span>
+        <span className="font-semibold">{version}</span>
       </div>
       <div className="flex flex-col gap-1 items-start h-full">
         <span className="font-semibold">{devBy}</span>
