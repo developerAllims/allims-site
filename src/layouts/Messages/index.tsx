@@ -16,6 +16,8 @@ import {
   FormField
 } from '../../components'
 import { dataMessages } from '../../data'
+import { useCallback } from 'react'
+import { replaceTemplate } from '../../utils/lib'
 
 interface LayoutMessagesProps {
   isSimple?: boolean
@@ -23,6 +25,38 @@ interface LayoutMessagesProps {
 
 export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
   const { icon, title, button, fields, schema, items } = dataMessages
+  const onSubmit = useCallback(async (data: any) => {
+    try {
+      //const { name, email, phone, company, message } = data
+      const {
+        VITE_MAILER_URL,
+        VITE_MAILER_FROM,
+        VITE_MAILER_TO,
+        VITE_MAILER_SUBJECT,
+        VITE_MAILER_TEXT,
+        VITE_MAILER_HTML
+      } = import.meta.env
+      const text = replaceTemplate({
+        template: VITE_MAILER_TEXT,
+        config: data
+      })
+      const html = replaceTemplate({
+        template: VITE_MAILER_HTML,
+        config: data
+      })
+      const payload = {
+        from: VITE_MAILER_FROM,
+        to: VITE_MAILER_TO,
+        subject: VITE_MAILER_SUBJECT,
+        text,
+        html
+      }
+      const resp = await axios.post(VITE_MAILER_URL, payload)
+      return { success: true, message: resp?.data?.message || '' }
+    } catch (error: any) {
+      return { success: false, message: error.message }
+    }
+  }, [])
   return (
     <Section
       className="bg-gray-primary"
@@ -55,27 +89,7 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
           <ArticleContainer>
             {/* TODO: refactor */}
             <FormContainer>
-              <FormBase
-                resolver={schema}
-                cb={async (data: any) => {
-                  const { name, email, phone, company, message } = data
-                  const text = `name=${name}\nemail=${email}\nphone=${phone}\ncompany=${company}\nmessage=${message}`
-                  const html = `<p>name=${name}</p><p>email=${email}</p><p>phone=${phone}</p><p>company=${company}</p><p>message=${message}</p>`
-                  const payload = {
-                    from: 'desenvolvimento@allims.com.br',
-                    to: 'ricardo.miranda@allims.com.br',
-                    subject: 'SiteALLIMS',
-                    text,
-                    html
-                  }
-                  console.log('payload', payload)
-                  const resp = await axios.post(
-                    'https://allims-simple-mailer.onrender.com/',
-                    payload
-                  )
-                  console.log('resp.data', resp.data)
-                }}
-              >
+              <FormBase resolver={schema} onSubmit={onSubmit}>
                 <Title className="text-2xl text-white text-left">{title}</Title>
                 <FormField config={fields.name} />
                 <FormRow>

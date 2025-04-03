@@ -11,6 +11,7 @@ import {
 } from 'react-hook-form'
 import { ZodType } from 'zod'
 import { Input, TextArea } from '../'
+import { toast } from 'react-toastify'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface FormProps extends ComponentProps<'form'> {}
@@ -53,25 +54,43 @@ export const FormContainer = ({
   )
 }
 
+type TSubmitResponse = {
+  success: boolean
+  message: string
+}
+
 interface FormBaseProps {
   children: ReactNode
   resolver?: ZodType<any, FieldValues>
-  cb?: any
+  onSubmit?: (data: any) => Promise<TSubmitResponse>
 }
 
-export const FormBase = ({ children, resolver, cb }: FormBaseProps) => {
+export const FormBase = ({ children, resolver, onSubmit }: FormBaseProps) => {
   const methods = useForm({ resolver: resolver && zodResolver(resolver) })
-  const onValid = (data: FieldValues, event?: BaseSyntheticEvent) => {
+  const onValid = async (data: FieldValues, event?: BaseSyntheticEvent) => {
     event?.preventDefault()
-    //console.log('data', data)
-    if (cb) cb(data)
+    if (onSubmit) {
+      const toastId = toast.loading('Aguarde')
+      const resp = (await onSubmit(data)) || {}
+      const { success, message } = resp
+      if (toastId) {
+        toast.update(toastId, {
+          type: success ? 'success' : 'error',
+          render: message,
+          isLoading: false,
+          autoClose: 3000
+        })
+      } else {
+        toast(message, { type: success ? 'success' : 'error' })
+      }
+    }
   }
   const onInvalid = (
     errors: FieldErrors<FieldValues>,
     event?: BaseSyntheticEvent
   ) => {
     event?.preventDefault()
-    console.log('errors', errors)
+    console.error('errors', errors)
   }
   const handleSubmit = (data: any) => {
     methods.handleSubmit(onValid, onInvalid)(data)
