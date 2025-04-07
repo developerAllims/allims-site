@@ -34,7 +34,6 @@ export const LayoutClients = () => {
               <Title className="text-4xl text-orange-primary">{title}</Title>
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
-            {/* TODO: refactor */}
             <Gallery className={`grid-cols-${max} gap-20`}>
               {arr.map(val => (
                 <Logo

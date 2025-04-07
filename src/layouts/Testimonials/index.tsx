@@ -12,7 +12,6 @@ import { dataTestimonials } from '../../data'
 
 export const LayoutTestimonials = () => {
   const { title, items } = dataTestimonials
-  // TODO: refactor
   return (
     <Section className="bg-gray-primary p-10" style={{ height: '711px' }}>
       <SectionContainer>

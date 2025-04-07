@@ -91,7 +91,6 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
         </Article>
         <Article className="w-2/3 text-center" style={{ padding: '5% 0' }}>
           <ArticleContainer>
-            {/* TODO: refactor */}
             <FormContainer>
               <FormBase resolver={schema} onSubmit={onSubmit}>
                 <Title className="text-2xl text-white text-left">{title}</Title>
