@@ -15,15 +15,20 @@ import { dataClients } from '../../data'
 export const LayoutClients = () => {
   const { title, items } = dataClients
   const [position, setPosition] = useState(0)
+  const [fade, setFade] = useState(1)
   const max = 4
   const arr = new Array(max).fill(null).map((_, idx) => idx)
 
   useEffect(() => {
     const interval = setInterval(() => {
+      setFade(0.1)
       setPosition(position + max >= items?.length ? 0 : position + max)
     }, 5000)
-    return () => clearInterval(interval)
-  }, [items?.length, position])
+    return () => {
+      clearInterval(interval)
+      setFade(1)
+    }
+  }, [items?.length, position, fade])
 
   return (
     <Section className="bg-white p-10" style={{ height: '574px' }}>
@@ -39,7 +44,7 @@ export const LayoutClients = () => {
                 <Logo
                   key={`client-${position + val}`}
                   client={items[position + val]}
-                  style={{ maxHeight: '80px' }}
+                  style={{ maxHeight: '80px', opacity: fade }}
                 />
               ))}
             </Gallery>

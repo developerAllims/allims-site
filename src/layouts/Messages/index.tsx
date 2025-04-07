@@ -11,7 +11,7 @@ import {
   Gallery,
   GalleryIconLabelText,
   FormBase,
-  ButtonSubmit,
+  ButtonSimple,
   FormContainer,
   FormField
 } from '../../components'
@@ -101,12 +101,13 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
                 </FormRow>
                 <FormField config={fields.company} />
                 <FormField config={fields.message} />
-                <ButtonSubmit
+                <ButtonSimple
+                  type="submit"
                   className="text-lg bg-orange-primary text-white"
                   classContainer="justify-end"
                 >
                   {button}
-                </ButtonSubmit>
+                </ButtonSimple>
               </FormBase>
             </FormContainer>
           </ArticleContainer>

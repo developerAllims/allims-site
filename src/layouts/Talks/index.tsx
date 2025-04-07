@@ -3,7 +3,7 @@ import {
   Section,
   Article,
   ArticleContainer,
-  Button,
+  ButtonLink,
   Paragraph,
   Title,
   SectionContainer
@@ -31,9 +31,9 @@ export const LayoutTalks = () => {
                 {val}
               </Paragraph>
             ))}
-            <Button to="/contato" className="text-lg text-white border-2">
+            <ButtonLink to="/contato" className="text-lg text-white border-2">
               {button}
-            </Button>
+            </ButtonLink>
           </ArticleContainer>
         </Article>
       </SectionContainer>

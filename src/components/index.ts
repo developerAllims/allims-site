@@ -1,6 +1,7 @@
 export * from './Accordion'
 export * from './Article'
 export * from './Button'
+export * from './Modal'
 export * from './Divider'
 export * from './Footer'
 export * from './Form'

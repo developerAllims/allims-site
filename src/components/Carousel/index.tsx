@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ComponentProps, Dispatch, SetStateAction, useState } from 'react'
 import { Paragraph } from '../Paragraph'
 
@@ -44,7 +45,6 @@ export const CarouselTestimonials = ({
 }
 
 interface CarouselButtonProps extends ComponentProps<'div'> {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   items: Array<any>
   index: number
   isLeft: boolean

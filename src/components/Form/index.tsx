@@ -1,6 +1,12 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { zodResolver } from '@hookform/resolvers/zod'
-import { BaseSyntheticEvent, ComponentProps, ReactNode } from 'react'
+import {
+  BaseSyntheticEvent,
+  ComponentProps,
+  ReactNode,
+  useCallback
+} from 'react'
 import {
   FieldErrors,
   FieldValues,
@@ -13,7 +19,6 @@ import { ZodType } from 'zod'
 import { Input, TextArea } from '../'
 import { toast } from 'react-toastify'
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface FormProps extends ComponentProps<'form'> {}
 
 export const Form = ({ children, className = '', ...rest }: FormProps) => {
@@ -24,7 +29,6 @@ export const Form = ({ children, className = '', ...rest }: FormProps) => {
   )
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface FormRowProps extends ComponentProps<'div'> {}
 
 export const FormRow = ({
@@ -39,7 +43,6 @@ export const FormRow = ({
   )
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface FormContainerProps extends ComponentProps<'div'> {}
 
 export const FormContainer = ({
@@ -67,34 +70,40 @@ interface FormBaseProps {
 
 export const FormBase = ({ children, resolver, onSubmit }: FormBaseProps) => {
   const methods = useForm({ resolver: resolver && zodResolver(resolver) })
-  const onValid = async (data: FieldValues, event?: BaseSyntheticEvent) => {
-    event?.preventDefault()
-    if (onSubmit) {
-      const toastId = toast.loading('Aguarde')
-      const resp = (await onSubmit(data)) || {}
-      const { success, message } = resp
-      if (toastId) {
-        toast.update(toastId, {
-          type: success ? 'success' : 'error',
-          render: message,
-          isLoading: false,
-          autoClose: 3000
-        })
-      } else {
-        toast(message, { type: success ? 'success' : 'error' })
+  const onValid = useCallback(
+    async (data: FieldValues, event?: BaseSyntheticEvent) => {
+      event?.preventDefault()
+      if (onSubmit) {
+        const toastId = toast.loading('Aguarde')
+        const resp = (await onSubmit(data)) || {}
+        const { success, message } = resp
+        if (toastId) {
+          toast.update(toastId, {
+            type: success ? 'success' : 'error',
+            render: message,
+            isLoading: false,
+            autoClose: 3000
+          })
+        } else {
+          toast(message, { type: success ? 'success' : 'error' })
+        }
       }
-    }
-  }
-  const onInvalid = (
-    errors: FieldErrors<FieldValues>,
-    event?: BaseSyntheticEvent
-  ) => {
-    event?.preventDefault()
-    console.error('errors', errors)
-  }
-  const handleSubmit = (data: any) => {
-    methods.handleSubmit(onValid, onInvalid)(data)
-  }
+    },
+    [onSubmit]
+  )
+  const onInvalid = useCallback(
+    (errors: FieldErrors<FieldValues>, event?: BaseSyntheticEvent) => {
+      event?.preventDefault()
+      console.error('errors', errors)
+    },
+    []
+  )
+  const handleSubmit = useCallback(
+    (data: any) => {
+      methods.handleSubmit(onValid, onInvalid)(data)
+    },
+    [methods, onInvalid, onValid]
+  )
   return (
     <FormProvider {...methods}>
       <form className="contents bg-inherit" onSubmit={handleSubmit}>

@@ -5,7 +5,7 @@ import {
   ArticleContainer,
   Title,
   Paragraph,
-  Button
+  ButtonLink
 } from '../../components'
 import { dataStarts } from '../../data'
 
@@ -27,13 +27,13 @@ export const LayoutStarts = () => {
             <Paragraph className="text-xl text-gray-primary">
               {slogan}
             </Paragraph>
-            <Button
+            <ButtonLink
               to="/sistema"
               className="text-lg bg-orange-primary text-white"
               classContainer="justify-start"
             >
               {button}
-            </Button>
+            </ButtonLink>
           </ArticleContainer>
         </Article>
       </SectionContainer>

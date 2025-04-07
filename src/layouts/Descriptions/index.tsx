@@ -2,7 +2,7 @@ import {
   Section,
   Article,
   ArticleContainer,
-  Button,
+  ButtonLink,
   Image,
   Paragraph,
   Title,
@@ -45,13 +45,13 @@ export const LayoutDescriptions = ({ isSimple = false }) => {
                 <Paragraph className="text-base text-white">
                   {items.join(' ')}
                 </Paragraph>
-                <Button
+                <ButtonLink
                   to="/sistema"
                   className="text-lg text-white border-2"
                   classContainer="justify-start py-[12px]"
                 >
                   {button}
-                </Button>
+                </ButtonLink>
               </>
             )}
           </ArticleContainer>

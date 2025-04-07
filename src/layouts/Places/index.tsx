@@ -2,7 +2,7 @@ import {
   Section,
   Article,
   ArticleContainer,
-  Button,
+  ButtonLink,
   Image,
   Paragraph,
   Title,
@@ -34,9 +34,9 @@ export const LayoutPlaces = () => {
                 {val}
               </Paragraph>
             ))}
-            <Button to={'/'} className="text-lg text-white border-2">
+            <ButtonLink to={'/'} className="text-lg text-white border-2">
               {button}
-            </Button>
+            </ButtonLink>
           </ArticleContainer>
         </Article>
       </SectionContainer>

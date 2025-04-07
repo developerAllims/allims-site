@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 import { ComponentProps } from 'react'
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface TitleProps extends ComponentProps<'h2'> {}
 
 export const Title = ({ children, className = '', ...rest }: TitleProps) => {
@@ -11,7 +11,6 @@ export const Title = ({ children, className = '', ...rest }: TitleProps) => {
   )
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface TitleDividerProps extends ComponentProps<'span'> {}
 
 export const TitleDivider = ({ className = '' }: TitleDividerProps) => {
@@ -22,7 +21,6 @@ export const TitleDivider = ({ className = '' }: TitleDividerProps) => {
   )
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface TitleContainerProps extends ComponentProps<'div'> {}
 
 export const TitleContainer = ({ children }: TitleContainerProps) => {

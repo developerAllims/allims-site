@@ -5,7 +5,7 @@ import {
   SectionContainer,
   Gallery,
   GalleryCheckText,
-  Button,
+  ButtonLink,
   Title,
   TitleContainer,
   TitleDivider
@@ -30,12 +30,12 @@ export const LayoutFeatures = () => {
                 </GalleryCheckText>
               ))}
             </Gallery>
-            <Button
+            <ButtonLink
               to="/modulos"
               className="text-lg bg-orange-primary text-white"
             >
               {button}
-            </Button>
+            </ButtonLink>
           </ArticleContainer>
         </Article>
       </SectionContainer>

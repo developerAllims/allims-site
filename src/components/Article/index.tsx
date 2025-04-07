@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 import { ComponentProps } from 'react'
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface ArticleProps extends ComponentProps<'article'> {}
 
 export const Article = ({
@@ -20,7 +20,6 @@ export const Article = ({
   )
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface ArticleContainerProps extends ComponentProps<'div'> {}
 
 export const ArticleContainer = ({

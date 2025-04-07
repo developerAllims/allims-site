@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 import { ComponentProps } from 'react'
 
 interface SectionProps extends ComponentProps<'section'> {
@@ -30,7 +31,6 @@ export const Section = ({
   )
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface SectionContainerProps extends ComponentProps<'div'> {}
 
 export const SectionContainer = ({

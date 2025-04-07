@@ -1,7 +1,7 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 import { ComponentProps, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface MenuProps extends ComponentProps<'nav'> {}
 
 export const Menu = ({ children, ...rest }: MenuProps) => {

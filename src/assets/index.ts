@@ -25,6 +25,7 @@ import illustrationSystem from './illustrations/system.png'
 import logoPrimary from './logos/primary.png'
 import logoSecondary from './logos/secondary.png'
 import logoTertiary from './logos/tertiary.png'
+import moduleManager from './modules/manager.png'
 
 export {
   segmentChemical,
@@ -53,5 +54,6 @@ export {
   illustrationSystem,
   logoPrimary,
   logoSecondary,
-  logoTertiary
+  logoTertiary,
+  moduleManager
 }

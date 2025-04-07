@@ -2,7 +2,7 @@ import {
   Section,
   Article,
   ArticleContainer,
-  Button,
+  ButtonLink,
   Paragraph,
   Title
 } from '../../components'
@@ -31,13 +31,13 @@ export const LayoutConcepts = () => {
               </Paragraph>
             ))}
 
-            <Button
+            <ButtonLink
               to={route}
               className="text-lg text-white border-2"
               classContainer="justify-start"
             >
               {button}
-            </Button>
+            </ButtonLink>
           </ArticleContainer>
         </Article>
       ))}

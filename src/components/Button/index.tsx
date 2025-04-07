@@ -1,18 +1,18 @@
 import { ComponentProps, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-interface ButtonProps extends ComponentProps<'a'> {
+interface ButtonLinkProps extends ComponentProps<'a'> {
   classContainer?: string
   to: string
 }
 
-export const Button = ({
+export const ButtonLink = ({
   children,
   className = '',
   classContainer = '',
-  to,
+  to = '/',
   ...rest
-}: ButtonProps) => {
+}: ButtonLinkProps) => {
   const [hover, setHover] = useState(false)
   return (
     <div
@@ -38,16 +38,16 @@ export const Button = ({
   )
 }
 
-interface ButtonSubmitProps extends ComponentProps<'button'> {
+interface ButtonSimpleProps extends ComponentProps<'button'> {
   classContainer?: string
 }
 
-export const ButtonSubmit = ({
+export const ButtonSimple = ({
   children,
   className = '',
   classContainer = '',
   ...rest
-}: ButtonSubmitProps) => {
+}: ButtonSimpleProps) => {
   const [hover, setHover] = useState(false)
   return (
     <div
@@ -56,7 +56,6 @@ export const ButtonSubmit = ({
       }`}
     >
       <button
-        type="submit"
         {...rest}
         className={`font-semibold max-w-max px-[1em] py-[0.4em] rounded-[3px] ${className}`}
         style={hover ? { padding: '0.4em 1.2em 0.4em 0.7em' } : {}}
@@ -68,6 +67,42 @@ export const ButtonSubmit = ({
         }}
       >
         {`${children}${hover ? '  ❯' : ''}`}
+      </button>
+    </div>
+  )
+}
+
+interface ButtonIconProps extends ComponentProps<'button'> {
+  classContainer?: string
+  title: string
+  icon: string
+}
+
+import { CiCircleChevLeft } from 'react-icons/ci'
+
+export const ButtonIcon = ({
+  className = '',
+  classContainer = '',
+  title,
+  icon,
+  ...rest
+}: ButtonIconProps) => {
+  return (
+    <div
+      className={`flex ${
+        classContainer.includes('justify-') ? classContainer : 'justify-center'
+      }`}
+    >
+      <button
+        {...rest}
+        className={`flex gap-2 font-semibold max-w-max rounded-[3px] ${className}`}
+      >
+        {icon === 'CiCircleChevLeft' ? (
+          <CiCircleChevLeft className="text-3xl" />
+        ) : (
+          ''
+        )}
+        <span className="text-xl font-semibold">{title}</span>
       </button>
     </div>
   )

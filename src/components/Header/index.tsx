@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 import { ComponentProps } from 'react'
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface HeaderProps extends ComponentProps<'header'> {}
 
 export const Header = ({ children, className = '', ...rest }: HeaderProps) => {

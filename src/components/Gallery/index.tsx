@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 import { ComponentProps, useState } from 'react'
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface GalleryProps extends ComponentProps<'div'> {}
 
 export const Gallery = ({
@@ -15,7 +15,6 @@ export const Gallery = ({
   )
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface GalleryCheckTextProps extends ComponentProps<'div'> {}
 
 export const GalleryCheckText = ({
@@ -33,7 +32,6 @@ export const GalleryCheckText = ({
   )
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface GalleryLampTextProps extends ComponentProps<'div'> {}
 
 import { TiLightbulb } from 'react-icons/ti'

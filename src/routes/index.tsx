@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   backgroundSystem,
   backgroundCompany,
@@ -15,7 +16,6 @@ import {
 type TRoute = {
   path: string
   name: string
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   page: any
   title?: string
   hide?: false | true

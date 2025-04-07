@@ -3,7 +3,7 @@ import {
   Article,
   ArticleContainer,
   SectionContainer,
-  Button,
+  ButtonLink,
   Paragraph,
   Title
 } from '../../components'
@@ -39,9 +39,9 @@ export const LayoutDemonstrations = ({
             {isSimple ? (
               ''
             ) : (
-              <Button to="/contato" className="text-lg text-white border-2">
+              <ButtonLink to="/contato" className="text-lg text-white border-2">
                 {button}
-              </Button>
+              </ButtonLink>
             )}
           </ArticleContainer>
         </Article>
