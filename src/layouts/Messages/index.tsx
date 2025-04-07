@@ -72,17 +72,31 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
               <Image src={icon} />
             ) : (
               <Gallery className="gap-10 justify-start">
-                {items.map(({ name, type, text, list }, idx) => (
+                {items.map(({ name, type, code, text, link, list }, idx) => (
                   <GalleryIconLabelText
                     key={`msg-info-${idx}`}
                     iconType={type}
                     label={name}
                   >
-                    {list
-                      ? list.map((val, idxLs) => (
-                          <p key={`contact-inf-${idxLs}`}>{val}</p>
-                        ))
-                      : text}
+                    {link ? (
+                      <a href={link} target="_blank">
+                        {text}
+                      </a>
+                    ) : list ? (
+                      list.map((val, idxLs) => (
+                        <p>
+                          {' '}
+                          <a
+                            key={`contact-inf-${idxLs}`}
+                            href={`${code}:${val}`}
+                          >
+                            {val}
+                          </a>
+                        </p>
+                      ))
+                    ) : (
+                      <a href={`${code}:${text}`}>{text}</a>
+                    )}
                   </GalleryIconLabelText>
                 ))}
               </Gallery>

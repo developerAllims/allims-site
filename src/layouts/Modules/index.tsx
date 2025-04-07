@@ -11,7 +11,7 @@ import {
   ButtonSimple,
   Modal,
   Image,
-  ButtonIcon
+  ModalContainer
 } from '../../components'
 import { dataModules } from '../../data'
 
@@ -30,7 +30,7 @@ export const LayoutModules = () => {
   const pairModules = setPairModules()
 
   const [open, setOpen] = useState(false)
-  const [config, setConfig] = useState({ image: '', lines: [] })
+  const [config, setConfig] = useState({ title: '', image: '', lines: [] })
 
   const modalOpen = useCallback((modal: any) => {
     setConfig(modal)
@@ -81,15 +81,9 @@ export const LayoutModules = () => {
           ))}
         </SectionContainer>
       </Section>
-      <Modal open={open} onClick={modalClose}>
+      <Modal open={open} title={config.title} onClick={modalClose}>
         <Image src={config.image} className="w-[200px]" />
-        <div
-          className="flex flex-col gap-6 content-stretch"
-          style={{
-            textAlign: 'justify',
-            textJustify: 'inter-word'
-          }}
-        >
+        <ModalContainer>
           {config.lines.map((val: any, idx) =>
             typeof val === 'object' ? (
               val.type === 'a' ? (
@@ -115,12 +109,7 @@ export const LayoutModules = () => {
               <p key={`module-modal-p-${idx}`}>{val}</p>
             )
           )}
-          <ButtonIcon
-            icon="CiCircleChevLeft"
-            title="Voltar"
-            classContainer="justify-start"
-          />
-        </div>
+        </ModalContainer>
       </Modal>
     </>
   )
