@@ -54,7 +54,7 @@ export const dataMessages = {
       name: 'Telefone',
       type: 'phone',
       code: 'tel',
-      list: ['(19) 9.9173-8161', '(19) 9.8160-6342']
+      list: ['+55 (19) 9.9173-8161', '+55 (19) 9.8160-6342']
     },
     {
       name: 'Email',
