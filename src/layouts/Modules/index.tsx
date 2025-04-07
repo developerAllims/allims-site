@@ -33,13 +33,11 @@ export const LayoutModules = () => {
   const [config, setConfig] = useState({ image: '', lines: [] })
 
   const modalOpen = useCallback((modal: any) => {
-    console.log('oi')
     setConfig(modal)
     setOpen(true)
   }, [])
 
   const modalClose = useCallback(() => {
-    console.log('xau')
     setOpen(false)
   }, [])
 
