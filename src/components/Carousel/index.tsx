@@ -56,7 +56,11 @@ export const CarouselButton = ({
   setIndex
 }: CarouselButtonProps) => {
   return (
-    <div className={`flex opacity-0 hover:opacity-100`}>
+    <div
+      className={`flex ${
+        '' //opacity-0 hover:opacity-100
+      }`}
+    >
       <button
         className={`flex w-[100px] h-full items-center ${
           isLeft ? 'justify-start' : 'justify-end'
@@ -74,8 +78,8 @@ export const CarouselButton = ({
         }}
       >
         <span
-          className={`flex items-center justify-center text-3xl font-bold w-full h-full py-0 ${
-            isLeft ? 'hover:pl-5 hover:pr-0' : 'hover:pl-0 hover:pr-5'
+          className={`flex items-center justify-center text-4xl font-bold w-full h-full py-0 ${
+            '' //isLeft ? 'hover:pl-5 hover:pr-0' : 'hover:pl-0 hover:pr-5'
           }`}
         >
           {isLeft ? '❮' : '❯'}

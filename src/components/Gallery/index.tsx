@@ -98,7 +98,7 @@ export const GalleryIconLabelText = ({
       )}
       <div className="flex flex-col gap-1">
         <label className="text-lg font-bold text-white">{label}</label>
-        <span className="text-base font-semibold w-[273px] text-white">
+        <span className="text-base font-semibold w-[18svw] text-white">
           {children}
         </span>
       </div>

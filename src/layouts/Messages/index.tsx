@@ -76,17 +76,14 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
                     iconType={type}
                     label={name}
                   >
-                    {link ? (
-                      <a href={link} target="_blank">
-                        {text}
-                      </a>
-                    ) : list ? (
+                    {list ? (
                       list.map((val, idxLs) => (
                         <p>
                           {' '}
                           <a
                             key={`contact-inf-${idxLs}`}
-                            href={`${code}:${val}`}
+                            href={link ? link : `${code}:${val}`}
+                            target={`${link ? '_blank' : '_self'}`}
                           >
                             {val}
                           </a>
@@ -103,7 +100,7 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
         </Article>
         <Article className="w-2/3 text-center py-[5%] px-0">
           <ArticleContainer>
-            <FormContainer>
+            <FormContainer className="max-w-[50svw]">
               <FormBase resolver={schema} onSubmit={onSubmit}>
                 <Title className="text-2xl text-white text-left">{title}</Title>
                 <FormField config={fields.name} />

@@ -21,6 +21,7 @@ export const Section = ({
           ? {
               backgroundImage: `url(${bgImage})`,
               backgroundSize: 'cover',
+              backgroundPosition: 'center',
               ...style
             }
           : { ...style }

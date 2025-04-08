@@ -65,7 +65,13 @@ export const dataMessages = {
     {
       name: 'Endereço',
       type: 'address',
-      text: 'Rua Comendador Torlogo Dauntre n. 74, Sala 1207 - Cambuí - Campinas - SP - CEP 13.025-270',
+      list: [
+        'R. Comendador Torlogo Dauntre, 74',
+        'Sala 1207 - Cambuí',
+        'Campinas - SP',
+        'CEP 13.025-270'
+      ],
+      //text: 'Rua Comendador Torlogo Dauntre n. 74, Sala 1207 - Cambuí - Campinas - SP - CEP 13.025-270',
       link: `https://www.google.com/maps/place/R.+Comendador+T%C3%B3rlogo+Dauntre,+74+-+Cambu%C3%AD,+Campinas+-+SP,+13025-270/@-22.8965566,-47.0505966,17z/data=!4m15!1m8!3m7!1s0x94c8cf454ff99701:0xb08af4199e4073fc!2sR.+Comendador+T%C3%B3rlogo+Dauntre,+74+-+Cambu%C3%AD,+Campinas+-+SP,+13025-270!3b1!8m2!3d-22.8965616!4d-47.0480217!16s%2Fg%2F11dzscy1_v!3m5!1s0x94c8cf454ff99701:0xb08af4199e4073fc!8m2!3d-22.8965616!4d-47.0480217!16s%2Fg%2F11dzscy1_v!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D`
     }
   ],

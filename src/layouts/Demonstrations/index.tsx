@@ -18,10 +18,7 @@ export const LayoutDemonstrations = ({
 }: LayoutDemonstrationsProps) => {
   const { icon, title, items, button } = dataDemonstrations
   return (
-    <Section
-      bgImage={icon}
-      className={`h-[482px] ${isSimple ? 'pt-[80px] pb-0 px-0' : ''}`}
-    >
+    <Section bgImage={icon} className={`h-[482px]`}>
       <SectionContainer>
         <Article className="w-full justify-center text-center text-shadow">
           <ArticleContainer className="gap-7">
