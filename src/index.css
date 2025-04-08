@@ -54,6 +54,7 @@ button,
 textarea,
 select {
   font: inherit;
+  outline: none;
 }
 /* 8. Avoid text overflows */
 p,
@@ -104,4 +105,8 @@ a {
   --color-gray-primary: #3f4244;
   --color-gray-secondary: #f0f0f0;
   --color-gray-tertiary: #0006;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 2px var(--color-gray-tertiary);
 }

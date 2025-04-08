@@ -7,7 +7,7 @@ interface ListProps extends ComponentProps<'div'> {
 export const List = ({ className = '', items = [], ...rest }: ListProps) => {
   return (
     <div {...rest} className={`flex flex-col w-full gap-3 ${className}`}>
-      <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
+      <ul className="list-disc pl-5">
         {items.map((val, idx) => (
           <li key={`List-${idx}`}>{val}</li>
         ))}

@@ -31,7 +31,7 @@ export const LayoutClients = () => {
   }, [items?.length, position, fade])
 
   return (
-    <Section className="bg-white p-10" style={{ height: '574px' }}>
+    <Section className="bg-white p-10 h-[574px]">
       <SectionContainer>
         <Article className="w-full text-center">
           <ArticleContainer className="gap-40 justify-center h-full">
@@ -44,7 +44,8 @@ export const LayoutClients = () => {
                 <Logo
                   key={`client-${position + val}`}
                   client={items[position + val]}
-                  style={{ maxHeight: '80px', opacity: fade }}
+                  className="max-h-[80px]"
+                  style={{ opacity: fade }}
                 />
               ))}
             </Gallery>

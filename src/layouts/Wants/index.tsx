@@ -17,10 +17,7 @@ export const LayoutWants = () => {
   return (
     <Section className="bg-gray-secondary">
       <SectionContainer>
-        <Article
-          className="w-full text-center"
-          style={{ padding: '7% 0', height: '538px' }}
-        >
+        <Article className="w-full text-center h-[538px] py-[7%] px-0">
           <ArticleContainer className="gap-14 justify-center h-full">
             <TitleContainer>
               <Title className="text-4xl text-gray-primary">{title}</Title>

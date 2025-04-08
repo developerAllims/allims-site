@@ -15,7 +15,7 @@ export const LayoutConcepts = () => {
       {items.map(({ title, descriptions, button, route }, idx) => (
         <Article
           key={`concept-${idx}`}
-          className={`justify-start h-full ${
+          className={`justify-start ${
             idx % 2 === 0 ? 'bg-orange-primary' : 'bg-orange-secondary'
           }`}
           style={{ height: '552px' }}

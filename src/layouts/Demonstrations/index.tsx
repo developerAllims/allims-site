@@ -20,16 +20,11 @@ export const LayoutDemonstrations = ({
   return (
     <Section
       bgImage={icon}
-      style={{ height: '482px', padding: `${isSimple ? '80px 0 0 0' : ''}` }}
+      className={`h-[482px] ${isSimple ? 'pt-[80px] pb-0 px-0' : ''}`}
     >
       <SectionContainer>
-        <Article className="w-full justify-center text-center">
-          <ArticleContainer
-            className="gap-7"
-            style={{
-              textShadow: '2px 2px 2px var(--color-gray-tertiary)'
-            }}
-          >
+        <Article className="w-full justify-center text-center text-shadow">
+          <ArticleContainer className="gap-7">
             <Title className="text-4xl text-white">{title}</Title>
             {items.map((val, idx) => (
               <Paragraph key={`demo-${idx}`} className="text-xl text-white">

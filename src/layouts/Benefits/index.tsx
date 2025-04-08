@@ -16,16 +16,13 @@ export const LayoutBenefits = () => {
   return (
     <Section className="bg-white">
       <SectionContainer>
-        <Article
-          className="w-full text-center"
-          style={{ padding: '7% 0', height: '895px' }}
-        >
+        <Article className="w-full text-center py-[7%] px-0 h-[895px]">
           <ArticleContainer className="gap-16 justify-center h-full">
             <TitleContainer>
               <Title className="text-4xl text-orange-primary">{title}</Title>
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
-            <Gallery className="grid-cols-4 gap-40">
+            <Gallery className="grid-cols-4 gap-30">
               {items.map(({ icon, name }, idx) => (
                 <GalleryIconText key={`benefit-${idx}`} icon={icon}>
                   {name}

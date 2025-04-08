@@ -14,9 +14,9 @@ import { dataSegments } from '../../data'
 export const LayoutSegments = () => {
   const { title, items } = dataSegments
   return (
-    <Section className="bg-orange-tertiary" style={{ height: '802px' }}>
+    <Section className="bg-orange-tertiary h-[802px]">
       <SectionContainer>
-        <Article className="w-full text-center" style={{ padding: '7% 0' }}>
+        <Article className="w-full text-center py-[7%] px-0">
           <ArticleContainer className="gap-14 justify-center h-full">
             <TitleContainer>
               <Title className="text-4xl text-orange-primary">{title}</Title>

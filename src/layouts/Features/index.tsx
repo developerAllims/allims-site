@@ -15,9 +15,9 @@ import { dataFeatures } from '../../data'
 export const LayoutFeatures = () => {
   const { title, items, button } = dataFeatures
   return (
-    <Section className="bg-gray-secondary" style={{ height: '737px' }}>
+    <Section className="bg-gray-secondary h-[737px]">
       <SectionContainer>
-        <Article className="w-full text-center" style={{ padding: '7% 0' }}>
+        <Article className="w-full text-center py-[7%] px-0">
           <ArticleContainer className="gap-10 justify-center h-full">
             <TitleContainer>
               <Title className="text-4xl text-gray-primary">{title}</Title>

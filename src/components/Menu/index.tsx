@@ -1,13 +1,35 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
-import { ComponentProps, useState } from 'react'
+import { ComponentProps, useCallback, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 interface MenuProps extends ComponentProps<'nav'> {}
 
+import { RiMenuFill } from 'react-icons/ri'
+
 export const Menu = ({ children, ...rest }: MenuProps) => {
+  const [open, setOpen] = useState(false)
+
+  const handleClick = useCallback(() => {
+    setOpen(!open)
+  }, [open])
+
   return (
-    <nav {...rest} className="flex h-full">
-      <ul className="flex flex-row gap-6 h-full">{children}</ul>
+    <nav {...rest} className="flex h-full w-full justify-end gap-6 relative">
+      <div className="lg:hidden">
+        <RiMenuFill
+          className="h-full min-w-6 cursor-pointer"
+          onClick={handleClick}
+        />
+      </div>
+      <ul
+        className={`${
+          open
+            ? 'flex absolute top-[80px] right-0 w-50 h-auto p-6 flex-col border-t-2 bg-white'
+            : 'hidden lg:flex'
+        } lg:flex-row gap-6`}
+      >
+        {children}
+      </ul>
     </nav>
   )
 }

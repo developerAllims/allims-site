@@ -43,7 +43,7 @@ export const LayoutModules = () => {
 
   return (
     <>
-      <Section className="bg-gray-secondary py-20" style={{ padding: '1%' }}>
+      <Section className="bg-gray-secondary py-20 p-[1%]">
         <SectionContainer className="flex-col">
           {pairModules.map(({ subItems = [] }, idx) => (
             <div key={`module-${idx}`}>
@@ -52,8 +52,7 @@ export const LayoutModules = () => {
                   ({ title, description, button, modal }, idxSub) => (
                     <Article
                       key={`module-${idx}-sub-${idxSub}`}
-                      className="w-full text-center h-full"
-                      style={{ padding: '7% 0' }}
+                      className="w-full text-center h-full py-[7%] px-0"
                     >
                       <ArticleContainer className="gap-6 items-start h-full">
                         <Title className="text-3xl text-gray-primary">
@@ -91,13 +90,12 @@ export const LayoutModules = () => {
                   key={`module-modal-p-${idx}`}
                   href={val.link}
                   target="_blank"
-                  className="text-orange-primary"
-                  style={{ textDecoration: 'underline' }}
+                  className="text-orange-primary underline"
                 >
                   {val.text}
                 </a>
               ) : val.type === 'ul' ? (
-                <ul style={{ listStyle: 'initial', paddingLeft: '1.5rem' }}>
+                <ul className="list-disc pl-[1.5rem]">
                   {val.items.map((valLi: string, idxLi: number) => (
                     <li key={`module-modal-p-${idxLi}`}>{valLi}</li>
                   ))}

@@ -7,13 +7,7 @@ export const TextArea = ({ className = '', ...rest }: TextAreaProps) => {
   return (
     <textarea
       {...rest}
-      className={`border-3 p-3 w-full placeholder:font-semibold min-h-[150px] placeholder-white ${className}`}
-      style={{
-        border: '3px solid var(--color-orange-primary)',
-        color: 'var(--color-white)',
-        fontWeight: '500',
-        outline: 'none'
-      }}
+      className={`border-3 p-3 w-full font-semibold placeholder:font-semibold border-orange-primary placeholder-white text-white min-h-[150px] ${className}`}
     />
   )
 }

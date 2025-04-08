@@ -58,14 +58,12 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
     }
   }, [])
   return (
-    <Section
-      className="bg-gray-primary"
-      style={{ height: '682px', padding: '2% 0' }}
-    >
+    <Section className="bg-gray-primary h-[682px] py-[2%] px-0">
       <SectionContainer>
         <Article
-          className="w-1/3"
-          style={{ padding: `${isSimple ? '5%' : '5% 5% 0 0'}` }}
+          className={`w-1/3 ${
+            isSimple ? 'p-[5%]' : 'pt-[5%] pr-[5%] pb-0 pl-0'
+          }`}
         >
           <ArticleContainer>
             {isSimple ? (
@@ -103,7 +101,7 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
             )}
           </ArticleContainer>
         </Article>
-        <Article className="w-2/3 text-center" style={{ padding: '5% 0' }}>
+        <Article className="w-2/3 text-center py-[5%] px-0">
           <ArticleContainer>
             <FormContainer>
               <FormBase resolver={schema} onSubmit={onSubmit}>

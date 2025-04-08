@@ -10,28 +10,10 @@ export const Input = ({ className = '', mask = '', ...rest }: InputProps) => {
     mask,
     replacement: { _: /\d/ }
   })
+  const classes = `border-3 p-3 w-full font-semibold placeholder:font-semibold border-orange-primary placeholder-white text-white ${className}`
   return mask ? (
-    <input
-      {...rest}
-      ref={inputRef}
-      className={`border-3 p-3 w-full placeholder:font-semibold placeholder-white ${className}`}
-      style={{
-        border: '3px solid var(--color-orange-primary)',
-        color: 'var(--color-white)',
-        fontWeight: '500',
-        outline: 'none'
-      }}
-    />
+    <input {...rest} ref={inputRef} className={classes} />
   ) : (
-    <input
-      {...rest}
-      className={`border-3 p-3 w-full placeholder:font-semibold placeholder-white ${className}`}
-      style={{
-        border: '3px solid var(--color-orange-primary)',
-        color: 'var(--color-white)',
-        fontWeight: '500',
-        outline: 'none'
-      }}
-    />
+    <input {...rest} className={classes} />
   )
 }

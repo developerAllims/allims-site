@@ -43,19 +43,6 @@ export const GalleryLampText = ({
 }: GalleryLampTextProps) => {
   return (
     <div {...rest} className={`flex gap-3 w-full h-[120px] ${className}`}>
-      {/* <span
-        className="text-4xl"
-        style={{
-          textShadow: [
-            `${size}px ${size}px ${size}px #fff`,
-            `${size}px -${size}px ${size}px #fff`,
-            `-${size}px ${size}px ${size}px #fff`,
-            `-${size}px -${size}px ${size}px #fff`
-          ].join(', ')
-        }}
-      >
-        💡
-      </span> */}
       <TiLightbulb size={36} className="min-w-[40px] text-white opacity-60" />
       <span className="text-base text-left font-normal text-white">
         {children}
@@ -111,10 +98,7 @@ export const GalleryIconLabelText = ({
       )}
       <div className="flex flex-col gap-1">
         <label className="text-lg font-bold text-white">{label}</label>
-        <span
-          className="text-base font-semibold text-white"
-          style={{ width: '273px' }}
-        >
+        <span className="text-base font-semibold w-[273px] text-white">
           {children}
         </span>
       </div>

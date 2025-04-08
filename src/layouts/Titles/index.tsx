@@ -11,10 +11,10 @@ export const LayoutTitles = () => {
   return (
     <Section
       bgImage={config?.bgImage}
-      style={{ height: 'calc(184px + 80px)', padding: '80px 0' }}
+      className="h-[calc(184px + 80px)] py-[80px] px-0"
     >
       <SectionContainer>
-        <Article style={{ padding: '4.2em 0' }}>
+        <Article className="py-[4.2em] px-0">
           <Title className="text-[45px] text-white">
             {config?.title || config?.name}
           </Title>

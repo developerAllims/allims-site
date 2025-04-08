@@ -57,19 +57,12 @@ export const CarouselButton = ({
   isLeft = true,
   setIndex
 }: CarouselButtonProps) => {
-  const [hover, setHover] = useState(false)
   return (
-    <div className="flex" style={{ opacity: `${hover ? '100%' : '0'}` }}>
+    <div className={`flex opacity-0 hover:opacity-100`}>
       <button
         className={`flex w-[100px] h-full items-center ${
           isLeft ? 'justify-start' : 'justify-end'
         }`}
-        onMouseEnter={() => {
-          setHover(true)
-        }}
-        onMouseLeave={() => {
-          setHover(false)
-        }}
         onClick={() => {
           setIndex(
             isLeft
@@ -83,10 +76,9 @@ export const CarouselButton = ({
         }}
       >
         <span
-          className="text-[30px] font-bold"
-          style={{
-            padding: `${hover ? (isLeft ? '0 0 0 20px' : '0 20px 0 0') : '0'}`
-          }}
+          className={`flex items-center justify-center text-3xl font-bold w-full h-full py-0 ${
+            isLeft ? 'hover:pl-5 hover:pr-0' : 'hover:pl-0 hover:pr-5'
+          }`}
         >
           {isLeft ? '❮' : '❯'}
         </span>

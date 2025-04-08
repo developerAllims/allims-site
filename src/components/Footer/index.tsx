@@ -9,7 +9,7 @@ export const Footer = ({ children, className = '', ...rest }: FooterProps) => {
       {...rest}
       className={`flex justify-center w-full min-h-36 bg-orange-primary text-white text-xs ${className}`}
     >
-      <div className="flex w-full max-w-5xl justify-between items-center">
+      <div className="flex w-full max-w-2xl lg:max-w-4xl xl:max-w-6xl justify-between items-center">
         {children}
       </div>
     </footer>

@@ -13,18 +13,15 @@ import { dataPlaces } from '../../data'
 export const LayoutPlaces = () => {
   const { icon, title, items, button } = dataPlaces
   return (
-    <Section className="bg-white" style={{ height: '548px' }}>
+    <Section className="bg-white h-[548px]">
       <SectionContainer>
-        <Article style={{ padding: '10% 0' }}>
-          <ArticleContainer style={{ padding: '27px 27px 0 0' }}>
+        <Article className="py-[10%] px-0">
+          <ArticleContainer className="pt-[27px] pr-[27px] pb-0 pl-0">
             <Image src={icon} />
           </ArticleContainer>
         </Article>
-        <Article style={{ padding: '10% 0' }}>
-          <ArticleContainer
-            className="gap-2"
-            style={{ padding: '27px 0 0 27px' }}
-          >
+        <Article className="py-[10%] px-0">
+          <ArticleContainer className="gap-2 pt-[27px] pr-0 pb-0 pl-[27px]">
             <Title className="text-4xl text-gray-primary">{title}</Title>
             {items.map((val, idx) => (
               <Paragraph

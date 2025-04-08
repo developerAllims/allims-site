@@ -13,12 +13,9 @@ import { dataTestimonials } from '../../data'
 export const LayoutTestimonials = () => {
   const { title, items } = dataTestimonials
   return (
-    <Section className="bg-gray-primary p-10" style={{ height: '711px' }}>
+    <Section className="bg-gray-primary p-10 h-[711px]">
       <SectionContainer>
-        <Article
-          className="w-full text-center justify-center h-full gap-20"
-          style={{ padding: '0' }}
-        >
+        <Article className="w-full text-center justify-center h-full gap-20 p-0">
           <TitleContainer>
             <Title className="text-4xl text-white">{title}</Title>
             <TitleDivider className="text-orange-primary" />

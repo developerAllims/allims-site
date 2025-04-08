@@ -9,20 +9,17 @@ export const LayoutHeaders = () => {
   const location = useLocation()
   const basePath = getBasePath(location.pathname)
   const scrollPosition = useScrollPosition()
+  const isTop = scrollPosition < 200
   return (
     <Header
-      className={scrollPosition > 200 ? 'h-14' : 'h-20'}
-      style={{
-        position: 'fixed',
-        top: 0,
-        boxShadow: '0 0 7px var(--color-gray-tertiary)',
-        zIndex: 99
-      }}
+      className={`lg:fixed lg:top-0 lg:z-98 px-6 lg:px-0 border-b-2 lg:shadow-md h-20 ${
+        isTop ? 'lg:h-20' : 'lg:h-14'
+      }`}
     >
       <Link to="/">
         <Image
           src={icon}
-          className={`w-32 ${scrollPosition > 200 ? 'h-10' : 'h-14'}`}
+          className={`w-32 h-full ${isTop ? 'lg:h-14' : 'lg:h-10'}`}
         />
       </Link>
       <Menu>

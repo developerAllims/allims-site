@@ -132,7 +132,7 @@ export const FormField = ({ config, ...rest }: FormFieldProps) => {
   const { control } = useFormContext()
   const { field, fieldState } = useController({ control, name })
   return (
-    <div className="flex flex-col w-full" style={{ position: 'relative' }}>
+    <div className="flex flex-col w-full relative">
       {type === 'textarea' ? (
         <TextArea
           {...rest}
@@ -152,10 +152,7 @@ export const FormField = ({ config, ...rest }: FormFieldProps) => {
           placeholder={title}
         />
       )}
-      <span
-        className="text-xs text-red-500 font-bold"
-        style={{ position: 'absolute', bottom: '-20px', left: '4px' }}
-      >
+      <span className="text-xs font-bold text-red-500 absolute bottom-[-20px] left-[4px]">
         {fieldState.error?.message}
       </span>
     </div>
