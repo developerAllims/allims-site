@@ -41,11 +41,10 @@ export const LayoutDescriptions = ({ isSimple = false }) => {
                 </Paragraph>
                 <ButtonLink
                   to="/sistema"
+                  title={button}
                   className="text-lg text-white border-2"
                   classContainer="justify-start py-[12px]"
-                >
-                  {button}
-                </ButtonLink>
+                />
               </>
             )}
           </ArticleContainer>

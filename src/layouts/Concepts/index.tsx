@@ -33,11 +33,12 @@ export const LayoutConcepts = () => {
 
             <ButtonLink
               to={route}
-              className="text-lg text-white border-2"
+              title={button}
+              className={`text-lg border-2 text-white ${
+                idx % 2 === 0 ? 'bg-orange-primary' : 'bg-orange-secondary'
+              }`}
               classContainer="justify-start"
-            >
-              {button}
-            </ButtonLink>
+            />
           </ArticleContainer>
         </Article>
       ))}

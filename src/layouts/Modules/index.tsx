@@ -61,15 +61,13 @@ export const LayoutModules = () => {
                         <Paragraph className="text-base text-gray-primary text-left">
                           {description}
                         </Paragraph>
-                        {/* TODO: refactor */}
                         <ButtonSimple
+                          title={button}
                           className="text-lg bg-orange-primary text-white"
                           onClick={() => {
                             modalOpen(modal)
                           }}
-                        >
-                          {button}
-                        </ButtonSimple>
+                        />
                       </ArticleContainer>
                     </Article>
                   )

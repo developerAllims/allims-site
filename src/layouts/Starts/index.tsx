@@ -23,11 +23,10 @@ export const LayoutStarts = () => {
             </Paragraph>
             <ButtonLink
               to="/sistema"
+              title={button}
               className="text-lg bg-orange-primary text-white"
               classContainer="justify-start"
-            >
-              {button}
-            </ButtonLink>
+            />
           </ArticleContainer>
         </Article>
       </SectionContainer>

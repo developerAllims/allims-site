@@ -32,10 +32,9 @@ export const LayoutFeatures = () => {
             </Gallery>
             <ButtonLink
               to="/modulos"
+              title={button}
               className="text-lg bg-orange-primary text-white"
-            >
-              {button}
-            </ButtonLink>
+            />
           </ArticleContainer>
         </Article>
       </SectionContainer>

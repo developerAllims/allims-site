@@ -115,11 +115,10 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
                 <FormField config={fields.message} />
                 <ButtonSimple
                   type="submit"
+                  title={button}
                   className="text-lg bg-orange-primary text-white"
                   classContainer="justify-end"
-                >
-                  {button}
-                </ButtonSimple>
+                />
               </FormBase>
             </FormContainer>
           </ArticleContainer>

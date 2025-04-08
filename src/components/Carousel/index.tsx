@@ -17,8 +17,6 @@ export const CarouselTestimonials = ({
 }: CarouselTestimonialsProps) => {
   const [index, setIndex] = useState(0)
   const { text, name, role } = items[index] || {}
-  // const [hoverL, setHoverL] = useState(false)
-  // const [hoverR, setHoverR] = useState(false)
   return (
     <div className="flex text-white">
       <CarouselButton

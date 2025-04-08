@@ -31,9 +31,11 @@ export const LayoutPlaces = () => {
                 {val}
               </Paragraph>
             ))}
-            <ButtonLink to={'/'} className="text-lg text-white border-2">
-              {button}
-            </ButtonLink>
+            <ButtonLink
+              to={'/'}
+              title={button}
+              className="text-lg text-white border-2"
+            />
           </ArticleContainer>
         </Article>
       </SectionContainer>

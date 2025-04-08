@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom'
 
 interface ButtonLinkProps extends ComponentProps<'a'> {
   classContainer?: string
+  title: string
   to: string
 }
 
 export const ButtonLink = ({
-  children,
   className = '',
   classContainer = '',
+  title,
   to = '/',
   ...rest
 }: ButtonLinkProps) => {
@@ -32,7 +33,8 @@ export const ButtonLink = ({
           setHover(false)
         }}
       >
-        {`${children}${hover ? '  ❯' : ''}`}
+        <span>{title}</span>
+        <span className={`${hover ? '' : 'hidden'}`}>{'  ❯'}</span>
       </Link>
     </div>
   )
@@ -40,12 +42,13 @@ export const ButtonLink = ({
 
 interface ButtonSimpleProps extends ComponentProps<'button'> {
   classContainer?: string
+  title: string
 }
 
 export const ButtonSimple = ({
-  children,
   className = '',
   classContainer = '',
+  title,
   ...rest
 }: ButtonSimpleProps) => {
   const [hover, setHover] = useState(false)
@@ -66,7 +69,8 @@ export const ButtonSimple = ({
           setHover(false)
         }}
       >
-        {`${children}${hover ? '  ❯' : ''}`}
+        <span>{title}</span>
+        <span className={`${hover ? '' : 'hidden'}`}>{'  ❯'}</span>
       </button>
     </div>
   )
