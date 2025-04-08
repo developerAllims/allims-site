@@ -13,7 +13,9 @@ export const LayoutHeaders = () => {
   return (
     <>
       <div
-        className={`w-full h-20 bg-white ${isTop ? 'lg:h-20' : 'lg:h-14'}`}
+        className={`hidden lg:flex w-full h-20 bg-white ${
+          isTop ? 'lg:h-20' : 'lg:h-14'
+        }`}
       />
       <Header
         className={`lg:fixed lg:top-0 lg:z-98 px-6 lg:px-0 border-b-2 lg:shadow-md h-20 ${
@@ -23,6 +25,7 @@ export const LayoutHeaders = () => {
         <Link to="/">
           <Image
             src={icon}
+            classContainer="w-32"
             className={`w-32 h-full ${isTop ? 'lg:h-14' : 'lg:h-10'}`}
           />
         </Link>

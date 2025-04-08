@@ -23,7 +23,7 @@ export const LayoutWants = () => {
               <Title className="text-4xl text-gray-primary">{title}</Title>
               <TitleDivider className="text-orange-primary" />
             </TitleContainer>
-            <Gallery className="grid-cols-4 gap-20 items-start">
+            <Gallery className="grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-15 items-start">
               {items.map((val, idx) => (
                 <GalleryCheckText key={`want-${idx}`}>{val}</GalleryCheckText>
               ))}

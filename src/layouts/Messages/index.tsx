@@ -58,23 +58,23 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
     }
   }, [])
   return (
-    <Section className="bg-gray-primary h-[682px] py-[2%] px-0">
-      <SectionContainer>
-        <Article
-          className={`w-1/3 ${
-            isSimple ? 'p-[5%]' : 'pt-[5%] pr-[5%] pb-0 pl-0'
-          }`}
-        >
-          <ArticleContainer>
+    <Section className="bg-gray-primary h-full lg:h-[682px] py-[2%] px-0">
+      <SectionContainer className="flex-col lg:flex-row">
+        <Article className={`w-full lg:py-[7%] lg:px-0`}>
+          <ArticleContainer className="w-full">
             {isSimple ? (
-              <Image src={icon} />
+              <Image
+                classContainer="w-full justify-end pl-40 lg:px-15"
+                src={icon}
+              />
             ) : (
-              <Gallery className="gap-10 justify-start">
+              <Gallery className="grid-cols-2 lg:grid-cols-1 gap-10 justify-start">
                 {items.map(({ name, type, code, text, link, list }, idx) => (
                   <GalleryIconLabelText
                     key={`msg-info-${idx}`}
                     iconType={type}
                     label={name}
+                    className={`${idx === 2 ? 'col-span-2 lg:col-span-1' : ''}`}
                   >
                     {list ? (
                       list.map((val, idxLs) => (
@@ -98,9 +98,9 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
             )}
           </ArticleContainer>
         </Article>
-        <Article className="w-2/3 text-center py-[5%] px-0">
-          <ArticleContainer>
-            <FormContainer className="max-w-[50svw]">
+        <Article className="w-full lg:w-2/3 text-center py-[5%] px-0">
+          <ArticleContainer className="w-full">
+            <FormContainer className="lg:max-w-[50svw]">
               <FormBase resolver={schema} onSubmit={onSubmit}>
                 <Title className="text-2xl text-white text-left">{title}</Title>
                 <FormField config={fields.name} />

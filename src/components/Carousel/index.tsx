@@ -18,19 +18,21 @@ export const CarouselTestimonials = ({
   const [index, setIndex] = useState(0)
   const { text, name, role } = items[index] || {}
   return (
-    <div className="flex text-white">
+    <div className="flex w-full text-white">
       <CarouselButton
         index={index}
         isLeft={true}
         items={items}
         setIndex={setIndex}
       />
-      <div className="flex flex-col gap-1 w-full h-[320px] items-center justify-center">
+      <div className="flex flex-col gap-1 w-full h-full lg:h-[450px] items-center justify-center">
         <Paragraph className="text-lg text-white">{text}</Paragraph>
-        <Paragraph className="text-[23px] text-white">
+        <Paragraph className="p-5 text-[23px] text-white">
           <strong>{name}</strong>
         </Paragraph>
-        <Paragraph className="text-lg text-orange-primary">{role}</Paragraph>
+        <Paragraph className="p-0 text-lg text-orange-primary">
+          {role}
+        </Paragraph>
       </div>
       <CarouselButton
         index={index}

@@ -23,7 +23,7 @@ export const GalleryCheckText = ({
   ...rest
 }: GalleryCheckTextProps) => {
   return (
-    <div {...rest} className={`flex gap-3 w-[225px] ${className}`}>
+    <div {...rest} className={`flex gap-3 w-full ${className}`}>
       <span className="text-4xl text-orange-primary">☑</span>
       <span className="text-base text-left font-semibold text-gray-primary">
         {children}
@@ -62,9 +62,12 @@ export const GalleryIconText = ({
   ...rest
 }: GalleryIconTextProps) => {
   return (
-    <div {...rest} className={`flex flex-col gap-3 w-[225px] ${className}`}>
-      <img src={icon} className="max-h-[133px] object-contain" />
-      <span className="text-base font-semibold text-gray-primary">
+    <div {...rest} className={`flex flex-col gap-3 w-full ${className}`}>
+      <img
+        src={icon}
+        className="max-h-[150px] lg:max-h-[133px] object-contain"
+      />
+      <span className="px-10 lg:px-0 text-base font-semibold text-gray-primary">
         {children}
       </span>
     </div>
@@ -88,7 +91,7 @@ export const GalleryIconLabelText = ({
   ...rest
 }: GalleryIconLabelTextProps) => {
   return (
-    <div {...rest} className={`flex gap-3 w-[225px] ${className}`}>
+    <div {...rest} className={`flex gap-3 w-full lg:w-[225px] ${className}`}>
       {iconType === 'phone' ? (
         <FaPhoneAlt size={30} className="min-w-[50px] text-orange-primary" />
       ) : iconType === 'address' ? (
@@ -98,7 +101,7 @@ export const GalleryIconLabelText = ({
       )}
       <div className="flex flex-col gap-1">
         <label className="text-lg font-bold text-white">{label}</label>
-        <span className="text-base font-semibold w-[18svw] text-white">
+        <span className="text-base font-semibold w-full lg:w-[18svw] text-white">
           {children}
         </span>
       </div>
@@ -118,10 +121,10 @@ export const GalleryPhotoText = ({
 }: GalleryPhotoTextProps) => {
   const [hover, setHover] = useState(false)
   return (
-    <div {...rest} className={`flex flex-col gap-7 w-[225px] ${className}`}>
+    <div {...rest} className={`flex flex-col gap-7 w-full ${className}`}>
       <img
         src={icon}
-        className="max-h-[161px] object-contain"
+        className="max-h-[220px] lg:max-h-[161px] object-contain"
         style={
           hover
             ? {}

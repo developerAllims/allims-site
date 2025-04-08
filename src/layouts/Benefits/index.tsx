@@ -22,7 +22,7 @@ export const LayoutBenefits = () => {
               <Title className="text-4xl text-orange-primary">{title}</Title>
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
-            <Gallery className="grid-cols-4 gap-30">
+            <Gallery className="grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-30">
               {items.map(({ icon, name }, idx) => (
                 <GalleryIconText key={`benefit-${idx}`} icon={icon}>
                   {name}

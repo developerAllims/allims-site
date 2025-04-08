@@ -12,7 +12,7 @@ export const Article = ({
   return (
     <article
       {...rest}
-      className={`flex flex-col h-full min-h-full w-1/2 p-[7%] ${className}`}
+      className={`flex flex-col h-full min-h-full w-1/2 py-[7%] ${className}`}
       style={{ ...style }}
     >
       {children || ' '}

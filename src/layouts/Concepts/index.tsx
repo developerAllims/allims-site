@@ -11,14 +11,13 @@ import { dataConcepts } from '../../data'
 export const LayoutConcepts = () => {
   const { items } = dataConcepts
   return (
-    <Section>
+    <Section className="flex-col lg:flex-row bg-orange-secondary">
       {items.map(({ title, descriptions, button, route }, idx) => (
         <Article
           key={`concept-${idx}`}
-          className={`justify-start ${
+          className={`justify-start w-full px-[10%] ${
             idx % 2 === 0 ? 'bg-orange-primary' : 'bg-orange-secondary'
           }`}
-          style={{ height: '552px' }}
         >
           <ArticleContainer className="justify-start h-full">
             <Title className="text-4xl text-white">{title}</Title>
@@ -34,7 +33,7 @@ export const LayoutConcepts = () => {
             <ButtonLink
               to={route}
               title={button}
-              className={`text-lg border-2 text-white ${
+              className={`text-lg border-3 text-white ${
                 idx % 2 === 0 ? 'bg-orange-primary' : 'bg-orange-secondary'
               }`}
               classContainer="justify-start"

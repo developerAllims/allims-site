@@ -15,7 +15,7 @@ export const Modal = ({ children, open, title, ...rest }: ModalProps) => {
       open={open}
       className="flex justify-center items-center fixed h-[100svh] w-[100svw] z-[999] left-0 top-0 bg-[rgba(0,0,0,0.4)]"
     >
-      <div className="flex flex-col w-2/3 max-w-[845px] h-fit max-h-[80svh] gap-6 p-7 font-semibold bg-white text-gray-primary rounded-[3px]">
+      <div className="flex flex-col w-4/5 lg:w-2/3 max-w-[845px] h-fit max-h-[80svh] gap-6 p-7 font-semibold bg-white text-gray-primary rounded-[3px]">
         <div className="flex justify-between">
           <ButtonIcon
             icon="CiCircleChevLeft"

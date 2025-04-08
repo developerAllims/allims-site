@@ -1,13 +1,21 @@
-/* eslint-disable @typescript-eslint/no-empty-object-type */
 import { ComponentProps } from 'react'
 
-interface ImageProps extends ComponentProps<'img'> {}
+interface ImageProps extends ComponentProps<'img'> {
+  classContainer?: string
+}
 
-export const Image = ({ children, className = '', ...rest }: ImageProps) => {
+export const Image = ({
+  children,
+  className = '',
+  classContainer = '',
+  ...rest
+}: ImageProps) => {
   return (
-    <img {...rest} className={`object-contain ${className}`}>
-      {children}
-    </img>
+    <div className={`flex ${classContainer}`}>
+      <img {...rest} className={`object-contain w-full ${className}`}>
+        {children}
+      </img>
+    </div>
   )
 }
 

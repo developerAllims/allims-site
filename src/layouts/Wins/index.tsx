@@ -25,7 +25,7 @@ export const LayoutWins = () => {
               <Title className="text-4xl text-white">{title}</Title>
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
-            <Gallery className="gap-16 grid-cols-3">
+            <Gallery className="grid-cols-1 lg:grid-cols-3 gap-1 lg:gap-16">
               {items.map((val, idx) => (
                 <GalleryLampText key={`win-${idx}`}>{val}</GalleryLampText>
               ))}

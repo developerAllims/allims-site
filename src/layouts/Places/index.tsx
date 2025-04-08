@@ -34,7 +34,7 @@ export const LayoutPlaces = () => {
             <ButtonLink
               to={'/'}
               title={button}
-              className="text-lg text-white border-2"
+              className="text-lg text-white border-3"
             />
           </ArticleContainer>
         </Article>

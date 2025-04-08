@@ -17,14 +17,14 @@ interface LayoutDescriptions {
 export const LayoutDescriptions = ({ isSimple = false }) => {
   const { icon, title, items, button } = dataDescriptions
   return (
-    <Section className="bg-gray-primary h-[598px]">
-      <SectionContainer>
-        <Article className="py-[10%] px-0">
+    <Section className="lg:py-[10%] px-[10%] lg:px-0 bg-gray-primary">
+      <SectionContainer className="flex-col lg:flex-row w-full">
+        <Article className="py-[10%] lg:py-0 px-0 w-full">
           <ArticleContainer className="justify-start h-full pt-[27px] pr-[27px] pb-0 pl-0">
-            <Image src={icon} />
+            <Image className="h-full w-full" src={icon} />
           </ArticleContainer>
         </Article>
-        <Article className="py-[10%] px-0">
+        <Article className="py-[10%] lg:py-0 px-0 w-full">
           <ArticleContainer className="gap-3 justify-center pt-[27px] pr-0 pb-0 pl-[27px]">
             <Title className="text-4xl text-white">{title}</Title>
 
@@ -42,7 +42,7 @@ export const LayoutDescriptions = ({ isSimple = false }) => {
                 <ButtonLink
                   to="/sistema"
                   title={button}
-                  className="text-lg text-white border-2"
+                  className="text-lg text-white border-3"
                   classContainer="justify-start py-[12px]"
                 />
               </>

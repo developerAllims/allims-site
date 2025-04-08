@@ -47,12 +47,12 @@ export const LayoutModules = () => {
         <SectionContainer className="flex-col">
           {pairModules.map(({ subItems = [] }, idx) => (
             <div key={`module-${idx}`}>
-              <div className="flex gap-6 h-full">
+              <div className="flex gap-1 lg:gap-6 h-full flex-col lg:flex-row">
                 {subItems.map(
                   ({ title, description, button, modal }, idxSub) => (
                     <Article
                       key={`module-${idx}-sub-${idxSub}`}
-                      className="w-full text-center h-full py-[7%] px-0"
+                      className="w-full text-center h-full py-0 lg:py-[7%] px-0"
                     >
                       <ArticleContainer className="gap-6 items-start h-full">
                         <Title className="text-3xl text-gray-primary">
@@ -69,6 +69,9 @@ export const LayoutModules = () => {
                           }}
                         />
                       </ArticleContainer>
+                      {idxSub < 1 && (
+                        <Divider classContainer="pt-[7%] lg:pt-0" />
+                      )}
                     </Article>
                   )
                 )}
