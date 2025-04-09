@@ -17,15 +17,15 @@ interface LayoutDescriptions {
 export const LayoutDescriptions = ({ isSimple = false }) => {
   const { icon, title, items, button } = dataDescriptions
   return (
-    <Section className="lg:py-[10%] px-[10%] lg:px-0 bg-gray-primary">
+    <Section className="p-[10%] lg:px-0 bg-gray-primary">
       <SectionContainer className="flex-col lg:flex-row w-full">
-        <Article className="py-[10%] lg:py-0 px-0 w-full">
-          <ArticleContainer className="justify-start h-full pt-[27px] pr-[27px] pb-0 pl-0">
+        <Article className="p-0 w-full">
+          <ArticleContainer className="justify-start h-full p-0 lg:pt-[27px] lg:pr-[27px]">
             <Image className="h-full w-full" src={icon} />
           </ArticleContainer>
         </Article>
-        <Article className="py-[10%] lg:py-0 px-0 w-full">
-          <ArticleContainer className="gap-3 justify-center pt-[27px] pr-0 pb-0 pl-[27px]">
+        <Article className="lg:py-0 px-0 w-full">
+          <ArticleContainer className="gap-3 justify-center lg:pt-[27px] pr-0 pb-0 lg:pl-[27px]">
             <Title className="text-4xl text-white">{title}</Title>
 
             {isSimple ? (

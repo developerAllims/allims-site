@@ -9,9 +9,9 @@ export const LayoutTitles = () => {
     ({ path, hide = false }) => basePath === path && !hide
   )
   return (
-    <Section bgImage={config?.bgImage} className="h-[184px]">
-      <SectionContainer>
-        <Article className="py-[4.2em] px-0">
+    <Section bgImage={config?.bgImage} className="h-[120px] md:h-[184px]">
+      <SectionContainer className="w-full">
+        <Article className="py-[4.2em] px-0 justify-center items-center md:items-start w-full">
           <Title className="text-[45px] text-white">
             {config?.title || config?.name}
           </Title>

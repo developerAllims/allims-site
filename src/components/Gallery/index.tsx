@@ -8,8 +8,9 @@ export const Gallery = ({
   className = '',
   ...rest
 }: GalleryProps) => {
+  const align = className.includes('place-items-') ? '' : 'place-items-center'
   return (
-    <div {...rest} className={`grid place-items-center ${className}`}>
+    <div {...rest} className={`grid ${align} ${className}`}>
       {children}
     </div>
   )
@@ -62,7 +63,10 @@ export const GalleryIconText = ({
   ...rest
 }: GalleryIconTextProps) => {
   return (
-    <div {...rest} className={`flex flex-col gap-3 w-full ${className}`}>
+    <div
+      {...rest}
+      className={`flex flex-col gap-3 w-full h-full items-center ${className}`}
+    >
       <img
         src={icon}
         className="max-h-[150px] lg:max-h-[133px] object-contain"

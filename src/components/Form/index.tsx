@@ -106,7 +106,7 @@ export const FormBase = ({ children, resolver, onSubmit }: FormBaseProps) => {
   )
   return (
     <FormProvider {...methods}>
-      <form className="contents bg-inherit" onSubmit={handleSubmit}>
+      <form className="contents h-full bg-inherit" onSubmit={handleSubmit}>
         {children}
       </form>
     </FormProvider>
@@ -132,7 +132,7 @@ export const FormField = ({ config, ...rest }: FormFieldProps) => {
   const { control } = useFormContext()
   const { field, fieldState } = useController({ control, name })
   return (
-    <div className="flex flex-col w-full relative">
+    <div className="flex flex-col w-full relative h-full">
       {type === 'textarea' ? (
         <TextArea
           {...rest}

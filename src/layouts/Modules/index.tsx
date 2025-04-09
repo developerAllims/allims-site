@@ -43,7 +43,7 @@ export const LayoutModules = () => {
 
   return (
     <>
-      <Section className="bg-gray-secondary py-20 p-[1%]">
+      <Section className="bg-gray-secondary p-[10%] lg:py-20 lg:p-[1%]">
         <SectionContainer className="flex-col">
           {pairModules.map(({ subItems = [] }, idx) => (
             <div key={`module-${idx}`}>
@@ -70,7 +70,7 @@ export const LayoutModules = () => {
                         />
                       </ArticleContainer>
                       {idxSub < 1 && (
-                        <Divider classContainer="pt-[7%] lg:pt-0" />
+                        <Divider classContainer="flex lg:hidden pt-[7%] lg:pt-0" />
                       )}
                     </Article>
                   )

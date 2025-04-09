@@ -13,9 +13,9 @@ import { dataExplanations } from '../../data'
 export const LayoutExplanations = () => {
   const { title, items } = dataExplanations
   return (
-    <Section id="lims" className="bg-white p-10 h-[750px]">
-      <SectionContainer>
-        <Article className="w-full text-center py-[7%] px-0">
+    <Section id="lims" className="bg-white p-10 h-full">
+      <SectionContainer className="justify-center">
+        <Article className="w-full text-center py-[7%] px-0 lg:w-4/5">
           <ArticleContainer className="justify-center h-full">
             <TitleContainer>
               <Title className="text-4xl text-orange-primary">{title}</Title>

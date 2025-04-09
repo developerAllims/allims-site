@@ -31,15 +31,17 @@ export const LayoutClients = () => {
   }, [items?.length, position, fade])
 
   return (
-    <Section className="bg-white p-10 h-[574px]">
-      <SectionContainer>
-        <Article className="w-full text-center">
-          <ArticleContainer className="gap-40 justify-center h-full">
+    <Section className="bg-white p-10 h-full">
+      <SectionContainer className="justify-center">
+        <Article className="w-full text-center lg:w-4/5">
+          <ArticleContainer className="gap-10 lg:gap-40 justify-center h-full">
             <TitleContainer>
               <Title className="text-4xl text-orange-primary">{title}</Title>
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
-            <Gallery className={`grid-cols-${max} gap-20`}>
+            <Gallery
+              className={`grid-cols-${max} grid-flow-row lg:grid-flow-col gap-20`}
+            >
               {arr.map(val => (
                 <Logo
                   key={`client-${position + val}`}

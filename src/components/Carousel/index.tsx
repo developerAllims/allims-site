@@ -64,7 +64,7 @@ export const CarouselButton = ({
       }`}
     >
       <button
-        className={`flex w-[100px] h-full items-center ${
+        className={`flex w-[80px] lg:w-[100px] h-full items-center ${
           isLeft ? 'justify-start' : 'justify-end'
         }`}
         onClick={() => {

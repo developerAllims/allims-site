@@ -18,9 +18,9 @@ export const LayoutDemonstrations = ({
 }: LayoutDemonstrationsProps) => {
   const { icon, title, items, button } = dataDemonstrations
   return (
-    <Section bgImage={icon} className={`h-[482px]`}>
-      <SectionContainer>
-        <Article className="w-full justify-center text-center text-shadow">
+    <Section bgImage={icon} className={`h-full p-[10%] lg:p-0`}>
+      <SectionContainer className="justify-center">
+        <Article className="w-full justify-center text-center text-shadow lg:w-4/5">
           <ArticleContainer className="gap-7">
             <Title className="text-4xl text-white">{title}</Title>
             {items.map((val, idx) => (

@@ -13,9 +13,9 @@ import { dataTalks } from '../../data'
 export const LayoutTalks = () => {
   const { title, descriptions, button } = dataTalks
   return (
-    <Section bgImage={backgroundTalk} className="h-[546px]">
-      <SectionContainer>
-        <Article className="w-full justify-center text-center py-[7%] px-0">
+    <Section bgImage={backgroundTalk} className="h-full p-[10%] lg:p-0">
+      <SectionContainer className="lg:justify-center">
+        <Article className="w-full justify-center text-center lg:py-[7%] px-0 lg:w-4/5">
           <ArticleContainer className="gap-7 justify-center h-full text-shadow">
             <Title className="text-4xl text-white">{title}</Title>
             {descriptions.map((val, idx) => (

@@ -5,7 +5,7 @@ export const dataFeatures = {
     `Automação nos registros de dados`,
     `Controle do almoxarifado e preparo de soluções`,
     `Emissão de relatórios gerenciais`,
-    `ecepção de amostras</GalleryCheckText>`,
+    `Recepção de amostras`,
     `Controle estatístico das amostras padrão`,
     `Controle de equipamentos e vidrarias`,
     `Gerenciamento de metodologias analíticas`,

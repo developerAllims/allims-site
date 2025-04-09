@@ -14,15 +14,15 @@ import { dataBenefits } from '../../data'
 export const LayoutBenefits = () => {
   const { title, items } = dataBenefits
   return (
-    <Section className="bg-white">
-      <SectionContainer>
-        <Article className="w-full text-center py-[7%] px-0 h-[895px]">
+    <Section className="bg-white p-[10%] lg:p-0">
+      <SectionContainer className="justify-center">
+        <Article className="w-full text-center py-[7%] px-0 h-[895px] lg:w-4/5">
           <ArticleContainer className="gap-16 justify-center h-full">
             <TitleContainer>
               <Title className="text-4xl text-orange-primary">{title}</Title>
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
-            <Gallery className="grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-30">
+            <Gallery className="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-30 lg:place-items-start">
               {items.map(({ icon, name }, idx) => (
                 <GalleryIconText key={`benefit-${idx}`} icon={icon}>
                   {name}

@@ -58,8 +58,8 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
     }
   }, [])
   return (
-    <Section className="bg-gray-primary h-full lg:h-[682px] py-[2%] px-0">
-      <SectionContainer className="flex-col lg:flex-row">
+    <Section className="bg-gray-primary h-full py-[2%] px-0">
+      <SectionContainer className="flex-col lg:flex-row h-full">
         <Article className={`w-full lg:py-[7%] lg:px-0`}>
           <ArticleContainer className="w-full">
             {isSimple ? (
@@ -68,13 +68,15 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
                 src={icon}
               />
             ) : (
-              <Gallery className="grid-cols-2 lg:grid-cols-1 gap-10 justify-start">
+              <Gallery className="grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-10 justify-start p-[10%] lg:p-0 place-items-start">
                 {items.map(({ name, type, code, text, link, list }, idx) => (
                   <GalleryIconLabelText
                     key={`msg-info-${idx}`}
                     iconType={type}
                     label={name}
-                    className={`${idx === 2 ? 'col-span-2 lg:col-span-1' : ''}`}
+                    className={`${
+                      idx === 2 ? 'col-span-1 sm:col-span-2 lg:col-span-1' : ''
+                    }`}
                   >
                     {list ? (
                       list.map((val, idxLs) => (
@@ -98,13 +100,13 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
             )}
           </ArticleContainer>
         </Article>
-        <Article className="w-full lg:w-2/3 text-center py-[5%] px-0">
-          <ArticleContainer className="w-full">
-            <FormContainer className="lg:max-w-[50svw]">
+        <Article className="w-full h-full lg:w-2/3 text-center p-[10%] lg:py-[5%] lg:px-0">
+          <ArticleContainer className="w-full h-full">
+            <FormContainer className="max-w-[100%] lg:max-w-[50svw]">
               <FormBase resolver={schema} onSubmit={onSubmit}>
                 <Title className="text-2xl text-white text-left">{title}</Title>
                 <FormField config={fields.name} />
-                <FormRow>
+                <FormRow className="flex-col md:flex-row">
                   <FormField config={fields.email} />
                   <FormField config={fields.phone} />
                 </FormRow>

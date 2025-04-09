@@ -18,7 +18,7 @@ export const LayoutHeaders = () => {
         }`}
       />
       <Header
-        className={`lg:fixed lg:top-0 lg:z-98 px-6 lg:px-0 border-b-2 lg:shadow-md h-20 ${
+        className={`lg:fixed lg:top-0 lg:z-98 px-6 sm:px-16 lg:px-0 border-b-2 lg:shadow-md h-20 ${
           isTop ? 'lg:h-20' : 'lg:h-14'
         }`}
       >

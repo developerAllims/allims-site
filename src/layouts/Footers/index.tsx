@@ -29,27 +29,32 @@ export const LayoutFooters = () => {
   }, [pageHeight, viewHeight])
 
   return (
-    <Footer
-      style={
-        hasScroll
-          ? {
-              padding: '1.7% 0'
-            }
-          : {
-              padding: '1.7% 0',
-              position: 'absolute',
-              bottom: '0'
-            }
-      }
-    >
-      <div className="flex flex-col items-start h-full">
-        <span className="font-semibold">{copyright}</span>
-        <span className="font-semibold">{`v.${version}`}</span>
-      </div>
-      <div className="flex flex-col gap-1 items-start h-full">
-        <span className="font-semibold">{devBy}</span>
-        <Image src={logo} className="w-32 h-10" />
-      </div>
-    </Footer>
+    <>
+      <Footer
+        className="p-[3%] lg:py-[1.7%] lg:px-0"
+        style={
+          hasScroll
+            ? {}
+            : {
+                position: 'absolute',
+                bottom: '0'
+              }
+        }
+      >
+        <div className="flex flex-col items-start h-full">
+          <span className="font-semibold">{copyright}</span>
+          <span className="font-semibold">{`v.${version}`}</span>
+        </div>
+        <div className="flex flex-col gap-1 items-start h-full">
+          <span className="font-semibold">{devBy}</span>
+          <Image src={logo} className="w-32 h-10" />
+        </div>
+      </Footer>
+      {hasScroll ? (
+        ''
+      ) : (
+        <div className="w-full h-[calc(40px + 2 * 1.7%)] bg-white" />
+      )}
+    </>
   )
 }
