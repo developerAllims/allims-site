@@ -26,7 +26,7 @@ export const Menu = ({ children, ...rest }: MenuProps) => {
           open
             ? 'flex absolute top-[80px] right-0 w-50 h-auto p-0 lg:p-6 flex-col border-t-2 lg:border-t-0 bg-white'
             : 'hidden lg:flex'
-        } lg:flex-row gap-0 lg:gap-6 shadow lg:shadow-none`}
+        } lg:flex-row gap-0 shadow lg:shadow-none`}
       >
         {children}
       </ul>
@@ -63,7 +63,7 @@ export const MenuItem = ({
         }}
       >
         <div
-          className={`flex items-center w-full h-[50px] lg:h-full p-6 lg:p-0 ${className}`}
+          className={`flex justify-start lg:justify-center items-center w-full h-[50px] lg:h-full p-6 ${className}`}
         >
           {children}
         </div>

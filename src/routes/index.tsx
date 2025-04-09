@@ -26,7 +26,7 @@ export const appRoutes: Array<TRoute> = [
   { path: '/', name: 'Home', page: PageHome },
   {
     path: '/sistema',
-    name: 'Sistema ALLÌMS',
+    name: 'Sistema',
     page: PageSystem,
     bgImage: backgroundSystem
   },
