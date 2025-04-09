@@ -58,7 +58,7 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
     }
   }, [])
   return (
-    <Section className="bg-gray-primary h-full py-[2%] px-0">
+    <Section className="bg-gray-primary h-full py-[2%] px-0 lg:min-h-[630px]">
       <SectionContainer className="flex-col lg:flex-row h-full">
         <Article className={`w-full lg:py-[7%] lg:px-0`}>
           <ArticleContainer className="w-full">

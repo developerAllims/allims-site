@@ -40,7 +40,7 @@ export const LayoutClients = () => {
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
             <Gallery
-              className={`grid-cols-${max} grid-flow-row lg:grid-flow-col gap-20`}
+              className={`grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 grid-flow-row lg:grid-flow-col gap-20`}
             >
               {arr.map(val => (
                 <Logo

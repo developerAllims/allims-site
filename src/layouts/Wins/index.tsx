@@ -20,7 +20,7 @@ export const LayoutWins = () => {
     <Section className="bg-orange-primary min-h-[1007px] p-[10%] lg:p-0">
       <SectionContainer className="justify-center">
         <Article className="w-full text-center justify-center h-full py-[7%] px-0 lg:w-4/5">
-          <ArticleContainer className="gap-10">
+          <ArticleContainer className="gap-10 lg:gap-20">
             <TitleContainer>
               <Title className="text-4xl text-white">{title}</Title>
               <TitleDivider className="text-gray-primary" />
