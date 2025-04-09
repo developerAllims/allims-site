@@ -3,9 +3,9 @@ import {
   SectionContainer,
   Article,
   ArticleContainer,
-  Title,
   Paragraph,
-  ButtonLink
+  ButtonLink,
+  TitleMain
 } from '../../components'
 import { dataStarts } from '../../data'
 
@@ -17,7 +17,9 @@ export const LayoutStarts = () => {
         <Article className="hidden lg:flex" />
         <Article className="lg:py-[27px] lg:px-[60px] justify-center">
           <ArticleContainer className="justify-center gap-7 h-[274px] w-[377px]">
-            <Title className="text-[55px] text-orange-primary">{title}</Title>
+            <TitleMain className="text-[55px] text-orange-primary">
+              {title}
+            </TitleMain>
             <Paragraph className="text-xl text-gray-primary max-w-[320px] lg:max-w-screen">
               {slogan}
             </Paragraph>

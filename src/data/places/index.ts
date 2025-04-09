@@ -2,6 +2,7 @@ import { illustrationCompany } from '../../assets'
 
 export const dataPlaces = {
   icon: illustrationCompany,
+  legend: 'Empresa ALLIMS',
   title: 'ALLIMS',
   items: [
     `Atuamos no mercado de desenvolvimento de sistema para o segmento laboratorial e também para o segmento agronômico.`,

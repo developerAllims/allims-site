@@ -24,7 +24,7 @@ interface LayoutMessagesProps {
 }
 
 export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
-  const { icon, title, button, fields, schema, items } = dataMessages
+  const { icon, legend, title, button, fields, schema, items } = dataMessages
   const onSubmit = useCallback(async (data: any) => {
     try {
       //const { name, email, phone, company, message } = data
@@ -66,6 +66,7 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
               <Image
                 classContainer="w-full justify-end pl-40 lg:px-15"
                 src={icon}
+                alt={legend}
               />
             ) : (
               <Gallery className="grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-10 justify-start p-[10%] lg:p-0 place-items-start">

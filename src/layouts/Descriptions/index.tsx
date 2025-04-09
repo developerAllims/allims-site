@@ -15,13 +15,13 @@ interface LayoutDescriptions {
 }
 
 export const LayoutDescriptions = ({ isSimple = false }) => {
-  const { icon, title, items, button } = dataDescriptions
+  const { icon, legend, title, items, button } = dataDescriptions
   return (
     <Section className="p-[10%] lg:px-0 bg-gray-primary">
       <SectionContainer className="flex-col lg:flex-row w-full">
         <Article className="p-0 w-full">
           <ArticleContainer className="justify-start h-full p-0 lg:pt-[27px] lg:pr-[27px]">
-            <Image className="h-full w-full" src={icon} />
+            <Image className="h-full w-full" src={icon} alt={legend} />
           </ArticleContainer>
         </Article>
         <Article className="lg:py-0 px-0 w-full">

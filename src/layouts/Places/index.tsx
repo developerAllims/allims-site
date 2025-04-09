@@ -11,13 +11,13 @@ import {
 import { dataPlaces } from '../../data'
 
 export const LayoutPlaces = () => {
-  const { icon, title, items, button } = dataPlaces
+  const { icon, legend, title, items, button } = dataPlaces
   return (
     <Section className="bg-white h-full p-[10%] lg:p-0">
       <SectionContainer className="flex-col lg:flex-row">
         <Article className="lg:py-[10%] lg:px-0">
           <ArticleContainer className="pt-[27px] pr-[27px] pb-0 pl-0">
-            <Image src={icon} />
+            <Image src={icon} alt={legend} />
           </ArticleContainer>
         </Article>
         <Article className="lg:py-[10%] lg:px-0">

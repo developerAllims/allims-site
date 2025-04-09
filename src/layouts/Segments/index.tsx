@@ -23,8 +23,12 @@ export const LayoutSegments = () => {
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
             <Gallery className="grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20 place-items-start">
-              {items.map(({ icon, name }, idx) => (
-                <GalleryPhotoText key={`segment-${idx}`} icon={icon}>
+              {items.map(({ icon, legend, name }, idx) => (
+                <GalleryPhotoText
+                  key={`segment-${idx}`}
+                  icon={icon}
+                  legend={legend}
+                >
                   {name}
                 </GalleryPhotoText>
               ))}

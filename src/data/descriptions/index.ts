@@ -2,6 +2,7 @@ import { illustrationSystem } from '../../assets'
 
 export const dataDescriptions = {
   icon: illustrationSystem,
+  legend: 'Sistema ALLIMS',
   title: 'Sistema ALLIMS',
   items: [
     `O sistema ALLIMS vai muito além dos padrões.`,

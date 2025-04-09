@@ -5,7 +5,7 @@ import { useScrollPosition } from '../../hooks'
 import { dataHeaders } from '../../data'
 
 export const LayoutHeaders = () => {
-  const { icon } = dataHeaders
+  const { icon, legend } = dataHeaders
   const location = useLocation()
   const basePath = getBasePath(location.pathname)
   const scrollPosition = useScrollPosition()
@@ -25,6 +25,7 @@ export const LayoutHeaders = () => {
         <Link to="/">
           <Image
             src={icon}
+            alt={legend}
             classContainer="w-32"
             className={`w-32 h-full ${isTop ? 'lg:h-14' : 'lg:h-10'}`}
           />

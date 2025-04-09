@@ -1,5 +1,6 @@
 import { logoPrimary } from '../../assets'
 
 export const dataHeaders = {
-  icon: logoPrimary
+  icon: logoPrimary,
+  legend: 'Empresa ALLIMS'
 }

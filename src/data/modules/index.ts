@@ -9,6 +9,7 @@ export const dataModules = {
       modal: {
         title: 'ALLIMS',
         image: moduleManager,
+        legend: 'Módulo do ALLIMS',
         lines: [
           `O ALLIMS permite mapear todos os processos analíticos do laboratório, desde a recepção da amostra até a expedição do Relatório de Ensaio (laudo) para o cliente. É responsável por etapas primordiais como análise crítica no recebimento da amostra, distribuição das tarefas analíticas, inserção dos ensaios, controle de bancada (ELN), interfaceamento com equipamentos (Conection) e expedição dos resultados através da emissão de relatórios (Lab.OnLine).`,
           `O sistema ALLIMS contempla diversas ferramentas para o dia a dia dos analistas. Possui interface (tela) gerencial completa, permite a visualização de serviços a serem iniciados, em andamento, atrasados e finalizados, por meio do mapa de trabalho é possível gerenciar a carga de tarefa de cada setor e/ou analista e redistribuir os serviços.`,
@@ -24,6 +25,7 @@ export const dataModules = {
       modal: {
         title: 'Comercial',
         image: moduleManager,
+        legend: 'Módulo do ALLIMS',
         lines: [
           `Este módulo faz por completo o gerenciamento do relacionamento com os clientes do laboratório. Desde as primeiras interações para entendimento das demandas, registro/histórico dos contatos, data para folllow-up, negociações, versões das propostas até a aprovação final.`,
           `O módulo também controla as faixas de desconto por usuário, ou seja, de acordo com perfil de cada um a porcentagem pode variar. O sistema irá manter para aprovação do superior quando um desconto for maior do que o permitido.`,
@@ -43,6 +45,7 @@ export const dataModules = {
       modal: {
         title: 'Agenda',
         image: moduleManager,
+        legend: 'Módulo do ALLIMS',
         lines: [
           `No módulo Agenda o setor de logística poderá ajustar as datas previstas para coleta conforme alinhamento final com o cliente e conforme seu roteiro de coleta. As coletas são apresentadas em forma de calendário, o que permite muita agilidade e visibilidade das programações definidas, além disso os coletadores poderão acompanhar sua programação, bem como, preparar as suas atividades com antecedência. há ainda a possibilidade dos planos de amostragem serem impressos pelo sistema.`,
           `As coletas também poderão ser enviadas para um dispositivo móvel para registro em campo, módulo Coleta Mobile, de modo que as informações de coleta serão digitadas ou transferidas automaticamente para o ALLIMS.`
@@ -56,6 +59,7 @@ export const dataModules = {
       modal: {
         title: 'Coleta Mobile',
         image: moduleManager,
+        legend: 'Módulo do ALLIMS',
         lines: [
           `O Coleta Mobile primeiro realiza o registro das informações de campo em disposto móvel, após o setor de logística revisar e finalizar no módulo Agenda as datas previstas para coleta, a lista de amostras, bem como as informações de campo, poderá ser enviada para o dispositivo móvel: tablet (Android ®), smartphone ou outros.`,
           `Em campo o coletor poderá localizar a amostra no sistema por meio da digitação do código da amostra ou leitura do código de barras ou QRCode constante na etiqueta da amostra, após todas as informações serem registradas os dados poderão ser enviados para o laboratório via conexão dados com a internet ou caso não tenha sinal de internet disponível no momento, assim que o dispositivo for conectado os dados da coleta serão enviados para o ALLIMS.`,
@@ -70,6 +74,7 @@ export const dataModules = {
       modal: {
         title: 'Insumos',
         image: moduleManager,
+        legend: 'Módulo do ALLIMS',
         lines: [
           `O módulo de Insumos é um módulo para gerenciamento dos insumos do laboratório: estoque, lote, validade de reagentes, preparo de soluções e materiais de consumo. Traz como grande benefício a redução de desperdícios e a conscientização de uso de materiais por parte dos analistas, pois oferece controle completo de materiais e gestão de suprimentos por departamento ou por colaborador, em um determinado período.`,
           `O módulo controla todas as entradas de materiais com gestão de nomenclaturas para eliminar possibilidades de estoques sem controle no sistema. Permite a gestão hierárquica de tarefas que devem ser executadas por colaboradores internos, indicando prazos e sazonalidade nas compras.`,
@@ -85,6 +90,7 @@ export const dataModules = {
       modal: {
         title: 'Custódia',
         image: moduleManager,
+        legend: 'Módulo do ALLIMS',
         lines: [
           `O módulo de Custódia está preparado para gerenciar com precisão todas as funções da cadeia da custódia dentro e fora do laboratório, inclusive com travas automáticas. Oferece rastreabilidade de manipulações e armazenamentos em ambientes controlados como estufas, freezer, termômetros, entre outros.`,
           `O módulo é responsável por avaliar o ambiente controlado através de métricas de qualidade, definidas de acordo com cada ambiente e equipamento, podendo reter uma amostra a partir de um apontador pré-definido.`,
@@ -99,6 +105,7 @@ export const dataModules = {
       modal: {
         title: 'Integrações',
         image: moduleManager,
+        legend: 'Módulo do ALLIMS',
         lines: [
           `O módulo de Integrações proporciona ao laboratório trocar informações com os sistemas: CRM, ERP, PIMS, MES e outros, além de fazer conexão e aquisição de dados dos equipamentos do laboratório.`,
           `O módulo Connection é considerado um dos principais responsáveis pela redução dos erros de transcrição de dados, do tempo de entrega dos resultados e re-digitação de informações, aumento da produtividade e da qualidade, além da automação de processos.`,
@@ -116,6 +123,7 @@ export const dataModules = {
       modal: {
         title: 'Lab.Online',
         image: moduleManager,
+        legend: 'Módulo do ALLIMS',
         lines: [
           `O Lab.OnLine permite aos clientes do laboratório consultar os resultados analíticos diretamente no portal da Web.`,
           `No Lab.OnLine é possível: acompanhar os status das amostras no laboratório, consultar resultados das amostras, imprimir os Relatórios de Ensaio (laudo PDF), encaminhar amostras para outras pessoas, exportar informações para o Excel, entre outros recursos.`,
@@ -133,6 +141,7 @@ export const dataModules = {
       modal: {
         title: 'Garantia da Qualidade',
         image: moduleManager,
+        legend: 'Módulo do ALLIMS',
         lines: [
           `O módulo de Garantia da Qualidade oferece o controle dos registros e apontadores exigidos pela ISO/IEC 17025, apoiando a área de qualidade do laboratório em todas as responsabilidades referentes a esta norma.`,
           `Este módulo traz diversas ferramentas como controle de capacitação de colaboradores, calibração de equipamentos, gestão de tomada de ação baseada em possíveis RNC, entre outras.`,
@@ -149,6 +158,7 @@ export const dataModules = {
       modal: {
         title: 'Alertas',
         image: moduleManager,
+        legend: 'Módulo do ALLIMS',
         lines: [
           `Imagine o sistema notificando seus usuários ou clientes conforme as ações são realizadas dentro do laboratório.`,
           `Diversas ocorrências no sistema podem ser vinculadas ao envio de e-mails automático ou notificações para o módulo de Alertas no seu celular.`,

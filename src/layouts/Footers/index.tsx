@@ -4,7 +4,7 @@ import { dataFooters } from '../../data'
 import { version } from '../../../package.json'
 
 export const LayoutFooters = () => {
-  const { logo, copyright, devBy } = dataFooters
+  const { logo, legend, copyright, devBy } = dataFooters
 
   const [pageHeight, setPageHeight] = useState(0)
   const [viewHeight, setViewHeight] = useState(0)
@@ -47,7 +47,7 @@ export const LayoutFooters = () => {
         </div>
         <div className="flex flex-col gap-1 items-start h-full">
           <span className="font-semibold">{devBy}</span>
-          <Image src={logo} className="w-32 h-10" />
+          <Image src={logo} alt={legend} className="w-32 h-10" />
         </div>
       </Footer>
       {hasScroll ? (

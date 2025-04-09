@@ -4,6 +4,7 @@ import { logoSecondary } from '../../assets'
 export const dataMessages = {
   title: 'Fale conosco através do formulário abaixo:',
   icon: logoSecondary,
+  legend: 'Contato ALLIMS',
   fields: {
     name: {
       specs: {

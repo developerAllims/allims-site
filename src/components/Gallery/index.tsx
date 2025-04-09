@@ -54,12 +54,14 @@ export const GalleryLampText = ({
 
 interface GalleryIconTextProps extends ComponentProps<'div'> {
   icon: string
+  legend: string
 }
 
 export const GalleryIconText = ({
   children,
   className = '',
   icon,
+  legend,
   ...rest
 }: GalleryIconTextProps) => {
   return (
@@ -69,6 +71,7 @@ export const GalleryIconText = ({
     >
       <img
         src={icon}
+        alt={legend}
         className="max-h-[150px] lg:max-h-[133px] object-contain"
       />
       <span className="px-10 lg:px-0 text-base font-semibold text-gray-primary">
@@ -115,12 +118,14 @@ export const GalleryIconLabelText = ({
 
 interface GalleryPhotoTextProps extends ComponentProps<'div'> {
   icon: string
+  legend: string
 }
 
 export const GalleryPhotoText = ({
   children,
   className = '',
   icon,
+  legend,
   ...rest
 }: GalleryPhotoTextProps) => {
   const [hover, setHover] = useState(false)
@@ -128,6 +133,7 @@ export const GalleryPhotoText = ({
     <div {...rest} className={`flex flex-col gap-7 w-full ${className}`}>
       <img
         src={icon}
+        alt={legend}
         className="max-h-[220px] lg:max-h-[161px] object-contain"
         style={
           hover

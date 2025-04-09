@@ -11,6 +11,20 @@ export const Title = ({ children, className = '', ...rest }: TitleProps) => {
   )
 }
 
+interface TitleMainProps extends ComponentProps<'h1'> {}
+
+export const TitleMain = ({
+  children,
+  className = '',
+  ...rest
+}: TitleMainProps) => {
+  return (
+    <h1 {...rest} className={`font-bold ${className}`}>
+      {children}
+    </h1>
+  )
+}
+
 interface TitleDividerProps extends ComponentProps<'span'> {}
 
 export const TitleDivider = ({ className = '' }: TitleDividerProps) => {

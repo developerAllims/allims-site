@@ -30,7 +30,12 @@ export const LayoutModules = () => {
   const pairModules = setPairModules()
 
   const [open, setOpen] = useState(false)
-  const [config, setConfig] = useState({ title: '', image: '', lines: [] })
+  const [config, setConfig] = useState({
+    title: '',
+    image: '',
+    legend: '',
+    lines: []
+  })
 
   const modalOpen = useCallback((modal: any) => {
     setConfig(modal)
@@ -87,7 +92,7 @@ export const LayoutModules = () => {
         title={config.title}
         onClick={modalClose}
       >
-        <Image src={config.image} className="w-[200px]" />
+        <Image src={config.image} alt={config.legend} className="w-[200px]" />
         <ModalContainer>
           {config.lines.map((val: any, idx) =>
             typeof val === 'object' ? (
