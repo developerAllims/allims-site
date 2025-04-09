@@ -31,12 +31,17 @@ export const LayoutHeaders = () => {
         </Link>
         <Menu>
           {appRoutes.map(
-            ({ path, name, hide }) =>
+            ({ path, name, hide }, idx) =>
               !hide && (
                 <MenuItem
                   key={`menu-${path}`}
                   to={path}
                   selected={basePath === path}
+                  className={`${
+                    idx + 1 === appRoutes.length
+                      ? ''
+                      : 'border-b-2 lg:border-b-0 border-gray-secondary'
+                  }`}
                 >
                   {name}
                 </MenuItem>

@@ -24,9 +24,9 @@ export const Menu = ({ children, ...rest }: MenuProps) => {
       <ul
         className={`${
           open
-            ? 'flex absolute top-[80px] right-0 w-50 h-auto p-6 flex-col border-t-2 bg-white'
+            ? 'flex absolute top-[80px] right-0 w-50 h-auto p-0 lg:p-6 flex-col border-t-2 lg:border-t-0 bg-white'
             : 'hidden lg:flex'
-        } lg:flex-row gap-6`}
+        } lg:flex-row gap-0 lg:gap-6 shadow lg:shadow-none`}
       >
         {children}
       </ul>
@@ -35,23 +35,25 @@ export const Menu = ({ children, ...rest }: MenuProps) => {
 }
 
 interface MenuItemProps extends ComponentProps<'a'> {
+  className?: string
   selected?: boolean
   to: string
 }
 
 export const MenuItem = ({
   children,
+  className = '',
   selected,
   to,
   ...rest
 }: MenuItemProps) => {
   const [hover, setHover] = useState(false)
   return (
-    <li className="flex h-full">
+    <li className="flex w-full h-full hover:bg-gray-secondary">
       <Link
         {...rest}
         to={to}
-        className={`${selected && 'text-orange-primary'}`}
+        className={`w-full h-full ${selected && 'text-orange-primary'}`}
         style={hover ? { opacity: '0.7' } : {}}
         onMouseEnter={() => {
           setHover(true)
@@ -60,7 +62,11 @@ export const MenuItem = ({
           setHover(false)
         }}
       >
-        <div className="flex items-center h-full">{children}</div>
+        <div
+          className={`flex items-center w-full h-[50px] lg:h-full p-6 lg:p-0 ${className}`}
+        >
+          {children}
+        </div>
       </Link>
     </li>
   )
