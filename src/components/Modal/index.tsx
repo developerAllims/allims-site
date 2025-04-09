@@ -1,13 +1,29 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-irregular-whitespace */
 /* eslint-disable @typescript-eslint/no-empty-object-type */
-import { ComponentProps } from 'react'
+import { ComponentProps, useCallback } from 'react'
 import { ButtonIcon } from '../Button'
 
 interface ModalProps extends ComponentProps<'dialog'> {
   title: string
+  modalClose: any
 }
 
-export const Modal = ({ children, open, title, ...rest }: ModalProps) => {
+export const Modal = ({
+  children,
+  open,
+  modalClose,
+  title,
+  ...rest
+}: ModalProps) => {
+  const handleClick = useCallback((event: any) => {
+    event.preventDefault()
+    event.stopPropagation()
+  }, [])
+  const handleClose = useCallback(() => {
+    modalClose()
+  }, [modalClose])
+
   if (!open) return <></>
   return (
     <dialog
@@ -15,12 +31,16 @@ export const Modal = ({ children, open, title, ...rest }: ModalProps) => {
       open={open}
       className="flex justify-center items-center fixed h-[100svh] w-[100svw] z-[999] left-0 top-0 bg-[rgba(0,0,0,0.4)]"
     >
-      <div className="flex flex-col w-4/5 lg:w-2/3 max-w-[845px] h-fit max-h-[80svh] gap-6 p-7 font-semibold bg-white text-gray-primary rounded-[3px]">
+      <div
+        className="flex flex-col w-4/5 lg:w-2/3 max-w-[845px] h-fit max-h-[80svh] gap-6 p-7 font-semibold bg-white text-gray-primary rounded-[3px]"
+        onClick={handleClick}
+      >
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-0 justify-between">
           <ButtonIcon
             icon="CiCircleChevLeft"
             title="Voltar"
             classContainer="justify-start"
+            onClick={handleClose}
           />
           <h3 className="text-2xl text-center sm:text-right font-bold text-gray-primary">
             {title}

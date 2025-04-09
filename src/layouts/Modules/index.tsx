@@ -81,7 +81,12 @@ export const LayoutModules = () => {
           ))}
         </SectionContainer>
       </Section>
-      <Modal open={open} title={config.title} onClick={modalClose}>
+      <Modal
+        open={open}
+        modalClose={modalClose}
+        title={config.title}
+        onClick={modalClose}
+      >
         <Image src={config.image} className="w-[200px]" />
         <ModalContainer>
           {config.lines.map((val: any, idx) =>
