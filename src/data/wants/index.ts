@@ -6,6 +6,6 @@ export const dataWants = {
     `Substituir seu sistema LIMS, porque existem lacunas e processos não atendidos?`,
     `Substituir seu sistema LIMS, referência no mercado, mas os custos de manutenção são exagerados?`
   ],
-  obs1: `A ALLÌMS pode ajudar muito na busca da solução ideal: `,
+  obs1: `A ALLIMS pode ajudar muito na busca da solução ideal: `,
   obs2: `Custos Reduzidos X Benefícios Elevados.`
 }

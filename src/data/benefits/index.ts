@@ -9,7 +9,7 @@ import {
 } from '../../assets'
 
 export const dataBenefits = {
-  title: 'Benefícios do Sistema ALLÍMS',
+  title: 'Benefícios do Sistema ALLIMS',
   items: [
     {
       icon: iconAgility,

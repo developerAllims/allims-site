@@ -2,7 +2,7 @@ import { illustrationCompany } from '../../assets'
 
 export const dataPlaces = {
   icon: illustrationCompany,
-  title: 'ALLÌMS',
+  title: 'ALLIMS',
   items: [
     `Atuamos no mercado de desenvolvimento de sistema para o segmento laboratorial e também para o segmento agronômico.`,
     `Atendemos vários clientes no segmento de laboratórios, nas áreas: ambiental, alimentos, solo, química, nutrição humana, nutrição animal, farmacêutica, pesquisa e desenvolvimento, entre outros.`,

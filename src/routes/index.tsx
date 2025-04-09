@@ -40,7 +40,7 @@ export const appRoutes: Array<TRoute> = [
     path: '/empresa',
     name: 'Empresa',
     page: PageCompany,
-    title: 'ALLÌMS',
+    title: 'ALLIMS',
     bgImage: backgroundCompany
   },
   { path: '/contato', name: 'Contato', page: PageContact },

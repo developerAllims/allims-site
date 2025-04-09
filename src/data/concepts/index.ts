@@ -10,7 +10,7 @@ export const dataConcepts = {
       route: '/sistema#lims' // TODO: refactor
     },
     {
-      title: 'Empresa ALLÌMS',
+      title: 'Empresa ALLIMS',
       descriptions: [
         `Atuamos no mercado de desenvolvimento de sistema para laboratórios de controle de qualidade, prestadores de serviços e pesquisa e desenvolvimento. Atendemos as áreas: ambiental, alimentos, solo, química, nutrição humana, animal, entre outros.`
       ],

@@ -1,5 +1,5 @@
 export const dataWins = {
-  title: 'Ganhos com o uso do ALLÌMS',
+  title: 'Ganhos com o uso do ALLIMS',
   items: [
     `Redução dos prazos de entrega dos resultados de análise para os clientes`,
     `Redução de custos operacionais do laboratório, possibilitando maior volume de amostras com a mesma equipe`,
@@ -20,7 +20,7 @@ export const dataWins = {
         'Relatórios de Ensaio;',
         'Remoção ou mesmo eliminação do uso de planilhas eletrônicas, evitando-se a duplicidade das informações;',
         'Padronização dos ensaios a serem realizados por tipo de material (amostra);',
-        'Registro dos dados dos ensaios na bancada diretamente no sistema ALLÌMS, eliminando os registros em papel;',
+        'Registro dos dados dos ensaios na bancada diretamente no sistema ALLIMS, eliminando os registros em papel;',
         'Os dados obtidos por meio dos equipamentos analíticos (balança, cromotógrafo, ICP, etc) são transferidos diretamente para o sistema, sem registro manual;'
       ]
     },
@@ -64,7 +64,7 @@ export const dataWins = {
         'Rastreabilidade integral das informações armazenadas, incluído a identificação do analista e equipamento pela qual foi gerada;',
         'Rastreabilidade completa dos equipamentos vinculados aos ensaios;',
         'Rastreabilidade completa dos insumos, reagentes, soluções, meios de cultura, entre outros;',
-        'O ALLÌMS permite que os requisitos da ISO/IEC 17.025 sejam contemplados facilmente no dia a dia do laboratório;',
+        'O ALLIMS permite que os requisitos da ISO/IEC 17.025 sejam contemplados facilmente no dia a dia do laboratório;',
         'Histórico e controle de exames e qualificações dos analistas;',
         'Gestão dos Treinamentos;',
         'Registro de não conformidades e tomada de ação;',
