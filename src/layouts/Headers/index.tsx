@@ -13,12 +13,10 @@ export const LayoutHeaders = () => {
   return (
     <>
       <div
-        className={`hidden lg:flex w-full h-20 bg-white ${
-          isTop ? 'lg:h-20' : 'lg:h-14'
-        }`}
+        className={`flex w-full h-20 bg-white ${isTop ? 'lg:h-20' : 'lg:h-14'}`}
       />
       <Header
-        className={`lg:fixed lg:top-0 lg:z-98 px-6 sm:px-16 lg:px-0 border-b-2 lg:shadow-md h-20 ${
+        className={`fixed top-0 z-98 px-6 sm:px-16 lg:px-0 border-b-2 lg:shadow-md h-20 ${
           isTop ? 'lg:h-20' : 'lg:h-14'
         }`}
       >
