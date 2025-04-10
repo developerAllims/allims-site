@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios'
+import { z } from 'zod'
+import { images, messages } from '../../assets'
 import {
   Section,
   Article,
@@ -15,7 +17,6 @@ import {
   FormContainer,
   FormField
 } from '../../components'
-import { dataMessages } from '../../data'
 import { useCallback } from 'react'
 import { replaceTemplate } from '../../utils/lib'
 
@@ -24,7 +25,14 @@ interface LayoutMessagesProps {
 }
 
 export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
-  const { icon, legend, title, button, fields, schema, items } = dataMessages
+  const { icon, legend, title, button, fields, items } = messages
+  const schema = z.object({
+    name: z.string().nonempty(),
+    email: z.string().nonempty().email(),
+    phone: z.string().nonempty(),
+    company: z.string().nonempty(),
+    message: z.string().nonempty()
+  })
   const onSubmit = useCallback(async (data: any) => {
     try {
       //const { name, email, phone, company, message } = data
@@ -65,38 +73,52 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
             {isSimple ? (
               <Image
                 classContainer="w-full justify-end pl-40 lg:px-15"
-                src={icon}
+                src={images[icon]}
                 alt={legend}
               />
             ) : (
               <Gallery className="grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-10 justify-start p-[10%] lg:p-0 place-items-start">
-                {items.map(({ name, type, code, text, link, list }, idx) => (
-                  <GalleryIconLabelText
-                    key={`msg-info-${idx}`}
-                    iconType={type}
-                    label={name}
-                    className={`${
-                      idx === 2 ? 'col-span-1 sm:col-span-2 lg:col-span-1' : ''
-                    }`}
-                  >
-                    {list ? (
-                      list.map((val, idxLs) => (
-                        <p>
-                          {' '}
-                          <a
-                            key={`contact-inf-${idxLs}`}
-                            href={link ? link : `${code}:${val}`}
-                            target={`${link ? '_blank' : '_self'}`}
-                          >
-                            {val}
-                          </a>
-                        </p>
-                      ))
-                    ) : (
-                      <a href={`${code}:${text}`}>{text}</a>
-                    )}
-                  </GalleryIconLabelText>
-                ))}
+                {items.map(
+                  (
+                    {
+                      name = '',
+                      type = '',
+                      code = '',
+                      text = '',
+                      link = '',
+                      list = []
+                    },
+                    idx = 0
+                  ) => (
+                    <GalleryIconLabelText
+                      key={`msg-info-${idx}`}
+                      iconType={type}
+                      label={name}
+                      className={`${
+                        idx === 2
+                          ? 'col-span-1 sm:col-span-2 lg:col-span-1'
+                          : ''
+                      }`}
+                    >
+                      {list ? (
+                        list.map((val, idxLs) => (
+                          <p>
+                            {' '}
+                            <a
+                              key={`contact-inf-${idxLs}`}
+                              href={link ? link : `${code}:${val}`}
+                              target={`${link ? '_blank' : '_self'}`}
+                            >
+                              {val}
+                            </a>
+                          </p>
+                        ))
+                      ) : (
+                        <a href={`${code}:${text}`}>{text}</a>
+                      )}
+                    </GalleryIconLabelText>
+                  )
+                )}
               </Gallery>
             )}
           </ArticleContainer>

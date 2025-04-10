@@ -1,3 +1,4 @@
+import { images, segments } from '../../assets'
 import {
   Section,
   Article,
@@ -9,10 +10,9 @@ import {
   TitleContainer,
   TitleDivider
 } from '../../components'
-import { dataSegments } from '../../data'
 
 export const LayoutSegments = () => {
-  const { title, items } = dataSegments
+  const { title, items } = segments
   return (
     <Section className="bg-orange-tertiary h-full p-[10%] lg:p-0">
       <SectionContainer className="justify-center">
@@ -23,10 +23,10 @@ export const LayoutSegments = () => {
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
             <Gallery className="grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20 place-items-start">
-              {items.map(({ icon, legend, name }, idx) => (
+              {items.map(({ icon = '', legend = '', name = '' }, idx = 0) => (
                 <GalleryPhotoText
                   key={`segment-${idx}`}
-                  icon={icon}
+                  icon={images[icon]}
                   legend={legend}
                 >
                   {name}

@@ -1,3 +1,4 @@
+import { explanations } from '../../assets'
 import {
   Section,
   Article,
@@ -8,10 +9,9 @@ import {
   TitleContainer,
   TitleDivider
 } from '../../components'
-import { dataExplanations } from '../../data'
 
 export const LayoutExplanations = () => {
-  const { title, items } = dataExplanations
+  const { title, items } = explanations
   return (
     <Section id="lims" className="bg-white p-10 h-full">
       <SectionContainer className="justify-center">
@@ -21,7 +21,7 @@ export const LayoutExplanations = () => {
               <Title className="text-4xl text-orange-primary">{title}</Title>
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
-            {items.map((val, idx) => (
+            {items.map((val = '', idx = 0) => (
               <Paragraph
                 key={`explanation-${idx}`}
                 className="text-base text-gray-primary text-justify"

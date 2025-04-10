@@ -1,3 +1,4 @@
+import { features } from '../../assets'
 import {
   Section,
   Article,
@@ -10,10 +11,9 @@ import {
   TitleContainer,
   TitleDivider
 } from '../../components'
-import { dataFeatures } from '../../data'
 
 export const LayoutFeatures = () => {
-  const { title, items, button } = dataFeatures
+  const { title, items, button } = features
   return (
     <Section className="bg-gray-secondary h-full p-[10%] lg:p-0">
       <SectionContainer className="justify-center">
@@ -24,7 +24,7 @@ export const LayoutFeatures = () => {
               <TitleDivider className="text-orange-primary" />
             </TitleContainer>
             <Gallery className="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20 lg:place-items-start">
-              {items.map((val, idx) => (
+              {items.map((val = '', idx = 0) => (
                 <GalleryCheckText key={`feature-${idx}`}>
                   {val}
                 </GalleryCheckText>

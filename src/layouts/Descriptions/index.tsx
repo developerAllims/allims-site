@@ -1,3 +1,4 @@
+import { images, descriptions } from '../../assets'
 import {
   Section,
   Article,
@@ -8,20 +9,19 @@ import {
   Title,
   SectionContainer
 } from '../../components'
-import { dataDescriptions } from '../../data'
 
 interface LayoutDescriptions {
   isSimple: boolean
 }
 
 export const LayoutDescriptions = ({ isSimple = false }) => {
-  const { icon, legend, title, items, button } = dataDescriptions
+  const { icon, legend, title, items, button } = descriptions
   return (
     <Section className="p-[10%] lg:px-0 bg-gray-primary">
       <SectionContainer className="flex-col lg:flex-row w-full">
         <Article className="p-0 w-full">
           <ArticleContainer className="justify-start h-full p-0 lg:pt-[27px] lg:pr-[27px]">
-            <Image className="h-full w-full" src={icon} alt={legend} />
+            <Image className="h-full w-full" src={images[icon]} alt={legend} />
           </ArticleContainer>
         </Article>
         <Article className="lg:py-0 px-0 w-full">
@@ -29,7 +29,7 @@ export const LayoutDescriptions = ({ isSimple = false }) => {
             <Title className="text-4xl text-white">{title}</Title>
 
             {isSimple ? (
-              items.map((val, idx) => (
+              items.map((val = '', idx = 0) => (
                 <Paragraph key={`desc-${idx}`} className="text-base text-white">
                   {val}
                 </Paragraph>

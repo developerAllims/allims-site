@@ -1,3 +1,4 @@
+import { wants } from '../../assets'
 import {
   Section,
   Article,
@@ -10,10 +11,9 @@ import {
   TitleContainer,
   TitleDivider
 } from '../../components'
-import { dataWants } from '../../data'
 
 export const LayoutWants = () => {
-  const { title, items, obs1, obs2 } = dataWants
+  const { title, items, obs1, obs2 } = wants
   return (
     <Section className="bg-gray-secondary p-[10%] lg:p-0">
       <SectionContainer className="justify-center">
@@ -24,7 +24,7 @@ export const LayoutWants = () => {
               <TitleDivider className="text-orange-primary" />
             </TitleContainer>
             <Gallery className="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-15 items-start">
-              {items.map((val, idx) => (
+              {items.map((val = '', idx = 0) => (
                 <GalleryCheckText key={`want-${idx}`}>{val}</GalleryCheckText>
               ))}
             </Gallery>

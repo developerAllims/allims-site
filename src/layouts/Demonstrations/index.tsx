@@ -1,3 +1,4 @@
+import { images, demonstrations } from '../../assets'
 import {
   Section,
   Article,
@@ -7,7 +8,6 @@ import {
   Paragraph,
   Title
 } from '../../components'
-import { dataDemonstrations } from '../../data'
 
 interface LayoutDemonstrationsProps {
   isSimple?: boolean
@@ -16,14 +16,14 @@ interface LayoutDemonstrationsProps {
 export const LayoutDemonstrations = ({
   isSimple = false
 }: LayoutDemonstrationsProps) => {
-  const { icon, title, items, button } = dataDemonstrations
+  const { icon, title, items, button } = demonstrations
   return (
-    <Section bgImage={icon} className={`h-full p-[10%] lg:p-0`}>
+    <Section bgImage={images[icon]} className={`h-full p-[10%] lg:p-0`}>
       <SectionContainer className="justify-center">
         <Article className="w-full justify-center text-center text-shadow lg:w-4/5">
           <ArticleContainer className="gap-7">
             <Title className="text-4xl text-white">{title}</Title>
-            {items.map((val, idx) => (
+            {items.map((val = '', idx = 0) => (
               <Paragraph key={`demo-${idx}`} className="text-xl text-white">
                 {val}
               </Paragraph>

@@ -1,3 +1,4 @@
+import { images, starts } from '../../assets'
 import {
   Section,
   SectionContainer,
@@ -7,12 +8,11 @@ import {
   ButtonLink,
   TitleMain
 } from '../../components'
-import { dataStarts } from '../../data'
 
 export const LayoutStarts = () => {
-  const { icon, title, slogan, button } = dataStarts
+  const { icon, title, slogan, button } = starts
   return (
-    <Section bgImage={icon} className="h-full">
+    <Section bgImage={images[icon]} className="h-full">
       <SectionContainer className="justify-start lg:justify-center h-full p-[10%] lg:py-[120px] lg:px-0">
         <Article className="hidden lg:flex" />
         <Article className="lg:py-[27px] lg:px-[60px] justify-center">

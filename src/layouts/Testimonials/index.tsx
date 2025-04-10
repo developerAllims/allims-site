@@ -1,3 +1,4 @@
+import { testimonials } from '../../assets'
 import {
   Section,
   Article,
@@ -8,10 +9,9 @@ import {
   TitleDivider,
   CarouselTestimonials
 } from '../../components'
-import { dataTestimonials } from '../../data'
 
 export const LayoutTestimonials = () => {
-  const { title, items } = dataTestimonials
+  const { title, items } = testimonials
   return (
     <Section className="bg-gray-primary p-0 lg:p-10 h-full lg:h-[810px]">
       <SectionContainer className="h-full justify-center">

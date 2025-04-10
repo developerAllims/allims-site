@@ -1,9 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import {
-  backgroundSystem,
-  backgroundCompany,
-  backgroundModules
-} from '../assets'
+import { routes } from '../assets'
 import {
   PageCompany,
   PageContact,
@@ -12,6 +8,15 @@ import {
   PageNotFound,
   PageSystem
 } from '../pages'
+
+export const pages: any = {
+  pageHome: PageHome,
+  pageSistema: PageSystem,
+  pageModulos: PageModules,
+  pageEmpresa: PageCompany,
+  pageContato: PageContact,
+  pageDefault: PageNotFound
+}
 
 type TRoute = {
   path: string
@@ -22,30 +27,23 @@ type TRoute = {
   bgImage?: string
 }
 
-export const appRoutes: Array<TRoute> = [
-  { path: '/', name: 'Home', page: PageHome },
-  {
-    path: '/sistema',
-    name: 'Sistema',
-    page: PageSystem,
-    bgImage: backgroundSystem
-  },
-  {
-    path: '/modulos',
-    name: 'Módulos',
-    page: PageModules,
-    bgImage: backgroundModules
-  },
-  {
-    path: '/empresa',
-    name: 'Empresa',
-    page: PageCompany,
-    title: 'ALLIMS',
-    bgImage: backgroundCompany
-  },
-  { path: '/contato', name: 'Contato', page: PageContact },
-  { path: '*', name: 'Default', page: PageNotFound, hide: true }
-]
+export const appRoutes: Array<TRoute> = routes.map(
+  ({
+    path = '',
+    name = '',
+    page = '',
+    bgImage = '',
+    title = '',
+    hide = false
+  }) => ({
+    path,
+    name,
+    page: pages[page],
+    bgImage,
+    title,
+    hide
+  })
+)
 
 export const getBasePath = (path = '') => {
   const parts = path.split('/') || []

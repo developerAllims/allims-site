@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useCallback, useState } from 'react'
+import { images, modules } from '../../assets'
 import {
   Section,
   Article,
@@ -13,10 +14,9 @@ import {
   Image,
   ModalContainer
 } from '../../components'
-import { dataModules } from '../../data'
 
 export const LayoutModules = () => {
-  const { items } = dataModules
+  const { items } = modules
   const setPairModules = useCallback(() => {
     const pairs = []
     for (let index = 0; index < items.length; index += 2) {
@@ -92,7 +92,11 @@ export const LayoutModules = () => {
         title={config.title}
         onClick={modalClose}
       >
-        <Image src={config.image} alt={config.legend} className="w-[200px]" />
+        <Image
+          src={images[config.image || '']}
+          alt={config.legend}
+          className="w-[200px]"
+        />
         <ModalContainer>
           {config.lines.map((val: any, idx) =>
             typeof val === 'object' ? (

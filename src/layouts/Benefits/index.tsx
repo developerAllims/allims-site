@@ -1,3 +1,4 @@
+import { images, benefits } from '../../assets'
 import {
   Section,
   Article,
@@ -9,10 +10,9 @@ import {
   TitleContainer,
   TitleDivider
 } from '../../components'
-import { dataBenefits } from '../../data'
 
 export const LayoutBenefits = () => {
-  const { title, items } = dataBenefits
+  const { title, items } = benefits
   return (
     <Section className="bg-white p-[10%] lg:p-0">
       <SectionContainer className="justify-center">
@@ -23,10 +23,10 @@ export const LayoutBenefits = () => {
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
             <Gallery className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-30 lg:place-items-start">
-              {items.map(({ icon, legend, name }, idx) => (
+              {items.map(({ icon = '', legend = '', name = '' }, idx = 0) => (
                 <GalleryIconText
                   key={`benefit-${idx}`}
-                  icon={icon}
+                  icon={images[icon]}
                   legend={legend}
                 >
                   {name}

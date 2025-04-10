@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { clients } from '../../assets'
 import {
   Section,
   Article,
@@ -10,10 +11,9 @@ import {
   TitleContainer,
   TitleDivider
 } from '../../components'
-import { dataClients } from '../../data'
 
 export const LayoutClients = () => {
-  const { title, items } = dataClients
+  const { title, items } = clients
   const [position, setPosition] = useState(0)
   const [fade, setFade] = useState(1)
   const max = 4
