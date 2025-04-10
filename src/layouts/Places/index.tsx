@@ -1,4 +1,4 @@
-import { images, places } from '../../assets'
+import { places } from '../../assets'
 import {
   Section,
   Article,
@@ -11,13 +11,13 @@ import {
 } from '../../components'
 
 export const LayoutPlaces = () => {
-  const { icon, legend, title, items, button } = places
+  const { icon, title, items, button } = places
   return (
     <Section className="bg-white h-full p-[10%] lg:p-0">
       <SectionContainer className="flex-col lg:flex-row">
         <Article className="lg:py-[10%] lg:px-0">
           <ArticleContainer className="pt-[27px] pr-[27px] pb-0 pl-0">
-            <Image src={images[icon]} alt={legend} />
+            <Image icon={icon} />
           </ArticleContainer>
         </Article>
         <Article className="lg:py-[10%] lg:px-0">

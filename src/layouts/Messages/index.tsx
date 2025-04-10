@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios'
 import { z } from 'zod'
-import { images, messages } from '../../assets'
+import { messages } from '../../assets'
 import {
   Section,
   Article,
@@ -25,7 +25,7 @@ interface LayoutMessagesProps {
 }
 
 export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
-  const { icon, legend, title, button, fields, items } = messages
+  const { icon, title, button, fields, items } = messages
   const schema = z.object({
     name: z.string().nonempty(),
     email: z.string().nonempty().email(),
@@ -73,8 +73,7 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
             {isSimple ? (
               <Image
                 classContainer="w-full justify-end pl-40 lg:px-15"
-                src={images[icon]}
-                alt={legend}
+                icon={icon}
               />
             ) : (
               <Gallery className="grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-10 justify-start p-[10%] lg:p-0 place-items-start">

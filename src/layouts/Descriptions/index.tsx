@@ -1,4 +1,4 @@
-import { images, descriptions } from '../../assets'
+import { descriptions } from '../../assets'
 import {
   Section,
   Article,
@@ -15,16 +15,16 @@ interface LayoutDescriptions {
 }
 
 export const LayoutDescriptions = ({ isSimple = false }) => {
-  const { icon, legend, title, items, button } = descriptions
+  const { icon, title, items, button } = descriptions
   return (
-    <Section className="p-[10%] lg:px-0 bg-gray-primary">
+    <Section className="p-[10%] lg:p-0 bg-gray-primary">
       <SectionContainer className="flex-col lg:flex-row w-full">
         <Article className="p-0 w-full">
           <ArticleContainer className="justify-start h-full p-0 lg:pt-[27px] lg:pr-[27px]">
-            <Image className="h-full w-full" src={images[icon]} alt={legend} />
+            <Image className="h-full w-full" icon={icon} />
           </ArticleContainer>
         </Article>
-        <Article className="lg:py-0 px-0 w-full">
+        <Article className="p-0 w-full">
           <ArticleContainer className="gap-3 justify-center lg:pt-[27px] pr-0 pb-0 lg:pl-[27px]">
             <Title className="text-4xl text-white">{title}</Title>
 

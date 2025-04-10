@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-import { images, footers } from '../../assets'
+import { footers } from '../../assets'
 import { Footer, Image } from '../../components'
 import { version } from '../../../package.json'
 
 export const LayoutFooters = () => {
-  const { logo, legend, copyright, devBy } = footers
+  const { logo, copyright, devBy } = footers
 
   const [pageHeight, setPageHeight] = useState(0)
   const [viewHeight, setViewHeight] = useState(0)
@@ -47,7 +47,7 @@ export const LayoutFooters = () => {
         </div>
         <div className="flex flex-col gap-1 items-start h-full">
           <span className="font-semibold">{devBy}</span>
-          <Image src={images[logo]} alt={legend} className="w-32 h-10" />
+          <Image icon={logo} className="w-32 h-10" />
         </div>
       </Footer>
       {hasScroll ? (

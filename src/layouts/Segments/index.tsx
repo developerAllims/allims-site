@@ -1,4 +1,4 @@
-import { images, segments } from '../../assets'
+import { segments } from '../../assets'
 import {
   Section,
   Article,
@@ -22,13 +22,9 @@ export const LayoutSegments = () => {
               <Title className="text-4xl text-orange-primary">{title}</Title>
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
-            <Gallery className="grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20 place-items-start">
-              {items.map(({ icon = '', legend = '', name = '' }, idx = 0) => (
-                <GalleryPhotoText
-                  key={`segment-${idx}`}
-                  icon={images[icon]}
-                  legend={legend}
-                >
+            <Gallery className="grid-cols-2 lg:grid-cols-4 gap-10 place-items-start">
+              {items.map(({ icon = '', name = '' }, idx = 0) => (
+                <GalleryPhotoText key={`segment-${idx}`} icon={icon}>
                   {name}
                 </GalleryPhotoText>
               ))}

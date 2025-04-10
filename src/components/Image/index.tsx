@@ -1,18 +1,25 @@
 import { ComponentProps } from 'react'
+import { images } from '../../assets'
 
 interface ImageProps extends ComponentProps<'img'> {
   classContainer?: string
+  icon: string
 }
 
 export const Image = ({
   children,
   className = '',
   classContainer = '',
+  icon,
   ...rest
 }: ImageProps) => {
   return (
     <div className={`flex ${classContainer}`}>
-      <img {...rest} className={`object-contain w-full ${className}`}>
+      <img
+        {...rest}
+        src={images[icon]}
+        className={`object-contain w-full ${className}`}
+      >
         {children}
       </img>
     </div>

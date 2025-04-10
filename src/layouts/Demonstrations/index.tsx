@@ -1,4 +1,4 @@
-import { images, demonstrations } from '../../assets'
+import { demonstrations } from '../../assets'
 import {
   Section,
   Article,
@@ -18,7 +18,7 @@ export const LayoutDemonstrations = ({
 }: LayoutDemonstrationsProps) => {
   const { icon, title, items, button } = demonstrations
   return (
-    <Section bgImage={images[icon]} className={`h-full p-[10%] lg:p-0`}>
+    <Section bgImage={icon} className={`h-full p-[10%] lg:p-0`}>
       <SectionContainer className="justify-center">
         <Article className="w-full justify-center text-center text-shadow lg:w-4/5">
           <ArticleContainer className="gap-7">

@@ -1,4 +1,4 @@
-import { images, talks } from '../../assets'
+import { talks } from '../../assets'
 import {
   Section,
   Article,
@@ -12,7 +12,7 @@ import {
 export const LayoutTalks = () => {
   const { icon, title, descriptions, button } = talks
   return (
-    <Section bgImage={images[icon]} className="h-full p-[10%] lg:p-0">
+    <Section bgImage={icon} className="h-full p-[10%] lg:p-0">
       <SectionContainer className="lg:justify-center">
         <Article className="w-full justify-center text-center lg:py-[7%] px-0 lg:w-4/5">
           <ArticleContainer className="gap-7 justify-center h-full text-shadow">

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useCallback, useState } from 'react'
-import { images, modules } from '../../assets'
+import { modules } from '../../assets'
 import {
   Section,
   Article,
@@ -33,7 +33,6 @@ export const LayoutModules = () => {
   const [config, setConfig] = useState({
     title: '',
     image: '',
-    legend: '',
     lines: []
   })
 
@@ -92,11 +91,7 @@ export const LayoutModules = () => {
         title={config.title}
         onClick={modalClose}
       >
-        <Image
-          src={images[config.image || '']}
-          alt={config.legend}
-          className="w-[200px]"
-        />
+        <Image icon={config.image || ''} className="w-[200px]" />
         <ModalContainer>
           {config.lines.map((val: any, idx) =>
             typeof val === 'object' ? (

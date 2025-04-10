@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 import { ComponentProps } from 'react'
-
+import { images } from '../../assets'
 interface SectionProps extends ComponentProps<'section'> {
   bgImage?: string
 }
@@ -19,7 +19,7 @@ export const Section = ({
       style={
         bgImage
           ? {
-              backgroundImage: `url(${bgImage})`,
+              backgroundImage: `url(${images[bgImage]})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               ...style

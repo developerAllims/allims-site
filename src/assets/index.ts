@@ -69,6 +69,7 @@ export const images: any = {
   logoTertiary
 }
 
+export const legends: any = pt.legends
 export const routes: any = pt.routes
 export const benefits: any = pt.benefits
 export const clients: any = pt.clients
