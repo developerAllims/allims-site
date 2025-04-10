@@ -12,7 +12,7 @@ export const Policy = () => {
   }, [setCookie])
   if (cookies[cookieName] === true) return <></>
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center fixed left-1/10 bottom-12 min-h-16 w-8/10 p-3 gap-3 border-2 border-white rounded-md bg-gray-primary">
+    <div className="flex flex-col md:flex-row justify-between items-center fixed left-1/10 z-97 bottom-12 min-h-16 w-8/10 p-3 gap-3 border-2 border-white rounded-md bg-gray-primary">
       <div className="flex">
         <ButtonLink
           title={name}

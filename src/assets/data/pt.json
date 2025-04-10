@@ -225,6 +225,7 @@
         "specs": { "name": "message", "title": "Mensagem", "type": "textarea" }
       }
     },
+    "whatsapp": "https://wa.me/5519991738161",
     "items": [
       {
         "name": "Telefone",
