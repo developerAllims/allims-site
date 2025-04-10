@@ -32,6 +32,8 @@ import logoPrimary from './images/logo-primary.webp'
 import logoSecondary from './images/logo-secondary.webp'
 import logoTertiary from './images/logo-tertiary.webp'
 
+import privacyPolicy from './docs/pp-pt.pdf'
+
 import pt from './data/pt.json'
 
 export const images: any = {
@@ -69,8 +71,16 @@ export const images: any = {
   logoTertiary
 }
 
+export const docs: any = {
+  privacyPolicy
+}
+
 export const legends: any = pt.legends
 export const routes: any = pt.routes
+export const headers: any = pt.headers
+export const footers: any = pt.footers
+export const policies: any = pt.policies
+
 export const benefits: any = pt.benefits
 export const clients: any = pt.clients
 export const concepts: any = pt.concepts
@@ -78,8 +88,6 @@ export const demonstrations: any = pt.demonstrations
 export const descriptions: any = pt.descriptions
 export const explanations: any = pt.explanations
 export const features: any = pt.features
-export const footers: any = pt.footers
-export const headers: any = pt.headers
 export const messages: any = pt.messages
 export const modules: any = pt.modules
 export const places: any = pt.places

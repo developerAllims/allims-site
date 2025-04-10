@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { footers } from '../../assets'
-import { Footer, Image } from '../../components'
+import { Footer, Image, Policy } from '../../components'
 import { version } from '../../../package.json'
 
 export const LayoutFooters = () => {
@@ -55,6 +55,7 @@ export const LayoutFooters = () => {
       ) : (
         <div className="w-full h-[calc(40px + 2 * 1.7%)] bg-white" />
       )}
+      <Policy />
     </>
   )
 }

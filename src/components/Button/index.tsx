@@ -5,6 +5,8 @@ interface ButtonLinkProps extends ComponentProps<'a'> {
   classContainer?: string
   title: string
   to: string
+  target?: string
+  showArrow?: boolean
 }
 
 export const ButtonLink = ({
@@ -12,6 +14,8 @@ export const ButtonLink = ({
   classContainer = '',
   title,
   to = '/',
+  target = '_self',
+  showArrow = true,
   ...rest
 }: ButtonLinkProps) => {
   const [hover, setHover] = useState(false)
@@ -24,8 +28,9 @@ export const ButtonLink = ({
       <Link
         {...rest}
         to={to}
+        target={target}
         className={`font-semibold max-w-max px-[1em] py-[0.4em] rounded-[3px] ${className}`}
-        style={hover ? { padding: '0.4em 1.2em 0.4em 0.7em' } : {}}
+        style={hover && showArrow ? { padding: '0.4em 1.2em 0.4em 0.7em' } : {}}
         onMouseEnter={() => {
           setHover(true)
         }}
@@ -34,7 +39,11 @@ export const ButtonLink = ({
         }}
       >
         <span>{title}</span>
-        <span className={`${hover ? '' : 'hidden'}`}>{'  ❯'}</span>
+        {showArrow ? (
+          <span className={`${hover ? '' : 'hidden'}`}>{'  ❯'}</span>
+        ) : (
+          ''
+        )}
       </Link>
     </div>
   )
@@ -43,15 +52,18 @@ export const ButtonLink = ({
 interface ButtonSimpleProps extends ComponentProps<'button'> {
   classContainer?: string
   title: string
+  showArrow?: boolean
 }
 
 export const ButtonSimple = ({
   className = '',
   classContainer = '',
   title,
+  showArrow = true,
   ...rest
 }: ButtonSimpleProps) => {
   const [hover, setHover] = useState(false)
+  const fontWeight = className.includes('font-') ? '' : 'font-semibold'
   return (
     <div
       className={`flex ${
@@ -60,8 +72,8 @@ export const ButtonSimple = ({
     >
       <button
         {...rest}
-        className={`font-semibold max-w-max px-[1em] py-[0.4em] rounded-[3px] ${className}`}
-        style={hover ? { padding: '0.4em 1.2em 0.4em 0.7em' } : {}}
+        className={`max-w-max px-[1em] py-[0.4em] rounded-[3px] ${className} ${fontWeight}`}
+        style={hover && showArrow ? { padding: '0.4em 1.2em 0.4em 0.7em' } : {}}
         onMouseEnter={() => {
           setHover(true)
         }}
@@ -69,8 +81,14 @@ export const ButtonSimple = ({
           setHover(false)
         }}
       >
-        <span>{title}</span>
-        <span className={`${hover ? '' : 'hidden'}`}>{'  ❯'}</span>
+        <span className={`${fontWeight}`}>{title}</span>
+        {showArrow ? (
+          <span className={`${hover ? '' : 'hidden'} ${fontWeight}`}>
+            {'  ❯'}
+          </span>
+        ) : (
+          ''
+        )}
       </button>
     </div>
   )

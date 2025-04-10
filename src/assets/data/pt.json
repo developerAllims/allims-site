@@ -59,6 +59,12 @@
     "devBy": "Desenvolvido por",
     "logo": "logoTertiary"
   },
+  "policies": {
+    "name": "Política de privacidade",
+    "doc": "privacyPolicy",
+    "text": "Usamos cookies para aprimorar sua experiência de navegação. Ao clicar em Aceitar, você concorda com o uso de cookies",
+    "button": "Aceito"
+  },
   "benefits": {
     "title": "Benefícios do Sistema ALLIMS",
     "items": [

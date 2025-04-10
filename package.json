@@ -1,7 +1,7 @@
 {
   "name": "allims-site",
   "private": true,
-  "version": "0.2.5",
+  "version": "0.2.6",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -23,6 +23,7 @@
     "axios": "^1.8.4",
     "lodash": "^4.17.21",
     "react": "^19.0.0",
+    "react-cookie": "^8.0.1",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.55.0",
     "react-icons": "^5.5.0",
