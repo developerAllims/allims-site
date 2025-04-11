@@ -12,6 +12,8 @@ import {
 import { version } from '../../../package.json'
 
 export const LayoutFooters = () => {
+  const { VITE_SOCIAL_SHOW } = import.meta.env
+  console.log(VITE_SOCIAL_SHOW, typeof VITE_SOCIAL_SHOW)
   const { logo, copyright } = footers
 
   const [pageHeight, setPageHeight] = useState(0)
@@ -52,11 +54,15 @@ export const LayoutFooters = () => {
         <div className="flex w-full min-h-36 justify-center p-[3%] lg:py-[15px] lg:px-0 bg-orange-primary text-white text-xs">
           <PageContainer className="justify-between">
             <Image icon={logo} className="w-48 h-15" />
-            <SocialContainer>
-              <SocialIcon type="facebook" />
-              <SocialIcon type="instagram" />
-              <SocialIcon type="linkedin" />
-            </SocialContainer>
+            {VITE_SOCIAL_SHOW === 'true' ? (
+              <SocialContainer>
+                <SocialIcon type="facebook" />
+                <SocialIcon type="instagram" />
+                <SocialIcon type="linkedin" />
+              </SocialContainer>
+            ) : (
+              ''
+            )}
           </PageContainer>
         </div>
         <div className="flex w-full min-h-2 justify-center p-[3%] lg:py-[2px] lg:px-0 bg-gray-secondary text-gray-primary text-xs">

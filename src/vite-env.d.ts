@@ -7,6 +7,8 @@ interface ImportMetaEnv {
   readonly VITE_MAILER_SUBJECT: string
   readonly VITE_MAILER_TEXT: string
   readonly VITE_MAILER_HTML: string
+
+  readonly VITE_SOCIAL_SHOW: string
 }
 
 interface ImportMeta {
