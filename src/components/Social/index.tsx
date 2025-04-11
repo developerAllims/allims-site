@@ -8,7 +8,7 @@ import { FaFacebookSquare, FaInstagram, FaLinkedin } from 'react-icons/fa'
 export const SocialWhatsApp = () => {
   const { whatsapp } = socials
   return (
-    <div className="flex fixed right-6 lg:right-8 bottom-6 lg:bottom-8 z-97 rounded-full">
+    <div className="flex fixed right-6 lg:right-8 bottom-6 hover:bottom-8 lg:bottom-8 hover:lg:bottom-10 z-97 rounded-full shadow-md shadow-gray-primary">
       <a
         href={whatsapp}
         target="_blank"
@@ -26,7 +26,7 @@ interface SocialIconProps extends ComponentProps<'a'> {
 
 export const SocialIcon = ({ type }: SocialIconProps) => {
   const { facebook, instagram, linkedin } = socials
-  const classes = 'h-7 lg:h-10 w-7 lg:w-10 text-white'
+  const classes = 'h-7 lg:h-10 w-7 lg:w-10 text-white hover:text-gray-primary'
   const link =
     type === 'facebook' ? facebook : type === 'instagram' ? instagram : linkedin
   return (
