@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 import { ComponentProps } from 'react'
 import { images } from '../../assets'
+import { PageContainer } from '../../components'
 interface SectionProps extends ComponentProps<'section'> {
   bgImage?: string
 }
@@ -40,11 +41,8 @@ export const SectionContainer = ({
   ...rest
 }: SectionContainerProps) => {
   return (
-    <div
-      {...rest}
-      className={`flex w-full max-w-2xl lg:max-w-4xl xl:max-w-6xl h-full ${className}`}
-    >
+    <PageContainer {...rest} className={`h-full ${className}`}>
       {children}
-    </div>
+    </PageContainer>
   )
 }

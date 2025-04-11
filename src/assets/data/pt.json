@@ -59,6 +59,12 @@
     "devBy": "Desenvolvido por",
     "logo": "logoTertiary"
   },
+  "socials": {
+    "whatsapp": "https://wa.me/5519991738161",
+    "facebook": "https://www.facebook.com/allims",
+    "instagram": "https://www.instagram.com/allims/",
+    "linkedin": "https://www.linkedin.com/in/allims/"
+  },
   "policies": {
     "name": "Política de privacidade",
     "doc": "privacyPolicy",
@@ -225,7 +231,6 @@
         "specs": { "name": "message", "title": "Mensagem", "type": "textarea" }
       }
     },
-    "whatsapp": "https://wa.me/5519991738161",
     "items": [
       {
         "name": "Telefone",

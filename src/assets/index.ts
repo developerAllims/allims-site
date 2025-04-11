@@ -79,6 +79,7 @@ export const legends: any = pt.legends
 export const routes: any = pt.routes
 export const headers: any = pt.headers
 export const footers: any = pt.footers
+export const socials: any = pt.socials
 export const policies: any = pt.policies
 
 export const benefits: any = pt.benefits
