@@ -1,4 +1,4 @@
-import { explanations } from '../../assets'
+import { dataSource } from '../../assets'
 import {
   Section,
   Article,
@@ -9,8 +9,11 @@ import {
   TitleContainer,
   TitleDivider
 } from '../../components'
+import { useLanguage } from '../../hooks'
 
 export const LayoutExplanations = () => {
+  const { language } = useLanguage()
+  const { explanations } = dataSource(language)
   const { title, items } = explanations
   return (
     <Section id="lims" className="bg-white p-10 h-full">

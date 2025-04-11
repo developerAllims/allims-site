@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 import { ComponentProps, useState } from 'react'
-import { images, legends } from '../../assets'
+import { images, dataSource } from '../../assets'
 
 interface GalleryProps extends ComponentProps<'div'> {}
 
@@ -63,6 +63,8 @@ export const GalleryIconText = ({
   icon,
   ...rest
 }: GalleryIconTextProps) => {
+  const { language } = useLanguage()
+  const { legends } = dataSource(language)
   return (
     <div
       {...rest}
@@ -83,6 +85,7 @@ export const GalleryIconText = ({
 import { FaPhoneAlt } from 'react-icons/fa'
 import { FiMapPin } from 'react-icons/fi'
 import { MdEmail } from 'react-icons/md'
+import { useLanguage } from '../../hooks'
 
 interface GalleryIconLabelTextProps extends ComponentProps<'div'> {
   iconType: string
@@ -125,6 +128,8 @@ export const GalleryPhotoText = ({
   icon,
   ...rest
 }: GalleryPhotoTextProps) => {
+  const { language } = useLanguage()
+  const { legends } = dataSource(language)
   const [hover, setHover] = useState(false)
   return (
     <div {...rest} className={`flex flex-col gap-7 w-full ${className}`}>

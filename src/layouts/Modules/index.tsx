@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useCallback, useState } from 'react'
-import { modules } from '../../assets'
+import { dataSource } from '../../assets'
 import {
   Section,
   Article,
@@ -14,8 +14,11 @@ import {
   Image,
   ModalContainer
 } from '../../components'
+import { useLanguage } from '../../hooks'
 
 export const LayoutModules = () => {
+  const { language } = useLanguage()
+  const { modules } = dataSource(language)
   const { items } = modules
   const setPairModules = useCallback(() => {
     const pairs = []

@@ -1,4 +1,4 @@
-import { demonstrations } from '../../assets'
+import { dataSource } from '../../assets'
 import {
   Section,
   Article,
@@ -8,6 +8,7 @@ import {
   Paragraph,
   Title
 } from '../../components'
+import { useLanguage } from '../../hooks'
 
 interface LayoutDemonstrationsProps {
   isSimple?: boolean
@@ -16,6 +17,8 @@ interface LayoutDemonstrationsProps {
 export const LayoutDemonstrations = ({
   isSimple = false
 }: LayoutDemonstrationsProps) => {
+  const { language } = useLanguage()
+  const { demonstrations } = dataSource(language)
   const { icon, title, items, button } = demonstrations
   return (
     <Section bgImage={icon} className={`h-full p-[10%] lg:p-0`}>

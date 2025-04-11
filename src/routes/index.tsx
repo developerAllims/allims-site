@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { routes } from '../assets'
 import {
   PageCompany,
   PageContact,
@@ -20,30 +19,27 @@ export const pages: any = {
 
 type TRoute = {
   path: string
-  name: string
   page: any
-  title?: string
   hide?: false | true
-  bgImage?: string
 }
 
-export const appRoutes: Array<TRoute> = routes.map(
-  ({
-    path = '',
-    name = '',
-    page = '',
-    bgImage = '',
-    title = '',
-    hide = false
-  }) => ({
-    path,
-    name,
-    page: pages[page],
-    bgImage,
-    title,
-    hide
-  })
-)
+export const appRoutes: Array<TRoute> = [
+  { path: '/', page: PageHome },
+  {
+    path: '/sistema',
+    page: PageSystem
+  },
+  {
+    path: '/modulos',
+    page: PageModules
+  },
+  {
+    path: '/empresa',
+    page: PageCompany
+  },
+  { path: '/contato', page: PageContact },
+  { path: '*', page: PageNotFound, hide: true }
+]
 
 export const getBasePath = (path = '') => {
   const parts = path.split('/') || []

@@ -1,4 +1,4 @@
-import { segments } from '../../assets'
+import { dataSource } from '../../assets'
 import {
   Section,
   Article,
@@ -10,8 +10,11 @@ import {
   TitleContainer,
   TitleDivider
 } from '../../components'
+import { useLanguage } from '../../hooks'
 
 export const LayoutSegments = () => {
+  const { language } = useLanguage()
+  const { segments } = dataSource(language)
   const { title, items } = segments
   return (
     <Section className="bg-orange-tertiary h-full p-[10%] lg:p-0">

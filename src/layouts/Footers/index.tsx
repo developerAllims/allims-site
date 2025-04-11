@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { footers } from '../../assets'
+import { dataSource } from '../../assets'
 import {
   Footer,
   Image,
@@ -10,9 +10,12 @@ import {
   PageContainer
 } from '../../components'
 import { version } from '../../../package.json'
+import { useLanguage } from '../../hooks'
 
 export const LayoutFooters = () => {
   const { VITE_SOCIAL_SHOW } = import.meta.env
+  const { language } = useLanguage()
+  const { footers } = dataSource(language)
   const { logo, copyright } = footers
 
   const [pageHeight, setPageHeight] = useState(0)

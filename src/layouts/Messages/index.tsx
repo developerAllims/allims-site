@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios'
 import { z } from 'zod'
-import { messages } from '../../assets'
+import { dataSource } from '../../assets'
 import {
   Section,
   Article,
@@ -19,12 +19,15 @@ import {
 } from '../../components'
 import { useCallback } from 'react'
 import { replaceTemplate } from '../../utils/lib'
+import { useLanguage } from '../../hooks'
 
 interface LayoutMessagesProps {
   isSimple?: boolean
 }
 
 export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
+  const { language } = useLanguage()
+  const { messages } = dataSource(language)
   const { icon, title, button, fields, items } = messages
   const schema = z.object({
     name: z.string().nonempty(),

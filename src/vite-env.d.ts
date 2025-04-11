@@ -9,6 +9,8 @@ interface ImportMetaEnv {
   readonly VITE_MAILER_HTML: string
 
   readonly VITE_SOCIAL_SHOW: string
+
+  readonly VITE_LANGS_SHOW: string
 }
 
 interface ImportMeta {

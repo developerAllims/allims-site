@@ -1,4 +1,4 @@
-import { wins } from '../../assets'
+import { dataSource } from '../../assets'
 import {
   Section,
   Article,
@@ -13,8 +13,11 @@ import {
   TitleContainer,
   TitleDivider
 } from '../../components'
+import { useLanguage } from '../../hooks'
 
 export const LayoutWins = () => {
+  const { language } = useLanguage()
+  const { wins } = dataSource(language)
   const { title, items, groups } = wins
   return (
     <Section className="bg-orange-primary min-h-[1007px] p-[10%] lg:p-0">

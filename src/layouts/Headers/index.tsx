@@ -1,24 +1,18 @@
 import { Link, useLocation } from 'react-router-dom'
-import { headers } from '../../assets'
+import { dataSource } from '../../assets'
 import { Header, Image, LanguageSelect, Menu, MenuItem } from '../../components'
 import { appRoutes, getBasePath } from '../../routes'
-import { useScrollPosition } from '../../hooks'
-import { useEffect, useState } from 'react'
+import { useLanguage, useScrollPosition } from '../../hooks'
 
 export const LayoutHeaders = () => {
+  const { language, setLanguage } = useLanguage()
+  const { pages, headers } = dataSource(language)
+
   const { icon } = headers
   const location = useLocation()
   const basePath = getBasePath(location.pathname)
   const scrollPosition = useScrollPosition()
   const isTop = scrollPosition < 200
-
-  const [lang, setLang] = useState('pt')
-  useEffect(() => {
-    setLang(document.documentElement.lang)
-  }, [])
-  useEffect(() => {
-    document.documentElement.lang = lang
-  }, [lang])
 
   return (
     <>
@@ -40,7 +34,7 @@ export const LayoutHeaders = () => {
         <div className="flex h-full">
           <Menu>
             {appRoutes.map(
-              ({ path, name, hide }, idx) =>
+              ({ path, hide }, idx) =>
                 !hide && (
                   <MenuItem
                     key={`menu-${path}`}
@@ -53,12 +47,12 @@ export const LayoutHeaders = () => {
                         : 'border-b-2 lg:border-b-0 border-gray-secondary'
                     }`}
                   >
-                    {name}
+                    {pages[path].name}
                   </MenuItem>
                 )
             )}
           </Menu>
-          <LanguageSelect lang={lang} setLang={setLang} />
+          <LanguageSelect lang={language} setLang={setLanguage} />
         </div>
       </Header>
     </>

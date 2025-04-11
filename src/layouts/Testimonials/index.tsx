@@ -1,4 +1,4 @@
-import { testimonials } from '../../assets'
+import { dataSource } from '../../assets'
 import {
   Section,
   Article,
@@ -9,8 +9,11 @@ import {
   TitleDivider,
   CarouselTestimonials
 } from '../../components'
+import { useLanguage } from '../../hooks'
 
 export const LayoutTestimonials = () => {
+  const { language } = useLanguage()
+  const { testimonials } = dataSource(language)
   const { title, items } = testimonials
   return (
     <Section className="bg-gray-primary p-0 lg:p-10 h-full lg:h-[810px]">

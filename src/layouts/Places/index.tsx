@@ -1,4 +1,4 @@
-import { places } from '../../assets'
+import { dataSource } from '../../assets'
 import {
   Section,
   Article,
@@ -9,8 +9,11 @@ import {
   Title,
   SectionContainer
 } from '../../components'
+import { useLanguage } from '../../hooks'
 
 export const LayoutPlaces = () => {
+  const { language } = useLanguage()
+  const { places } = dataSource(language)
   const { icon, title, items, button } = places
   return (
     <Section className="bg-white h-full p-[10%] lg:p-0">

@@ -1,4 +1,4 @@
-import { benefits } from '../../assets'
+import { dataSource } from '../../assets'
 import {
   Section,
   Article,
@@ -10,8 +10,11 @@ import {
   TitleContainer,
   TitleDivider
 } from '../../components'
+import { useLanguage } from '../../hooks'
 
 export const LayoutBenefits = () => {
+  const { language } = useLanguage()
+  const { benefits } = dataSource(language)
   const { title, items } = benefits
   return (
     <Section className="bg-white p-[10%] lg:p-0">

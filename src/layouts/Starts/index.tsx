@@ -1,4 +1,4 @@
-import { starts } from '../../assets'
+import { dataSource } from '../../assets'
 import {
   Section,
   SectionContainer,
@@ -8,8 +8,11 @@ import {
   ButtonLink,
   TitleMain
 } from '../../components'
+import { useLanguage } from '../../hooks'
 
 export const LayoutStarts = () => {
+  const { language } = useLanguage()
+  const { starts } = dataSource(language)
   const { icon, title, slogan, button } = starts
   return (
     <Section bgImage={icon} className="h-full">

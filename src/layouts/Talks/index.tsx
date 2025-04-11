@@ -1,4 +1,4 @@
-import { talks } from '../../assets'
+import { dataSource } from '../../assets'
 import {
   Section,
   Article,
@@ -8,8 +8,11 @@ import {
   Title,
   SectionContainer
 } from '../../components'
+import { useLanguage } from '../../hooks'
 
 export const LayoutTalks = () => {
+  const { language } = useLanguage()
+  const { talks } = dataSource(language)
   const { icon, title, descriptions, button } = talks
   return (
     <Section bgImage={icon} className="h-full p-[10%] lg:p-0">

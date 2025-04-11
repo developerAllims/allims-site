@@ -1,9 +1,12 @@
 import { useCallback } from 'react'
-import { policies, docs } from '../../assets'
+import { dataSource, docs } from '../../assets'
 import { ButtonLink, ButtonSimple } from '../Button'
 import { useCookies } from 'react-cookie'
+import { useLanguage } from '../../hooks'
 
 export const Policy = () => {
+  const { language } = useLanguage()
+  const { policies } = dataSource(language)
   const { name, doc, text, button } = policies
   const cookieName = 'allims-site-policy'
   const [cookies, setCookie] = useCookies([cookieName])

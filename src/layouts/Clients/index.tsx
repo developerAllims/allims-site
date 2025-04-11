@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { clients } from '../../assets'
+import { dataSource } from '../../assets'
 import {
   Section,
   Article,
@@ -11,8 +11,11 @@ import {
   TitleContainer,
   TitleDivider
 } from '../../components'
+import { useLanguage } from '../../hooks'
 
 export const LayoutClients = () => {
+  const { language } = useLanguage()
+  const { clients } = dataSource(language)
   const { title, items } = clients
   const [position, setPosition] = useState(0)
   const [fade, setFade] = useState(1)

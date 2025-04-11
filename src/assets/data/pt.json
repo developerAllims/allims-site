@@ -1,28 +1,15 @@
 {
-  "routes": [
-    { "path": "/", "name": "Home", "page": "pageHome" },
-    {
-      "path": "/sistema",
-      "name": "Sistema",
-      "page": "pageSistema",
-      "bgImage": "backgroundSystem"
-    },
-    {
-      "path": "/modulos",
-      "name": "Módulos",
-      "page": "pageModulos",
-      "bgImage": "backgroundModules"
-    },
-    {
-      "path": "/empresa",
+  "pages": {
+    "/": { "name": "Home" },
+    "/sistema": { "name": "Sistema", "bgImage": "backgroundSystem" },
+    "/modulos": { "name": "Módulos", "bgImage": "backgroundModules" },
+    "/empresa": {
       "name": "Empresa",
-      "page": "pageEmpresa",
       "title": "ALLIMS",
       "bgImage": "backgroundCompany"
     },
-    { "path": "/contato", "name": "Contato", "page": "pageContato" },
-    { "path": "*", "name": "Default", "page": "pageDefault", "hide": true }
-  ],
+    "/contato": { "name": "Contato" }
+  },
   "legends": {
     "segmentChemical": "Segmento de análise Química e Petroquímica",
     "segmentCosmetics": "Segmento de análise Cosméticos",
@@ -242,7 +229,7 @@
         "name": "Email",
         "type": "email",
         "code": "mailto",
-        "text": "comercial@allims.com.br"
+        "list": ["comercial@allims.com.br"]
       },
       {
         "name": "Endereço",
@@ -259,6 +246,7 @@
     "button": "Enviar"
   },
   "modules": {
+    "back": "Voltar",
     "items": [
       {
         "title": "ALLIMS",

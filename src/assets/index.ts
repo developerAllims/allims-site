@@ -34,8 +34,6 @@ import logoTertiary from './images/logo-tertiary.webp'
 
 import privacyPolicy from './docs/pp-pt.pdf'
 
-import pt from './data/pt.json'
-
 export const images: any = {
   segmentChemical,
   segmentCosmetics,
@@ -75,26 +73,10 @@ export const docs: any = {
   privacyPolicy
 }
 
-export const legends: any = pt.legends
-export const routes: any = pt.routes
-export const headers: any = pt.headers
-export const footers: any = pt.footers
-export const socials: any = pt.socials
-export const policies: any = pt.policies
+import pt from './data/pt.json'
+import en from './data/en.json'
+import es from './data/es.json'
 
-export const benefits: any = pt.benefits
-export const clients: any = pt.clients
-export const concepts: any = pt.concepts
-export const demonstrations: any = pt.demonstrations
-export const descriptions: any = pt.descriptions
-export const explanations: any = pt.explanations
-export const features: any = pt.features
-export const messages: any = pt.messages
-export const modules: any = pt.modules
-export const places: any = pt.places
-export const segments: any = pt.segments
-export const starts: any = pt.starts
-export const talks: any = pt.talks
-export const testimonials: any = pt.testimonials
-export const wants: any = pt.wants
-export const wins: any = pt.wins
+const data: any = { pt, en, es }
+
+export const dataSource: any = (lang: string) => data[lang]

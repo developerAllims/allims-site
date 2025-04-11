@@ -1,4 +1,4 @@
-import { descriptions } from '../../assets'
+import { dataSource } from '../../assets'
 import {
   Section,
   Article,
@@ -9,12 +9,15 @@ import {
   Title,
   SectionContainer
 } from '../../components'
+import { useLanguage } from '../../hooks'
 
 interface LayoutDescriptions {
   isSimple: boolean
 }
 
 export const LayoutDescriptions = ({ isSimple = false }) => {
+  const { language } = useLanguage()
+  const { descriptions } = dataSource(language)
   const { icon, title, items, button } = descriptions
   return (
     <Section className="p-[10%] lg:p-0 bg-gray-primary">

@@ -1,4 +1,4 @@
-import { wants } from '../../assets'
+import { dataSource } from '../../assets'
 import {
   Section,
   Article,
@@ -11,8 +11,11 @@ import {
   TitleContainer,
   TitleDivider
 } from '../../components'
+import { useLanguage } from '../../hooks'
 
 export const LayoutWants = () => {
+  const { language } = useLanguage()
+  const { wants } = dataSource(language)
   const { title, items, obs1, obs2 } = wants
   return (
     <Section className="bg-gray-secondary p-[10%] lg:p-0">

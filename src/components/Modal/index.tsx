@@ -3,6 +3,8 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 import { ComponentProps, useCallback } from 'react'
 import { ButtonIcon } from '../Button'
+import { useLanguage } from '../../hooks'
+import { dataSource } from '../../assets'
 
 interface ModalProps extends ComponentProps<'dialog'> {
   title: string
@@ -16,6 +18,9 @@ export const Modal = ({
   title,
   ...rest
 }: ModalProps) => {
+  const { language } = useLanguage()
+  const { modules } = dataSource(language)
+  const { back } = modules
   const handleClick = useCallback((event: any) => {
     event.preventDefault()
     event.stopPropagation()
@@ -38,7 +43,7 @@ export const Modal = ({
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-0 justify-between">
           <ButtonIcon
             icon="CiCircleChevLeft"
-            title="Voltar"
+            title={back}
             classContainer="justify-start"
             onClick={handleClose}
           />

@@ -1,4 +1,4 @@
-import { concepts } from '../../assets'
+import { dataSource } from '../../assets'
 import {
   Section,
   Article,
@@ -7,8 +7,11 @@ import {
   Paragraph,
   Title
 } from '../../components'
+import { useLanguage } from '../../hooks'
 
 export const LayoutConcepts = () => {
+  const { language } = useLanguage()
+  const { concepts } = dataSource(language)
   const { items } = concepts
   return (
     <Section className="flex-col lg:flex-row bg-orange-secondary">

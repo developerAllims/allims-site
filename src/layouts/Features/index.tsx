@@ -1,4 +1,4 @@
-import { features } from '../../assets'
+import { dataSource } from '../../assets'
 import {
   Section,
   Article,
@@ -11,8 +11,11 @@ import {
   TitleContainer,
   TitleDivider
 } from '../../components'
+import { useLanguage } from '../../hooks'
 
 export const LayoutFeatures = () => {
+  const { language } = useLanguage()
+  const { features } = dataSource(language)
   const { title, items, button } = features
   return (
     <Section className="bg-gray-secondary h-full p-[10%] lg:p-0">
