@@ -101,10 +101,9 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
                     >
                       {list ? (
                         list.map((val, idxLs) => (
-                          <p>
+                          <p key={`contact-inf-${idxLs}`}>
                             {' '}
                             <a
-                              key={`contact-inf-${idxLs}`}
                               href={link ? link : `${code}:${val}`}
                               target={`${link ? '_blank' : '_self'}`}
                             >

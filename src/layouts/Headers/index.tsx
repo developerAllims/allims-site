@@ -1,8 +1,9 @@
 import { Link, useLocation } from 'react-router-dom'
 import { headers } from '../../assets'
-import { Header, Image, Menu, MenuItem } from '../../components'
+import { Header, Image, LanguageSelect, Menu, MenuItem } from '../../components'
 import { appRoutes, getBasePath } from '../../routes'
 import { useScrollPosition } from '../../hooks'
+import { useEffect, useState } from 'react'
 
 export const LayoutHeaders = () => {
   const { icon } = headers
@@ -10,6 +11,15 @@ export const LayoutHeaders = () => {
   const basePath = getBasePath(location.pathname)
   const scrollPosition = useScrollPosition()
   const isTop = scrollPosition < 200
+
+  const [lang, setLang] = useState('pt')
+  useEffect(() => {
+    setLang(document.documentElement.lang)
+  }, [])
+  useEffect(() => {
+    document.documentElement.lang = lang
+  }, [lang])
+
   return (
     <>
       <div
@@ -27,25 +37,29 @@ export const LayoutHeaders = () => {
             className={`w-32 h-full ${isTop ? 'lg:h-14' : 'lg:h-10'}`}
           />
         </Link>
-        <Menu>
-          {appRoutes.map(
-            ({ path, name, hide }, idx) =>
-              !hide && (
-                <MenuItem
-                  key={`menu-${path}`}
-                  to={path}
-                  selected={basePath === path}
-                  className={`${
-                    idx + 1 === appRoutes.length
-                      ? ''
-                      : 'border-b-2 lg:border-b-0 border-gray-secondary'
-                  }`}
-                >
-                  {name}
-                </MenuItem>
-              )
-          )}
-        </Menu>
+        <div className="flex h-full">
+          <Menu>
+            {appRoutes.map(
+              ({ path, name, hide }, idx) =>
+                !hide && (
+                  <MenuItem
+                    key={`menu-${path}`}
+                    to={path}
+                    selected={basePath === path}
+                    isTop={isTop}
+                    className={`${
+                      idx + 1 === appRoutes.length
+                        ? ''
+                        : 'border-b-2 lg:border-b-0 border-gray-secondary'
+                    }`}
+                  >
+                    {name}
+                  </MenuItem>
+                )
+            )}
+          </Menu>
+          <LanguageSelect lang={lang} setLang={setLang} />
+        </div>
       </Header>
     </>
   )

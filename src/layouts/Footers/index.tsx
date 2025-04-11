@@ -13,7 +13,6 @@ import { version } from '../../../package.json'
 
 export const LayoutFooters = () => {
   const { VITE_SOCIAL_SHOW } = import.meta.env
-  console.log(VITE_SOCIAL_SHOW, typeof VITE_SOCIAL_SHOW)
   const { logo, copyright } = footers
 
   const [pageHeight, setPageHeight] = useState(0)

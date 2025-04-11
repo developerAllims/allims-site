@@ -14,10 +14,13 @@ export const Menu = ({ children, ...rest }: MenuProps) => {
   }, [open])
 
   return (
-    <nav {...rest} className="flex h-full w-full justify-end gap-6 relative">
-      <div className="lg:hidden">
+    <nav
+      {...rest}
+      className="flex h-auto w-full justify-end items-center gap-6 relative"
+    >
+      <div className="flex lg:hidden justify-center items-center h-full w-18 hover:bg-gray-secondary">
         <RiMenuFill
-          className="h-full min-w-6 cursor-pointer"
+          className=" h-auto min-w-6 cursor-pointer"
           onClick={handleClick}
         />
       </div>
@@ -38,6 +41,7 @@ interface MenuItemProps extends ComponentProps<'a'> {
   className?: string
   selected?: boolean
   to: string
+  isTop: boolean
 }
 
 export const MenuItem = ({
@@ -45,6 +49,7 @@ export const MenuItem = ({
   className = '',
   selected,
   to,
+  isTop = true,
   ...rest
 }: MenuItemProps) => {
   const [hover, setHover] = useState(false)
@@ -53,7 +58,7 @@ export const MenuItem = ({
       <Link
         {...rest}
         to={to}
-        className={`w-full h-full ${selected && 'text-orange-primary'}`}
+        className={`flex w-full h-full ${selected && 'text-orange-primary'}`}
         style={hover ? { opacity: '0.7' } : {}}
         onMouseEnter={() => {
           setHover(true)
@@ -62,11 +67,13 @@ export const MenuItem = ({
           setHover(false)
         }}
       >
-        <div
-          className={`flex justify-start lg:justify-center items-center w-full h-[50px] lg:h-full p-6 ${className}`}
+        <span
+          className={`flex justify-start lg:justify-center items-center w-full h-[50px] px-6 ${
+            isTop ? 'lg:h-[80px]' : 'lg:h-[50px]'
+          } ${className}`}
         >
           {children}
-        </div>
+        </span>
       </Link>
     </li>
   )
