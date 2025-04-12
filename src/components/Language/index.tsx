@@ -3,6 +3,7 @@ import { useLanguage } from '../../hooks'
 import { useCallback } from 'react'
 
 import { languages } from '../../hooks'
+import { dataSource } from '../../assets'
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 interface LanguageSelectProps {
@@ -53,6 +54,15 @@ export const LanguageSelect = ({ lang, setLang }: LanguageSelectProps) => {
 
 export const LanguageHelmet = () => {
   const { language } = useLanguage()
+  const { pages } = dataSource(language)
+  const { index } = pages
+  const { title, description, keywords } = index
 
-  return <Helmet htmlAttributes={{ lang: language }} />
+  return (
+    <Helmet htmlAttributes={{ lang: language }}>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+    </Helmet>
+  )
 }

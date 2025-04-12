@@ -31,7 +31,7 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider = ({ children }: LanguageProviderProps) => {
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState('pt')
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>

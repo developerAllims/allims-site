@@ -1,5 +1,10 @@
 {
   "pages": {
+    "index": {
+      "title": "ALLIMS - Simplified Management",
+      "description": "ALLÌMS develops modular systems for laboratory management (LIMS system), offering solutions that automate processes, reducing costs and increasing laboratory efficiency.",
+      "keywords": "LIMS, ERP, Laboratory, Analysis, Testing"
+    },
     "/": { "name": "Home" },
     "/sistema": { "name": "System", "bgImage": "backgroundSystem" },
     "/modulos": { "name": "Modules", "bgImage": "backgroundModules" },
