@@ -1,4 +1,4 @@
-import { dataSource } from '../../assets'
+import { appConfig } from '../../assets'
 import {
   Section,
   Article,
@@ -9,11 +9,11 @@ import {
   TitleContainer,
   TitleDivider
 } from '../../components'
-import { useLanguage } from '../../hooks'
+import { useTranslator } from '../../hooks'
 
 export const LayoutExplanations = () => {
-  const { language } = useLanguage()
-  const { explanations } = dataSource(language)
+  const t = useTranslator()
+  const { explanations } = appConfig
   const { title, items } = explanations
   return (
     <Section id="lims" className="bg-white p-10 h-full">
@@ -21,10 +21,10 @@ export const LayoutExplanations = () => {
         <Article className="w-full text-center py-[7%] px-0 lg:w-4/5">
           <ArticleContainer className="justify-center h-full">
             <TitleContainer>
-              <Title className="text-4xl text-orange-primary">{title}</Title>
+              <Title className="text-4xl text-orange-primary">{t[title]}</Title>
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
-            {items.map((val = '', idx = 0) => (
+            {t[items].split('\n').map((val = '', idx = 0) => (
               <Paragraph
                 key={`explanation-${idx}`}
                 className="text-base text-gray-primary text-justify"

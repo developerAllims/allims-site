@@ -1,4 +1,4 @@
-import { dataSource } from '../../assets'
+import { appConfig } from '../../assets'
 import {
   Section,
   Article,
@@ -9,15 +9,15 @@ import {
   Title,
   SectionContainer
 } from '../../components'
-import { useLanguage } from '../../hooks'
+import { useTranslator } from '../../hooks'
 
 interface LayoutDescriptions {
   isSimple: boolean
 }
 
 export const LayoutDescriptions = ({ isSimple = false }) => {
-  const { language } = useLanguage()
-  const { descriptions } = dataSource(language)
+  const t = useTranslator()
+  const { descriptions } = appConfig
   const { title, items, button } = descriptions
   return (
     <Section className="p-[10%] lg:p-0 bg-gray-primary">
@@ -29,10 +29,10 @@ export const LayoutDescriptions = ({ isSimple = false }) => {
         </Article>
         <Article className="p-0 w-full">
           <ArticleContainer className="gap-3 justify-center lg:pt-[27px] pr-0 pb-0 lg:pl-[27px]">
-            <Title className="text-4xl text-white">{title}</Title>
+            <Title className="text-4xl text-white">{t[title]}</Title>
 
             {isSimple ? (
-              items.map((val = '', idx = 0) => (
+              t[items].split('\n').map((val = '', idx = 0) => (
                 <Paragraph key={`desc-${idx}`} className="text-base text-white">
                   {val}
                 </Paragraph>
@@ -40,11 +40,11 @@ export const LayoutDescriptions = ({ isSimple = false }) => {
             ) : (
               <>
                 <Paragraph className="text-base text-white">
-                  {items.join(' ')}
+                  {t[items].split('\n').join(' ')}
                 </Paragraph>
                 <ButtonLink
                   to="/sistema"
-                  title={button}
+                  title={t[button]}
                   className="text-lg text-white border-3"
                   classContainer="justify-start py-[12px]"
                 />

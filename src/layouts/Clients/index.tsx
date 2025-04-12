@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { dataSource, appConfig } from '../../assets'
+import { appConfig } from '../../assets'
 import {
   Section,
   Article,
@@ -11,11 +11,11 @@ import {
   TitleContainer,
   TitleDivider
 } from '../../components'
-import { useLanguage } from '../../hooks'
+import { useTranslator } from '../../hooks'
 
 export const LayoutClients = () => {
-  const { language } = useLanguage()
-  const { clients } = dataSource(language)
+  const t = useTranslator()
+  const { clients } = appConfig
   const { title } = clients
   const { clients: cfgClients } = appConfig
   const { items } = cfgClients
@@ -42,7 +42,7 @@ export const LayoutClients = () => {
         <Article className="w-full text-center lg:w-4/5">
           <ArticleContainer className="gap-10 lg:gap-40 justify-center h-full">
             <TitleContainer>
-              <Title className="text-4xl text-orange-primary">{title}</Title>
+              <Title className="text-4xl text-orange-primary">{t[title]}</Title>
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
             <Gallery

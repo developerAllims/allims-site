@@ -1,9 +1,8 @@
 import { Helmet } from 'react-helmet'
-import { useLanguage } from '../../hooks'
 import { useCallback } from 'react'
 
-import { languages } from '../../hooks'
-import { dataSource } from '../../assets'
+import { languages, useLanguage, useTranslator } from '../../hooks'
+import { appConfig } from '../../assets'
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 interface LanguageSelectProps {
@@ -54,15 +53,16 @@ export const LanguageSelect = ({ lang, setLang }: LanguageSelectProps) => {
 
 export const LanguageHelmet = () => {
   const { language } = useLanguage()
-  const { pages } = dataSource(language)
+  const t = useTranslator()
+  const { pages } = appConfig
   const { index } = pages
   const { title, description, keywords } = index
 
   return (
     <Helmet htmlAttributes={{ lang: language }}>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
+      <title>{t[title]}</title>
+      <meta name="description" content={t[description]} />
+      <meta name="keywords" content={t[keywords]} />
     </Helmet>
   )
 }

@@ -7,6 +7,7 @@ import {
   useContext,
   useState
 } from 'react'
+import { dataSource } from '../../assets'
 
 export const languages = [
   { id: 'pt', name: 'Português', flag: '🇧🇷' },
@@ -41,3 +42,8 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
 }
 
 export const useLanguage = () => useContext(LanguageContext)
+
+export const useTranslator: any = () => {
+  const { language } = useLanguage()
+  return dataSource(language)
+}

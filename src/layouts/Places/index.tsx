@@ -1,4 +1,4 @@
-import { dataSource } from '../../assets'
+import { appConfig } from '../../assets'
 import {
   Section,
   Article,
@@ -9,11 +9,11 @@ import {
   Title,
   SectionContainer
 } from '../../components'
-import { useLanguage } from '../../hooks'
+import { useTranslator } from '../../hooks'
 
 export const LayoutPlaces = () => {
-  const { language } = useLanguage()
-  const { places } = dataSource(language)
+  const t = useTranslator()
+  const { places } = appConfig
   const { items, button } = places
   return (
     <Section className="bg-white h-full p-[10%] lg:p-0">
@@ -26,7 +26,7 @@ export const LayoutPlaces = () => {
         <Article className="lg:py-[10%] lg:px-0">
           <ArticleContainer className="gap-2 pt-[27px] pr-0 pb-0 pl-[27px]">
             <Title className="text-4xl text-gray-primary">ALLIMS</Title>
-            {items.map((val = '', idx = 0) => (
+            {t[items].split('\n').map((val = '', idx = 0) => (
               <Paragraph
                 key={`place-${idx}`}
                 className="text-base text-gray-primary"
@@ -36,7 +36,7 @@ export const LayoutPlaces = () => {
             ))}
             <ButtonLink
               to={'/'}
-              title={button}
+              title={t[button]}
               className="text-lg text-white border-3"
             />
           </ArticleContainer>

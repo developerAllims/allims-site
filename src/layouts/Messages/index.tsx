@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios'
 import { z } from 'zod'
-import { dataSource, appConfig } from '../../assets'
+import { appConfig } from '../../assets'
 import {
   Section,
   Article,
@@ -19,26 +19,33 @@ import {
 } from '../../components'
 import { useCallback } from 'react'
 import { replaceTemplate } from '../../utils/lib'
-import { useLanguage } from '../../hooks'
+import { useTranslator } from '../../hooks'
 
 interface LayoutMessagesProps {
   isSimple?: boolean
 }
 
 export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
-  const { language } = useLanguage()
-  const { messages } = dataSource(language)
+  const t = useTranslator()
+  const { messages } = appConfig
   const { title, button, fields, contacts } = messages
 
-  const { messages: cfgMessages } = appConfig
-  const { fields: cfgFields, items } = cfgMessages
-
   const cfg: any = {
-    name: { specs: { ...cfgFields.name.specs, title: fields.name } },
-    email: { specs: { ...cfgFields.email.specs, title: fields.email } },
-    phone: { specs: { ...cfgFields.phone.specs, title: fields.phone } },
-    company: { specs: { ...cfgFields.company.specs, title: fields.company } },
-    message: { specs: { ...cfgFields.message.specs, title: fields.message } }
+    name: {
+      specs: { ...fields.name.specs, title: t[fields.name.specs.title] }
+    },
+    email: {
+      specs: { ...fields.email.specs, title: t[fields.email.specs.title] }
+    },
+    phone: {
+      specs: { ...fields.phone.specs, title: t[fields.phone.specs.title] }
+    },
+    company: {
+      specs: { ...fields.company.specs, title: t[fields.company.specs.title] }
+    },
+    message: {
+      specs: { ...fields.message.specs, title: t[fields.message.specs.title] }
+    }
   }
 
   const schema = z.object({
@@ -94,12 +101,15 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
               />
             ) : (
               <Gallery className="grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-10 justify-start p-[10%] lg:p-0 place-items-start">
-                {items.map(
-                  ({ type = '', code = '', link = '', list = [] }, idx = 0) => (
+                {contacts.map(
+                  (
+                    { name = '', type = '', code = '', link = '', list = [] },
+                    idx = 0
+                  ) => (
                     <GalleryIconLabelText
                       key={`msg-info-${idx}`}
                       iconType={type}
-                      label={contacts[type]}
+                      label={t[name]}
                       className={`${
                         idx === 2
                           ? 'col-span-1 sm:col-span-2 lg:col-span-1'
@@ -128,7 +138,9 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
           <ArticleContainer className="w-full h-full">
             <FormContainer className="max-w-[100%] lg:max-w-[50svw]">
               <FormBase resolver={schema} onSubmit={onSubmit}>
-                <Title className="text-2xl text-white text-left">{title}</Title>
+                <Title className="text-2xl text-white text-left">
+                  {t[title]}
+                </Title>
                 <FormField config={cfg.name} />
                 <FormRow className="flex-col md:flex-row">
                   <FormField config={cfg.email} />
@@ -138,7 +150,7 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
                 <FormField config={cfg.message} />
                 <ButtonSimple
                   type="submit"
-                  title={button}
+                  title={t[button]}
                   className="text-lg bg-orange-primary text-white"
                   classContainer="justify-end"
                 />

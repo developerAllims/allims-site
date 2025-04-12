@@ -1,4 +1,4 @@
-import { dataSource } from '../../assets'
+import { appConfig } from '../../assets'
 import {
   Section,
   SectionContainer,
@@ -8,11 +8,11 @@ import {
   ButtonLink,
   TitleMain
 } from '../../components'
-import { useLanguage } from '../../hooks'
+import { useTranslator } from '../../hooks'
 
 export const LayoutStarts = () => {
-  const { language } = useLanguage()
-  const { starts } = dataSource(language)
+  const t = useTranslator()
+  const { starts } = appConfig
   const { slogan, button } = starts
   return (
     <Section bgImage={'backgroundStart'} className="h-full">
@@ -24,11 +24,11 @@ export const LayoutStarts = () => {
               ALLIMS
             </TitleMain>
             <Paragraph className="text-xl text-gray-primary max-w-[320px] lg:max-w-screen">
-              {slogan}
+              {t[slogan]}
             </Paragraph>
             <ButtonLink
               to="/sistema"
-              title={button}
+              title={t[button]}
               className="text-lg bg-orange-primary text-white"
               classContainer="justify-start"
             />

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 import { ComponentProps, useState } from 'react'
-import { images, dataSource } from '../../assets'
+import { images, appConfig } from '../../assets'
 
 interface GalleryProps extends ComponentProps<'div'> {}
 
@@ -63,8 +63,8 @@ export const GalleryIconText = ({
   icon,
   ...rest
 }: GalleryIconTextProps) => {
-  const { language } = useLanguage()
-  const { legends } = dataSource(language)
+  const t = useTranslator()
+  const { legends } = appConfig
   return (
     <div
       {...rest}
@@ -72,7 +72,7 @@ export const GalleryIconText = ({
     >
       <img
         src={images[icon]}
-        alt={legends[icon]}
+        alt={t[legends[icon]]}
         className="max-h-[150px] lg:max-h-[140px] lg:min-h-[140px] object-contain"
       />
       <span className="px-10 lg:px-0 text-base font-semibold text-gray-primary">
@@ -85,7 +85,7 @@ export const GalleryIconText = ({
 import { FaPhoneAlt } from 'react-icons/fa'
 import { FiMapPin } from 'react-icons/fi'
 import { MdEmail } from 'react-icons/md'
-import { useLanguage } from '../../hooks'
+import { useTranslator } from '../../hooks'
 
 interface GalleryIconLabelTextProps extends ComponentProps<'div'> {
   iconType: string
@@ -128,14 +128,14 @@ export const GalleryPhotoText = ({
   icon,
   ...rest
 }: GalleryPhotoTextProps) => {
-  const { language } = useLanguage()
-  const { legends } = dataSource(language)
+  const t = useTranslator()
+  const { legends } = appConfig
   const [hover, setHover] = useState(false)
   return (
     <div {...rest} className={`flex flex-col gap-7 w-full ${className}`}>
       <img
         src={images[icon]}
-        alt={legends[icon]}
+        alt={t[legends[icon]]}
         className="max-h-[220px] lg:max-h-[161px] lg:min-h-[161px] object-contain"
         style={
           hover

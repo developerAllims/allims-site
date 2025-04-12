@@ -1,4 +1,4 @@
-import { dataSource } from '../../assets'
+import { appConfig } from '../../assets'
 import {
   Section,
   Article,
@@ -10,11 +10,11 @@ import {
   TitleContainer,
   TitleDivider
 } from '../../components'
-import { useLanguage } from '../../hooks'
+import { useTranslator } from '../../hooks'
 
 export const LayoutSegments = () => {
-  const { language } = useLanguage()
-  const { segments } = dataSource(language)
+  const t = useTranslator()
+  const { segments } = appConfig
   const { title, items } = segments
 
   const icons = [
@@ -34,13 +34,13 @@ export const LayoutSegments = () => {
         <Article className="w-full text-center py-[7%] px-0 lg:w-4/5">
           <ArticleContainer className="gap-14 justify-center h-full">
             <TitleContainer>
-              <Title className="text-4xl text-orange-primary">{title}</Title>
+              <Title className="text-4xl text-orange-primary">{t[title]}</Title>
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
             <Gallery className="grid-cols-2 lg:grid-cols-4 gap-10 place-items-start">
               {items.map(({ name = '' }, idx = 0) => (
                 <GalleryPhotoText key={`segment-${idx}`} icon={icons[idx]}>
-                  {name}
+                  {t[name]}
                 </GalleryPhotoText>
               ))}
             </Gallery>

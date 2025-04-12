@@ -1,12 +1,13 @@
 import { Link, useLocation } from 'react-router-dom'
-import { dataSource } from '../../assets'
+import { appConfig } from '../../assets'
 import { Header, Image, LanguageSelect, Menu, MenuItem } from '../../components'
 import { appRoutes, getBasePath } from '../../routes'
-import { useLanguage, useScrollPosition } from '../../hooks'
+import { useLanguage, useScrollPosition, useTranslator } from '../../hooks'
 
 export const LayoutHeaders = () => {
   const { language, setLanguage } = useLanguage()
-  const { pages } = dataSource(language)
+  const t = useTranslator()
+  const { pages } = appConfig
   const location = useLocation()
   const basePath = getBasePath(location.pathname)
   const scrollPosition = useScrollPosition()
@@ -45,7 +46,7 @@ export const LayoutHeaders = () => {
                         : 'border-b-2 lg:border-b-0 border-gray-secondary'
                     }`}
                   >
-                    {pages[path].name}
+                    {t[pages[path].name]}
                   </MenuItem>
                 )
             )}

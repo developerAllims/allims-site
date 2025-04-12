@@ -1,91 +1,227 @@
 {
-  "appTitle": "ALLIMS - Gestão Simplificada",
-  "appDescription": "A ALLÌMS desenvolve sistemas modulares para gestão laboratorial (sistema LIMS), oferecendo soluções que automatizam processos, reduzindo custos e aumentando a eficiência dos laboratórios.",
-  "appKeywords": "LIMS, ERP, Laboratório, Análise, Ensaio",
-  "appCopyright": "Todos os Direitos Reservados @ALLIMS",
-  "appSlogan": "O sistema ideal para gerenciamento das informações do seu laboratório",
-  "pageHomeTitle": "Home",
-  "pageSystemTitle": "Sistema",
-  "pageModulesTitle": "Módulos",
-  "pageCompanyTitle": "Empresa",
-  "pageContactTitle": "Contato",
-  "subtitleSegmentChemical": "Segmento de análise Química e Petroquímica",
-  "subtitleSegmentCosmetics": "Segmento de análise Cosméticos",
-  "subtitleSegmentDrinks": "Segmento de análise Alimentos e Bebidas",
-  "subtitleSegmentEnvironment": "Segmento de análise Meio Ambiente",
-  "subtitleSegmentFarm": "Segmento de análise Agrícola",
-  "subtitleSegmentMining": "Segmento de análise Mineração e Metalúrgica",
-  "subtitleSegmentNutrition": "Segmento de análise Nutrição Animal",
-  "subtitleSegmentSanitation": "Segmento de análise Saneamento",
-  "subtitleBackgroundStart": "Fundo da sessão Inicial",
-  "subtitleBackgroundCompany": "Fundo da sessão Empresa",
-  "subtitleBackgroundDemonstration": "Fundo da sessão Demonstração",
-  "subtitleBackgroundModules": "Fundo da sessão Módulos",
-  "subtitleBackgroundSystem": "Fundo da sessão Sistema",
-  "subtitleBackgroundTalk": "Fundo da sessão Vamos Conversar?",
-  "subtitleIconAgility": "Ícone de Segurança e Agilidade",
-  "subtitleIconCalculation": "Ícone de Cáculo das Análises",
-  "subtitleIconConnection": "Ícone de Conexão com Outros Sistemas",
-  "subtitleIconEquipment": "Ícone de Integração com Equipamentos",
-  "subtitleIconExport": "Ícone de Consulta de resultados online",
-  "subtitleIconIso": "Ícone de Garantia da Qualidade",
-  "subtitleIconFollowUp": "Ícone de Acompanhamento em tempo real",
-  "subtitleIconTraceability": "Ícone de Rastreabilidade",
-  "subtitleIllustrationCompany": "Empresa ALLIMS",
-  "subtitleIllustrationModule": "Módulo do ALLIMS",
-  "subtitleIllustrationSystem": "Sistema ALLIMS",
-  "subtitleLogoPrimary": "Logomarca primária da ALLIMS",
-  "subtitleLogoSecondary": "Logomarca secundária da ALLIMS",
-  "subtitleLogoTertiary": "Logomarca terciária da ALLIMS",
-  "policyPrivacyTitle": "Política de privacidade",
-  "policyPrivacyDescription": "Usamos cookies para aprimorar sua experiência de navegação. Ao clicar em Aceitar, você concorda com o uso de cookies",
-  "benefitsTitle": "Benefícios do Sistema ALLIMS",
-  "benefitsAgilityTitle": "Segurança e agilidade na consulta dos resultados",
-  "benefitsEquipmentTitle": "Elimina transcrição de dados dos equipamentos",
-  "benefitsFollowUpTitle": "Acompanhamento da rotina analítica em tempo real",
-  "benefitsCalculationTitle": "Cálculo dos ensaios parametrizados pelo usuário",
-  "benefitsExportTitle": "Conexão segura com outros sistemas CRM, ERP",
-  "benefitsTraceabilityTitle": "Rastreabilidade das informações cadastradas",
-  "benefitsIsoTitle": "Tranquilidade no atendimento da ISO 17.025",
-  "benefitsConnectionTitle": "100% dos usuários conectados 100% do tempo",
-  "clientsTitle": "Clientes",
-  "limsConceptTitle": "Conceito LIMS",
-  "limsConceptDescription": "Sistema informatizado para gerenciamento das rotinas e informações laboratoriais.\nA partir deste conceito, simples processos como garantir a rastreabilidade de uma amostra dentro do laboratório, até processos mais complexos como: aquisição de dados dos equipamentos, execução de cálculos nos ensaios, comparativos de resultados, emissão e envio automático do Relatório de Ensaio para os clientes, são funções de um sistema LIMS completo.",
-  "limsConceptDetailedTitle": "Conceito do Sistema LIMS",
-  "limsConceptDetailedDescription": "Um sistema LIMS pode ser definido como um conjunto de ferramentas de software que operam de forma integrada e que são suportados por uma infraestrutura formada por sistemas de gerenciamento de banco de dados e sistemas de alta tecnologia. Esse conjunto de ferramentas tem por objetivo permitir a gestão eficiente dos processos e atividades de laboratórios analíticos, químicos, físicos e microbiológicos com o objetivo principal de permitir alcançar maior qualidade com menores custos, auxiliando as empresas no atendimento aos níveis de produtividade exigidos atualmente pelo mercado, além de aumentar a confiabilidade e segurança da informação, uma vez que reduzem as possibilidades de erros proporcionados por anotações manuais e redundância de informações.\nEm uma visão simplista, a principal função de um software LIMS é a gestão das amostras que estão sob custódia do laboratório. Este controle normalmente é iniciado quando a amostra é recebida no laboratório e registrada no LIMS. A dinâmica da definição das prioridades dos trabalhos poderá ser realizada pelo coordenador do laboratório ou diretamente pelo LIMS.\nDepois de liberada para análise, a amostra ficará disponível aos analistas para registro dos dados brutos e no final deste processo, o sistema LIMS deverá calcular o resultado final e disponibilizar o seu Relatório de Ensaio para que seja impresso ou enviado de forma eletrônica para o cliente.\nDiversos outras informações também deverão ser registradas no LIMS, à exemplo do ciclo de vida da amostra, registros de processos analíticos, equipamentos, vidrarias, soluções, rastreabilidades, estatísticas, dentre outras.",
-  "allimsCompanyTitle": "Empresa ALLIMS",
-  "allimsCompanyDescription": "Atuamos no mercado de desenvolvimento de sistema para laboratórios de controle de qualidade, prestadores de serviços e pesquisa e desenvolvimento. Atendemos as áreas: ambiental, alimentos, solo, química, nutrição humana, animal, entre outros.",
-  "allimsSystemTitle": "Sistema ALLIMS",
-  "allimsSystemDescription": "O sistema ALLIMS vai muito além dos padrões.\nConta com recursos exclusivos e de forma modular, atende a diversos tipos e tamanhos de laboratórios: Prestadores de Serviços, Controle de Qualidade e Pesquisa e Desenvolvimento. Saiba como conseguimos automatizar centenas de rotinas em um único sistema.\nCom o melhor custo benefício do mercado, o sistema ALLIMS tem a forma justa e realista dos custos de licenciamento de uso. Reduza os custos exagerados e conquiste mais recursos.",
-  "demonstrationTitle": "Solicite uma Demonstração",
-  "demonstrationDescription": "Esta etapa é fundamental para o processo de escolha do sistema adequado para sua necessidade. É aqui onde você poderá garantir o entendimento completo do sistema e capacidade de resolver seus problemas, bem como avaliar o conhecimento técnico da empresa que passará ser seu provedor de soluções.\nSolicite agora mesmo e no fechamento do contrato ganhe até 3 mensalidades grátis!",
-  "featuresTitle": "Funcionalidades do Sistema",
-  "featuresCommercialTitle": "Controle de propostas comerciais e contratos",
-  "featuresAutomationTitle": "Automação nos registros de dados",
-  "featuresWarehouseTitle": "Controle do almoxarifado e preparo de soluções",
-  "featuresReportsTitle": "Emissão de relatórios gerenciais",
-  "featuresSamplesTitle": "Recepção de amostras",
-  "featuresStatisticsTitle": "Controle estatístico das amostras padrão",
-  "featuresCalibrationTitle": "Controle de equipamentos e vidrarias",
-  "featuresMethodsTitle": "Gerenciamento de metodologias analíticas",
-  "featuresBatchsTitle": "Gerenciamento dos trabalhos analíticos",
-  "featuresEssayReportsTitle": "Elaboração de relatórios de ensaios",
-  "featuresPlanningTitle": "Planejamento do uso de recursos do laboratório",
-  "featuresAccessTitle": "Gerenciamento de usuários e privilégios de acesso",
-  "messageTitle": "Fale conosco através do formulário abaixo:",
-  "messageFieldName": "Nome",
-  "messageFieldEmail": "E-mail",
-  "messageFieldPhone": "Telefone",
-  "messageFieldCompany": "Empresa",
-  "messageFieldContent": "Mensagem",
-  "messageContactPhone": "Telefone",
-  "messageContactEmail": "E-mail",
-  "messageContactAddress": "Endereço",
-  "buttonAccept": "Aceito",
-  "buttonLearnMore": "Saiba mais",
-  "buttonGetInTouch": "Entre em contato",
-  "buttonSeeTheModules": "Conheça os Módulos",
-  "buttonSend": "Enviar",
+  "pages": {
+    "index": {
+      "title": "appTitle",
+      "description": "appDescription",
+      "keywords": "appKeywords"
+    },
+    "/": { "name": "pageHomeTitle" },
+    "/sistema": { "name": "pageSystemTitle" },
+    "/modulos": { "name": "pageModulesTitle" },
+    "/empresa": {
+      "name": "pageCompanyTitle"
+    },
+    "/contato": { "name": "pageContactTitle" }
+  },
+  "legends": {
+    "segmentChemical": "subtitleSegmentChemical",
+    "segmentCosmetics": "subtitleSegmentCosmetics",
+    "segmentDrinks": "subtitleSegmentDrinks",
+    "segmentEnvironment": "subtitleSegmentEnvironment",
+    "segmentFarm": "subtitleSegmentFarm",
+    "segmentMining": "subtitleSegmentMining",
+    "segmentNutrition": "subtitleSegmentNutrition",
+    "segmentSanitation": "subtitleSegmentSanitation",
+    "backgroundStart": "subtitleBackgroundStart",
+    "backgroundCompany": "subtitleBackgroundCompany",
+    "backgroundDemonstration": "subtitleBackgroundDemonstration",
+    "backgroundModules": "subtitleBackgroundModules",
+    "backgroundSystem": "subtitleBackgroundSystem",
+    "backgroundTalk": "subtitleBackgroundTalk?",
+    "iconAgility": "subtitleIconAgility",
+    "iconCalculation": "subtitleIconCalculation",
+    "iconConnection": "subtitleIconConnection",
+    "iconEquipment": "subtitleIconEquipment",
+    "iconExport": "subtitleIconExport",
+    "iconIso": "subtitleIconIso",
+    "iconFollowUp": "subtitleIconFollowUp",
+    "iconTraceability": "subtitleIconTraceability",
+    "illustrationCompany": "subtitleIllustrationCompany",
+    "illustrationModule": "subtitleIllustrationModule",
+    "illustrationSystem": "subtitleIllustrationSystem",
+    "logoPrimary": "subtitleLogoPrimary",
+    "logoSecondary": "subtitleLogoSecondary",
+    "logoTertiary": "subtitleLogoTertiary"
+  },
+  "footers": {
+    "copyright": "appCopyright"
+  },
+  "policies": {
+    "name": "policyPrivacyTitle",
+    "text": "policyPrivacyDescription",
+    "button": "buttonAccept"
+  },
+  "benefits": {
+    "title": "benefitsTitle",
+    "items": [
+      {
+        "name": "benefitsAgilityTitle"
+      },
+      {
+        "name": "benefitsEquipmentTitle"
+      },
+      {
+        "name": "benefitsFollowUpTitle"
+      },
+      {
+        "name": "benefitsCalculationTitle"
+      },
+      {
+        "name": "benefitsExportTitle"
+      },
+      {
+        "name": "benefitsTraceabilityTitle"
+      },
+      {
+        "name": "benefitsIsoTitle"
+      },
+      {
+        "name": "benefitsConnectionTitle"
+      }
+    ]
+  },
+  "clients": {
+    "title": "clientsTitle",
+    "items": [
+      { "name": "adambiental", "title": "Ad Ambiental" },
+      { "name": "agrolab", "title": "Agrolab" },
+      { "name": "alsukkar", "title": "AlSukkar" },
+      { "name": "ascana", "title": "Ascana" },
+      { "name": "atralabs", "title": "Atralabs" },
+      { "name": "biolab", "title": "Biolab" },
+      { "name": "camda", "title": "Camda" },
+      { "name": "centralanalitica", "title": "Central Analítica" },
+      { "name": "cetal", "title": "Cetal" },
+      { "name": "cls", "title": "CLS" },
+      { "name": "colombo", "title": "Colombo" },
+      { "name": "coopercitrus", "title": "Coopercitrus" },
+      { "name": "cooxupe", "title": "Cooxupé" },
+      { "name": "cqlab", "title": "CQ Lab" },
+      { "name": "dsm", "title": "DSM" },
+      { "name": "econsulting", "title": "Econsulting" },
+      { "name": "esalq", "title": "Esalq" },
+      { "name": "fundacaoabc", "title": "Fundação ABC" },
+      { "name": "iac", "title": "IAC" },
+      { "name": "ibra", "title": "Ibra" },
+      { "name": "laborfort", "title": "Laborfort" },
+      { "name": "mattos", "title": "Mattos" },
+      { "name": "salus", "title": "Salus" },
+      { "name": "solum", "title": "Solum" },
+      { "name": "ufes", "title": "Ufes" },
+      { "name": "unicamp", "title": "Unicamp" },
+      { "name": "upf", "title": "UPF" },
+      { "name": "vapor", "title": "Vapor" }
+    ]
+  },
+  "concepts": {
+    "items": [
+      {
+        "title": "limsConceptTitle",
+        "descriptions": "limsConceptDescription",
+        "button": "buttonLearnMore"
+      },
+      {
+        "title": "allimsCompanyTitle",
+        "descriptions": "allimsCompanyDescription",
+        "button": "buttonLearnMore"
+      }
+    ]
+  },
+  "demonstrations": {
+    "title": "demonstrationTitle",
+    "items": "demonstrationDescription",
+    "button": "buttonGetInTouch"
+  },
+  "descriptions": {
+    "title": "allimsSystemTitle",
+    "items": "allimsSystemDescription",
+    "button": "buttonLearnMore"
+  },
+  "explanations": {
+    "title": "limsConceptDetailedTitle",
+    "items": "limsConceptDetailedDescription"
+  },
+  "features": {
+    "title": "featuresTitle",
+    "items": [
+      "featuresCommercialTitle",
+      "featuresAutomationTitle",
+      "featuresWarehouseTitle",
+      "featuresReportsTitle",
+      "featuresSamplesTitle",
+      "featuresStatisticsTitle",
+      "featuresCalibrationTitle",
+      "featuresMethodsTitle",
+      "featuresBatchsTitle",
+      "featuresEssayReportsTitle",
+      "featuresPlanningTitle",
+      "featuresAccessTitle"
+    ],
+    "button": "buttonSeeTheModules"
+  },
+  "messages": {
+    "title": "messageTitle",
+    "fields": {
+      "name": {
+        "specs": { "name": "name", "title": "messageFieldName", "type": "text" }
+      },
+      "email": {
+        "specs": {
+          "name": "email",
+          "title": "messageFieldEmail",
+          "type": "text"
+        }
+      },
+      "phone": {
+        "specs": {
+          "name": "phone",
+          "title": "messageFieldPhone",
+          "type": "text",
+          "mask": "(__) _____-____"
+        }
+      },
+      "company": {
+        "specs": {
+          "name": "company",
+          "title": "messageFieldCompany",
+          "type": "text"
+        }
+      },
+      "message": {
+        "specs": {
+          "name": "message",
+          "title": "messageFieldContent",
+          "type": "textarea"
+        }
+      }
+    },
+    "contacts": [
+      {
+        "type": "phone",
+        "name": "messageContactPhone",
+        "code": "tel",
+        "list": ["+55 (19) 9.9173-8161", "+55 (19) 9.8160-6342"]
+      },
+      {
+        "type": "email",
+        "name": "messageContactEmail",
+        "code": "mailto",
+        "list": ["comercial@allims.com.br"]
+      },
+      {
+        "type": "address",
+        "name": "messageContactAddress",
+        "list": [
+          "R. Comendador Torlogo Dauntre, 74",
+          "Sala 1207 - Cambuí",
+          "Campinas - SP",
+          "CEP 13.025-270"
+        ],
+        "link": "https://www.google.com/maps/place/R.+Comendador+T%C3%B3rlogo+Dauntre,+74+-+Cambu%C3%AD,+Campinas+-+SP,+13025-270/@-22.8965566,-47.0505966,17z/data=!4m15!1m8!3m7!1s0x94c8cf454ff99701:0xb08af4199e4073fc!2sR.+Comendador+T%C3%B3rlogo+Dauntre,+74+-+Cambu%C3%AD,+Campinas+-+SP,+13025-270!3b1!8m2!3d-22.8965616!4d-47.0480217!16s%2Fg%2F11dzscy1_v!3m5!1s0x94c8cf454ff99701:0xb08af4199e4073fc!8m2!3d-22.8965616!4d-47.0480217!16s%2Fg%2F11dzscy1_v!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D"
+      }
+    ],
+    "button": "buttonSend"
+  },
   "modules": {
     "back": "Voltar",
     "items": [
@@ -234,18 +370,52 @@
       }
     ]
   },
-  "placeDescription": "Atuamos no mercado de desenvolvimento de sistema para o segmento laboratorial e também para o segmento agronômico.\nAtendemos vários clientes no segmento de laboratórios, nas áreas: ambiental, alimentos, solo, química, nutrição humana, nutrição animal, farmacêutica, pesquisa e desenvolvimento, entre outros.\nEstamos situados em Campinas – SP com sede própria.",
-  "segmentsTitle": "Áreas de Atuação",
-  "segmentsDrinksTitle": "Alimentos e Bebidas",
-  "segmentsSanitationTitle": "Saneamento",
-  "segmentsCosmeticsTitle": "Cosméticos",
-  "segmentsFarmTitle": "Agrícola",
-  "segmentsEnvironmentTitle": "Meio Ambiente",
-  "segmentsMiningTitle": "Mineração e Metalúrgica",
-  "segmentsNutritionTitle": "Nutrição Animal",
-  "segmentsChemicalTitle": "Química e Petroquímica",
-  "talksTitle": "Vamos Conversar",
-  "talksDescription": "O sistema ALLIMS vai muito além dos padrões.\nConta com recursos exclusivos e de forma modular, atende a diversos tipos e tamanhos de laboratórios: Prestadores de Serviços, Controle de Qualidade e Pesquisa e Desenvolvimento. Saiba como conseguimos automatizar centenas de rotinas em um único sistema.\nCom o melhor custo benefício do mercado, o sistema ALLIMS tem a forma justa e realista dos custos de licenciamento de uso. Reduza os custos exagerados e conquiste mais recursos.",
+  "places": {
+    "items": "placeDescription",
+    "button": "buttonLearnMore"
+  },
+  "segments": {
+    "title": "segmentsTitle",
+    "items": [
+      {
+        "name": "segmentsDrinksTitle"
+      },
+      {
+        "name": "segmentsSanitationTitle"
+      },
+      {
+        "name": "segmentsCosmeticsTitle"
+      },
+      { "name": "segmentsFarmTitle" },
+      {
+        "name": "segmentsEnvironmentTitle"
+      },
+      {
+        "name": "segmentsMiningTitle"
+      },
+      {
+        "name": "segmentsNutritionTitle"
+      },
+      {
+        "name": "segmentsChemicalTitle"
+      }
+    ]
+  },
+  "socials": {
+    "whatsapp": "https://wa.me/5519991738161",
+    "facebook": "https://www.facebook.com/allims",
+    "instagram": "https://www.instagram.com/allims/",
+    "linkedin": "https://www.linkedin.com/in/allims/"
+  },
+  "starts": {
+    "slogan": "appSlogan",
+    "button": "buttonLearnMore"
+  },
+  "talks": {
+    "title": "talksTitle",
+    "descriptions": "talksDescription",
+    "button": "buttonGetInTouch"
+  },
   "testimonials": {
     "title": "Depoimentos",
     "items": [
@@ -271,20 +441,36 @@
       }
     ]
   },
-  "wantsTitle": "O Que Você Procura?",
-  "wantsDescription": "Implantar um sistema LIMS para substituir registros em papel, planilhas, documentos eletrônicos ou outras soluções?\nSubstituir seu sistema atual, desenvolvido de forma caseira e que não contam mais com o apoio e dedicação inicial?\nSubstituir seu sistema LIMS, porque existem lacunas e processos não atendidos?\nSubstituir seu sistema LIMS, referência no mercado, mas os custos de manutenção são exagerados?",
-  "wantsObs1": "A ALLIMS pode ajudar muito na busca da solução ideal: ",
-  "wantsObs2": "Custos Reduzidos X Benefícios Elevados.",
-  "winsTitle": "Ganhos com o uso do ALLIMS",
-  "winsDescription": "Redução dos prazos de entrega dos resultados de análise para os clientes\nRedução de custos operacionais do laboratório, possibilitando maior volume de amostras com a mesma equipe\nAumento da confiabilidade e credibilidade do processo de análise e dos resultados gerados para os clientes\nFacilidade e conforto nas auditorias, pois as informações do dia a dia do laboratório estarão disponíveis e acessíveis facilmente\nRelatórios gerenciais e indicadores de qualidade e dos processos\nDisponibilidade dos status das amostras, bem dos relatórios de ensaios e seus anexos, na web em tempo real",
-  "winsGroupRecordTitle": "Registros",
-  "winsGroupRecordDescription": "Registro eletrônico das informações da coleta das amostras em campo (passar para o primeiro item);\nRegistro e rastreabilidade do recebimento ou entrada das amostras no laboratório;\nRedução drástica dos registros manuais em papel e do tempo de resgate de informações, fazendo com que as informações estejam centralizadas;\nEliminação de erros através do menor número de transcrição de dados e dependendo da situação, aquisição de dados automática através da comunicação com equipamentos e outros sistemas, bem como cálculo automático dos resultados;\nMaior agilidade nos processos laboratoriais, registros de controles e na elaboração dos\nRelatórios de Ensaio;\nRemoção ou mesmo eliminação do uso de planilhas eletrônicas, evitando-se a duplicidade das informações;\nPadronização dos ensaios a serem realizados por tipo de material (amostra);\nRegistro dos dados dos ensaios na bancada diretamente no sistema ALLIMS, eliminando os registros em papel;\nOs dados obtidos por meio dos equipamentos analíticos (balança, cromotógrafo, ICP, etc) são transferidos diretamente para o sistema, sem registro manual;",
-  "winsGroupManagementTitle": "Gestão",
-  "winsGroupManagementDescription": "Controle e gerenciamento dos planos de amostragem e registro de amostras periódicas;\nGestão do ciclo de vida das amostras e análises proporcionando controle e aumento da eficiência operacional do laboratório;\nControle dos insumos e do estoque de laboratório (características, validade e quantidades em estoque, custos, produção de soluções, etc.);\nControle dos equipamentos e instrumentos do laboratório (calibração, manutenção e intervenções);\nFacilidade de investigação de desvios e tendências de processo, geração de dados estatísticos e visualização histórica dos resultados das matérias-primas e produtos;\nEmissão e envio de resultados e/ ou dos relatórios de análises de forma completamente eletrônica, contribuindo para a redução de custos, diminuição do tempo na  entrega de resultados e garantindo comodidade aos clientes do laboratório;\nPossibilidade de análise do histórico armazenado, permitindo a interpolação entre as informações e avaliações estatísticas;\nGerenciamento dos planos de controle e especificações dos tipos de materiais;\nGerenciamento e previsibilidade das amostras a coletar e/ou a receber;\nMapa de trabalho das situações das amostras no laboratório, por tipo de material, por serviços, por analista e por ensaio;\nNotificações automáticas para lotes de insumos e equipamentos a vencer ou vencidos, além de impedir seu vínculo aos ensaios realizados;\nGestão das amostras de controle de qualidade analítica: padrões, duplicatas, brancos, curvas de calibração, spikes, surrogates, entre outos;\nGerenciamento das amostras para liberação, análise crítica e reanálises quando necessário.",
-  "winsGroupAutomationTitle": "Automação",
-  "winsGroupAutomationDescription": "Geração de pareceres automáticos para os parâmetros e amostras através da comparação com os limites de especificação e controle de cada tipo da amostra;\nExecução automática de planos de amostragem e registro de amostras periódicas;\nEliminar esta linha Cálculo automático dos resultados, sendo que o usuário é quem irá definir as regras matemáticas das fórmulas sem depender do Excel;\nSegurança no cálculo do resultado final, uma vez que os dados podem ser transmitidos diretamente do equipamento de leitura para o sistema, evitando-se erro de digitação;\nDistribuição das amostras (lista de tarefas) automática entre os laboratoriais e analistas;\nCálculo automático dos resultados das análises realizada pelo sistema, conforme regras matemáticas e de comparações cadastradas pelo próprio usuário (analista);\nOs ensaios físico químicos, microbiológicos (tabelas NMP), entre outros, são definidos pelo laboratório e padronizados para os analistas;\nA partir de configurações no sistema, os Relatórios de Ensaios (laudos) poderão ser impressos, enviado por e-mail (PDF) ou disponibilizado via portal Lab.OnLine.\nNotificação automática para os clientes quando as amostras são recebidas e publicadas.",
-  "winsGroupAuditTitle": "Auditorias / ISO",
-  "winsGroupAuditDescription": "Durante as auditorias o laboratório utiliza um único sistema com informações centralizadas e rastreáveis;\nFacilidade na adequação do laboratório às normas, boas práticas e regulamentações aplicáveis como NBR ISO/IEC 17025, FDA CFR 21 Part 11, RDC 210, EPA, BPLs, etc;\nRastreabilidade integral das informações armazenadas, incluído a identificação do analista e equipamento pela qual foi gerada;\nRastreabilidade completa dos equipamentos vinculados aos ensaios;\nRastreabilidade completa dos insumos, reagentes, soluções, meios de cultura, entre outros;\nO ALLIMS permite que os requisitos da ISO/IEC 17.025 sejam contemplados facilmente no dia a dia do laboratório;\nHistórico e controle de exames e qualificações dos analistas;\nGestão dos Treinamentos;\nRegistro de não conformidades e tomada de ação;\nLista mestra de documentos.",
-  "winsGroupTecnologyTitle": "TI",
-  "winsGroupTecnologyDescription": "Aumento da integração do laboratório as demais áreas da empresa, diminuindo o tempo na troca de informações e correção do processo, reduzindo os custos de produção, bem como agilizando e facilitando a liberação dos lotes de matéria-prima para produção e produtos para o mercado;\nPermite a integração com sistemas ERP, para o controle financeiro e administrativo dos serviços analíticos realizados;\nNo portal Lab.OnLine os clientes do laboratório podem validar a autenticidade do Relatório de Ensaio.\nAdicionar: Assinatura eletrônica dos signatários, proteção de alta complexidade usando MD-5, chave de validação dos Relatórios de Ensaio."
+  "wants": {
+    "title": "wantsTitle",
+    "items": "wantsDescription",
+    "obs1": "wantsObs1",
+    "obs2": "wantsObs2"
+  },
+  "wins": {
+    "title": "winsTitle",
+    "items": "winsDescription",
+    "groups": [
+      {
+        "name": "winsGroupRecordTitle",
+        "list": "winsGroupRecordDescription"
+      },
+      {
+        "name": "winsGroupManagementTitle",
+        "list": "winsGroupManagementDescription"
+      },
+      {
+        "name": "winsGroupAutomationTitle",
+        "list": "winsGroupAutomationDescription"
+      },
+      {
+        "name": "winsGroupAuditTitle",
+        "list": "winsGroupAuditDescription"
+      },
+      {
+        "name": "winsGroupTecnologyTitle",
+        "list": "winsGroupTecnologyDescription"
+      }
+    ]
+  }
 }

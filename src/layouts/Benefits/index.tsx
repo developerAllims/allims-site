@@ -1,4 +1,4 @@
-import { dataSource } from '../../assets'
+import { appConfig } from '../../assets'
 import {
   Section,
   Article,
@@ -10,11 +10,11 @@ import {
   TitleContainer,
   TitleDivider
 } from '../../components'
-import { useLanguage } from '../../hooks'
+import { useTranslator } from '../../hooks'
 
 export const LayoutBenefits = () => {
-  const { language } = useLanguage()
-  const { benefits } = dataSource(language)
+  const t = useTranslator()
+  const { benefits } = appConfig
   const { title, items } = benefits
 
   const icons = [
@@ -34,7 +34,7 @@ export const LayoutBenefits = () => {
         <Article className="w-full text-center py-[7%] px-0 h-[895px] lg:w-4/5">
           <ArticleContainer className="gap-16 justify-center h-full">
             <TitleContainer>
-              <Title className="text-4xl text-orange-primary">{title}</Title>
+              <Title className="text-4xl text-orange-primary">{t[title]}</Title>
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
             <Gallery className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:place-items-start">
@@ -44,7 +44,7 @@ export const LayoutBenefits = () => {
                   icon={icons[idx]}
                   className="lg:min-h-[132px]"
                 >
-                  {name}
+                  {t[name]}
                 </GalleryIconText>
               ))}
             </Gallery>

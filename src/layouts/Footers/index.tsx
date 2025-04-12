@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { dataSource } from '../../assets'
+import { appConfig } from '../../assets'
 import {
   Footer,
   Image,
@@ -10,12 +10,13 @@ import {
   PageContainer
 } from '../../components'
 import { version } from '../../../package.json'
-import { useLanguage } from '../../hooks'
+import { useTranslator } from '../../hooks'
 
 export const LayoutFooters = () => {
   const { VITE_SOCIAL_SHOW } = import.meta.env
-  const { language } = useLanguage()
-  const { footers } = dataSource(language)
+
+  const t = useTranslator()
+  const { footers } = appConfig
   const { copyright } = footers
 
   const [pageHeight, setPageHeight] = useState(0)
@@ -69,7 +70,7 @@ export const LayoutFooters = () => {
         </div>
         <div className="flex w-full min-h-2 justify-center p-[3%] lg:py-[2px] lg:px-0 bg-gray-secondary text-gray-primary text-xs">
           <PageContainer className="justify-between">
-            <span className="font-semibold">{copyright}</span>
+            <span className="font-semibold">{t[copyright]}</span>
             <span className="font-semibold">{`v.${version}`}</span>
           </PageContainer>
         </div>

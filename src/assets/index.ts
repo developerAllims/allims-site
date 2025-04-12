@@ -77,9 +77,9 @@ export const docs: any = {
   es: { privacyPolicy: esPrivacyPolicy }
 }
 
-import all from './data/all.json'
+import config from './data/config.json'
 
-export const appConfig = all
+export const appConfig: any = config
 
 import pt from './data/pt.json'
 import en from './data/en.json'
