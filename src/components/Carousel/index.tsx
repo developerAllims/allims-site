@@ -10,10 +10,12 @@ type TTestimonial = {
 
 interface CarouselTestimonialsProps extends ComponentProps<'div'> {
   items: Array<TTestimonial>
+  translations: any
 }
 
 export const CarouselTestimonials = ({
-  items = []
+  items = [],
+  translations = {}
 }: CarouselTestimonialsProps) => {
   const [index, setIndex] = useState(0)
   const { text, name, role } = items[index] || {}
@@ -26,12 +28,14 @@ export const CarouselTestimonials = ({
         setIndex={setIndex}
       />
       <div className="flex flex-col gap-1 w-full h-full lg:h-[450px] items-center justify-center">
-        <Paragraph className="text-lg text-white">{text}</Paragraph>
+        <Paragraph className="text-lg text-white">
+          {translations[text]}
+        </Paragraph>
         <Paragraph className="p-5 text-[23px] text-white">
-          <strong>{name}</strong>
+          <strong>{translations[name]}</strong>
         </Paragraph>
         <Paragraph className="p-0 text-lg text-orange-primary">
-          {role}
+          {translations[role]}
         </Paragraph>
       </div>
       <CarouselButton

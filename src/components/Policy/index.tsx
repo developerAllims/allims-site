@@ -26,7 +26,7 @@ export const Policy = () => {
           title={t[name]}
           to={privacyPolicy}
           target="_blank"
-          className="bg-orange-primary text-white font-bold text-center"
+          className="bg-gray-primary text-orange-primary border-2 border-orange-primary font-bold text-center"
           showArrow={false}
         />
       </div>

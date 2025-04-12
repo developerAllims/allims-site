@@ -246,31 +246,19 @@
   "segmentsChemicalTitle": "Chemistry and Petrochemistry",
   "talksTitle": "Let's talk",
   "talksDescription": "The ALLIMS system goes far beyond the standards.\nIt has exclusive resources and is modular in design, serving different types and sizes of laboratories: Service Providers, Quality Control and Research and Development. Learn how we were able to automate hundreds of routines in a single system.\nWith the best cost-benefit ratio on the market, the ALLIMS system has a fair and realistic way of licensing usage costs. Reduce exaggerated costs and gain more resources.",
-  "testimonials": {
-    "title": "Testimonials",
-    "items": [
-      {
-        "text": "We presented a bold project to ALLIMS for the management of analyses in the area of ​​animal nutrition and, with great professionalism and commitment, the objectives were achieved. The attention, the desire to make things happen and the support structure of ALLIMS have been fundamental factors for the success of our projects.",
-        "name": "Aldair de Souza Santos",
-        "role": "Service Manager at DSM"
-      },
-      {
-        "text": "The ALLIMS program has helped us a lot with the management system and also with the insertion of data in the analytical runs. Today, nothing is typed for soil analysis; 100% of the readings performed on the devices are imported automatically. Our customers receive an alert when the sample enters the analysis battery and another alert when the analysis is finished and we issue the report. We also generate export files that are automatically sent to the agronomists at our units.",
-        "name": "César Aparecido Alvez",
-        "role": "Laboratory Coordinator, Cooxupé Cooperative"
-      },
-      {
-        "text": "We have all the necessary tools to ensure agility and reliability in data records in ALLIMS. With it, we are able to issue more than 400 thousand reports per year. Another highlight is the Analytical Quality Control (QA) that evaluates standard samples in real time and takes autonomous actions, keeping our process fully assured.",
-        "name": "Carlos Eduardo Prieto",
-        "role": "Technical Manager, IBRA Laboratory"
-      },
-      {
-        "text": "We went after the best. We sought accreditation of our testing scope with CGCRE in ABNT NBR ISO/IEC 17025:2005 and looked for the best laboratory management program available on the market and found ALLIMS. This choice was a turning point in the organization of the laboratory. There was a time AA – Before ALLIMS and the current time DA – After Allims. With it, we were able to eliminate a lot of spreadsheets spread across the various sectors of the company, we practically eliminated the frequent transcription errors that sometimes put us in embarrassing situations, we eliminated rework, we sped up the delivery of services, several stages of verification, in short, with ALLIMS, all of this improved.",
-        "name": "Fernando Tiroli",
-        "role": "Director of CQLab Laboratory"
-      }
-    ]
-  },
+  "testimonialsTitle": "Testimonials",
+  "testimonialsOneText": "We presented a bold project to ALLIMS for the management of analyses in the area of ​​animal nutrition and, with great professionalism and commitment, the objectives were achieved. The attention, the desire to make things happen and the support structure of ALLIMS have been fundamental factors for the success of our projects.",
+  "testimonialsOneName": "Aldair de Souza Santos",
+  "testimonialsOneRole": "Service Manager at DSM",
+  "testimonialsTwoText": "The ALLIMS program has helped us a lot with the management system and also with the insertion of data in the analytical runs. Today, nothing is typed for soil analysis; 100% of the readings performed on the devices are imported automatically. Our customers receive an alert when the sample enters the analysis battery and another alert when the analysis is finished and we issue the report. We also generate export files that are automatically sent to the agronomists at our units.",
+  "testimonialsTwoName": "César Aparecido Alvez",
+  "testimonialsTwoRole": "Laboratory Coordinator, Cooxupé Cooperative",
+  "testimonialsThreeText": "We have all the necessary tools to ensure agility and reliability in data records in ALLIMS. With it, we are able to issue more than 400 thousand reports per year. Another highlight is the Analytical Quality Control (QA) that evaluates standard samples in real time and takes autonomous actions, keeping our process fully assured.",
+  "testimonialsThreeName": "Carlos Eduardo Prieto",
+  "testimonialsThreeRole": "Technical Manager, IBRA Laboratory",
+  "testimonialsFourText": "We went after the best. We sought accreditation of our testing scope with CGCRE in ABNT NBR ISO/IEC 17025:2005 and looked for the best laboratory management program available on the market and found ALLIMS. This choice was a turning point in the organization of the laboratory. There was a time AA – Before ALLIMS and the current time DA – After Allims. With it, we were able to eliminate a lot of spreadsheets spread across the various sectors of the company, we practically eliminated the frequent transcription errors that sometimes put us in embarrassing situations, we eliminated rework, we sped up the delivery of services, several stages of verification, in short, with ALLIMS, all of this improved.",
+  "testimonialsFourName": "Fernando Tiroli",
+  "testimonialsFourRole": "Director of CQLab Laboratory",
   "wantsTitle": "What Are You Looking For?",
   "wantsDescription": "Implement a LIMS system to replace paper records, spreadsheets, electronic documents or other solutions?\nReplace your current system, developed in-house and which no longer has the initial support and dedication?\nReplace your LIMS system, because there are gaps and unmet processes?\nReplace your LIMS system, a reference in the market, but the maintenance costs are exaggerated?",
   "wantsObs1": "ALLIMS can help a lot in the search for the ideal solution: ",

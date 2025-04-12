@@ -246,31 +246,19 @@
   "segmentsChemicalTitle": "Química e Petroquímica",
   "talksTitle": "Vamos Conversar",
   "talksDescription": "O sistema ALLIMS vai muito além dos padrões.\nConta com recursos exclusivos e de forma modular, atende a diversos tipos e tamanhos de laboratórios: Prestadores de Serviços, Controle de Qualidade e Pesquisa e Desenvolvimento. Saiba como conseguimos automatizar centenas de rotinas em um único sistema.\nCom o melhor custo benefício do mercado, o sistema ALLIMS tem a forma justa e realista dos custos de licenciamento de uso. Reduza os custos exagerados e conquiste mais recursos.",
-  "testimonials": {
-    "title": "Depoimentos",
-    "items": [
-      {
-        "text": "Apresentamos um projeto ousado à ALLIMS para gerenciamento de\n      análises na área de nutrição animal e, com muito profissionalismo\n      e empenho, os objetivos foram alçados. A atenção, a vontade de\n      fazer acontecer e a estrutura de suporte da ALLIMS, tem sido\n      fatores fundamentais para o sucesso de nossos projetos.",
-        "name": "Aldair de Souza Santos",
-        "role": "Gerente de serviços na DSM"
-      },
-      {
-        "text": "O programa ALLIMS nos ajudou bastante quanto ao sistema de gerenciamento e também na inserção de dados nas corridas analíticas. Hoje para a análise de solo nada é digitado, 100% das leituras realizadas nos aparelhos são importadas de forma automática. Nossos clientes recebem um alerta quando a amostra entra na bateria de análises e outro alerta quando a análise é encerrada e emitimos o laudo. Temos também a geração de arquivos de exportação que são enviadas de forma automática aos agrônomos de nossas unidades.",
-        "name": "César Aparecido Alvez",
-        "role": "Coordenador do Laboratório, Cooperativa Cooxupé"
-      },
-      {
-        "text": "Temos todas as ferramentas necessárias para garantir muita agilidade e confiabilidade nos registros de dados no ALLIMS. Com ele conseguimos emitir mais de 400 mil laudos por ano. Outro destaque é o Controle de Qualidade Analítica (QA) que em tempo real avalia as amostras padrão e toma ações autônomas mantendo nosso processo totalmente assegurado.",
-        "name": "Carlos Eduardo Prieto",
-        "role": "Gerente de Técnico, Laboratório IBRA"
-      },
-      {
-        "text": "Fomos atrás dos melhores. Buscamos a acreditação de nosso escopo de ensaios junto à CGCRE na ABNT NBR ISO/IEC 17025:2005 e buscamos o melhor programa de gerenciamento de laboratórios que estivesse disponível no mercado e encontramos o ALLIMS. Essa escolha foi um divisor de águas na organização do laboratório. Existe um tempo AA – Antes do ALLIMS e o tempo atual DA – Depois do Allims. Com ele, nós pudemos eliminar um monte de planilhas espalhadas pelos vários setores da empresa, praticamente extinguimos os frequentes erros de transcrição que nos colocavam, as vezes, em situações embaraçosas, eliminamos retrabalhos, agilizamos a entrega dos serviços, várias etapas de conferência, enfim, com o ALLIMS, tudo isso melhorou.",
-        "name": "Fernando Tiroli",
-        "role": "Diretor do Laboratório CQLab"
-      }
-    ]
-  },
+  "testimonialsTitle": "Depoimentos",
+  "testimonialsOneText": "Apresentamos um projeto ousado à ALLIMS para gerenciamento de análises na área de nutrição animal e, com muito profissionalismo e empenho, os objetivos foram alçados. A atenção, a vontade de fazer acontecer e a estrutura de suporte da ALLIMS, tem sido fatores fundamentais para o sucesso de nossos projetos.",
+  "testimonialsOneName": "Aldair de Souza Santos",
+  "testimonialsOneRole": "Gerente de serviços na DSM",
+  "testimonialsTwoText": "O programa ALLIMS nos ajudou bastante quanto ao sistema de gerenciamento e também na inserção de dados nas corridas analíticas. Hoje para a análise de solo nada é digitado, 100% das leituras realizadas nos aparelhos são importadas de forma automática. Nossos clientes recebem um alerta quando a amostra entra na bateria de análises e outro alerta quando a análise é encerrada e emitimos o laudo. Temos também a geração de arquivos de exportação que são enviadas de forma automática aos agrônomos de nossas unidades.",
+  "testimonialsTwoName": "César Aparecido Alvez",
+  "testimonialsTwoRole": "Coordenador do Laboratório, Cooperativa Cooxupé",
+  "testimonialsThreeText": "Temos todas as ferramentas necessárias para garantir muita agilidade e confiabilidade nos registros de dados no ALLIMS. Com ele conseguimos emitir mais de 400 mil laudos por ano. Outro destaque é o Controle de Qualidade Analítica (QA) que em tempo real avalia as amostras padrão e toma ações autônomas mantendo nosso processo totalmente assegurado.",
+  "testimonialsThreeName": "Carlos Eduardo Prieto",
+  "testimonialsThreeRole": "Gerente de Técnico, Laboratório IBRA",
+  "testimonialsFourText": "Fomos atrás dos melhores. Buscamos a acreditação de nosso escopo de ensaios junto à CGCRE na ABNT NBR ISO/IEC 17025:2005 e buscamos o melhor programa de gerenciamento de laboratórios que estivesse disponível no mercado e encontramos o ALLIMS. Essa escolha foi um divisor de águas na organização do laboratório. Existe um tempo AA – Antes do ALLIMS e o tempo atual DA – Depois do Allims. Com ele, nós pudemos eliminar um monte de planilhas espalhadas pelos vários setores da empresa, praticamente extinguimos os frequentes erros de transcrição que nos colocavam, as vezes, em situações embaraçosas, eliminamos retrabalhos, agilizamos a entrega dos serviços, várias etapas de conferência, enfim, com o ALLIMS, tudo isso melhorou.",
+  "testimonialsFourName": "Fernando Tiroli",
+  "testimonialsFourRole": "Diretor do Laboratório CQLab",
   "wantsTitle": "O Que Você Procura?",
   "wantsDescription": "Implantar um sistema LIMS para substituir registros em papel, planilhas, documentos eletrônicos ou outras soluções?\nSubstituir seu sistema atual, desenvolvido de forma caseira e que não contam mais com o apoio e dedicação inicial?\nSubstituir seu sistema LIMS, porque existem lacunas e processos não atendidos?\nSubstituir seu sistema LIMS, referência no mercado, mas os custos de manutenção são exagerados?",
   "wantsObs1": "A ALLIMS pode ajudar muito na busca da solução ideal: ",
