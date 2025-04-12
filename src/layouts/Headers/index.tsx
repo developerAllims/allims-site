@@ -6,9 +6,7 @@ import { useLanguage, useScrollPosition } from '../../hooks'
 
 export const LayoutHeaders = () => {
   const { language, setLanguage } = useLanguage()
-  const { pages, headers } = dataSource(language)
-
-  const { icon } = headers
+  const { pages } = dataSource(language)
   const location = useLocation()
   const basePath = getBasePath(location.pathname)
   const scrollPosition = useScrollPosition()
@@ -26,7 +24,7 @@ export const LayoutHeaders = () => {
       >
         <Link to="/">
           <Image
-            icon={icon}
+            icon={'logoPrimary'}
             classContainer="w-32"
             className={`w-32 h-full ${isTop ? 'lg:h-14' : 'lg:h-10'}`}
           />

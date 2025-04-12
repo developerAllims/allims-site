@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios'
 import { z } from 'zod'
-import { dataSource } from '../../assets'
+import { dataSource, appConfig } from '../../assets'
 import {
   Section,
   Article,
@@ -28,7 +28,19 @@ interface LayoutMessagesProps {
 export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
   const { language } = useLanguage()
   const { messages } = dataSource(language)
-  const { icon, title, button, fields, items } = messages
+  const { title, button, fields, contacts } = messages
+
+  const { messages: cfgMessages } = appConfig
+  const { fields: cfgFields, items } = cfgMessages
+
+  const cfg: any = {
+    name: { specs: { ...cfgFields.name.specs, title: fields.name } },
+    email: { specs: { ...cfgFields.email.specs, title: fields.email } },
+    phone: { specs: { ...cfgFields.phone.specs, title: fields.phone } },
+    company: { specs: { ...cfgFields.company.specs, title: fields.company } },
+    message: { specs: { ...cfgFields.message.specs, title: fields.message } }
+  }
+
   const schema = z.object({
     name: z.string().nonempty(),
     email: z.string().nonempty().email(),
@@ -36,6 +48,7 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
     company: z.string().nonempty(),
     message: z.string().nonempty()
   })
+
   const onSubmit = useCallback(async (data: any) => {
     try {
       //const { name, email, phone, company, message } = data
@@ -68,6 +81,7 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
       return { success: false, message: error.message }
     }
   }, [])
+
   return (
     <Section className="bg-gray-primary h-full py-[2%] px-0 lg:min-h-[630px]">
       <SectionContainer className="flex-col lg:flex-row h-full">
@@ -76,47 +90,33 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
             {isSimple ? (
               <Image
                 classContainer="w-full justify-end pl-40 lg:px-15"
-                icon={icon}
+                icon={'logoSecondary'}
               />
             ) : (
               <Gallery className="grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-10 justify-start p-[10%] lg:p-0 place-items-start">
                 {items.map(
-                  (
-                    {
-                      name = '',
-                      type = '',
-                      code = '',
-                      text = '',
-                      link = '',
-                      list = []
-                    },
-                    idx = 0
-                  ) => (
+                  ({ type = '', code = '', link = '', list = [] }, idx = 0) => (
                     <GalleryIconLabelText
                       key={`msg-info-${idx}`}
                       iconType={type}
-                      label={name}
+                      label={contacts[type]}
                       className={`${
                         idx === 2
                           ? 'col-span-1 sm:col-span-2 lg:col-span-1'
                           : ''
                       }`}
                     >
-                      {list ? (
-                        list.map((val, idxLs) => (
-                          <p key={`contact-inf-${idxLs}`}>
-                            {' '}
-                            <a
-                              href={link ? link : `${code}:${val}`}
-                              target={`${link ? '_blank' : '_self'}`}
-                            >
-                              {val}
-                            </a>
-                          </p>
-                        ))
-                      ) : (
-                        <a href={`${code}:${text}`}>{text}</a>
-                      )}
+                      {list.map((val, idxLs) => (
+                        <p key={`contact-inf-${idxLs}`}>
+                          {' '}
+                          <a
+                            href={link ? link : `${code}:${val}`}
+                            target={`${link ? '_blank' : '_self'}`}
+                          >
+                            {val}
+                          </a>
+                        </p>
+                      ))}
                     </GalleryIconLabelText>
                   )
                 )}
@@ -129,13 +129,13 @@ export const LayoutMessages = ({ isSimple = true }: LayoutMessagesProps) => {
             <FormContainer className="max-w-[100%] lg:max-w-[50svw]">
               <FormBase resolver={schema} onSubmit={onSubmit}>
                 <Title className="text-2xl text-white text-left">{title}</Title>
-                <FormField config={fields.name} />
+                <FormField config={cfg.name} />
                 <FormRow className="flex-col md:flex-row">
-                  <FormField config={fields.email} />
-                  <FormField config={fields.phone} />
+                  <FormField config={cfg.email} />
+                  <FormField config={cfg.phone} />
                 </FormRow>
-                <FormField config={fields.company} />
-                <FormField config={fields.message} />
+                <FormField config={cfg.company} />
+                <FormField config={cfg.message} />
                 <ButtonSimple
                   type="submit"
                   title={button}

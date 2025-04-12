@@ -6,12 +6,10 @@
       "keywords": "LIMS, ERP, Laboratório, Análise, Ensaio"
     },
     "/": { "name": "Home" },
-    "/sistema": { "name": "Sistema", "bgImage": "backgroundSystem" },
-    "/modulos": { "name": "Módulos", "bgImage": "backgroundModules" },
+    "/sistema": { "name": "Sistema" },
+    "/modulos": { "name": "Módulos" },
     "/empresa": {
-      "name": "Empresa",
-      "title": "ALLIMS",
-      "bgImage": "backgroundCompany"
+      "name": "Empresa"
     },
     "/contato": { "name": "Contato" }
   },
@@ -45,21 +43,11 @@
     "logoSecondary": "Logomarca secundária da ALLIMS",
     "logoTertiary": "Logomarca terciária da ALLIMS"
   },
-  "headers": { "icon": "logoPrimary" },
   "footers": {
-    "copyright": "Todos os Direitos Reservados @ALLIMS",
-    "devBy": "Desenvolvido por",
-    "logo": "logoTertiary"
-  },
-  "socials": {
-    "whatsapp": "https://wa.me/5519991738161",
-    "facebook": "https://www.facebook.com/allims",
-    "instagram": "https://www.instagram.com/allims/",
-    "linkedin": "https://www.linkedin.com/in/allims/"
+    "copyright": "Todos os Direitos Reservados @ALLIMS"
   },
   "policies": {
     "name": "Política de privacidade",
-    "doc": "privacyPolicy",
     "text": "Usamos cookies para aprimorar sua experiência de navegação. Ao clicar em Aceitar, você concorda com o uso de cookies",
     "button": "Aceito"
   },
@@ -67,71 +55,33 @@
     "title": "Benefícios do Sistema ALLIMS",
     "items": [
       {
-        "icon": "iconAgility",
         "name": "Segurança e agilidade na consulta dos resultados"
       },
       {
-        "icon": "iconEquipment",
         "name": "Elimina transcrição de dados dos equipamentos"
       },
       {
-        "icon": "iconFollowUp",
         "name": "Acompanhamento da rotina analítica em tempo real"
       },
       {
-        "icon": "iconCalculation",
         "name": "Cálculo dos ensaios parametrizados pelo usuário"
       },
       {
-        "icon": "iconExport",
         "name": "Conexão segura com outros sistemas CRM, ERP"
       },
       {
-        "icon": "iconTraceability",
         "name": "Rastreabilidade das informações cadastradas"
       },
       {
-        "icon": "iconIso",
         "name": "Tranquilidade no atendimento da ISO 17.025"
       },
       {
-        "icon": "iconConnection",
         "name": "100% dos usuários conectados 100% do tempo"
       }
     ]
   },
   "clients": {
-    "title": "Clientes",
-    "items": [
-      { "name": "adambiental", "title": "Ad Ambiental" },
-      { "name": "agrolab", "title": "Agrolab" },
-      { "name": "alsukkar", "title": "AlSukkar" },
-      { "name": "ascana", "title": "Ascana" },
-      { "name": "atralabs", "title": "Atralabs" },
-      { "name": "biolab", "title": "Biolab" },
-      { "name": "camda", "title": "Camda" },
-      { "name": "centralanalitica", "title": "Central Analítica" },
-      { "name": "cetal", "title": "Cetal" },
-      { "name": "cls", "title": "CLS" },
-      { "name": "colombo", "title": "Colombo" },
-      { "name": "coopercitrus", "title": "Coopercitrus" },
-      { "name": "cooxupe", "title": "Cooxupé" },
-      { "name": "cqlab", "title": "CQ Lab" },
-      { "name": "dsm", "title": "DSM" },
-      { "name": "econsulting", "title": "Econsulting" },
-      { "name": "esalq", "title": "Esalq" },
-      { "name": "fundacaoabc", "title": "Fundação ABC" },
-      { "name": "iac", "title": "IAC" },
-      { "name": "ibra", "title": "Ibra" },
-      { "name": "laborfort", "title": "Laborfort" },
-      { "name": "mattos", "title": "Mattos" },
-      { "name": "salus", "title": "Salus" },
-      { "name": "solum", "title": "Solum" },
-      { "name": "ufes", "title": "Ufes" },
-      { "name": "unicamp", "title": "Unicamp" },
-      { "name": "upf", "title": "UPF" },
-      { "name": "vapor", "title": "Vapor" }
-    ]
+    "title": "Clientes"
   },
   "concepts": {
     "items": [
@@ -141,21 +91,18 @@
           "Sistema informatizado para gerenciamento das rotinas e informações laboratoriais.",
           "A partir deste conceito, simples processos como garantir a rastreabilidade de uma amostra dentro do laboratório, até processos mais complexos como: aquisição de dados dos equipamentos, execução de cálculos nos ensaios, comparativos de resultados, emissão e envio automático do Relatório de Ensaio para os clientes, são funções de um sistema LIMS completo."
         ],
-        "button": "Saiba mais",
-        "route": "/sistema#lims"
+        "button": "Saiba mais"
       },
       {
         "title": "Empresa ALLIMS",
         "descriptions": [
           "Atuamos no mercado de desenvolvimento de sistema para laboratórios de controle de qualidade, prestadores de serviços e pesquisa e desenvolvimento. Atendemos as áreas: ambiental, alimentos, solo, química, nutrição humana, animal, entre outros."
         ],
-        "button": "Saiba mais",
-        "route": "/empresa"
+        "button": "Saiba mais"
       }
     ]
   },
   "demonstrations": {
-    "icon": "backgroundDemonstration",
     "title": "Solicite uma Demonstração",
     "items": [
       "Esta etapa é fundamental para o processo de escolha do sistema adequado para sua necessidade. É aqui onde você poderá garantir o entendimento completo do sistema e capacidade de resolver seus problemas, bem como avaliar o conhecimento técnico da empresa que passará ser seu provedor de soluções.”",
@@ -164,7 +111,6 @@
     "button": "Entre em contato"
   },
   "descriptions": {
-    "icon": "illustrationSystem",
     "title": "Sistema ALLIMS",
     "items": [
       "O sistema ALLIMS vai muito além dos padrões.",
@@ -202,52 +148,18 @@
   },
   "messages": {
     "title": "Fale conosco através do formulário abaixo:",
-    "icon": "logoSecondary",
     "fields": {
-      "name": { "specs": { "name": "name", "title": "Nome", "type": "text" } },
-      "email": {
-        "specs": { "name": "email", "title": "E-mail", "type": "text" }
-      },
-      "phone": {
-        "specs": {
-          "name": "phone",
-          "title": "Telefone",
-          "type": "text",
-          "mask": "(__) _____-____"
-        }
-      },
-      "company": {
-        "specs": { "name": "company", "title": "Empresa", "type": "text" }
-      },
-      "message": {
-        "specs": { "name": "message", "title": "Mensagem", "type": "textarea" }
-      }
+      "name": "Nome",
+      "email": "E-mail",
+      "phone": "Telefone",
+      "company": "Empresa",
+      "message": "Mensagem"
     },
-    "items": [
-      {
-        "name": "Telefone",
-        "type": "phone",
-        "code": "tel",
-        "list": ["+55 (19) 9.9173-8161", "+55 (19) 9.8160-6342"]
-      },
-      {
-        "name": "Email",
-        "type": "email",
-        "code": "mailto",
-        "list": ["comercial@allims.com.br"]
-      },
-      {
-        "name": "Endereço",
-        "type": "address",
-        "list": [
-          "R. Comendador Torlogo Dauntre, 74",
-          "Sala 1207 - Cambuí",
-          "Campinas - SP",
-          "CEP 13.025-270"
-        ],
-        "link": "https://www.google.com/maps/place/R.+Comendador+T%C3%B3rlogo+Dauntre,+74+-+Cambu%C3%AD,+Campinas+-+SP,+13025-270/@-22.8965566,-47.0505966,17z/data=!4m15!1m8!3m7!1s0x94c8cf454ff99701:0xb08af4199e4073fc!2sR.+Comendador+T%C3%B3rlogo+Dauntre,+74+-+Cambu%C3%AD,+Campinas+-+SP,+13025-270!3b1!8m2!3d-22.8965616!4d-47.0480217!16s%2Fg%2F11dzscy1_v!3m5!1s0x94c8cf454ff99701:0xb08af4199e4073fc!8m2!3d-22.8965616!4d-47.0480217!16s%2Fg%2F11dzscy1_v!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D"
-      }
-    ],
+    "contacts": {
+      "phone": "Telefone",
+      "email": "E-mail",
+      "address": "Endereço"
+    },
     "button": "Enviar"
   },
   "modules": {
@@ -258,8 +170,6 @@
         "button": "Saiba mais",
         "description": "O ALLIMS permite mapear todos os processos analíticos do laboratório, desde a recepção da amostra até a expedição do Relatório de Ensaio (laudo) para o cliente. É responsável por etapas primordiais como análise crítica no recebimento da amostra.",
         "modal": {
-          "title": "ALLIMS",
-          "image": "illustrationModule",
           "lines": [
             "O ALLIMS permite mapear todos os processos analíticos do laboratório, desde a recepção da amostra até a expedição do Relatório de Ensaio (laudo) para o cliente. É responsável por etapas primordiais como análise crítica no recebimento da amostra, distribuição das tarefas analíticas, inserção dos ensaios, controle de bancada (ELN), interfaceamento com equipamentos (Conection) e expedição dos resultados através da emissão de relatórios (Lab.OnLine).",
             "O sistema ALLIMS contempla diversas ferramentas para o dia a dia dos analistas. Possui interface (tela) gerencial completa, permite a visualização de serviços a serem iniciados, em andamento, atrasados e finalizados, por meio do mapa de trabalho é possível gerenciar a carga de tarefa de cada setor e/ou analista e redistribuir os serviços.",
@@ -273,8 +183,6 @@
         "button": "Saiba mais",
         "description": "Este módulo faz por completo o gerenciamento do relacionamento com os clientes do laboratório. Desde as primeiras interações para entendimento das demandas, registro/histórico dos contatos, data para folllow-up, negociações, versões das propostas até a aprovação final.",
         "modal": {
-          "title": "Comercial",
-          "image": "illustrationModule",
           "lines": [
             "Este módulo faz por completo o gerenciamento do relacionamento com os clientes do laboratório. Desde as primeiras interações para entendimento das demandas, registro/histórico dos contatos, data para folllow-up, negociações, versões das propostas até a aprovação final.",
             "O módulo também controla as faixas de desconto por usuário, ou seja, de acordo com perfil de cada um a porcentagem pode variar. O sistema irá manter para aprovação do superior quando um desconto for maior do que o permitido.",
@@ -292,8 +200,6 @@
         "button": "Saiba mais",
         "description": "No módulo Agenda o setor de logística poderá ajustar as datas previstas para coleta conforme alinhamento final com o cliente e conforme seu roteiro de coleta. As coletas são apresentadas em forma de calendário, o que permite muita agilidade e visibilidade das programações definidas.",
         "modal": {
-          "title": "Agenda",
-          "image": "illustrationModule",
           "lines": [
             "No módulo Agenda o setor de logística poderá ajustar as datas previstas para coleta conforme alinhamento final com o cliente e conforme seu roteiro de coleta. As coletas são apresentadas em forma de calendário, o que permite muita agilidade e visibilidade das programações definidas, além disso os coletadores poderão acompanhar sua programação, bem como, preparar as suas atividades com antecedência. há ainda a possibilidade dos planos de amostragem serem impressos pelo sistema.",
             "As coletas também poderão ser enviadas para um dispositivo móvel para registro em campo, módulo Coleta Mobile, de modo que as informações de coleta serão digitadas ou transferidas automaticamente para o ALLIMS."
@@ -305,8 +211,6 @@
         "button": "Saiba mais",
         "description": "O Coleta Mobile primeiro realiza o registro das informações de campo em disposto móvel, após o setor de logística revisar e finalizar no módulo Agenda as datas previstas para coleta, a lista de amostras, bem como as informações de campo.",
         "modal": {
-          "title": "Coleta Mobile",
-          "image": "illustrationModule",
           "lines": [
             "O Coleta Mobile primeiro realiza o registro das informações de campo em disposto móvel, após o setor de logística revisar e finalizar no módulo Agenda as datas previstas para coleta, a lista de amostras, bem como as informações de campo, poderá ser enviada para o dispositivo móvel: tablet (Android ®), smartphone ou outros.",
             "Em campo o coletor poderá localizar a amostra no sistema por meio da digitação do código da amostra ou leitura do código de barras ou QRCode constante na etiqueta da amostra, após todas as informações serem registradas os dados poderão ser enviados para o laboratório via conexão dados com a internet ou caso não tenha sinal de internet disponível no momento, assim que o dispositivo for conectado os dados da coleta serão enviados para o ALLIMS.",
@@ -319,8 +223,6 @@
         "button": "Saiba mais",
         "description": "Insumos é um módulo para gerenciamento dos insumos do laboratório: estoque, lote, validade de reagentes, preparo de soluções e materiais de consumo. Traz como grande benefício a redução de desperdícios e a conscientização de uso de materiais por parte dos analistas.",
         "modal": {
-          "title": "Insumos",
-          "image": "illustrationModule",
           "lines": [
             "O módulo de Insumos é um módulo para gerenciamento dos insumos do laboratório: estoque, lote, validade de reagentes, preparo de soluções e materiais de consumo. Traz como grande benefício a redução de desperdícios e a conscientização de uso de materiais por parte dos analistas, pois oferece controle completo de materiais e gestão de suprimentos por departamento ou por colaborador, em um determinado período.",
             "O módulo controla todas as entradas de materiais com gestão de nomenclaturas para eliminar possibilidades de estoques sem controle no sistema. Permite a gestão hierárquica de tarefas que devem ser executadas por colaboradores internos, indicando prazos e sazonalidade nas compras.",
@@ -334,8 +236,6 @@
         "button": "Saiba mais",
         "description": "O módulo de Custódia está preparado para gerenciar com precisão todas as funções da cadeia da custódia dentro e fora do laboratório, inclusive com travas automáticas.",
         "modal": {
-          "title": "Custódia",
-          "image": "illustrationModule",
           "lines": [
             "O módulo de Custódia está preparado para gerenciar com precisão todas as funções da cadeia da custódia dentro e fora do laboratório, inclusive com travas automáticas. Oferece rastreabilidade de manipulações e armazenamentos em ambientes controlados como estufas, freezer, termômetros, entre outros.",
             "O módulo é responsável por avaliar o ambiente controlado através de métricas de qualidade, definidas de acordo com cada ambiente e equipamento, podendo reter uma amostra a partir de um apontador pré-definido.",
@@ -348,8 +248,6 @@
         "button": "Saiba mais",
         "description": "O módulo de Integrações proporciona ao laboratório trocar informações com os sistemas: CRM, ERP, PIMS, MES e outros, além de fazer conexão e aquisição de dados dos equipamentos do laboratório. O módulo Connection é considerado um dos principais responsáveis pela redução dos erros de transcrição de dados.",
         "modal": {
-          "title": "Integrações",
-          "image": "illustrationModule",
           "lines": [
             "O módulo de Integrações proporciona ao laboratório trocar informações com os sistemas: CRM, ERP, PIMS, MES e outros, além de fazer conexão e aquisição de dados dos equipamentos do laboratório.",
             "O módulo Connection é considerado um dos principais responsáveis pela redução dos erros de transcrição de dados, do tempo de entrega dos resultados e re-digitação de informações, aumento da produtividade e da qualidade, além da automação de processos.",
@@ -365,8 +263,6 @@
         "button": "Saiba mais",
         "description": "O Lab.OnLine permite aos clientes do laboratório consultar os resultados analíticos diretamente no portal da Web. No Lab.OnLine é possível: acompanhar os status das amostras no laboratório, consultar resultados das amostras, imprimir os Relatórios de Ensaio (laudo PDF), encaminhar amostras para outras pessoas.",
         "modal": {
-          "title": "Lab.Online",
-          "image": "illustrationModule",
           "lines": [
             "O Lab.OnLine permite aos clientes do laboratório consultar os resultados analíticos diretamente no portal da Web.",
             "No Lab.OnLine é possível: acompanhar os status das amostras no laboratório, consultar resultados das amostras, imprimir os Relatórios de Ensaio (laudo PDF), encaminhar amostras para outras pessoas, exportar informações para o Excel, entre outros recursos.",
@@ -382,8 +278,6 @@
         "button": "Saiba mais",
         "description": "O módulo de Garantia da Qualidade oferece o controle dos registros e apontadores exigidos pela ISO/IEC 17025, apoiando a área de qualidade do laboratório em todas as responsabilidades referentes a esta norma. Este módulo traz diversas ferramentas como controle de capacitação de colaboradores, calibração de equipamentos,",
         "modal": {
-          "title": "Garantia da Qualidade",
-          "image": "illustrationModule",
           "lines": [
             "O módulo de Garantia da Qualidade oferece o controle dos registros e apontadores exigidos pela ISO/IEC 17025, apoiando a área de qualidade do laboratório em todas as responsabilidades referentes a esta norma.",
             "Este módulo traz diversas ferramentas como controle de capacitação de colaboradores, calibração de equipamentos, gestão de tomada de ação baseada em possíveis RNC, entre outras.",
@@ -397,8 +291,6 @@
         "button": "Saiba mais",
         "description": "Imagine o sistema notificando seus usuários ou clientes conforme as ações são realizadas dentro do laboratório.\n        Diversas ocorrências no sistema podem ser vinculadas ao envio de e-mails automático ou notificações para o módulo de Alertas no seu celular.",
         "modal": {
-          "title": "Alertas",
-          "image": "illustrationModule",
           "lines": [
             "Imagine o sistema notificando seus usuários ou clientes conforme as ações são realizadas dentro do laboratório.",
             "Diversas ocorrências no sistema podem ser vinculadas ao envio de e-mails automático ou notificações para o módulo de Alertas no seu celular.",
@@ -419,8 +311,6 @@
     ]
   },
   "places": {
-    "icon": "illustrationCompany",
-    "title": "ALLIMS",
     "items": [
       "Atuamos no mercado de desenvolvimento de sistema para o segmento laboratorial e também para o segmento agronômico.",
       "Atendemos vários clientes no segmento de laboratórios, nas áreas: ambiental, alimentos, solo, química, nutrição humana, nutrição animal, farmacêutica, pesquisa e desenvolvimento, entre outros.",
@@ -432,44 +322,34 @@
     "title": "Áreas de Atuação",
     "items": [
       {
-        "icon": "segmentDrinks",
         "name": "Alimentos e Bebidas"
       },
       {
-        "icon": "segmentSanitation",
         "name": "Saneamento"
       },
       {
-        "icon": "segmentCosmetics",
         "name": "Cosméticos"
       },
-      { "icon": "segmentFarm", "name": "Agrícola" },
+      { "name": "Agrícola" },
       {
-        "icon": "segmentEnvironment",
         "name": "Meio Ambiente"
       },
       {
-        "icon": "segmentMining",
         "name": "Mineração e Metalúrgica"
       },
       {
-        "icon": "segmentNutrition",
         "name": "Nutrição Animal"
       },
       {
-        "icon": "segmentChemical",
         "name": "Química e Petroquímica"
       }
     ]
   },
   "starts": {
-    "icon": "backgroundStart",
-    "title": "ALLIMS",
     "slogan": "O sistema ideal para gerenciamento das informações do seu laboratório",
     "button": "Saiba mais"
   },
   "talks": {
-    "icon": "backgroundTalk",
     "title": "Vamos Conversar",
     "descriptions": [
       "O sistema ALLIMS vai muito além dos padrões.",

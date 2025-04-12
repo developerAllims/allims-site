@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { dataSource } from '../../assets'
+import { dataSource, appConfig } from '../../assets'
 import {
   Section,
   Article,
@@ -16,7 +16,10 @@ import { useLanguage } from '../../hooks'
 export const LayoutClients = () => {
   const { language } = useLanguage()
   const { clients } = dataSource(language)
-  const { title, items } = clients
+  const { title } = clients
+  const { clients: cfgClients } = appConfig
+  const { items } = cfgClients
+
   const [position, setPosition] = useState(0)
   const [fade, setFade] = useState(1)
   const max = 4

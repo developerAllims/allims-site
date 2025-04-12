@@ -18,13 +18,13 @@ interface LayoutDescriptions {
 export const LayoutDescriptions = ({ isSimple = false }) => {
   const { language } = useLanguage()
   const { descriptions } = dataSource(language)
-  const { icon, title, items, button } = descriptions
+  const { title, items, button } = descriptions
   return (
     <Section className="p-[10%] lg:p-0 bg-gray-primary">
       <SectionContainer className="flex-col lg:flex-row w-full">
         <Article className="p-0 w-full">
           <ArticleContainer className="justify-start h-full p-0 lg:pt-[27px] lg:pr-[27px]">
-            <Image className="h-full w-full" icon={icon} />
+            <Image className="h-full w-full" icon={'illustrationSystem'} />
           </ArticleContainer>
         </Article>
         <Article className="p-0 w-full">

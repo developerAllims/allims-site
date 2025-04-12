@@ -16,6 +16,18 @@ export const LayoutBenefits = () => {
   const { language } = useLanguage()
   const { benefits } = dataSource(language)
   const { title, items } = benefits
+
+  const icons = [
+    'iconAgility',
+    'iconEquipment',
+    'iconFollowUp',
+    'iconCalculation',
+    'iconExport',
+    'iconTraceability',
+    'iconIso',
+    'iconConnection'
+  ]
+
   return (
     <Section className="bg-white p-[10%] lg:p-0">
       <SectionContainer className="justify-center">
@@ -26,10 +38,10 @@ export const LayoutBenefits = () => {
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
             <Gallery className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:place-items-start">
-              {items.map(({ icon = '', name = '' }, idx = 0) => (
+              {items.map(({ name = '' }, idx = 0) => (
                 <GalleryIconText
                   key={`benefit-${idx}`}
-                  icon={icon}
+                  icon={icons[idx]}
                   className="lg:min-h-[132px]"
                 >
                   {name}

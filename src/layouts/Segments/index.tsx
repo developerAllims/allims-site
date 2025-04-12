@@ -16,6 +16,18 @@ export const LayoutSegments = () => {
   const { language } = useLanguage()
   const { segments } = dataSource(language)
   const { title, items } = segments
+
+  const icons = [
+    'segmentDrinks',
+    'segmentSanitation',
+    'segmentCosmetics',
+    'segmentFarm',
+    'segmentEnvironment',
+    'segmentMining',
+    'segmentNutrition',
+    'segmentChemical'
+  ]
+
   return (
     <Section className="bg-orange-tertiary h-full p-[10%] lg:p-0">
       <SectionContainer className="justify-center">
@@ -26,8 +38,8 @@ export const LayoutSegments = () => {
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
             <Gallery className="grid-cols-2 lg:grid-cols-4 gap-10 place-items-start">
-              {items.map(({ icon = '', name = '' }, idx = 0) => (
-                <GalleryPhotoText key={`segment-${idx}`} icon={icon}>
+              {items.map(({ name = '' }, idx = 0) => (
+                <GalleryPhotoText key={`segment-${idx}`} icon={icons[idx]}>
                   {name}
                 </GalleryPhotoText>
               ))}

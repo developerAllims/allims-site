@@ -20,6 +20,7 @@ export const LayoutModules = () => {
   const { language } = useLanguage()
   const { modules } = dataSource(language)
   const { items } = modules
+
   const setPairModules = useCallback(() => {
     const pairs = []
     for (let index = 0; index < items.length; index += 2) {
@@ -32,18 +33,16 @@ export const LayoutModules = () => {
   }, [items])
   const pairModules = setPairModules()
 
-  const [open, setOpen] = useState(false)
   const [config, setConfig] = useState({
     title: '',
-    image: '',
     lines: []
   })
 
+  const [open, setOpen] = useState(false)
   const modalOpen = useCallback((modal: any) => {
     setConfig(modal)
     setOpen(true)
   }, [])
-
   const modalClose = useCallback(() => {
     setOpen(false)
   }, [])
@@ -72,7 +71,7 @@ export const LayoutModules = () => {
                           title={button}
                           className="text-lg bg-orange-primary text-white"
                           onClick={() => {
-                            modalOpen(modal)
+                            modalOpen({ ...modal, title })
                           }}
                         />
                       </ArticleContainer>
@@ -94,7 +93,7 @@ export const LayoutModules = () => {
         title={config.title}
         onClick={modalClose}
       >
-        <Image icon={config.image || ''} className="w-[200px]" />
+        <Image icon={'illustrationModule'} className="w-[200px]" />
         <ModalContainer>
           {config.lines.map((val: any, idx) =>
             typeof val === 'object' ? (

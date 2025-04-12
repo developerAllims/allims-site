@@ -13,9 +13,9 @@ import { useLanguage } from '../../hooks'
 export const LayoutTalks = () => {
   const { language } = useLanguage()
   const { talks } = dataSource(language)
-  const { icon, title, descriptions, button } = talks
+  const { title, descriptions, button } = talks
   return (
-    <Section bgImage={icon} className="h-full p-[10%] lg:p-0">
+    <Section bgImage={'backgroundTalk'} className="h-full p-[10%] lg:p-0">
       <SectionContainer className="lg:justify-center">
         <Article className="w-full justify-center text-center lg:py-[7%] px-0 lg:w-4/5">
           <ArticleContainer className="gap-7 justify-center h-full text-shadow">

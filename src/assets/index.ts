@@ -32,8 +32,6 @@ import logoPrimary from './images/logo-primary.webp'
 import logoSecondary from './images/logo-secondary.webp'
 import logoTertiary from './images/logo-tertiary.webp'
 
-import privacyPolicy from './docs/pp-pt.pdf'
-
 export const images: any = {
   segmentChemical,
   segmentCosmetics,
@@ -69,9 +67,19 @@ export const images: any = {
   logoTertiary
 }
 
+import ptPrivacyPolicy from './docs/pp-pt.pdf'
+import enPrivacyPolicy from './docs/pp-en.pdf'
+import esPrivacyPolicy from './docs/pp-es.pdf'
+
 export const docs: any = {
-  privacyPolicy
+  pt: { privacyPolicy: ptPrivacyPolicy },
+  en: { privacyPolicy: enPrivacyPolicy },
+  es: { privacyPolicy: esPrivacyPolicy }
 }
+
+import all from './data/all.json'
+
+export const appConfig = all
 
 import pt from './data/pt.json'
 import en from './data/en.json'

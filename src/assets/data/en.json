@@ -6,12 +6,10 @@
       "keywords": "LIMS, ERP, Laboratory, Analysis, Testing"
     },
     "/": { "name": "Home" },
-    "/sistema": { "name": "System", "bgImage": "backgroundSystem" },
-    "/modulos": { "name": "Modules", "bgImage": "backgroundModules" },
+    "/sistema": { "name": "System" },
+    "/modulos": { "name": "Modules" },
     "/empresa": {
-      "name": "Company",
-      "title": "ALLIMS",
-      "bgImage": "backgroundCompany"
+      "name": "Company"
     },
     "/contato": { "name": "Contact" }
   },
@@ -45,21 +43,11 @@
     "logoSecondary": "ALLIMS secondary logo",
     "logoTertiary": "ALLIMS tertiary logo"
   },
-  "headers": { "icon": "logoPrimary" },
   "footers": {
-    "copyright": "All Rights Reserved @ALLIMS",
-    "devBy": "Developed by",
-    "logo": "logoTertiary"
-  },
-  "socials": {
-    "whatsapp": "https://wa.me/5519991738161",
-    "facebook": "https://www.facebook.com/allims",
-    "instagram": "https://www.instagram.com/allims/",
-    "linkedin": "https://www.linkedin.com/in/allims/"
+    "copyright": "All Rights Reserved @ALLIMS"
   },
   "policies": {
     "name": "Privacy Policy",
-    "doc": "privacyPolicy",
     "text": "We use cookies to improve your browsing experience. By clicking Accept, you agree to the use of cookies",
     "button": "Accept"
   },
@@ -67,71 +55,33 @@
     "title": "Benefits of the ALLIMS System",
     "items": [
       {
-        "icon": "iconAgility",
         "name": "Security and agility in consulting results"
       },
       {
-        "icon": "iconEquipment",
         "name": "Eliminates transcription of equipment data"
       },
       {
-        "icon": "iconFollowUp",
         "name": "Monitoring the analytical routine in real time"
       },
       {
-        "icon": "iconCalculation",
         "name": "Monitoring the analytical routine in real time"
       },
       {
-        "icon": "iconExport",
         "name": "Secure connection with other CRM, ERP systems"
       },
       {
-        "icon": "iconTraceability",
         "name": "Traceability of registered information"
       },
       {
-        "icon": "iconIso",
         "name": "Peace of mind when complying with ISO 17.025"
       },
       {
-        "icon": "iconConnection",
         "name": "100% of users connected 100% of the time"
       }
     ]
   },
   "clients": {
-    "title": "Clients",
-    "items": [
-      { "name": "adambiental", "title": "Ad Ambiental" },
-      { "name": "agrolab", "title": "Agrolab" },
-      { "name": "alsukkar", "title": "AlSukkar" },
-      { "name": "ascana", "title": "Ascana" },
-      { "name": "atralabs", "title": "Atralabs" },
-      { "name": "biolab", "title": "Biolab" },
-      { "name": "camda", "title": "Camda" },
-      { "name": "centralanalitica", "title": "Central Analítica" },
-      { "name": "cetal", "title": "Cetal" },
-      { "name": "cls", "title": "CLS" },
-      { "name": "colombo", "title": "Colombo" },
-      { "name": "coopercitrus", "title": "Coopercitrus" },
-      { "name": "cooxupe", "title": "Cooxupé" },
-      { "name": "cqlab", "title": "CQ Lab" },
-      { "name": "dsm", "title": "DSM" },
-      { "name": "econsulting", "title": "Econsulting" },
-      { "name": "esalq", "title": "Esalq" },
-      { "name": "fundacaoabc", "title": "Fundação ABC" },
-      { "name": "iac", "title": "IAC" },
-      { "name": "ibra", "title": "Ibra" },
-      { "name": "laborfort", "title": "Laborfort" },
-      { "name": "mattos", "title": "Mattos" },
-      { "name": "salus", "title": "Salus" },
-      { "name": "solum", "title": "Solum" },
-      { "name": "ufes", "title": "Ufes" },
-      { "name": "unicamp", "title": "Unicamp" },
-      { "name": "upf", "title": "UPF" },
-      { "name": "vapor", "title": "Vapor" }
-    ]
+    "title": "Clients"
   },
   "concepts": {
     "items": [
@@ -141,21 +91,18 @@
           "Computerized system for managing laboratory routines and information.",
           "Based on this concept, simple processes such as ensuring the traceability of a sample within the laboratory, to more complex processes such as: acquiring data from equipment, performing calculations in tests, comparing results, issuing and automatically sending the Test Report to customers, are functions of a complete LIMS system."
         ],
-        "button": "Learn more",
-        "route": "/sistema#lims"
+        "button": "Learn more"
       },
       {
         "title": "ALLIMS Company",
         "descriptions": [
           "We operate in the system development market for quality control laboratories, service providers and research and development. We serve the following areas: environmental, food, soil, chemistry, human and animal nutrition, among others."
         ],
-        "button": "Learn more",
-        "route": "/empresa"
+        "button": "Learn more"
       }
     ]
   },
   "demonstrations": {
-    "icon": "backgroundDemonstration",
     "title": "Request a Demo",
     "items": [
       "This step is essential for the process of choosing the right system for your needs. This is where you can ensure that you fully understand the system and its ability to solve your problems, as well as assess the technical knowledge of the company that will become your solution provider.”",
@@ -164,7 +111,6 @@
     "button": "Get in touch"
   },
   "descriptions": {
-    "icon": "illustrationSystem",
     "title": "ALLIMS System",
     "items": [
       "The ALLIMS system goes far beyond the standards.",
@@ -202,52 +148,18 @@
   },
   "messages": {
     "title": "Contact us using the form below:",
-    "icon": "logoSecondary",
     "fields": {
-      "name": { "specs": { "name": "name", "title": "Name", "type": "text" } },
-      "email": {
-        "specs": { "name": "email", "title": "E-mail", "type": "text" }
-      },
-      "phone": {
-        "specs": {
-          "name": "phone",
-          "title": "Phone",
-          "type": "text",
-          "mask": "(__) _____-____"
-        }
-      },
-      "company": {
-        "specs": { "name": "company", "title": "Company", "type": "text" }
-      },
-      "message": {
-        "specs": { "name": "message", "title": "Message", "type": "textarea" }
-      }
+      "name": "Name",
+      "email": "E-mail",
+      "phone": "Phone",
+      "company": "Company",
+      "message": "Message"
     },
-    "items": [
-      {
-        "name": "Phone",
-        "type": "phone",
-        "code": "tel",
-        "list": ["+55 (19) 9.9173-8161", "+55 (19) 9.8160-6342"]
-      },
-      {
-        "name": "Email",
-        "type": "email",
-        "code": "mailto",
-        "list": ["comercial@allims.com.br"]
-      },
-      {
-        "name": "Address",
-        "type": "address",
-        "list": [
-          "74, Comendador Torlogo Dauntre St.",
-          "Room 1207 - Cambuí",
-          "Campinas - SP",
-          "ZipCode 13.025-270"
-        ],
-        "link": "https://www.google.com/maps/place/R.+Comendador+T%C3%B3rlogo+Dauntre,+74+-+Cambu%C3%AD,+Campinas+-+SP,+13025-270/@-22.8965566,-47.0505966,17z/data=!4m15!1m8!3m7!1s0x94c8cf454ff99701:0xb08af4199e4073fc!2sR.+Comendador+T%C3%B3rlogo+Dauntre,+74+-+Cambu%C3%AD,+Campinas+-+SP,+13025-270!3b1!8m2!3d-22.8965616!4d-47.0480217!16s%2Fg%2F11dzscy1_v!3m5!1s0x94c8cf454ff99701:0xb08af4199e4073fc!8m2!3d-22.8965616!4d-47.0480217!16s%2Fg%2F11dzscy1_v!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D"
-      }
-    ],
+    "contacts": {
+      "phone": "Phone",
+      "email": "E-mail",
+      "address": "Address"
+    },
     "button": "Send"
   },
   "modules": {
@@ -258,8 +170,6 @@
         "button": "Learn more",
         "description": "ALLIMS allows you to map all of the laboratory's analytical processes, from sample reception to the issuing of the Test Report to the client. It is responsible for essential steps such as critical analysis upon receipt of the sample.",
         "modal": {
-          "title": "ALLIMS",
-          "image": "illustrationModule",
           "lines": [
             "ALLIMS allows you to map all of the laboratory's analytical processes, from sample reception to the issuing of the Test Report (report) to the client. It is responsible for essential steps such as critical analysis upon receipt of the sample, distribution of analytical tasks, insertion of tests, bench control (ELN), interfacing with equipment (Conection) and issuing of results through the issuance of reports (Lab.OnLine).",
             "The ALLIMS system includes several tools for the analysts' daily routine. It has a complete management interface (screen), allows viewing of services to be started, in progress, delayed and completed, through the work map it is possible to manage the workload of each sector and/or analyst and redistribute the services.",
@@ -273,8 +183,6 @@
         "button": "Learn more",
         "description": "This module completely manages the relationship with the laboratory's clients. From the first interactions to understand demands, contact records/history, follow-up dates, negotiations, proposal versions, and final approval.",
         "modal": {
-          "title": "Commercial",
-          "image": "illustrationModule",
           "lines": [
             "This module completely manages the relationship with the laboratory's clients. From the first interactions to understand demands, contact records/history, follow-up dates, negotiations, proposal versions, and final approval.",
             "The module also controls discount ranges per user, i.e., the percentage may vary depending on each user's profile. The system will maintain a record for approval by the superior when a discount is greater than the permitted amount.",
@@ -292,8 +200,6 @@
         "button": "Learn more",
         "description": "In the Schedule module, the logistics department can adjust the scheduled collection dates according to the final agreement with the customer and their collection schedule. Collections are presented in calendar format, which allows for greater agility and visibility of the defined schedules.",
         "modal": {
-          "title": "Schedule",
-          "image": "illustrationModule",
           "lines": [
             "In the Schedule module, the logistics sector can adjust the scheduled collection dates according to the final agreement with the client and according to their collection itinerary. The collections are presented in calendar format, which allows for a lot of agility and visibility of the defined schedules. In addition, collectors can monitor their schedules and prepare their activities in advance. There is also the possibility of sampling plans being printed by the system.",
             "Collections can also be sent to a mobile device for field recording, Mobile Collection module, so that the collection information will be automatically entered or transferred to ALLIMS."
@@ -305,8 +211,6 @@
         "button": "Learn more",
         "description": "Coleta Mobile first records field information in a mobile device, after which the logistics sector reviews and finalizes the scheduled collection dates, the sample list, and field information in the Schedule module.",
         "modal": {
-          "title": "Mobile Collection",
-          "image": "illustrationModule",
           "lines": [
             "Mobile Collection first records field information on a mobile device. After the logistics sector reviews and finalizes the planned collection dates in the Schedule module, the sample list, as well as field information, can be sent to the mobile device: tablet (Android ®), smartphone or others.",
             "In the field, the collector can locate the sample in the system by typing the sample code or reading the barcode or QRCode on the sample label. After all information is recorded, the data can be sent to the laboratory via an internet connection or, if there is no internet signal available at the time, as soon as the device is connected, the collection data will be sent to ALLIMS.",
@@ -319,8 +223,6 @@
         "button": "Learn more",
         "description": "Consumables is a module for managing laboratory consumables: inventory, batch, reagent expiration date, solution preparation and consumable materials. Its major benefits include reducing waste and raising awareness of material use among analysts.",
         "modal": {
-          "title": "Consumables",
-          "image": "illustrationModule",
           "lines": [
             "The Consumables module is a module for managing laboratory consumables: stock, batch, reagent expiration date, preparation of solutions and consumable materials. Its major benefit is reducing waste and raising awareness of material usage by analysts, as it offers complete control of materials and supply management by department or employee, in a given period.",
             "The module controls all material entries with nomenclature management to eliminate the possibility of uncontrolled stock in the system. It allows hierarchical management of tasks that must be performed by internal employees, indicating deadlines and seasonality in purchases.",
@@ -334,8 +236,6 @@
         "button": "Learn more",
         "description": "The Custody module is prepared to accurately manage all chain of custody functions inside and outside the laboratory, including automatic locks.",
         "modal": {
-          "title": "Custody",
-          "image": "illustrationModule",
           "lines": [
             "The Custody module is prepared to accurately manage all functions of the chain of custody inside and outside the laboratory, including automatic locks. It offers traceability of handling and storage in controlled environments such as greenhouses, freezers, thermometers, among others.",
             "The module is responsible for evaluating the controlled environment through quality metrics, defined according to each environment and equipment, and can retain a sample from a pre-defined pointer.",
@@ -348,8 +248,6 @@
         "button": "Learn more",
         "description": "The Integrations module allows the laboratory to exchange information with the following systems: CRM, ERP, PIMS, MES and others, in addition to connecting and acquiring data from laboratory equipment. The Connection module is considered one of the main factors responsible for reducing data transcription errors.",
         "modal": {
-          "title": "Integrations",
-          "image": "illustrationModule",
           "lines": [
             "The Integration module allows the laboratory to exchange information with the following systems: CRM, ERP, PIMS, MES and others, in addition to connecting and acquiring data from laboratory equipment.",
             "The Connection module is considered one of the main factors responsible for reducing data transcription errors, results delivery time and re-typing of information, increasing productivity and quality, in addition to process automation.",
@@ -365,8 +263,6 @@
         "button": "Learn more",
         "description": "Lab.OnLine allows laboratory clients to consult analytical results directly on the web portal. In Lab.OnLine it is possible to: monitor the status of samples in the laboratory, consult sample results, print Test Reports (PDF report), forward samples to other people.",
         "modal": {
-          "title": "Lab.Online",
-          "image": "illustrationModule",
           "lines": [
             "Lab.OnLine allows laboratory clients to consult analytical results directly on the web portal.",
             "In Lab.OnLine it is possible to: monitor the status of samples in the laboratory, consult sample results, print Test Reports (PDF report), forward samples to other people, export information to Excel, among other resources.",
@@ -382,8 +278,6 @@
         "button": "Learn more",
         "description": "The Quality Assurance module provides control of the records and pointers required by ISO/IEC 17025, supporting the laboratory's quality area in all responsibilities related to this standard. This module provides several tools such as employee training control, equipment calibration,",
         "modal": {
-          "title": "Quality Assurance",
-          "image": "illustrationModule",
           "lines": [
             "The Quality Assurance module provides control of the records and indicators required by ISO/IEC 17025, supporting the laboratory's quality area in all responsibilities related to this standard.",
             "This module provides several tools such as employee training control, equipment calibration, management of action based on possible RNC, among others.",
@@ -397,8 +291,6 @@
         "button": "Learn more",
         "description": "Imagine the system notifying your users or customers as actions are performed within the laboratory.\n Various occurrences in the system can be linked to the sending of automatic emails or notifications to the Alerts module on your cell phone.",
         "modal": {
-          "title": "Alerts",
-          "image": "illustrationModule",
           "lines": [
             "Imagine the system notifying your users or customers as actions are performed within the laboratory.",
             "Several occurrences in the system can be linked to the sending of automatic emails or notifications to the Alerts module on your cell phone.",
@@ -419,8 +311,6 @@
     ]
   },
   "places": {
-    "icon": "illustrationCompany",
-    "title": "ALLIMS",
     "items": [
       "We operate in the market for developing systems for the laboratory segment and also for the agronomic segment.",
       "We serve several clients in the laboratory segment, in the areas of: environmental, food, soil, chemistry, human nutrition, animal nutrition, pharmaceuticals, research and development, among others.",
@@ -432,44 +322,34 @@
     "title": "Areas of Activity",
     "items": [
       {
-        "icon": "segmentDrinks",
         "name": "Food and Beverages"
       },
       {
-        "icon": "segmentSanitation",
         "name": "Sanitation"
       },
       {
-        "icon": "segmentCosmetics",
         "name": "Cosmetics"
       },
-      { "icon": "segmentFarm", "name": "Agricultural" },
+      { "name": "Agricultural" },
       {
-        "icon": "segmentEnvironment",
         "name": "Environment"
       },
       {
-        "icon": "segmentMining",
         "name": "Mining and Metallurgy"
       },
       {
-        "icon": "segmentNutrition",
         "name": "Animal Nutrition"
       },
       {
-        "icon": "segmentChemical",
         "name": "Chemistry and Petrochemistry"
       }
     ]
   },
   "starts": {
-    "icon": "backgroundStart",
-    "title": "ALLIMS",
     "slogan": "The ideal system for managing your laboratory information",
     "button": "Learn more"
   },
   "talks": {
-    "icon": "backgroundTalk",
     "title": "Let's talk",
     "descriptions": [
       "The ALLIMS system goes far beyond the standards.",

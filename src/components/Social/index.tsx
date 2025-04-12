@@ -1,14 +1,12 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 import { ComponentProps } from 'react'
-import { dataSource } from '../../assets'
+import { appConfig } from '../../assets'
 
 import { AiOutlineWhatsApp } from 'react-icons/ai'
 import { FaFacebookSquare, FaInstagram, FaLinkedin } from 'react-icons/fa'
-import { useLanguage } from '../../hooks'
 
 export const SocialWhatsApp = () => {
-  const { language } = useLanguage()
-  const { socials } = dataSource(language)
+  const { socials } = appConfig
   const { whatsapp } = socials
   return (
     <div className="flex fixed right-6 lg:right-8 bottom-6 hover:bottom-8 lg:bottom-8 hover:lg:bottom-10 z-97 rounded-full shadow-md shadow-gray-primary">
@@ -28,8 +26,7 @@ interface SocialIconProps extends ComponentProps<'a'> {
 }
 
 export const SocialIcon = ({ type }: SocialIconProps) => {
-  const { language } = useLanguage()
-  const { socials } = dataSource(language)
+  const { socials } = appConfig
   const { facebook, instagram, linkedin } = socials
   const classes = 'h-7 lg:h-10 w-7 lg:w-10 text-white hover:text-gray-primary'
   const link =

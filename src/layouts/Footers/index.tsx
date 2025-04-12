@@ -16,7 +16,7 @@ export const LayoutFooters = () => {
   const { VITE_SOCIAL_SHOW } = import.meta.env
   const { language } = useLanguage()
   const { footers } = dataSource(language)
-  const { logo, copyright } = footers
+  const { copyright } = footers
 
   const [pageHeight, setPageHeight] = useState(0)
   const [viewHeight, setViewHeight] = useState(0)
@@ -55,7 +55,7 @@ export const LayoutFooters = () => {
       >
         <div className="flex w-full min-h-36 justify-center p-[3%] lg:py-[15px] lg:px-0 bg-orange-primary text-white text-xs">
           <PageContainer className="justify-between">
-            <Image icon={logo} className="w-48 h-15" />
+            <Image icon={'logoTertiary'} className="w-48 h-15" />
             {VITE_SOCIAL_SHOW === 'true' ? (
               <SocialContainer>
                 <SocialIcon type="facebook" />
