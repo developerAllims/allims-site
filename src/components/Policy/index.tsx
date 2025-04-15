@@ -15,7 +15,8 @@ export const Policy = () => {
   const cookieName = 'allims-site-policy'
   const [cookies, setCookie] = useCookies([cookieName])
   const handleClick = useCallback(() => {
-    setCookie(cookieName, true)
+    const cookieOptions = { maxAge: 60 * 60 * 24 * 365 }
+    setCookie(cookieName, true, cookieOptions)
   }, [setCookie])
 
   if (cookies[cookieName] === true) return <></>
