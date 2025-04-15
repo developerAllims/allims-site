@@ -38,13 +38,13 @@ export const LayoutBenefits = () => {
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
             <Gallery className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:place-items-start">
-              {items.map(({ name = '' }, idx = 0) => (
+              {items.map((val = '', idx = 0) => (
                 <GalleryIconText
                   key={`benefit-${idx}`}
                   icon={icons[idx]}
                   className="lg:min-h-[132px]"
                 >
-                  {t[name]}
+                  {t[val]}
                 </GalleryIconText>
               ))}
             </Gallery>

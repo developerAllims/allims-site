@@ -3,8 +3,8 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 import { ComponentProps, useCallback } from 'react'
 import { ButtonIcon } from '../Button'
-import { useLanguage } from '../../hooks'
-import { dataSource } from '../../assets'
+import { useTranslator } from '../../hooks'
+import { appConfig } from '../../assets'
 
 interface ModalProps extends ComponentProps<'dialog'> {
   title: string
@@ -18,8 +18,8 @@ export const Modal = ({
   title,
   ...rest
 }: ModalProps) => {
-  const { language } = useLanguage()
-  const { modules } = dataSource(language)
+  const t = useTranslator()
+  const { modules } = appConfig
   const { back } = modules
   const handleClick = useCallback((event: any) => {
     event.preventDefault()
@@ -43,12 +43,12 @@ export const Modal = ({
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-0 justify-between">
           <ButtonIcon
             icon="CiCircleChevLeft"
-            title={back}
+            title={t[back]}
             classContainer="justify-start"
             onClick={handleClose}
           />
           <h3 className="text-2xl text-center sm:text-right font-bold text-gray-primary">
-            {title}
+            {t[title]}
           </h3>
           <span className="hidden md:block"> </span>
         </div>

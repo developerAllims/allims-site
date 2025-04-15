@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useCallback, useState } from 'react'
-import { dataSource } from '../../assets'
+import { appConfig } from '../../assets'
 import {
   Section,
   Article,
@@ -14,12 +14,12 @@ import {
   Image,
   ModalContainer
 } from '../../components'
-import { useLanguage } from '../../hooks'
+import { useTranslator } from '../../hooks'
 
 export const LayoutModules = () => {
-  const { language } = useLanguage()
-  const { modules } = dataSource(language)
-  const { items } = modules
+  const t = useTranslator()
+  const { modules } = appConfig
+  const { more, items } = modules
 
   const setPairModules = useCallback(() => {
     const pairs = []
@@ -35,7 +35,7 @@ export const LayoutModules = () => {
 
   const [config, setConfig] = useState({
     title: '',
-    lines: []
+    text: ''
   })
 
   const [open, setOpen] = useState(false)
@@ -54,33 +54,31 @@ export const LayoutModules = () => {
           {pairModules.map(({ subItems = [] }, idx) => (
             <div key={`module-${idx}`}>
               <div className="flex gap-1 lg:gap-6 h-full flex-col lg:flex-row">
-                {subItems.map(
-                  ({ title, description, button, modal }, idxSub) => (
-                    <Article
-                      key={`module-${idx}-sub-${idxSub}`}
-                      className="w-full text-center h-full py-0 lg:py-[7%] px-0"
-                    >
-                      <ArticleContainer className="gap-6 items-start h-full">
-                        <Title className="text-3xl text-gray-primary">
-                          {title}
-                        </Title>
-                        <Paragraph className="text-base text-gray-primary text-left">
-                          {description}
-                        </Paragraph>
-                        <ButtonSimple
-                          title={button}
-                          className="text-lg bg-orange-primary text-white"
-                          onClick={() => {
-                            modalOpen({ ...modal, title })
-                          }}
-                        />
-                      </ArticleContainer>
-                      {idxSub < 1 && (
-                        <Divider classContainer="flex lg:hidden pt-[7%] lg:pt-0" />
-                      )}
-                    </Article>
-                  )
-                )}
+                {subItems.map(({ title, description, text }, idxSub) => (
+                  <Article
+                    key={`module-${idx}-sub-${idxSub}`}
+                    className="w-full text-center h-full py-0 lg:py-[7%] px-0"
+                  >
+                    <ArticleContainer className="gap-6 items-start h-full">
+                      <Title className="text-3xl text-gray-primary">
+                        {t[title]}
+                      </Title>
+                      <Paragraph className="text-base text-gray-primary text-left">
+                        {t[description]}
+                      </Paragraph>
+                      <ButtonSimple
+                        title={t[more]}
+                        className="text-lg bg-orange-primary text-white"
+                        onClick={() => {
+                          modalOpen({ title, text })
+                        }}
+                      />
+                    </ArticleContainer>
+                    {idxSub < 1 && (
+                      <Divider classContainer="flex lg:hidden pt-[7%] lg:pt-0" />
+                    )}
+                  </Article>
+                ))}
               </div>
               {idx + 1 < pairModules.length && <Divider />}
             </div>
@@ -95,30 +93,9 @@ export const LayoutModules = () => {
       >
         <Image icon={'illustrationModule'} className="w-[200px]" />
         <ModalContainer>
-          {config.lines.map((val: any, idx) =>
-            typeof val === 'object' ? (
-              val.type === 'a' ? (
-                <a
-                  key={`module-modal-p-${idx}`}
-                  href={val.link}
-                  target="_blank"
-                  className="text-orange-primary underline"
-                >
-                  {val.text}
-                </a>
-              ) : val.type === 'ul' ? (
-                <ul className="list-disc pl-[1.5rem]">
-                  {val.items.map((valLi: string, idxLi: number) => (
-                    <li key={`module-modal-p-${idxLi}`}>{valLi}</li>
-                  ))}
-                </ul>
-              ) : (
-                ''
-              )
-            ) : (
-              <p key={`module-modal-p-${idx}`}>{val}</p>
-            )
-          )}
+          {(t[config.text] || '').split('\n').map((val: any, idx = 0) => (
+            <p key={`module-modal-p-${idx}`}>{val}</p>
+          ))}
         </ModalContainer>
       </Modal>
     </>

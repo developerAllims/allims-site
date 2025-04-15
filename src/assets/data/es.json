@@ -86,155 +86,37 @@
   "buttonGetInTouch": "Ponte en contacto con nosotros",
   "buttonSeeTheModules": "Conozca los módulos",
   "buttonSend": "Enviar",
-  "modules": {
-    "back": "Volver",
-    "items": [
-      {
-        "title": "ALLIMS",
-        "button": "Más información",
-        "description": "ALLIMS permite mapear todos los procesos analíticos del laboratorio, desde la recepción de la muestra hasta la emisión del Informe de Ensayo al cliente. Es responsable de pasos esenciales como el análisis crítico al recibir la muestra.",
-        "modal": {
-          "lines": [
-            "ALLIMS permite mapear todos los procesos analíticos del laboratorio, desde la recepción de la muestra hasta la emisión del Informe de Prueba (informe) al cliente. Es responsable de pasos esenciales como el análisis crítico tras la recepción de la muestra, la distribución de tareas analíticas, la inserción de pruebas, el control del banco de pruebas (ELN), la interconexión con el equipo (Conexión) y la emisión de resultados mediante la emisión de informes (Lab.OnLine).",
-            "El sistema ALLIMS incluye diversas herramientas para el trabajo diario de los analistas. Cuenta con una interfaz de gestión completa (pantalla) que permite visualizar los servicios iniciados, en curso, retrasados ​​y finalizados. A través del mapa de trabajo, es posible gestionar la carga de trabajo de cada sector y/o analista, así como redistribuir los servicios.",
-            "Las pruebas se parametrizan según su procedimiento operativo y las normas regulatorias, y los analistas tienen total libertad para configurarlas. Las muestras también se estandarizan previamente por tipo de material, pruebas a realizar, límites de control y servicios analíticos, entre otros. De esta manera, la rutina analítica es predecible, sin sorpresas para los analistas, ya que, tras recibir las muestras, los servicios se distribuyen automáticamente.",
-            "ALLIMS permite optimizar el tiempo del proceso analítico en su conjunto, la trazabilidad y el apoyo a la gestión de normas como la ISO/IEC 17025. También puede ser utilizado por las áreas analíticas, de gestión y ejecutivas de la empresa, ya que mapea el laboratorio, los servicios a realizar y priorizar, las métricas de gestión y la evaluación de los objetivos definidos."
-          ]
-        }
-      },
-      {
-        "title": "Comercial",
-        "button": "Más información",
-        "description": "Este módulo gestiona completamente la relación con los clientes del laboratorio. Desde las primeras interacciones para entender demandas, registro/histórico de contactos, fecha de seguimiento, negociaciones, versiones de propuestas hasta la aprobación final.",
-        "modal": {
-          "lines": [
-            "Este módulo gestiona por completo la relación con los clientes del laboratorio. Desde las primeras interacciones para comprender las demandas, el registro/historial de contactos, la fecha de seguimiento, las negociaciones, las versiones de las propuestas hasta la aprobación final.",
-            "El módulo también controla los rangos de descuento por usuario; es decir, el porcentaje puede variar según el perfil de cada usuario. El sistema esperará la aprobación del superior cuando un descuento supere el permitido.",
-            "La lista de precios también puede ser exclusiva para una categoría de cliente, por cliente o general. Cada lista puede sufrir ajustes específicos sin afectar a las demás ni a las propuestas ya registradas; es decir, no modifica el historial. Los clientes pueden recibir correos electrónicos con el archivo PDF de la propuesta tan pronto como se finalice la versión.",
-            "En el portal Lab.OnLine también es posible seguir el historial de cada propuesta, así como negociar e interactuar con el laboratorio. Los archivos PDF de cada versión de la propuesta estarán disponibles para consulta.",
-            "Con el módulo Comercial, es posible gestionar propuestas a corto plazo para una ejecución puntual o incluso contratos a largo plazo. El módulo gestiona el contrato indicando las cantidades y valores esperados frente a los reales.",
-            "El método de pago también se puede adaptar de varias maneras, con cuotas definidas, por ejemplo: 30/60/90, o con importes mensuales fijos, y el sistema informa el saldo al final del contrato o en un plazo definido por el usuario, además de informar las muestras completadas y aún no facturadas.",
-            "Tras la aprobación de la propuesta comercial, es posible definir la preprogramación de las recolecciones, la programación final se realizará en el módulo Calendario.",
-            "Es muy común que el módulo Comercial se conecte con otros sistemas de laboratorio, como CRM o ERP. En estos casos, podemos conectar, a través del módulo de Integraciones, registros de clientes, tablas de precios, facturación, entre otros recursos."
-          ]
-        }
-      },
-      {
-        "title": "Calendario",
-        "button": "Más información",
-        "description": "En el módulo Calendario, el sector logístico puede ajustar las fechas de recogida programadas según el acuerdo final con el cliente y de acuerdo a su itinerario de recogida. Las colecciones se presentan en forma de calendario, lo que permite una gran agilidad y visibilidad de los horarios definidos.",
-        "modal": {
-          "lines": [
-            "En el módulo Calendario, el sector logístico puede ajustar las fechas de recogida programadas según el acuerdo final con el cliente y de acuerdo a su itinerario de recogida. Las colecciones se presentan en forma de calendario, lo que permite una gran agilidad y visibilidad de los horarios definidos. Además, los coleccionistas pueden controlar su agenda y preparar sus actividades con antelación. También existe la posibilidad de que el sistema imprima planes de muestreo.",
-            "Las recolecciones también se pueden enviar a un dispositivo móvil para registro en campo, módulo Recolección Móvil, de manera que la información de la recolección se ingresará o se transferirá automáticamente a ALLIMS."
-          ]
-        }
-      },
-      {
-        "title": "Colección Mobile",
-        "button": "Más información",
-        "description": "Colección Mobile primero registra la información de campo en un dispositivo móvil, luego el sector logístico revisa y finaliza las fechas de recolección programadas, la lista de muestras y la información de campo en el módulo Calendario.",
-        "modal": {
-          "lines": [
-            "Colección Mobile registra primero la información de campo en un dispositivo móvil. Luego de que el departamento de logística revisa y finaliza las fechas de recolección planificadas en el módulo Calendario, el listado de muestras, así como la información de campo, se pueden enviar al dispositivo móvil: tableta (Android ®), teléfono inteligente u otros.",
-            "En el campo, el recolector puede localizar la muestra en el sistema escribiendo el código de la muestra o leyendo el código de barras o QRCode en la etiqueta de la muestra. Una vez registrada toda la información, los datos se pueden enviar al laboratorio a través de una conexión a Internet o, si no hay señal de Internet disponible en ese momento, tan pronto como se conecte el dispositivo, los datos de la recolección se enviarán a ALLIMS.",
-            "La recepción de muestras quedará registrada en ALLIMS, de forma que el sistema también controlará cualquier incidencia pendiente y/o inconsistencia encontrada en los registros de campo."
-          ]
-        }
-      },
-      {
-        "title": "Consumibles",
-        "button": "Más información",
-        "description": "Consumibles es un módulo para la gestión de suministros de laboratorio: stock, lote, fecha de caducidad de reactivos, preparación de soluciones y consumibles. Aporta el gran beneficio de reducir residuos y concienciar a los analistas sobre el uso de materiales.",
-        "modal": {
-          "lines": [
-            "El módulo de Consumibles permite gestionar los suministros de laboratorio: stock, lote, fecha de caducidad de los reactivos, preparación de soluciones y materiales consumibles. Sus principales beneficios incluyen la reducción de residuos y la concienciación sobre el uso de materiales por parte de los analistas, ya que ofrece un control completo de la gestión de materiales y suministros por departamento o empleado, durante un período determinado.",
-            "El módulo controla todas las entradas de materiales mediante la gestión de nomenclatura para eliminar la posibilidad de existencias descontroladas en el sistema. Permite la gestión jerárquica de las tareas que deben realizar los empleados internos, indicando plazos y estacionalidad en las compras.",
-            "El módulo de Consumibles está preparado para cumplir con la normativa de compra de materiales peligrosos, con informes preparados para satisfacer las necesidades del Ejército y la Policía Federal. Gestiona las compras con el proveedor mediante mensajes automáticos.",
-            "También permite gestionar los insumos, los medios de cultivo y los reactivos utilizados en las pruebas. Dado que las pruebas se registran en el sistema, si está configurado, ALLIMS solicitará al analista que informe el insumo, el lote y la cantidad consumida. Si se produce alguna restricción de uso, como un lote caducado, el sistema bloqueará la vinculación de este insumo."
-          ]
-        }
-      },
-      {
-        "title": "Custodia",
-        "button": "Más información",
-        "description": "El módulo de Custodia está preparado para gestionar con precisión todas las funciones de la cadena de custodia dentro y fuera del laboratorio, incluidas las cerraduras automáticas.",
-        "modal": {
-          "lines": [
-            "El módulo de Custodia está preparado para gestionar con precisión todas las funciones de la cadena de custodia dentro y fuera del laboratorio, incluyendo las cerraduras automáticas. Ofrece trazabilidad de la manipulación y el almacenamiento en entornos controlados como invernaderos, congeladores y termómetros, entre otros.",
-            "El módulo se encarga de evaluar el ambiente controlado mediante métricas de calidad, definidas según cada ambiente y equipo, pudiendo retener una muestra de un puntero predefinido.",
-            "El módulo Custodia gestiona todo el recorrido de la muestra, desde la salida del cliente hasta todos los pasos dentro del laboratorio."
-          ]
-        }
-      },
-      {
-        "title": "Integraciones",
-        "button": "Más información",
-        "description": "El módulo de Integraciones permite al laboratorio intercambiar información con los siguientes sistemas: CRM, ERP, PIMS, MES y otros, además de conectar y adquirir datos de los equipos del laboratorio. El módulo Conexión se considera uno de los principales factores responsables de reducir los errores de transcripción de datos.",
-        "modal": {
-          "lines": [
-            "El módulo de Integración permite al laboratorio intercambiar información con sistemas: CRM, ERP, PIMS, MES y otros, además de conectar y adquirir datos de los equipos del laboratorio.",
-            "El módulo Conexión se considera uno de los principales factores responsables de reducir errores de transcripción de datos, tiempos de entrega de resultados y reescritura de información, incrementando la productividad y la calidad, además de automatizar procesos.",
-            "La conexión con otros sistemas garantiza la integridad de la información; por ejemplo, el registro de clientes puede ser obligatorio en CRM o ERP y enviar información para su actualización en ALLIMS, lo que a su vez bloquea cualquier cambio en el registro de clientes.",
-            "Otra forma de comunicación muy común es que el sistema ALLIMS informe a otros sistemas cuando las muestras están terminadas. A partir de esta información, podemos notificar al CRM o ERP que las muestras pueden facturarse o enviar los resultados analíticos al ERP, PIMS o MES para su tratamiento en el proceso o la línea de producción.",
-            "Las conexiones a equipos analíticos también son muy comunes. Adquirir datos de estos dispositivos es muy sencillo. Dispositivos como cromatógrafos, ICP, absorción atómica, entre otros, generan archivos con los datos de la muestra analizada y los resultados de cada parámetro generado por el dispositivo.",
-            "Estos archivos se guardan en formatos como TXT, CSV, XLS u otros. De esta manera, el módulo Conexión puede capturar estos archivos e interpretar los resultados para guardarlos en la base de datos de ALLIMS.",
-            "Existen otras conexiones para adquisición de datos que son más sencillas, conexión con: básculas, medidores de pH, entre otros, en estos casos el equipo se conecta directamente al sistema y la lectura de los resultados se envía directamente al sistema.”"
-          ]
-        }
-      },
-      {
-        "title": "Lab.Online",
-        "button": "Más información",
-        "description": "Lab.OnLine permite a los clientes del laboratorio consultar los resultados analíticos directamente en el portal web. En Lab.OnLine es posible: monitorear el estado de las muestras en el laboratorio, consultar resultados de muestras, imprimir Informes de Ensayos (informe PDF), reenviar muestras a otras personas.",
-        "modal": {
-          "lines": [
-            "Lab.OnLine permite a los clientes del laboratorio consultar los resultados analíticos directamente en el portal web.",
-            "Con Lab.OnLine puedes: monitorear el estado de las muestras en el laboratorio, consultar resultados de muestras, imprimir informes de pruebas (informe PDF), reenviar muestras a otras personas, exportar información a Excel, entre otras funcionalidades.",
-            "Permite a los clientes del laboratorio validar la autenticidad de los informes que tienen en su poder. El cliente accederá a Lab.OnLine e ingresará el número de informe, junto con la clave de validación impresa en el informe. Esta clave es única y cumple con el estándar global MD-5.",
-            "Con estos datos, Lab.OnLine abrirá el Informe de Prueba original para que el cliente lo compare con lo impreso.",
-            "Lab.OnLine también permite a los clientes del laboratorio prerregistrar muestras, generar un número y una etiqueta de identificación con código de barras. Al llegar las muestras al laboratorio, se recibirán con mayor rapidez y calidad.",
-            "En Lab.OnLine, el cliente también puede consultar el historial de propuestas comerciales aprobadas, así como negociar e intercambiar mensajes con el laboratorio sobre las propuestas abiertas."
-          ]
-        }
-      },
-      {
-        "title": "Seguro de calidad",
-        "button": "Más información",
-        "description": "El módulo de Aseguramiento de Calidad proporciona el control de los registros y apuntadores requeridos por la norma ISO/IEC 17025, apoyando al área de calidad del laboratorio en todas las responsabilidades relacionadas con esta norma. Este módulo proporciona varias herramientas como control de capacitación de empleados, calibración de equipos,",
-        "modal": {
-          "lines": [
-            "El módulo de Aseguramiento de Calidad permite el control de los registros y apuntadores requeridos por la norma ISO/IEC 17025, apoyando al área de calidad del laboratorio en todas las responsabilidades relacionadas con esta norma.",
-            "Este módulo proporciona diversas herramientas como el control de la capacitación de empleados, la calibración de equipos, la gestión de la toma de acciones en función de posibles RNC, entre otras.",
-            "Sus principales actividades son alertar al responsable de calidad sobre los objetivos fijados, plazos y problemas a resolver.",
-            "Permite registrar la intermediación entre el laboratorio y el cliente, y está preparado para recibir datos como feedback tanto positivo como negativo y, en el caso de este último, verificar el problema, asignar tareas y controlar los plazos de reparación."
-          ]
-        }
-      },
-      {
-        "title": "Alertas",
-        "button": "Más información",
-        "description": "Imagine el sistema notificando a sus usuarios o clientes a medida que se realizan acciones dentro del laboratorio.\n Diversas ocurrencias en el sistema se pueden vincular al envío de correos electrónicos automáticos o notificaciones al módulo de Alertas de su teléfono celular.",
-        "modal": {
-          "lines": [
-            "Imagine el sistema notificando a sus usuarios o clientes a medida que se realizan acciones dentro del laboratorio.",
-            "Diversas ocurrencias del sistema se pueden vincular al envío de correos electrónicos automáticos o notificaciones al módulo de Alertas de tu celular.",
-            "Las personas autorizadas podrán recibir información como:",
-            {
-              "type": "ul",
-              "items": [
-                "Número de muestras recibidas, completadas y rechazadas hoy, esta semana, la semana pasada,…",
-                "Cantidad de insumos próximos a vencer o vencidos",
-                "Número de equipos a calibrar o caducados",
-                "O cualquier otra información contenida en la base de datos del sistema ALLIMS"
-              ]
-            },
-            "Puede haber varias notificaciones personalizadas según sus necesidades. Notificaciones basadas en clientes, muestras, pruebas, reportes, entre otros."
-          ]
-        }
-      }
-    ]
-  },
+  "buttonBack": "Volver",
+  "moduleManagerTitle": "ALLIMS",
+  "moduleManagerDescription": "ALLIMS permite mapear todos los procesos analíticos del laboratorio, desde la recepción de la muestra hasta la emisión del Informe de Ensayo al cliente. Es responsable de pasos esenciales como el análisis crítico al recibir la muestra.",
+  "moduleManagerText": "ALLIMS permite mapear todos los procesos analíticos del laboratorio, desde la recepción de la muestra hasta la emisión del Informe de Prueba (informe) al cliente. Es responsable de pasos esenciales como el análisis crítico tras la recepción de la muestra, la distribución de tareas analíticas, la inserción de pruebas, el control del banco de pruebas (ELN), la interconexión con el equipo (Conexión) y la emisión de resultados mediante la emisión de informes (Lab.OnLine).\nEl sistema ALLIMS incluye diversas herramientas para el trabajo diario de los analistas. Cuenta con una interfaz de gestión completa (pantalla) que permite visualizar los servicios iniciados, en curso, retrasados ​​y finalizados. A través del mapa de trabajo, es posible gestionar la carga de trabajo de cada sector y/o analista, así como redistribuir los servicios.\nLas pruebas se parametrizan según su procedimiento operativo y las normas regulatorias, y los analistas tienen total libertad para configurarlas. Las muestras también se estandarizan previamente por tipo de material, pruebas a realizar, límites de control y servicios analíticos, entre otros. De esta manera, la rutina analítica es predecible, sin sorpresas para los analistas, ya que, tras recibir las muestras, los servicios se distribuyen automáticamente.\nALLIMS permite optimizar el tiempo del proceso analítico en su conjunto, la trazabilidad y el apoyo a la gestión de normas como la ISO/IEC 17025. También puede ser utilizado por las áreas analíticas, de gestión y ejecutivas de la empresa, ya que mapea el laboratorio, los servicios a realizar y priorizar, las métricas de gestión y la evaluación de los objetivos definidos.",
+  "moduleCommercialTitle": "Comercial",
+  "moduleCommercialDescription": "Este módulo gestiona completamente la relación con los clientes del laboratorio. Desde las primeras interacciones para entender demandas, registro/histórico de contactos, fecha de seguimiento, negociaciones, versiones de propuestas hasta la aprobación final.",
+  "moduleCommercialText": "Este módulo gestiona por completo la relación con los clientes del laboratorio. Desde las primeras interacciones para comprender las demandas, el registro/historial de contactos, la fecha de seguimiento, las negociaciones, las versiones de las propuestas hasta la aprobación final.\nEl módulo también controla los rangos de descuento por usuario; es decir, el porcentaje puede variar según el perfil de cada usuario. El sistema esperará la aprobación del superior cuando un descuento supere el permitido.\nLa lista de precios también puede ser exclusiva para una categoría de cliente, por cliente o general. Cada lista puede sufrir ajustes específicos sin afectar a las demás ni a las propuestas ya registradas; es decir, no modifica el historial. Los clientes pueden recibir correos electrónicos con el archivo PDF de la propuesta tan pronto como se finalice la versión.\nEn el portal Lab.OnLine también es posible seguir el historial de cada propuesta, así como negociar e interactuar con el laboratorio. Los archivos PDF de cada versión de la propuesta estarán disponibles para consulta.\nCon el módulo Comercial, es posible gestionar propuestas a corto plazo para una ejecución puntual o incluso contratos a largo plazo. El módulo gestiona el contrato indicando las cantidades y valores esperados frente a los reales.\nEl método de pago también se puede adaptar de varias maneras, con cuotas definidas, por ejemplo: 30/60/90, o con importes mensuales fijos, y el sistema informa el saldo al final del contrato o en un plazo definido por el usuario, además de informar las muestras completadas y aún no facturadas.\nTras la aprobación de la propuesta comercial, es posible definir la preprogramación de las recolecciones, la programación final se realizará en el módulo Calendario.\nEs muy común que el módulo Comercial se conecte con otros sistemas de laboratorio, como CRM o ERP. En estos casos, podemos conectar, a través del módulo de Integraciones, registros de clientes, tablas de precios, facturación, entre otros recursos.",
+  "moduleScheduleTitle": "Calendario",
+  "moduleScheduleDescription": "En el módulo Calendario, el sector logístico puede ajustar las fechas de recogida programadas según el acuerdo final con el cliente y de acuerdo a su itinerario de recogida. Las colecciones se presentan en forma de calendario, lo que permite una gran agilidad y visibilidad de los horarios definidos.",
+  "moduleScheduleText": "En el módulo Calendario, el sector logístico puede ajustar las fechas de recogida programadas según el acuerdo final con el cliente y de acuerdo a su itinerario de recogida. Las colecciones se presentan en forma de calendario, lo que permite una gran agilidad y visibilidad de los horarios definidos. Además, los coleccionistas pueden controlar su agenda y preparar sus actividades con antelación. También existe la posibilidad de que el sistema imprima planes de muestreo.\nLas recolecciones también se pueden enviar a un dispositivo móvil para registro en campo, módulo Recolección Móvil, de manera que la información de la recolección se ingresará o se transferirá automáticamente a ALLIMS.",
+  "moduleCollectTitle": "Colección Mobile",
+  "moduleCollectDescription": "Colección Mobile primero registra la información de campo en un dispositivo móvil, luego el sector logístico revisa y finaliza las fechas de recolección programadas, la lista de muestras y la información de campo en el módulo Calendario.",
+  "moduleCollectText": "Colección Mobile registra primero la información de campo en un dispositivo móvil. Luego de que el departamento de logística revisa y finaliza las fechas de recolección planificadas en el módulo Calendario, el listado de muestras, así como la información de campo, se pueden enviar al dispositivo móvil: tableta (Android ®), teléfono inteligente u otros.\nEn el campo, el recolector puede localizar la muestra en el sistema escribiendo el código de la muestra o leyendo el código de barras o QRCode en la etiqueta de la muestra. Una vez registrada toda la información, los datos se pueden enviar al laboratorio a través de una conexión a Internet o, si no hay señal de Internet disponible en ese momento, tan pronto como se conecte el dispositivo, los datos de la recolección se enviarán a ALLIMS.\nLa recepción de muestras quedará registrada en ALLIMS, de forma que el sistema también controlará cualquier incidencia pendiente y/o inconsistencia encontrada en los registros de campo.",
+  "moduleWarehouseTitle": "Consumibles",
+  "moduleWarehouseDescription": "Consumibles es un módulo para la gestión de suministros de laboratorio: stock, lote, fecha de caducidad de reactivos, preparación de soluciones y consumibles. Aporta el gran beneficio de reducir residuos y concienciar a los analistas sobre el uso de materiales.",
+  "moduleWarehouseText": "El módulo de Consumibles permite gestionar los suministros de laboratorio: stock, lote, fecha de caducidad de los reactivos, preparación de soluciones y materiales consumibles. Sus principales beneficios incluyen la reducción de residuos y la concienciación sobre el uso de materiales por parte de los analistas, ya que ofrece un control completo de la gestión de materiales y suministros por departamento o empleado, durante un período determinado.\nEl módulo controla todas las entradas de materiales mediante la gestión de nomenclatura para eliminar la posibilidad de existencias descontroladas en el sistema. Permite la gestión jerárquica de las tareas que deben realizar los empleados internos, indicando plazos y estacionalidad en las compras.\nEl módulo de Consumibles está preparado para cumplir con la normativa de compra de materiales peligrosos, con informes preparados para satisfacer las necesidades del Ejército y la Policía Federal. Gestiona las compras con el proveedor mediante mensajes automáticos.\nTambién permite gestionar los insumos, los medios de cultivo y los reactivos utilizados en las pruebas. Dado que las pruebas se registran en el sistema, si está configurado, ALLIMS solicitará al analista que informe el insumo, el lote y la cantidad consumida. Si se produce alguna restricción de uso, como un lote caducado, el sistema bloqueará la vinculación de este insumo.",
+  "moduleCustodyTitle": "Custodia",
+  "moduleCustodyDescription": "El módulo de Custodia está preparado para gestionar con precisión todas las funciones de la cadena de custodia dentro y fuera del laboratorio, incluidas las cerraduras automáticas.",
+  "moduleCustodyText": "El módulo de Custodia está preparado para gestionar con precisión todas las funciones de la cadena de custodia dentro y fuera del laboratorio, incluyendo las cerraduras automáticas. Ofrece trazabilidad de la manipulación y el almacenamiento en entornos controlados como invernaderos, congeladores y termómetros, entre otros.\nEl módulo se encarga de evaluar el ambiente controlado mediante métricas de calidad, definidas según cada ambiente y equipo, pudiendo retener una muestra de un puntero predefinido.\nEl módulo Custodia gestiona todo el recorrido de la muestra, desde la salida del cliente hasta todos los pasos dentro del laboratorio.",
+  "moduleIntegrationsTitle": "Integraciones",
+  "moduleIntegrationsDescription": "El módulo de Integraciones permite al laboratorio intercambiar información con los siguientes sistemas: CRM, ERP, PIMS, MES y otros, además de conectar y adquirir datos de los equipos del laboratorio. El módulo Conexión se considera uno de los principales factores responsables de reducir los errores de transcripción de datos.",
+  "moduleIntegrationsText": "El módulo de Integración permite al laboratorio intercambiar información con sistemas: CRM, ERP, PIMS, MES y otros, además de conectar y adquirir datos de los equipos del laboratorio.\nEl módulo Conexión se considera uno de los principales factores responsables de reducir errores de transcripción de datos, tiempos de entrega de resultados y reescritura de información, incrementando la productividad y la calidad, además de automatizar procesos.\nLa conexión con otros sistemas garantiza la integridad de la información; por ejemplo, el registro de clientes puede ser obligatorio en CRM o ERP y enviar información para su actualización en ALLIMS, lo que a su vez bloquea cualquier cambio en el registro de clientes.\nOtra forma de comunicación muy común es que el sistema ALLIMS informe a otros sistemas cuando las muestras están terminadas. A partir de esta información, podemos notificar al CRM o ERP que las muestras pueden facturarse o enviar los resultados analíticos al ERP, PIMS o MES para su tratamiento en el proceso o la línea de producción.\nLas conexiones a equipos analíticos también son muy comunes. Adquirir datos de estos dispositivos es muy sencillo. Dispositivos como cromatógrafos, ICP, absorción atómica, entre otros, generan archivos con los datos de la muestra analizada y los resultados de cada parámetro generado por el dispositivo.\nEstos archivos se guardan en formatos como TXT, CSV, XLS u otros. De esta manera, el módulo Conexión puede capturar estos archivos e interpretar los resultados para guardarlos en la base de datos de ALLIMS.\nExisten otras conexiones para adquisición de datos que son más sencillas, conexión con: básculas, medidores de pH, entre otros, en estos casos el equipo se conecta directamente al sistema y la lectura de los resultados se envía directamente al sistema.",
+  "moduleLabOnlineTitle": "Lab.Online",
+  "moduleLabOnlineDescription": "Lab.OnLine permite a los clientes del laboratorio consultar los resultados analíticos directamente en el portal web. En Lab.OnLine es posible: monitorear el estado de las muestras en el laboratorio, consultar resultados de muestras, imprimir Informes de Ensayos (informe PDF), reenviar muestras a otras personas.",
+  "moduleLabOnlineText": "Lab.OnLine permite a los clientes del laboratorio consultar los resultados analíticos directamente en el portal web.\nCon Lab.OnLine puedes: monitorear el estado de las muestras en el laboratorio, consultar resultados de muestras, imprimir informes de pruebas (informe PDF), reenviar muestras a otras personas, exportar información a Excel, entre otras funcionalidades.\nPermite a los clientes del laboratorio validar la autenticidad de los informes que tienen en su poder. El cliente accederá a Lab.OnLine e ingresará el número de informe, junto con la clave de validación impresa en el informe. Esta clave es única y cumple con el estándar global MD-5.\nCon estos datos, Lab.OnLine abrirá el Informe de Prueba original para que el cliente lo compare con lo impreso.\nLab.OnLine también permite a los clientes del laboratorio prerregistrar muestras, generar un número y una etiqueta de identificación con código de barras. Al llegar las muestras al laboratorio, se recibirán con mayor rapidez y calidad.\nEn Lab.OnLine, el cliente también puede consultar el historial de propuestas comerciales aprobadas, así como negociar e intercambiar mensajes con el laboratorio sobre las propuestas abiertas.",
+  "moduleQualityTitle": "Seguro de calidad",
+  "moduleQualityDescription": "El módulo de Aseguramiento de Calidad proporciona el control de los registros y apuntadores requeridos por la norma ISO/IEC 17025, apoyando al área de calidad del laboratorio en todas las responsabilidades relacionadas con esta norma. Este módulo proporciona varias herramientas como control de capacitación de empleados, calibración de equipos",
+  "moduleQualityText": "El módulo de Aseguramiento de Calidad permite el control de los registros y apuntadores requeridos por la norma ISO/IEC 17025, apoyando al área de calidad del laboratorio en todas las responsabilidades relacionadas con esta norma.\nEste módulo proporciona diversas herramientas como el control de la capacitación de empleados, la calibración de equipos, la gestión de la toma de acciones en función de posibles RNC, entre otras.\nSus principales actividades son alertar al responsable de calidad sobre los objetivos fijados, plazos y problemas a resolver.\nPermite registrar la intermediación entre el laboratorio y el cliente, y está preparado para recibir datos como feedback tanto positivo como negativo y, en el caso de este último, verificar el problema, asignar tareas y controlar los plazos de reparación.",
+  "moduleAlertsTitle": "Alertas",
+  "moduleAlertsDescription": "Imagine el sistema notificando a sus usuarios o clientes a medida que se realizan acciones dentro del laboratorio.\n Diversas ocurrencias en el sistema se pueden vincular al envío de correos electrónicos automáticos o notificaciones al módulo de Alertas de su teléfono celular.",
+  "moduleAlertsText": "Imagine el sistema notificando a sus usuarios o clientes a medida que se realizan acciones dentro del laboratorio.\nDiversas ocurrencias del sistema se pueden vincular al envío de correos electrónicos automáticos o notificaciones al módulo de Alertas de tu celular.\nLas personas autorizadas podrán recibir información como:\n• Número de muestras recibidas, completadas y rechazadas hoy, esta semana, la semana pasada,…\n• Cantidad de insumos próximos a vencer o vencidos\n• Número de equipos a calibrar o caducados\n• O cualquier otra información contenida en la base de datos del sistema ALLIMS\nPuede haber varias notificaciones personalizadas según sus necesidades. Notificaciones basadas en clientes, muestras, pruebas, reportes, entre otros.",
   "placeDescription": "Operamos en el mercado de desarrollo de sistemas para el segmento de laboratorio y también para el segmento agronómico.\nAtendemos a diversos clientes en el segmento de laboratorio, en las áreas de: medio ambiente, alimentos, suelos, química, nutrición humana, nutrición animal, farmacéutica, investigación y desarrollo, entre otras.\nEstamos ubicados en Campinas – SP con sede propia.",
   "segmentsTitle": "Áreas de actividad",
   "segmentsDrinksTitle": "Alimentos y bebidas",

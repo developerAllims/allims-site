@@ -51,8 +51,8 @@ export const LayoutClients = () => {
               {arr.map(val => (
                 <Logo
                   key={`client-${position + val}`}
-                  client={items[position + val].name}
-                  alt={`Logomarca do cliente ${items[position + val].title}`}
+                  client={items[position + val].id}
+                  alt={`Logomarca do cliente ${items[position + val].name}`}
                   className="max-h-[80px]"
                   style={{ opacity: fade }}
                 />

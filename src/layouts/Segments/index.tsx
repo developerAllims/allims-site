@@ -38,9 +38,9 @@ export const LayoutSegments = () => {
               <TitleDivider className="text-gray-primary" />
             </TitleContainer>
             <Gallery className="grid-cols-2 lg:grid-cols-4 gap-10 place-items-start">
-              {items.map(({ name = '' }, idx = 0) => (
+              {items.map((val = '', idx = 0) => (
                 <GalleryPhotoText key={`segment-${idx}`} icon={icons[idx]}>
-                  {t[name]}
+                  {t[val]}
                 </GalleryPhotoText>
               ))}
             </Gallery>

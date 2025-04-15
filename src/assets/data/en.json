@@ -86,154 +86,37 @@
   "buttonGetInTouch": "Get in touch",
   "buttonSeeTheModules": "Meet the Modules",
   "buttonSend": "Send",
-  "modules": {
-    "back": "Back",
-    "items": [
-      {
-        "title": "ALLIMS",
-        "button": "Learn more",
-        "description": "ALLIMS allows you to map all of the laboratory's analytical processes, from sample reception to the issuing of the Test Report to the client. It is responsible for essential steps such as critical analysis upon receipt of the sample.",
-        "modal": {
-          "lines": [
-            "ALLIMS allows you to map all of the laboratory's analytical processes, from sample reception to the issuing of the Test Report (report) to the client. It is responsible for essential steps such as critical analysis upon receipt of the sample, distribution of analytical tasks, insertion of tests, bench control (ELN), interfacing with equipment (Conection) and issuing of results through the issuance of reports (Lab.OnLine).",
-            "The ALLIMS system includes several tools for the analysts' daily routine. It has a complete management interface (screen), allows viewing of services to be started, in progress, delayed and completed, through the work map it is possible to manage the workload of each sector and/or analyst and redistribute the services.",
-            "The tests are parameterized according to their operational procedure and regulatory standards, analysts have complete freedom to configure them, just as the samples are also previously standardized by type of material, tests to be performed, control limits, analytical services, among others. This way, the analytical routine becomes predictable, without surprises for analysts, since after receiving the samples, the services are distributed automatically.",
-            "ALLIMS allows for optimization of the time of the analytical process as a whole, traceability and support for the management of standards such as ISO/IEC 17025. It can also be used by the analytical, management and executive areas of the company, as it maps the laboratory, services to be performed and prioritized, management metrics and evaluation of goals created."
-          ]
-        }
-      },
-      {
-        "title": "Commercial",
-        "button": "Learn more",
-        "description": "This module completely manages the relationship with the laboratory's clients. From the first interactions to understand demands, contact records/history, follow-up dates, negotiations, proposal versions, and final approval.",
-        "modal": {
-          "lines": [
-            "This module completely manages the relationship with the laboratory's clients. From the first interactions to understand demands, contact records/history, follow-up dates, negotiations, proposal versions, and final approval.",
-            "The module also controls discount ranges per user, i.e., the percentage may vary depending on each user's profile. The system will maintain a record for approval by the superior when a discount is greater than the permitted amount.",
-            "The price list may also be exclusive to a client category, per client or general. Each list may undergo specific adjustments without affecting the others and without affecting proposals already registered, i.e., it does not change the history. Clients may receive emails with the PDF file of the proposal as soon as a version is finalized.",
-            "On the Lab.OnLine portal, it is also possible to monitor the history of each proposal, as well as negotiate and generate interactions with the laboratory. The PDF files of each version of the proposal will be available for consultation.",
-            "With the Commercial section, it is possible to manage “short” proposals for one-off execution or even manage long-term contracts. The module manages the contract by indicating the expected quantities and values ​​versus the actual quantities and values.",
-            "The payment method can also be adjusted in several ways, with defined installments, for example: 30/60/90, or with fixed monthly amounts, and the system informs the balance at the end of the contract or even within a period defined by the user, in addition to informing the samples completed and not yet invoiced.",
-            "After the approval of the commercial proposal, it is possible to define the pre-scheduling of collections, the final scheduling will be done in the Schedule module.",
-            "It is very common for the Commercial module to connect with other laboratory systems such as CRM or ERP. In these cases, we can connect, through the Integrations module, customer records, price tables, billing, among other resources."
-          ]
-        }
-      },
-      {
-        "title": "Schedule",
-        "button": "Learn more",
-        "description": "In the Schedule module, the logistics department can adjust the scheduled collection dates according to the final agreement with the customer and their collection schedule. Collections are presented in calendar format, which allows for greater agility and visibility of the defined schedules.",
-        "modal": {
-          "lines": [
-            "In the Schedule module, the logistics sector can adjust the scheduled collection dates according to the final agreement with the client and according to their collection itinerary. The collections are presented in calendar format, which allows for a lot of agility and visibility of the defined schedules. In addition, collectors can monitor their schedules and prepare their activities in advance. There is also the possibility of sampling plans being printed by the system.",
-            "Collections can also be sent to a mobile device for field recording, Mobile Collection module, so that the collection information will be automatically entered or transferred to ALLIMS."
-          ]
-        }
-      },
-      {
-        "title": "Mobile Collection",
-        "button": "Learn more",
-        "description": "Coleta Mobile first records field information in a mobile device, after which the logistics sector reviews and finalizes the scheduled collection dates, the sample list, and field information in the Schedule module.",
-        "modal": {
-          "lines": [
-            "Mobile Collection first records field information on a mobile device. After the logistics sector reviews and finalizes the planned collection dates in the Schedule module, the sample list, as well as field information, can be sent to the mobile device: tablet (Android ®), smartphone or others.",
-            "In the field, the collector can locate the sample in the system by typing the sample code or reading the barcode or QRCode on the sample label. After all information is recorded, the data can be sent to the laboratory via an internet connection or, if there is no internet signal available at the time, as soon as the device is connected, the collection data will be sent to ALLIMS.",
-            "The receipt of samples will be recorded in ALLIMS, so that the system will also control any pending issues and/or inconsistencies found in the field records."
-          ]
-        }
-      },
-      {
-        "title": "Consumables",
-        "button": "Learn more",
-        "description": "Consumables is a module for managing laboratory consumables: inventory, batch, reagent expiration date, solution preparation and consumable materials. Its major benefits include reducing waste and raising awareness of material use among analysts.",
-        "modal": {
-          "lines": [
-            "The Consumables module is a module for managing laboratory consumables: stock, batch, reagent expiration date, preparation of solutions and consumable materials. Its major benefit is reducing waste and raising awareness of material usage by analysts, as it offers complete control of materials and supply management by department or employee, in a given period.",
-            "The module controls all material entries with nomenclature management to eliminate the possibility of uncontrolled stock in the system. It allows hierarchical management of tasks that must be performed by internal employees, indicating deadlines and seasonality in purchases.",
-            "The Consumables module is prepared to work with regulations for purchasing hazardous materials, with reports prepared to meet the needs of the army and the federal police. It manages purchases from the supplier through automatic messages.",
-            "It also allows managing consumables, culture media and reagents that are used in tests. As the tests are recorded in the system, if configured, ALLIMS will require the analyst to inform the input, batch and quantity consumed. If any usage restrictions occur, such as an expired batch, the system will block the link of this input in the system."
-          ]
-        }
-      },
-      {
-        "title": "Custody",
-        "button": "Learn more",
-        "description": "The Custody module is prepared to accurately manage all chain of custody functions inside and outside the laboratory, including automatic locks.",
-        "modal": {
-          "lines": [
-            "The Custody module is prepared to accurately manage all functions of the chain of custody inside and outside the laboratory, including automatic locks. It offers traceability of handling and storage in controlled environments such as greenhouses, freezers, thermometers, among others.",
-            "The module is responsible for evaluating the controlled environment through quality metrics, defined according to each environment and equipment, and can retain a sample from a pre-defined pointer.",
-            "The Custody module manages the entire sample path, from the client's departure to all passages within the laboratory."
-          ]
-        }
-      },
-      {
-        "title": "Integrations",
-        "button": "Learn more",
-        "description": "The Integrations module allows the laboratory to exchange information with the following systems: CRM, ERP, PIMS, MES and others, in addition to connecting and acquiring data from laboratory equipment. The Connection module is considered one of the main factors responsible for reducing data transcription errors.",
-        "modal": {
-          "lines": [
-            "The Integration module allows the laboratory to exchange information with the following systems: CRM, ERP, PIMS, MES and others, in addition to connecting and acquiring data from laboratory equipment.",
-            "The Connection module is considered one of the main factors responsible for reducing data transcription errors, results delivery time and re-typing of information, increasing productivity and quality, in addition to process automation.",
-            "Connection with other systems ensures the integrity of information. For example, customer registration can be mandatory in CRM or ERP and send information to be updated in ALLIMS, which in turn blocks any changes to customer registration.",
-            "Another very common form of communication is for the ALLIMS system to inform other systems when samples are finished. From this information, we can notify CRM or ERP that samples can be invoiced or send analytical results to ERP, PIMS or MES to be processed in the process or production line.",
-            "Connections with analytical equipment are also very common. Acquiring data from these equipments is very simple. Equipment such as: chromatographs, ICP, atomic absorption, among others, generate files with the data of the analyzed sample and the results of each parameter generated by the equipment. These files are saved in formats: TXT, CSV, XLS, or others. In this way, the Connection module can capture these files and interpret the results to save them in the ALLIMS database.",
-            "There are other connections for data acquisition that are simpler, connection with: scales, pH meters, among others. In these cases, the equipment is connected directly to the system and the reading of the results is sent directly to the system."
-          ]
-        }
-      },
-      {
-        "title": "Lab.Online",
-        "button": "Learn more",
-        "description": "Lab.OnLine allows laboratory clients to consult analytical results directly on the web portal. In Lab.OnLine it is possible to: monitor the status of samples in the laboratory, consult sample results, print Test Reports (PDF report), forward samples to other people.",
-        "modal": {
-          "lines": [
-            "Lab.OnLine allows laboratory clients to consult analytical results directly on the web portal.",
-            "In Lab.OnLine it is possible to: monitor the status of samples in the laboratory, consult sample results, print Test Reports (PDF report), forward samples to other people, export information to Excel, among other resources.",
-            "It allows laboratory clients to validate the authenticity of the Reports in their hands. The client will access Lab.OnLine and enter the report number, plus the validation key printed on the Report. This key is unique and follows the MD-5 global standard.",
-            "With this data, Lab.OnLine will open the original Test Report for the client to compare with what is printed.",
-            "Lab.OnLine also allows laboratory clients to pre-register samples, generate a number and identification label with a barcode. When the samples arrive at the laboratory, they will be received faster and more qualified.",
-            "In Lab.OnLine, the client will also be able to consult the history of approved commercial proposals, as well as negotiate and exchange messages with the laboratory regarding open proposals."
-          ]
-        }
-      },
-      {
-        "title": "Quality Assurance",
-        "button": "Learn more",
-        "description": "The Quality Assurance module provides control of the records and pointers required by ISO/IEC 17025, supporting the laboratory's quality area in all responsibilities related to this standard. This module provides several tools such as employee training control, equipment calibration,",
-        "modal": {
-          "lines": [
-            "The Quality Assurance module provides control of the records and indicators required by ISO/IEC 17025, supporting the laboratory's quality area in all responsibilities related to this standard.",
-            "This module provides several tools such as employee training control, equipment calibration, management of action based on possible RNC, among others.",
-            "Its main activities are to alert the quality manager about the goals set, deadlines and problems to be solved.",
-            "It allows the recording of the intermediation between the laboratory and the client, and is prepared to receive data such as both positive and negative feedback and, in the case of the latter, to verify the problem, assign tasks and control repair deadlines."
-          ]
-        }
-      },
-      {
-        "title": "Alerts",
-        "button": "Learn more",
-        "description": "Imagine the system notifying your users or customers as actions are performed within the laboratory.\n Various occurrences in the system can be linked to the sending of automatic emails or notifications to the Alerts module on your cell phone.",
-        "modal": {
-          "lines": [
-            "Imagine the system notifying your users or customers as actions are performed within the laboratory.",
-            "Several occurrences in the system can be linked to the sending of automatic emails or notifications to the Alerts module on your cell phone.",
-            "Authorized people can receive information such as:",
-            {
-              "type": "ul",
-              "items": [
-                "Number of samples received, completed and rejected today, this week, last week,…",
-                "Number of consumables due or expired",
-                "Number of equipment to be calibrated or expired",
-                "Or any other information contained in the ALLIMS system database"
-              ]
-            },
-            "There can be several notifications customized to your needs. Notifications based on customers, samples, tests, issuing of reports, among others."
-          ]
-        }
-      }
-    ]
-  },
+  "buttonBack": "Back",
+  "moduleManagerTitle": "ALLIMS",
+  "moduleManagerDescription": "ALLIMS allows you to map all of the laboratory's analytical processes, from sample reception to the issuing of the Test Report to the client. It is responsible for essential steps such as critical analysis upon receipt of the sample.",
+  "moduleManagerText": "ALLIMS allows you to map all of the laboratory's analytical processes, from sample reception to the issuing of the Test Report (report) to the client. It is responsible for essential steps such as critical analysis upon receipt of the sample, distribution of analytical tasks, insertion of tests, bench control (ELN), interfacing with equipment (Conection) and issuing of results through the issuance of reports (Lab.OnLine).\nThe ALLIMS system includes several tools for the analysts' daily routine. It has a complete management interface (screen), allows viewing of services to be started, in progress, delayed and completed, through the work map it is possible to manage the workload of each sector and/or analyst and redistribute the services.\nThe tests are parameterized according to their operational procedure and regulatory standards, analysts have complete freedom to configure them, just as the samples are also previously standardized by type of material, tests to be performed, control limits, analytical services, among others. This way, the analytical routine becomes predictable, without surprises for analysts, since after receiving the samples, the services are distributed automatically.\nALLIMS allows for optimization of the time of the analytical process as a whole, traceability and support for the management of standards such as ISO/IEC 17025. It can also be used by the analytical, management and executive areas of the company, as it maps the laboratory, services to be performed and prioritized, management metrics and evaluation of goals created.",
+  "moduleCommercialTitle": "Commercial",
+  "moduleCommercialDescription": "This module completely manages the relationship with the laboratory's clients. From the first interactions to understand demands, contact records/history, follow-up dates, negotiations, proposal versions, and final approval.",
+  "moduleCommercialText": "This module completely manages the relationship with the laboratory's clients. From the first interactions to understand demands, contact records/history, follow-up dates, negotiations, proposal versions, and final approval.\nThe module also controls discount ranges per user, i.e., the percentage may vary depending on each user's profile. The system will maintain a record for approval by the superior when a discount is greater than the permitted amount.\nThe price list may also be exclusive to a client category, per client or general. Each list may undergo specific adjustments without affecting the others and without affecting proposals already registered, i.e., it does not change the history. Clients may receive emails with the PDF file of the proposal as soon as a version is finalized.\nOn the Lab.OnLine portal, it is also possible to monitor the history of each proposal, as well as negotiate and generate interactions with the laboratory. The PDF files of each version of the proposal will be available for consultation.\nWith the Commercial section, it is possible to manage “short” proposals for one-off execution or even manage long-term contracts. The module manages the contract by indicating the expected quantities and values ​​versus the actual quantities and values.\nThe payment method can also be adjusted in several ways, with defined installments, for example: 30/60/90, or with fixed monthly amounts, and the system informs the balance at the end of the contract or even within a period defined by the user, in addition to informing the samples completed and not yet invoiced.\nAfter the approval of the commercial proposal, it is possible to define the pre-scheduling of collections, the final scheduling will be done in the Schedule module.\nIt is very common for the Commercial module to connect with other laboratory systems such as CRM or ERP. In these cases, we can connect, through the Integrations module, customer records, price tables, billing, among other resources.",
+  "moduleScheduleTitle": "Schedule",
+  "moduleScheduleDescription": "In the Schedule module, the logistics department can adjust the scheduled collection dates according to the final agreement with the customer and their collection schedule. Collections are presented in calendar format, which allows for greater agility and visibility of the defined schedules.",
+  "moduleScheduleText": "In the Schedule module, the logistics sector can adjust the scheduled collection dates according to the final agreement with the client and according to their collection itinerary. The collections are presented in calendar format, which allows for a lot of agility and visibility of the defined schedules. In addition, collectors can monitor their schedules and prepare their activities in advance. There is also the possibility of sampling plans being printed by the system.\nCollections can also be sent to a mobile device for field recording, Mobile Collection module, so that the collection information will be automatically entered or transferred to ALLIMS.",
+  "moduleCollectTitle": "Mobile Collection",
+  "moduleCollectDescription": "Coleta Mobile first records field information in a mobile device, after which the logistics sector reviews and finalizes the scheduled collection dates, the sample list, and field information in the Schedule module.",
+  "moduleCollectText": "Mobile Collection first records field information on a mobile device. After the logistics sector reviews and finalizes the planned collection dates in the Schedule module, the sample list, as well as field information, can be sent to the mobile device: tablet (Android ®), smartphone or others.\nIn the field, the collector can locate the sample in the system by typing the sample code or reading the barcode or QRCode on the sample label. After all information is recorded, the data can be sent to the laboratory via an internet connection or, if there is no internet signal available at the time, as soon as the device is connected, the collection data will be sent to ALLIMS.\nThe receipt of samples will be recorded in ALLIMS, so that the system will also control any pending issues and/or inconsistencies found in the field records.",
+  "moduleWarehouseTitle": "Consumables",
+  "moduleWarehouseDescription": "Consumables is a module for managing laboratory consumables: inventory, batch, reagent expiration date, solution preparation and consumable materials. Its major benefits include reducing waste and raising awareness of material use among analysts.",
+  "moduleWarehouseText": "The Consumables module is a module for managing laboratory consumables: stock, batch, reagent expiration date, preparation of solutions and consumable materials. Its major benefit is reducing waste and raising awareness of material usage by analysts, as it offers complete control of materials and supply management by department or employee, in a given period.\nThe module controls all material entries with nomenclature management to eliminate the possibility of uncontrolled stock in the system. It allows hierarchical management of tasks that must be performed by internal employees, indicating deadlines and seasonality in purchases.\nThe Consumables module is prepared to work with regulations for purchasing hazardous materials, with reports prepared to meet the needs of the army and the federal police. It manages purchases from the supplier through automatic messages.\nIt also allows managing consumables, culture media and reagents that are used in tests. As the tests are recorded in the system, if configured, ALLIMS will require the analyst to inform the input, batch and quantity consumed. If any usage restrictions occur, such as an expired batch, the system will block the link of this input in the system.",
+  "moduleCustodyTitle": "Custody",
+  "moduleCustodyDescription": "The Custody module is prepared to accurately manage all chain of custody functions inside and outside the laboratory, including automatic locks.",
+  "moduleCustodyText": "The Custody module is prepared to accurately manage all functions of the chain of custody inside and outside the laboratory, including automatic locks. It offers traceability of handling and storage in controlled environments such as greenhouses, freezers, thermometers, among others.\nThe module is responsible for evaluating the controlled environment through quality metrics, defined according to each environment and equipment, and can retain a sample from a pre-defined pointer.\nThe Custody module manages the entire sample path, from the client's departure to all passages within the laboratory.",
+  "moduleIntegrationsTitle": "Integrations",
+  "moduleIntegrationsDescription": "The Integrations module allows the laboratory to exchange information with the following systems: CRM, ERP, PIMS, MES and others, in addition to connecting and acquiring data from laboratory equipment. The Connection module is considered one of the main factors responsible for reducing data transcription errors.",
+  "moduleIntegrationsText": "The Integration module allows the laboratory to exchange information with the following systems: CRM, ERP, PIMS, MES and others, in addition to connecting and acquiring data from laboratory equipment.\nThe Connection module is considered one of the main factors responsible for reducing data transcription errors, results delivery time and re-typing of information, increasing productivity and quality, in addition to process automation.\nConnection with other systems ensures the integrity of information. For example, customer registration can be mandatory in CRM or ERP and send information to be updated in ALLIMS, which in turn blocks any changes to customer registration.\nAnother very common form of communication is for the ALLIMS system to inform other systems when samples are finished. From this information, we can notify CRM or ERP that samples can be invoiced or send analytical results to ERP, PIMS or MES to be processed in the process or production line.\nConnections with analytical equipment are also very common. Acquiring data from these equipments is very simple. Equipment such as: chromatographs, ICP, atomic absorption, among others, generate files with the data of the analyzed sample and the results of each parameter generated by the equipment. These files are saved in formats: TXT, CSV, XLS, or others. In this way, the Connection module can capture these files and interpret the results to save them in the ALLIMS database.\nThere are other connections for data acquisition that are simpler, connection with: scales, pH meters, among others. In these cases, the equipment is connected directly to the system and the reading of the results is sent directly to the system.",
+  "moduleLabOnlineTitle": "Lab.Online",
+  "moduleLabOnlineDescription": "Lab.OnLine allows laboratory clients to consult analytical results directly on the web portal. In Lab.OnLine it is possible to: monitor the status of samples in the laboratory, consult sample results, print Test Reports (PDF report), forward samples to other people.",
+  "moduleLabOnlineText": "Lab.OnLine allows laboratory clients to consult analytical results directly on the web portal.\nIn Lab.OnLine it is possible to: monitor the status of samples in the laboratory, consult sample results, print Test Reports (PDF report), forward samples to other people, export information to Excel, among other resources.\nIt allows laboratory clients to validate the authenticity of the Reports in their hands. The client will access Lab.OnLine and enter the report number, plus the validation key printed on the Report. This key is unique and follows the MD-5 global standard.\nWith this data, Lab.OnLine will open the original Test Report for the client to compare with what is printed.\nLab.OnLine also allows laboratory clients to pre-register samples, generate a number and identification label with a barcode. When the samples arrive at the laboratory, they will be received faster and more qualified.\nIn Lab.OnLine, the client will also be able to consult the history of approved commercial proposals, as well as negotiate and exchange messages with the laboratory regarding open proposals.",
+  "moduleQualityTitle": "Quality Assurance",
+  "moduleQualityDescription": "The Quality Assurance module provides control of the records and pointers required by ISO/IEC 17025, supporting the laboratory's quality area in all responsibilities related to this standard. This module provides several tools such as employee training control, equipment calibration",
+  "moduleQualityText": "The Quality Assurance module provides control of the records and indicators required by ISO/IEC 17025, supporting the laboratory's quality area in all responsibilities related to this standard.\nThis module provides several tools such as employee training control, equipment calibration, management of action based on possible RNC, among others.\nIts main activities are to alert the quality manager about the goals set, deadlines and problems to be solved.\nIt allows the recording of the intermediation between the laboratory and the client, and is prepared to receive data such as both positive and negative feedback and, in the case of the latter, to verify the problem, assign tasks and control repair deadlines.",
+  "moduleAlertsTitle": "Alerts",
+  "moduleAlertsDescription": "Imagine the system notifying your users or customers as actions are performed within the laboratory.\n Various occurrences in the system can be linked to the sending of automatic emails or notifications to the Alerts module on your cell phone.",
+  "moduleAlertsText": "Imagine the system notifying your users or customers as actions are performed within the laboratory.\nSeveral occurrences in the system can be linked to the sending of automatic emails or notifications to the Alerts module on your cell phone.\nAuthorized people can receive information such as:\n• Number of samples received, completed and rejected today, this week, last week,…\n• Number of consumables due or expired\n• Number of equipment to be calibrated or expired\n• Or any other information contained in the ALLIMS system database\nThere can be several notifications customized to your needs. Notifications based on customers, samples, tests, issuing of reports, among others.",
   "placeDescription": "We operate in the market for developing systems for the laboratory segment and also for the agronomic segment.\nWe serve several clients in the laboratory segment, in the areas of: environmental, food, soil, chemistry, human nutrition, animal nutrition, pharmaceuticals, research and development, among others.\nWe are located in Campinas – SP with our own headquarters.",
   "segmentsTitle": "Areas of Activity",
   "segmentsDrinksTitle": "Food and Beverages",
